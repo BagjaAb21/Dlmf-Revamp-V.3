@@ -1,0 +1,347 @@
+// ==================================================================================
+//                           SOLUSI 1: Gunakan CSS Bootstrap + Custom SCSS
+// ==================================================================================
+
+// Import Bootstrap CSS (bukan SCSS) untuk menghindari konflik @use
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css");
+
+// ==================================================================================
+//                           CUSTOM STYLES & VARIABLES
+// ==================================================================================
+
+// Definisi variabel custom
+$custom-primary: #667eea;
+$custom-secondary: #764ba2;
+$custom-success: #28a745;
+$custom-info: #17a2b8;
+$custom-warning: #ffc107;
+$custom-danger: #dc3545;
+
+// Font import
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: $custom-primary;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 0;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+        opacity: 0.9;
+    }
+}
+
+.blog-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .card-title {
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+    }
+}
+
+.teacher-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+
+    &:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px);
+    }
+
+    .teacher-photo {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        border: 5px solid #f8f9fa;
+    }
+
+    h5 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .text-muted {
+        font-size: 0.875rem;
+    }
+}
+
+.feature-box {
+    padding: 2rem;
+    text-align: center;
+
+    i {
+        font-size: 3rem;
+    }
+
+    h4 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+}
+
+.post-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #333;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        color: #1a202c;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 2rem 0;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    ul,
+    ol {
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+    }
+
+    blockquote {
+        border-left: 4px solid $custom-primary;
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        font-style: italic;
+        color: #6c757d;
+    }
+
+    pre {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+    }
+
+    code {
+        background-color: #f8f9fa;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-size: 0.875em;
+        color: #e83e8c;
+    }
+
+    a {
+        color: $custom-primary;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.pagination {
+    .page-link {
+        color: $custom-primary;
+        border-color: #dee2e6;
+        padding: 0.5rem 0.75rem;
+
+        &:hover {
+            color: darken($custom-primary, 10%);
+            background-color: #f8f9fa;
+        }
+    }
+
+    .page-item.active .page-link {
+        background-color: $custom-primary;
+        border-color: $custom-primary;
+    }
+
+    .page-item.disabled .page-link {
+        color: #6c757d;
+        background-color: #fff;
+        border-color: #dee2e6;
+    }
+}
+
+footer {
+    background-color: #1a202c !important;
+
+    h5 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: white !important;
+        }
+    }
+
+    .social-links a {
+        font-size: 1.25rem;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.badge {
+    padding: 0.375rem 0.75rem;
+    font-weight: 500;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &-primary {
+        background-color: $custom-primary !important;
+        border-color: $custom-primary !important;
+
+        &:hover {
+            background-color: darken($custom-primary, 10%) !important;
+            border-color: darken($custom-primary, 10%) !important;
+            transform: translateY(-2px);
+        }
+    }
+
+    &-outline-primary {
+        color: $custom-primary !important;
+        border-color: $custom-primary !important;
+
+        &:hover {
+            background-color: $custom-primary !important;
+            border-color: $custom-primary !important;
+        }
+    }
+}
+
+// Override Bootstrap primary colors dengan CSS custom properties
+:root {
+    --bs-primary: #{$custom-primary};
+    --bs-primary-rgb: 102, 126, 234;
+    --bs-secondary: #{$custom-secondary};
+    --bs-secondary-rgb: 118, 75, 162;
+}
+
+// Custom utility classes untuk override warna Bootstrap
+.bg-primary-custom {
+    background-color: $custom-primary !important;
+}
+
+.text-primary-custom {
+    color: $custom-primary !important;
+}
+
+.border-primary-custom {
+    border-color: $custom-primary !important;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .lead {
+            font-size: 1.125rem;
+        }
+    }
+
+    .teacher-card .teacher-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.shadow-hover {
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.text-gradient {
+    background: linear-gradient(
+        135deg,
+        $custom-primary 0%,
+        $custom-secondary 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
