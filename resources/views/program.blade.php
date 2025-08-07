@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program - Deutsch Lernen mit Fara</title>
+    <title>Program - DlmF</title>
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-bulet.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -970,13 +971,13 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
                             <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="#">Produk Digital</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
                     </li>
@@ -1463,11 +1464,15 @@
 
                 <div class="col-lg-2 col-md-6 col-6 mb-4">
                     <h5 class="footer-title text-white">Quick Link</h5>
-                    <a href="{{ url('/') }}" class="footer-link">Beranda</a>
-                    <a href="{{ url('/program') }}" class="footer-link">Program</a>
-                    <a href="{{ url('/about') }}" class="footer-link">About Us</a>
-                    <a href="{{ url('/blog') }}" class="footer-link">Blog</a>
-                    {{-- <a href="#" class="footer-link">Contact</a> --}}
+                    {{-- <li><a href="#">Course</a></li> --}}
+                        <li><a href="{{ url('/') }}">Beranda</a></li>
+                        <li><a href="{{ url('/program') }}">Program</a></li>
+                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
+                        <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
+                        <li><a href="{{ url('/about') }}">About Us</a></li>
+                        {{-- <li><a href="#">Career</a></li>
+                        <li><a href="#">Legalitas</a></li> --}}
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-6 mb-4">

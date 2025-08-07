@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - Deutsch Lernen mit Fara</title>
+    <title>Beranda - DlmF</title>
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-bulet.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1512,13 +1513,13 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
                             <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="#">Produk Digital</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
                     </li>
@@ -2088,8 +2089,10 @@
                     <h5>Quick Link</h5>
                     <ul class="footer-links">
                         {{-- <li><a href="#">Course</a></li> --}}
+                        <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li>
+                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                         {{-- <li><a href="#">Career</a></li>

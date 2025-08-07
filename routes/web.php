@@ -18,6 +18,16 @@ Route::get('/program', function () {
     return view('program');
 });
 
+// Program routes
+Route::get('/harga', function () {
+    return view('harga');
+});
+
+// Au Pair
+Route::get('/au-pair', function () {
+    return view('au-pair');
+});
+
 // Blog routes
 Route::prefix('blog')->name('blog.')->group(function () {
 Route::get('/', [BlogController::class, 'index'])->name('index');
