@@ -824,6 +824,12 @@
             color: var(--primary-color);
         }
 
+        .footer-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
         .social-links {
             display: flex;
             gap: 1rem;
@@ -1018,17 +1024,17 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Program</a></li>
-                            <li><a class="dropdown-item" href="#">Harga</a></li>
-                            <li><a class="dropdown-item" href="#">Aus Bildung</a></li>
-                            <li><a class="dropdown-item" href="#">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Produk Digital</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ url('/about') }}">Tentang Kami</a>
@@ -1044,7 +1050,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <div class="hero-content">
-                        <h1 class="display-4 fw-bold mb-4">Dari Indonesia Menuju Jerman, Bersama DimF</h1>
+                        <h1 class="display-4 fw-bold mb-4">Dari Indonesia Menuju Jerman, Bersama DlmF</h1>
                         <p class="lead mb-4">
                             Kami adalah platform pembelajaran bahasa Jerman terdepan yang membantu ribuan siswa
                             Indonesia meraih
@@ -1150,7 +1156,7 @@
             <div class="values-content">
                 <div class="value-item" data-delay="0">
                     <h5>Fun Learning</h5>
-                    <p>Kami percaya bahwa proses belajar yang menyenangkan akan memudahkan pemahaman. Di DimF, setiap
+                    <p>Kami percaya bahwa proses belajar yang menyenangkan akan memudahkan pemahaman. Di DlmF, setiap
                         kelas dirancang interaktif agar siswa betah dan aktif belajar.</p>
                 </div>
 
@@ -1189,7 +1195,7 @@
                 <div class="journey-content">
                     <h2 class="section-title">Perjalanan Kami</h2>
                     <p class="journey-intro">
-                        Dalam lima tahun perjalanannya, DimF terus berkembang dengan menghadirkan berbagai layanan
+                        Dalam lima tahun perjalanannya, DlmF terus berkembang dengan menghadirkan berbagai layanan
                         baru serta memperkuat kualitas pengajaran melalui pengajar tersertifikasi. Kami percaya bahwa
                         langkah-
                         langkah kecil yang dilakukan secara konsisten dapat menciptakan perubahan besar dalam dunia
@@ -1198,7 +1204,7 @@
                     <p class="journey-desc">
                         Perjalanan kami dimulai dari hal-hal sederhana yang terus tumbuh seiring waktu. Berikut adalah
                         tonggak
-                        yang menandai perkembangan DimF.
+                        yang menandai perkembangan DlmF.
                     </p>
                 </div>
                 <div class="journey-main-image">
@@ -1231,7 +1237,7 @@
                     <div class="timeline-card" data-year="2020">
                         <div class="timeline-year">2020</div>
                         <h5 class="timeline-title">Lahirnya Deutsch lernen mit Fara</h5>
-                        <p class="timeline-description">Deutsch lernen mit Fara (DimF) resmi didirikan dengan semangat
+                        <p class="timeline-description">Deutsch lernen mit Fara (DlmF) resmi didirikan dengan semangat
                             untuk membantu generasi muda Indonesia yang bermimpi kuliah di Jerman yang menjanjikan,
                             praktis, dan efektif dengan dukungan dari generasi muda Indonesia masa kini.</p>
                     </div>
@@ -1239,7 +1245,7 @@
                     <div class="timeline-card" data-year="2021">
                         <div class="timeline-year">2021</div>
                         <h5 class="timeline-title">Tahun Pertama dan Awal Komunitas Belajar</h5>
-                        <p class="timeline-description">Memasuki tahun pertamanya, DimF mulai mengembangkan kelas online
+                        <p class="timeline-description">Memasuki tahun pertamanya, DlmF mulai mengembangkan kelas online
                             dari level A1, A2, serta membangun komunitas pembelajar Bahasa Jerman yang solid dan
                             suportif. Pendekatan belajar yang komunikatif dan kontekstual menjadi ciri khas, menjadikan
                             proses belajar terasa lebih hidup.</p>
@@ -1248,7 +1254,7 @@
                     <div class="timeline-card" data-year="2022">
                         <div class="timeline-year">2022</div>
                         <h5 class="timeline-title">Ekspansi Digital dan Jangkauan Nasional</h5>
-                        <p class="timeline-description">DimF mulai mengembangkan kehadirannya secara digital melalui
+                        <p class="timeline-description">DlmF mulai mengembangkan kehadirannya secara digital melalui
                             platform pembelajaran dan penyebaran konten edukatif di media sosial. Peserta dari berbagai
                             daerah di Indonesia mulai bergabung, dan kurikulum berbasis CEFR diperkenalkan untuk
                             mendukung standar pembelajaran internasional.</p>
@@ -1258,7 +1264,7 @@
                         <div class="timeline-year">2023</div>
                         <h5 class="timeline-title">Legalitas, Diversifikasi, dan Kolaborasi Strategis</h5>
                         <p class="timeline-description">Tahun ini menjadi tonggak penting dengan pendirian badan hukum
-                            sebagai landasan PT Fara Kreatif Sejahtera. DimF juga mulai membuka kelas online dari level
+                            sebagai landasan PT Fara Kreatif Sejahtera. DlmF juga mulai membuka kelas online dari level
                             B1 dan diversifikasi layanan, sekaligus memperluas kerja sama dengan mitra pendidikan dan
                             konsultan studi ke Jerman. Kurikulum A1-B1 disusun secara sistematis, didukung sistem
                             evaluasi internal yang lebih matang.</p>
@@ -1267,7 +1273,7 @@
                     <div class="timeline-card" data-year="2025">
                         <div class="timeline-year">2025</div>
                         <h5 class="timeline-title">Kantor Baru dan Langkah Menuju Akreditasi</h5>
-                        <p class="timeline-description">DimF resmi membuka kantor fisik pertamanya di Jalan Trengguli
+                        <p class="timeline-description">DlmF resmi membuka kantor fisik pertamanya di Jalan Trengguli
                             Sari Asih No. 76, Bandung. Tahun ini juga menandai langkah strategis dan menuju akreditasi
                             sebagai lembaga pendidikan non-formal, sekaligus pengembangan platform pembelajaran digital
                             mandiri untuk memperkuat daya saing nasional dan internasional.</p>
@@ -1277,7 +1283,7 @@
                     <div class="timeline-card" data-year="2020">
                         <div class="timeline-year">2020</div>
                         <h5 class="timeline-title">Lahirnya Deutsch lernen mit Fara</h5>
-                        <p class="timeline-description">Deutsch lernen mit Fara (DimF) resmi didirikan dengan semangat
+                        <p class="timeline-description">Deutsch lernen mit Fara (DlmF) resmi didirikan dengan semangat
                             untuk membantu generasi muda Indonesia yang bermimpi kuliah di Jerman yang menjanjikan,
                             praktis, dan efektif dengan dukungan dari generasi muda Indonesia masa kini.</p>
                     </div>
@@ -1285,7 +1291,7 @@
                     <div class="timeline-card" data-year="2021">
                         <div class="timeline-year">2021</div>
                         <h5 class="timeline-title">Tahun Pertama dan Awal Komunitas Belajar</h5>
-                        <p class="timeline-description">Memasuki tahun pertamanya, DimF mulai mengembangkan kelas online
+                        <p class="timeline-description">Memasuki tahun pertamanya, DlmF mulai mengembangkan kelas online
                             dari level A1, A2, serta membangun komunitas pembelajar Bahasa Jerman yang solid dan
                             suportif. Pendekatan belajar yang komunikatif dan kontekstual menjadi ciri khas, menjadikan
                             proses belajar terasa lebih hidup.</p>
@@ -1294,7 +1300,7 @@
                     <div class="timeline-card" data-year="2022">
                         <div class="timeline-year">2022</div>
                         <h5 class="timeline-title">Ekspansi Digital dan Jangkauan Nasional</h5>
-                        <p class="timeline-description">DimF mulai mengembangkan kehadirannya secara digital melalui
+                        <p class="timeline-description">DlmF mulai mengembangkan kehadirannya secara digital melalui
                             platform pembelajaran dan penyebaran konten edukatif di media sosial. Peserta dari berbagai
                             daerah di Indonesia mulai bergabung, dan kurikulum berbasis CEFR diperkenalkan untuk
                             mendukung standar pembelajaran internasional.</p>
@@ -1304,7 +1310,7 @@
                         <div class="timeline-year">2023</div>
                         <h5 class="timeline-title">Legalitas, Diversifikasi, dan Kolaborasi Strategis</h5>
                         <p class="timeline-description">Tahun ini menjadi tonggak penting dengan pendirian badan hukum
-                            sebagai landasan PT Fara Kreatif Sejahtera. DimF juga mulai membuka kelas online dari level
+                            sebagai landasan PT Fara Kreatif Sejahtera. DlmF juga mulai membuka kelas online dari level
                             B1 dan diversifikasi layanan, sekaligus memperluas kerja sama dengan mitra pendidikan dan
                             konsultan studi ke Jerman. Kurikulum A1-B1 disusun secara sistematis, didukung sistem
                             evaluasi internal yang lebih matang.</p>
@@ -1313,7 +1319,7 @@
                     <div class="timeline-card" data-year="2025">
                         <div class="timeline-year">2025</div>
                         <h5 class="timeline-title">Kantor Baru dan Langkah Menuju Akreditasi</h5>
-                        <p class="timeline-description">DimF resmi membuka kantor fisik pertamanya di Jalan Trengguli
+                        <p class="timeline-description">DlmF resmi membuka kantor fisik pertamanya di Jalan Trengguli
                             Sari Asih No. 76, Bandung. Tahun ini juga menandai langkah strategis dan menuju akreditasi
                             sebagai lembaga pendidikan non-formal, sekaligus pengembangan platform pembelajaran digital
                             mandiri untuk memperkuat daya saing nasional dan internasional.</p>
@@ -1427,9 +1433,9 @@
                     <h5>Quick Link</h5>
                     <ul class="footer-links">
                         {{-- <li><a href="#">Course</a></li> --}}
-                        <li><a href="#">Program</a></li>
-                        <li><a href="#">Aus Bildung</a></li>
-                        <li><a href="#">Au Pair</a></li>
+                        <li><a href="{{ url('/program') }}">Program</a></li>
+                        <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li>
+                        <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                         {{-- <li><a href="#">Career</a></li>
                         <li><a href="#">Legalitas</a></li> --}}
@@ -1445,6 +1451,9 @@
                         <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
                         <a href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
                     </div>
+                    <p class="footer-description">
+                        Ikuti media sosial kami untuk tips belajar bahasa Jerman dan update program terbaru.
+                    </p>
                 </div>
             </div>
 

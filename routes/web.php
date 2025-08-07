@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
+// Program routes
+Route::get('/program', function () {
+    return view('program');
+});
+
 // Blog routes
 Route::prefix('blog')->name('blog.')->group(function () {
 Route::get('/', [BlogController::class, 'index'])->name('index');

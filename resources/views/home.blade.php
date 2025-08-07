@@ -1073,6 +1073,12 @@
             color: white;
         }
 
+        .footer-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
         /* Animation Effects */
         .animate-on-scroll {
             opacity: 0;
@@ -1505,10 +1511,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Pogram</a></li>
-                            <li><a class="dropdown-item" href="#">Harga</a></li>
-                            <li><a class="dropdown-item" href="#">Aus Bildung</a></li>
-                            <li><a class="dropdown-item" href="#">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -2084,9 +2090,9 @@
                     <h5>Quick Link</h5>
                     <ul class="footer-links">
                         {{-- <li><a href="#">Course</a></li> --}}
-                        <li><a href="#">Program</a></li>
-                        <li><a href="#">Aus Bildung</a></li>
-                        <li><a href="#">Au Pair</a></li>
+                        <li><a href="{{ url('/program') }}">Program</a></li>
+                        <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li>
+                        <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                         {{-- <li><a href="#">Career</a></li>
                         <li><a href="#">Legalitas</a></li> --}}
@@ -2094,14 +2100,16 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5>Get in Touch</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
+                    <h5 class="footer-title text-white">Follow Us</h5>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
                     </div>
+                    <p class="footer-description">
+                        Ikuti media sosial kami untuk tips belajar bahasa Jerman dan update program terbaru.
+                    </p>
                 </div>
             </div>
 
