@@ -1494,9 +1494,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <i class="bi bi-translate me-2"></i>
-                Deutsch lernen mit Fara
+            <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;" alt="Logo-Mitfara-Panjang">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -2078,10 +2077,9 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 mb-4">
                     <div class="footer-logo">
-                        <i class="bi bi-translate me-2"></i>
-                        Deutsch Lernen mit Fara
+                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;" alt="Logo-Mitfara-Bulat">
                     </div>
-                    <p class="mb-3">Portal Belajar Bahasa Jerman No. 1 di Indonesia</p>
+                    <h2 class="mb-3"><b>Deutsch Lernen Mit Fara</b></h2>
                     <p class="mb-2">📍 Jalan Trengguli Sari Asri No. 79, Semarang, Semarang, Jawa Tengah, Indonesia</p>
                     <p class="mb-2">📞 +62 896 7576 5648</p>
                 </div>

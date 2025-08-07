@@ -953,8 +953,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                <i class="bi bi-translate me-2"></i>
-                Deutsch lernen mit Fara
+                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;" alt="Logo-Mitfara-Panjang">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -1448,11 +1447,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="footer-brand">MinFara</div>
-                    <p class="footer-description">
-                        Platform pembelajaran bahasa Jerman terpercaya dengan metode modern dan instruktur berpengalaman.
-                        Wujudkan impianmu untuk menguasai bahasa Jerman bersama kami.
-                    </p>
+                    <div class="footer-logo">
+                        <div class="footer-logo">
+                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;" alt="Logo-Mitfara-Bulat">
+                    </div>
+                    <h2 class="mb-3"><b>Deutsch Lernen Mit Fara</b></h2>
+                    </div>
                     <div class="footer-contact">
                         <i class="bi bi-telephone me-2"></i>+62 812 3456 7890
                     </div>
