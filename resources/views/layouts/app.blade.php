@@ -10,6 +10,65 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            --primary-color: #7C3AED;
+            --secondary-color: #A855F7;
+            --accent-color: #FDE047;
+            --dark-blue: #1E293B;
+            --light-gray: #F8FAFC;
+            --text-dark: #334155;
+        }
+
+        .navbar-dark.bg-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+
+        .nav-link.active {
+            color: var(--accent-color) !important;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+            transition: color 0.3s ease;
+        }
+
+        .btn-light {
+            background-color: white;
+            color: var(--primary-color);
+            border: 2px solid white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-light:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        footer.bg-dark {
+            background: var(--dark-blue) !important;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color) !important;
+            transition: color 0.3s ease;
+        }
+
+        .text-white-50:hover {
+            color: var(--accent-color) !important;
+            transition: color 0.3s ease;
+        }
+    </style>
+
     @stack('styles')
 </head>
 <body>
