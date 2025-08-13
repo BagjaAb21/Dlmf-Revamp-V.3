@@ -72,6 +72,57 @@ class Post extends Model
         return $slug;
     }
 
+    /**
+     * Search scope for posts
+     */
+    public function scopeSearch($query, $term)
+    {
+        if (!$term) {
+            return $query;
+        }
+
+        return $query->where(function($q) use ($term) {
+            $q->where('title', 'LIKE', '%' . $term . '%')
+              ->orWhere('excerpt', 'LIKE', '%' . $term . '%')
+              ->orWhere('content', 'LIKE', '%' . $term . '%');
+        });
+    }
+
+    /**
+     * Highlight search term in text
+     */
+    public function highlightSearchTerm($text, $searchTerm)
+    {
+        if (!$searchTerm) {
+            return $text;
+        }
+
+        return preg_replace(
+            '/(' . preg_quote($searchTerm, '/') . ')/i',
+            '<mark>$1</mark>',
+            $text
+        );
+    }
+
+    /**
+     * Get highlighted title for search results
+     */
+    public function getHighlightedTitle($searchTerm = null)
+    {
+        $searchTerm = $searchTerm ?: request('search');
+        return $this->highlightSearchTerm($this->title, $searchTerm);
+    }
+
+    /**
+     * Get highlighted excerpt for search results
+     */
+    public function getHighlightedExcerpt($searchTerm = null, $limit = 150)
+    {
+        $searchTerm = $searchTerm ?: request('search');
+        $excerpt = Str::limit($this->excerpt, $limit);
+        return $this->highlightSearchTerm($excerpt, $searchTerm);
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class);

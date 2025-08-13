@@ -248,14 +248,14 @@
 
         /* Content Sections */
         .content-section {
-            padding: 4rem 0;
+            padding: 2rem 0;
         }
 
         .section-title {
             font-size: 2rem;
             font-weight: bold;
             margin-bottom: 2rem;
-            color: var(--dark-blue);
+            color: var(--primary-color);
         }
 
         .vision-mission {
@@ -715,8 +715,8 @@
 
         /* Contact Section */
         .contact-section {
-            background: var(--dark-blue);
-            color: white;
+            background: var(--light-gray);
+            color: var(--primary-color);
             text-align: center;
         }
 
@@ -761,74 +761,82 @@
 
         /* Footer */
         .footer {
-            background: #0f172a;
+            background: var(--dark-blue);
             color: white;
-            padding: 3rem 0 1rem;
+            padding: 60px 0 20px;
         }
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
         }
 
-        .footer-brand h5 {
-            color: white;
-            margin-bottom: 1rem;
+        .footer-brand {
             font-size: 1.5rem;
-            font-weight: bold;
+            font-weight: 700;
         }
 
-        .footer-brand .brand-subtitle {
-            color: #94a3b8;
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 2rem;
         }
 
-        .footer-brand .contact-info {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            line-height: 1.8;
-        }
-
-        .footer-brand .contact-info i {
-            color: var(--primary-color);
-            margin-right: 0.5rem;
-            width: 16px;
-        }
-
-        .footer-section h5 {
-            color: white;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .footer-section ul {
+        .footer-links {
             list-style: none;
             padding: 0;
         }
 
-        .footer-section ul li {
-            padding: 0.4rem 0;
+        .footer-links li {
+            margin-bottom: 0.8rem;
         }
 
-        .footer-section ul li a {
-            color: #94a3b8;
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            transition: color 0.3s ease;
-            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
 
-        .footer-section ul li a:hover {
+        .footer-links a:hover {
             color: var(--primary-color);
+            transform: translateX(5px);
+            display: inline-block;
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
         }
 
         .footer-description {
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 30px;
             line-height: 1.8;
+            text-align: justify;
         }
 
         .social-links {
@@ -857,35 +865,10 @@
             transform: translateY(-2px);
         }
 
-        .footer-bottom {
-            border-top: 1px solid #334155;
-            padding-top: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .footer-bottom .copyright {
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-
-        .footer-bottom .legal-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .footer-bottom .legal-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-bottom .legal-links a:hover {
-            color: var(--primary-color);
+        @media (max-width: 576px) {
+            .social-links {
+                justify-content: center;
+            }
         }
 
         /* Responsive */
@@ -1012,7 +995,8 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;" alt="Logo-Mitfara-Panjang">
+                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;"
+                    alt="Logo-Mitfara-Panjang">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -1384,7 +1368,7 @@
     <!-- Contact Section -->
     <section class="content-section contact-section">
         <div class="container">
-            <h2 class="section-title text-white">Yuk, Terhubung dengan Kami!</h2>
+            <h2 class="section-title">Yuk, Terhubung dengan Kami!</h2>
             <p class="lead mb-5">Punya pertanyaan atau ingin bergabung? Jangan ragu untuk menghubungi kami kapan saja
             </p>
 
@@ -1394,7 +1378,9 @@
                         <i class="bi bi-envelope-fill"></i>
                     </div>
                     <h5>Email</h5>
-                    <p>info@deutschlernen.id</p>
+                    <a class="text-decoration-none" style="color: var(--primary-color);" href="mailto:info@mitfara.com">
+                        <p>info@mitfara.com</p>
+                    </a>
                 </div>
 
                 <div class="contact-method" data-delay="200">
@@ -1402,7 +1388,10 @@
                         <i class="bi bi-telephone-fill"></i>
                     </div>
                     <h5>Phone</h5>
-                    <p>+62 896 7576 5648</p>
+                    <a class="text-decoration-none" style="color: var(--primary-color);"
+                        href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0">
+                        <p>+62 896 7576 5648</p>
+                    </a>
                 </div>
 
                 <div class="contact-method" data-delay="400">
@@ -1410,7 +1399,7 @@
                         <i class="bi bi-geo-alt-fill"></i>
                     </div>
                     <h5>Location</h5>
-                    <p>Semarang, Jawa Tengah</p>
+                    <p>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</p>
                 </div>
             </div>
         </div>
@@ -1419,21 +1408,21 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
-                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;" alt="Logo-Mitfara-Bulat">
+                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;"
+                            alt="Logo-Mitfara-Bulat">
                     </div>
-                    <h2 class="mb-3"><b>Deutsch Lernen Mit Fara</b></h2>
-                    <div class="contact-info">
-                        <p><i class="bi bi-geo-alt-fill"></i> Jalan Trengguli Sari Asri No. 79, Semarang, Semarang, Jawa
-                            Tengah, Indonesia</p>
-                        <p><i class="bi bi-telephone-fill"></i> +62 896 7576 5648</p>
-                    </div>
+                    <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
+                    <p class="footer-description">
+                        Platform pembelajaran bahasa Jerman terpercaya dengan metode pembelajaran yang efektif dan
+                        menyenangkan.
+                    </p>
                 </div>
 
-                <div class="footer-section">
-                    <h5>Quick Link</h5>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Link</h5>
                     <ul class="footer-links">
                         {{-- <li><a href="#">Course</a></li> --}}
                         <li><a href="{{ url('/') }}">Beranda</a></li>
@@ -1444,17 +1433,42 @@
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                         {{-- <li><a href="#">Career</a></li>
                         <li><a href="#">Legalitas</a></li> --}}
+
                     </ul>
                 </div>
 
-                <div class="footer-section">
-                    <h5>Follow Us</h5>
-                    <div class="social-links">
-                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
-                        <a href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Get In Touch</h5>
+                    <div class="contact-info">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                href="https://wa.me/6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0">+62
+                                896 4789 7616</a>
+                        </span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                href="mailto:info@mitfara.com">info@mitfara.com</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <div class="d-flex gap-3 social-links mb-1">
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                     <p class="footer-description">
                         Ikuti media sosial kami untuk tips belajar bahasa Jerman dan update program terbaru.
@@ -1463,13 +1477,15 @@
             </div>
 
             <div class="footer-bottom">
-                <div class="copyright">
-                    <p>&copy; 2025 PT Fara Kreatif Sejahtera. All Right Reserved</p>
-                </div>
-                <div class="legal-links">
-                    <a href="#">Terms</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Legal</a>
+                <div class="row">
+                    <div class="col-md-6 text-start">
+                        <span>© 2025 Deutsch Lernen mit Fara. All Rights Reserved</span>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <a href="#" class="me-3 text-white text-decoration-none">Terms</a>
+                        <a href="#" class="me-3 text-white text-decoration-none">Privacy</a>
+                        <a href="#" class="text-white text-decoration-none">Legal</a>
+                    </div>
                 </div>
             </div>
         </div>

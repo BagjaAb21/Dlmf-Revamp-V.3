@@ -517,51 +517,112 @@
         .footer {
             background: var(--dark-blue);
             color: white;
-            padding: 60px 0 30px;
+            padding: 60px 0 20px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
         }
 
         .footer-brand {
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 20px;
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+            display: inline-block;
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
         }
 
         .footer-description {
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 30px;
             line-height: 1.8;
+            text-align: justify;
         }
 
-        .footer-contact {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 10px;
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
         }
 
-        .footer-title {
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--accent-color);
-        }
-
-        .footer-link {
-            color: rgba(255, 255, 255, 0.8);
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 8px;
+            color: #94a3b8;
             text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
             transition: all 0.3s ease;
+            font-size: 1.2rem;
         }
 
-        .footer-link:hover {
-            color: var(--accent-color);
-            padding-left: 10px;
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
         }
 
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 30px;
-            margin-top: 40px;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.6);
+        @media (max-width: 576px){
+            .social-links {
+                justify-content: center;
+            }
         }
 
         /* Responsive Design */
@@ -1447,24 +1508,22 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
-                        <div class="footer-logo">
-                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;" alt="Logo-Mitfara-Bulat">
+                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;"
+                            alt="Logo-Mitfara-Bulat">
                     </div>
-                    <h2 class="mb-3"><b>Deutsch Lernen Mit Fara</b></h2>
-                    </div>
-                    <div class="footer-contact">
-                        <i class="bi bi-telephone me-2"></i>+62 812 3456 7890
-                    </div>
-                    <div class="footer-contact">
-                        <i class="bi bi-envelope me-2"></i>hello@minfara.com
-                    </div>
+                    <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
+                    <p class="footer-description">
+                        Platform pembelajaran bahasa Jerman terpercaya dengan metode pembelajaran yang efektif dan
+                        menyenangkan.
+                    </p>
                 </div>
 
-                <div class="col-lg-2 col-md-6 col-6 mb-4">
-                    <h5 class="footer-title text-white">Quick Link</h5>
-                    {{-- <li><a href="#">Course</a></li> --}}
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Link</h5>
+                    <ul class="footer-links">
+                        {{-- <li><a href="#">Course</a></li> --}}
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
                         <li><a href="{{ url('/blog') }}">Blog</a></li>
@@ -1473,23 +1532,42 @@
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                         {{-- <li><a href="#">Career</a></li>
                         <li><a href="#">Legalitas</a></li> --}}
-                </div>
 
-                <div class="col-lg-3 col-md-6 col-6 mb-4">
-                    <h5 class="footer-title text-white">Saat ini Tersedia</h5>
-                    <a href="#" class="footer-link">Super Intensif Offline</a>
-                    <a href="#" class="footer-link">Super Intensif Online</a>
-                    <a href="#" class="footer-link">Kelas Private</a>
-                    <a href="#" class="footer-link">Kelas Gramatik</a>
+                    </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="footer-title text-white">Follow Us</h5>
-                    <div class="d-flex gap-3 mb-3">
-                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+                    <h5 class="footer-title">Get In Touch</h5>
+                    <div class="contact-info">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                href="https://wa.me/6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0">+62
+                                896 4789 7616</a>
+                        </span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                href="mailto:info@mitfara.com">info@mitfara.com</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <div class="d-flex gap-3 social-links mb-1">
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                     <p class="footer-description">
                         Ikuti media sosial kami untuk tips belajar bahasa Jerman dan update program terbaru.
@@ -1498,14 +1576,14 @@
             </div>
 
             <div class="footer-bottom">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                        <p class="mb-0">&copy; 2024 MinFara. All Rights Reserved.</p>
+                <div class="row">
+                    <div class="col-md-6 text-start">
+                        <span>© 2025 Deutsch Lernen mit Fara. All Rights Reserved</span>
                     </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <a href="#" class="footer-link me-3 d-inline">Terms</a>
-                        <a href="#" class="footer-link me-3 d-inline">Privacy</a>
-                        <a href="#" class="footer-link d-inline">Cookies</a>
+                    <div class="col-md-6 text-end">
+                        <a href="#" class="me-3 text-white text-decoration-none">Terms</a>
+                        <a href="#" class="me-3 text-white text-decoration-none">Privacy</a>
+                        <a href="#" class="text-white text-decoration-none">Legal</a>
                     </div>
                 </div>
             </div>

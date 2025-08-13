@@ -753,60 +753,174 @@
         }
 
         /* Course Cards Section */
-        .courses-section {
-            padding: 5rem 0;
-        }
+    .courses-section {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
 
-        .course-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
 
-        .course-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.15);
-        }
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
-        .course-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
+    .course-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+      position: relative;
+    }
 
-        .course-content {
-            padding: 1.5rem;
-        }
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(124, 58, 237, 0.2);
+    }
 
-        .course-badge {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
+    .course-image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
 
-        .course-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: var(--text-dark);
-        }
+    .course-card:hover .course-image {
+      transform: scale(1.05);
+    }
 
-        .course-instructor {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #64748B;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
+    .course-content {
+      padding: 1.8rem;
+    }
+
+    .course-badge {
+      background: linear-gradient(135deg, var(--primary-color), #9333ea);
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .course-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+
+    .course-description {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .course-instructor {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .instructor-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-color), #9333ea);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .course-price {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .price-btn {
+      background: linear-gradient(135deg, var(--primary-color), #9333ea);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .price-btn:hover {
+      background: linear-gradient(135deg, #6d28d9, #7c3aed);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+      color: white;
+    }
+
+    .price-btn i {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .price-btn:hover i {
+      transform: translateX(3px);
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .courses-section {
+        padding: 3rem 0;
+      }
+
+      .course-image {
+        height: 200px;
+      }
+
+      .course-content {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .course-image {
+        height: 180px;
+      }
+    }
 
         .instructor-avatar {
             width: 24px;
@@ -814,13 +928,6 @@
             border-radius: 50%;
             background: var(--primary-color);
         }
-
-        .course-price {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
         /* Teachers Section */
         .teachers-section {
             padding: 5rem 0;
@@ -1038,13 +1145,24 @@
         .footer {
             background: var(--dark-blue);
             color: white;
-            padding: 3rem 0 1rem;
+            padding: 60px 0 20px;
         }
 
         .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand {
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 2rem;
         }
 
         .footer-links {
@@ -1053,31 +1171,86 @@
         }
 
         .footer-links li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .footer-links a {
-            color: #94A3B8;
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+            display: inline-block;
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
             color: white;
         }
 
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            width: 20px;
+        }
+
         .footer-bottom {
-            border-top: 1px solid #334155;
-            padding-top: 1rem;
-            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 40px;
             text-align: center;
-            color: white;
+            color: rgba(255, 255, 255, 0.7);
         }
 
         .footer-description {
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 30px;
             line-height: 1.8;
+            text-align: justify;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 8px;
+            color: #94a3b8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 576px){
+            .social-links {
+                justify-content: center;
+            }
         }
 
         /* Animation Effects */
@@ -1237,14 +1410,6 @@
                 font-size: 0.85rem;
             }
 
-            .course-card {
-                margin-bottom: 1.5rem;
-            }
-
-            .course-image {
-                height: 250px;
-            }
-
             .teacher-card {
                 margin-bottom: 1.5rem;
                 padding: 1.5rem;
@@ -1356,19 +1521,6 @@
                 font-size: 0.8rem;
                 line-height: 1.4;
             }
-
-            .course-content {
-                padding: 1rem;
-            }
-
-            .course-title {
-                font-size: 1rem;
-            }
-
-            .course-price {
-                font-size: 1.1rem;
-            }
-
             .teacher-card {
                 padding: 1.25rem;
             }
@@ -1413,10 +1565,6 @@
                 font-size: 1rem;
             }
 
-            .footer-logo {
-                font-size: 1.25rem;
-            }
-
             .overlay-card-title {
                 font-size: 0.9rem;
             }
@@ -1449,7 +1597,6 @@
 
             .learning-method-section,
             .features-section,
-            .courses-section,
             .teachers-section {
                 padding: 3rem 0;
             }
@@ -1462,10 +1609,6 @@
 
             .features-main-image {
                 min-height: 250px;
-            }
-
-            .course-image {
-                height: 200px;
             }
 
             .testimonial-card {
@@ -1539,7 +1682,7 @@
                     <h1 class="hero-title">Kursus Bahasa Jerman Terpercaya di <span
                             style="color: var(--accent-color);">Indonesia</span></h1>
                     <p class="hero-subtitle">Bergabunglah dengan ribuan pelajar yang telah berhasil menguasai bahasa
-                        Jerman bersama kami. Dari level A1 hingga C2, kami siap membantu perjalanan belajar Anda.</p>
+                        Jerman bersama kami. Dari level A1 hingga B2, kami siap membantu perjalanan belajar Anda.</p>
                     <div class="hero-buttons">
                         <a href="#" class="btn btn-hero-primary">Mulai Belajar</a>
                         <button class="btn btn-hero-secondary">Tonton Video</button>
@@ -1744,7 +1887,7 @@
                             </div>
                             <h4 class="feature-item-title">Sistematis</h4>
                             <p class="feature-item-description">Setiap level punya target jelas dengan kurikulum
-                                terstruktur dari A1 hingga C2</p>
+                                terstruktur dari A1 hingga B2</p>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -1773,106 +1916,113 @@
     </section>
 
     <!-- Courses Section -->
-    <section class="courses-section">
-        <div class="container">
-            <h2 class="section-title">Pilih Program Kursus Bahasa Jerman Sesuai Tujuanmu</h2>
-            <p class="section-subtitle">Kami menyediakan berbagai program pembelajaran yang disesuaikan dengan kebutuhan
-                dan level kemampuan Anda</p>
+  <section class="courses-section">
+    <div class="container">
+      <h2 class="section-title">Pilih Program Kursus Bahasa Jerman Sesuai Tujuanmu</h2>
+      <p class="section-subtitle">Kami menyediakan berbagai program pembelajaran yang disesuaikan dengan kebutuhan dan
+        level kemampuan Anda</p>
 
-            <div class="row mt-5">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="A1 - A2 Basic Course" class="course-image">
-                        <div class="course-content">
-                            <span class="course-badge">Reguler Offline</span>
-                            <h5 class="course-title">Super Intensif Reguler Offline</h5>
-                            <div class="course-instructor">
-                                <div class="instructor-avatar"></div>
-                                <span>Frau Carla</span>
-                            </div>
-                            <div class="course-price">Rp1.750.000</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="B1 - B2 Intermediate" class="course-image">
-                        <div class="course-content">
-                            <span class="course-badge">Reguler Online</span>
-                            <h5 class="course-title">Super Intensif Reguler Online</h5>
-                            <div class="course-instructor">
-                                <div class="instructor-avatar"></div>
-                                <span>Frau Zahra</span>
-                            </div>
-                            <div class="course-price">Rp2.250.000</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="Business German" class="course-image">
-                        <div class="course-content">
-                            <span class="course-badge">Persiapan</span>
-                            <h5 class="course-title">Persiapan Ujian</h5>
-                            <div class="course-instructor">
-                                <div class="instructor-avatar"></div>
-                                <span>Herr Mueller</span>
-                            </div>
-                            <div class="course-price">Rp3.500.000</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="Exam Preparation" class="course-image">
-                        <div class="course-content">
-                            <span class="course-badge">Au Pair</span>
-                            <h5 class="course-title">Kelas Au Pair</h5>
-                            <div class="course-instructor">
-                                <div class="instructor-avatar"></div>
-                                <span>Frau Schmidt</span>
-                            </div>
-                            <div class="course-price">Rp2.750.000</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="Business German" class="course-image">
-                        <div class="course-content">
-                            <span class="course-badge">Private</span>
-                            <h5 class="course-title">Business German</h5>
-                            <div class="course-instructor">
-                                <div class="instructor-avatar"></div>
-                                <span>Herr Mueller</span>
-                            </div>
-                            <div class="course-price">Rp3.500.000</div>
-                        </div>
-                    </div>
-                </div>
-                {{-- <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="Exam Preparation" class="course-image">
-                        <div class="course-content">
-                            <span class="course-badge">Preparation</span>
-                            <h5 class="course-title">Exam Preparation</h5>
-                            <div class="course-instructor">
-                                <div class="instructor-avatar"></div>
-                                <span>Frau Schmidt</span>
-                            </div>
-                            <div class="course-price">Rp2.750.000</div>
-                        </div>
-                    </div>
-                </div> --}}
+      <div class="row mt-5">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="course-card">
+            <img
+              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Kelas Reguler Offline" class="course-image">
+            <div class="course-content">
+              <span class="course-badge">Reguler Offline</span>
+              <h5 class="course-title">Super Intensif Reguler Offline</h5>
+              <p class="course-description">Belajar langsung di kelas dengan suasana interaktif. Cocok untuk kamu yang ingin cepat memahami Bahasa Jerman secara menyeluruh dengan bimbingan tatap muka.</p>
+
+              <a href="#" class="price-btn">
+                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
+          </div>
         </div>
-    </section>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="course-card">
+            <img
+              src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Kelas Online" class="course-image">
+            <div class="course-content">
+              <span class="course-badge">Reguler Online</span>
+              <h5 class="course-title">Super Intensif Reguler Online</h5>
+              <p class="course-description">Belajar dari mana saja dengan metode intensif. Dirancang untuk kamu yang ingin fasih Bahasa Jerman secara efektif melalui sesi live online yang terarah.</p>
+              <a href="#" class="price-btn">
+                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="course-card">
+            <img
+              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Persiapan Ujian" class="course-image">
+            <div class="course-content">
+              <span class="course-badge">Private</span>
+              <h5 class="course-title">Private Gramatik</h5>
+              <p class="course-description">Kelas Private Grammatik sangat cocok bagi kamu yang ingin mendalami grammatik tertentu dengan waktu dan kuantitas kelas yang dapat disesuaikan.</p>
+              <a href="#" class="price-btn">
+                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="course-card">
+            <img
+              src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Kelas Au Pair" class="course-image">
+            <div class="course-content">
+              <span class="course-badge">Persiapan</span>
+              <h5 class="course-title">Kelas Persiapan Ujian</h5>
+              <p class="course-description">Kelas Persiapan Ujian sangat cocok bagi kamu yang sedang menyiapkan ujian sertifikasi Bahasa Jerman dengan waktu dan kuantitas kelas yang dapat disesuaikan</p>
+              <a href="3" class="price-btn">
+                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="course-card">
+            <img
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Business German" class="course-image">
+            <div class="course-content">
+              <span class="course-badge">Au Pair</span>
+              <h5 class="course-title">Kelas Au Pair</h5>
+              <p class="course-description">Au Pair secara singkat adalah program pertukaran budaya antar negara. Au Pair memberikan kesempatan bagi anak muda yang berusia 18 hingga 26 tahun.</p>
+              <a href="#" class="price-btn">
+                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {{-- <div class="col-lg-4 col-md-6 mb-4">
+          <div class="course-card">
+            <img
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Business German" class="course-image">
+            <div class="course-content">
+              <span class="course-badge">Course Online</span>
+              <h5 class="course-title">Course Bahasa Jerman</h5>
+              <p class="course-description">Belajar Bahasa Jerman jadi lebih mudah dengan sistem Learning Management System (LMS) DlmF.</p>
+              <a href="#" class="price-btn">
+                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div> --}}
+
+      </div>
+    </div>
+  </section>
 
     <!-- Teachers Section -->
     <section class="teachers-section">
@@ -1907,7 +2057,7 @@
                         <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
                             alt="Frau Schmidt" class="teacher-avatar">
                         <h5 class="teacher-name">Frau Schmidt</h5>
-                        <p class="teacher-level">German Tutor C1-C2</p>
+                        <p class="teacher-level">German Tutor C1-B2</p>
                         <p class="teacher-description">PhD Linguistik, Spesialis Exam Preparation</p>
                         <p class="small text-primary">10+ tahun pengalaman</p>
                     </div>
@@ -2076,17 +2226,20 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 mb-4">
+                <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
-                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;" alt="Logo-Mitfara-Bulat">
+                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;"
+                            alt="Logo-Mitfara-Bulat">
                     </div>
-                    <h2 class="mb-3"><b>Deutsch Lernen Mit Fara</b></h2>
-                    <p class="mb-2">📍 Jalan Trengguli Sari Asri No. 79, Semarang, Semarang, Jawa Tengah, Indonesia</p>
-                    <p class="mb-2">📞 +62 896 7576 5648</p>
+                    <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
+                    <p class="footer-description">
+                        Platform pembelajaran bahasa Jerman terpercaya dengan metode pembelajaran yang efektif dan
+                        menyenangkan.
+                    </p>
                 </div>
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5>Quick Link</h5>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Link</h5>
                     <ul class="footer-links">
                         {{-- <li><a href="#">Course</a></li> --}}
                         <li><a href="{{ url('/') }}">Beranda</a></li>
@@ -2097,16 +2250,42 @@
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                         {{-- <li><a href="#">Career</a></li>
                         <li><a href="#">Legalitas</a></li> --}}
+
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="footer-title text-white">Follow Us</h5>
-                    <div class="d-flex gap-3 mb-3">
-                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+                    <h5 class="footer-title">Get In Touch</h5>
+                    <div class="contact-info">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                href="https://wa.me/6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0">+62
+                                896 4789 7616</a>
+                        </span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                href="mailto:info@mitfara.com">info@mitfara.com</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <div class="d-flex gap-3 social-links mb-1">
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                     <p class="footer-description">
                         Ikuti media sosial kami untuk tips belajar bahasa Jerman dan update program terbaru.
@@ -2115,12 +2294,14 @@
             </div>
 
             <div class="footer-bottom">
-                <div class="d-flex justify-content-between align-items-center flex-wrap">
-                    <p class="mb-0">© 2025 PT Fara Kreatif Sejahtera. All Right Reserved</p>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-decoration-none" style="color: white">Terms</a>
-                        <a href="#" class="text-decoration-none" style="color: white">Privacy</a>
-                        <a href="#" class="text-decoration-none" style="color: white">Legal</a>
+                <div class="row">
+                    <div class="col-md-6 text-start">
+                        <span>© 2025 Deutsch Lernen mit Fara. All Rights Reserved</span>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <a href="#" class="me-3 text-white text-decoration-none">Terms</a>
+                        <a href="#" class="me-3 text-white text-decoration-none">Privacy</a>
+                        <a href="#" class="text-white text-decoration-none">Legal</a>
                     </div>
                 </div>
             </div>

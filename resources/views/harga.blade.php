@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harga - DlmF</title>
-    <link rel="icon" href="https://via.placeholder.com/32x32/7C3AED/ffffff?text=D" type="image/x-icon">
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-bulet.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -559,6 +559,45 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
+        .footer-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 8px;
+            color: #94a3b8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 576px){
+            .social-links {
+                justify-content: center;
+            }
+        }
+
         /* Modal Styles */
         .modal-content {
             border-radius: 20px;
@@ -737,11 +776,7 @@
             }
         }
 
-        .footer-description {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 30px;
-            line-height: 1.8;
-        }
+
     </style>
 </head>
 
@@ -1147,13 +1182,13 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
-                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;" alt="Logo-Mitfara-Bulat">
+                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;"
+                            alt="Logo-Mitfara-Bulat">
                     </div>
-                    <h2 class="footer-brand"><b>Deutsch Lernen mit Fara</b></h2>
+                    <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
                     <p class="footer-description">
                         Platform pembelajaran bahasa Jerman terpercaya dengan metode pembelajaran yang efektif dan
-                        menyenangkan. Kami berkomitmen membantu Anda mencapai kemampuan berbahasa Jerman yang
-                        diinginkan.
+                        menyenangkan.
                     </p>
                 </div>
 
@@ -1177,28 +1212,33 @@
                     <h5 class="footer-title">Get In Touch</h5>
                     <div class="contact-info">
                         <i class="bi bi-geo-alt-fill"></i>
-                        <span>Jalan Trengguli Sari Asri No. 79, Semarang, Jawa Tengah, 61234</span>
+                        <span>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</span>
                     </div>
                     <div class="contact-info">
                         <i class="bi bi-telephone-fill"></i>
-                        <span>+62 896 7576 5648</span>
+                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                href="https://wa.me/6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0">+62
+                                896 4789 7616</a>
+                        </span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                href="mailto:info@mitfara.com">info@mitfara.com</a>
+                        </span>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5 class="footer-title">Follow Us</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white" style="font-size: 1.5rem; transition: all 0.3s ease;">
-                            <i class="bi bi-facebook"></i>
+                    <div class="d-flex gap-3 social-links mb-1">
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i>
                         </a>
-                        <a href="#" class="text-white" style="font-size: 1.5rem; transition: all 0.3s ease;">
-                            <i class="bi bi-instagram"></i>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i>
                         </a>
-                        <a href="#" class="text-white" style="font-size: 1.5rem; transition: all 0.3s ease;">
-                            <i class="bi bi-youtube"></i>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i>
                         </a>
-                        <a href="#" class="text-white" style="font-size: 1.5rem; transition: all 0.3s ease;">
-                            <i class="bi bi-whatsapp"></i>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i>
                         </a>
                     </div>
                     <p class="footer-description">
@@ -1213,9 +1253,9 @@
                         <span>© 2025 Deutsch Lernen mit Fara. All Rights Reserved</span>
                     </div>
                     <div class="col-md-6 text-end">
-                        <a href="#" class="me-3">Terms</a>
-                        <a href="#" class="me-3">Privacy</a>
-                        <a href="#">Legal</a>
+                        <a href="#" class="me-3 text-white text-decoration-none">Terms</a>
+                        <a href="#" class="me-3 text-white text-decoration-none">Privacy</a>
+                        <a href="#" class="text-white text-decoration-none">Legal</a>
                     </div>
                 </div>
             </div>

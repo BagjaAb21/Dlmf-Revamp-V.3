@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Deutsch Lernen mit Fara')</title>
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-bulet.png') }}" type="image/x-icon">
+    <meta name="description" content="@yield('description', 'Belajar bahasa Jerman dengan cara yang menyenangkan dan efektif bersama Deutsch Lernen mit Fara.')">
+    <meta name="keywords" content="@yield('keywords', 'Bahasa Jerman, Kursus Bahasa Jerman, Deutsch Lernen mit Fara')">
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
@@ -20,23 +23,33 @@
             --text-dark: #334155;
         }
 
-        .navbar-dark.bg-primary {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+        /* Header & Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         .navbar-brand {
             font-weight: 700;
-            font-size: 1.4rem;
+            font-size: 1.25rem;
+            color: var(--primary-color) !important;
         }
 
-        .nav-link.active {
-            color: var(--accent-color) !important;
-            font-weight: 600;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-color) !important;
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
             transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color) !important;
         }
 
         .btn-light {
@@ -54,13 +67,116 @@
             transform: translateY(-2px);
         }
 
-        footer.bg-dark {
-            background: var(--dark-blue) !important;
+        /* Footer */
+        .footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+            display: inline-block;
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 8px;
+            color: #94a3b8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
         }
 
         .social-links a:hover {
-            color: var(--accent-color) !important;
-            transition: color 0.3s ease;
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 576px){
+            .social-links {
+                justify-content: center;
+            }
         }
 
         .text-white-50:hover {
@@ -72,12 +188,11 @@
     @stack('styles')
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('home') }}">
-                <i class="bi bi-translate me-2"></i>
-                Deutsch Lernen mit Fara
+            <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;" alt="Logo-Mitfara-Panjang">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -85,23 +200,27 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Beranda</a>
+                        <a class="nav-link" href="{{ url('/') }}">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
+                            <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
+                        </ul>
+                    </li>
+                    {{-- <li class="nav-item">
+                        <a class="nav-link" href="#">Produk Digital</a>
+                    </li> --}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('blog.*') ? 'active' : '' }}" href="{{ route('blog.index') }}">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('teachers.index') ? 'active' : '' }}" href="{{ route('teachers.index') }}">Guru</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">Tentang Kami</a>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <a class="btn btn-light btn-sm" href="/admin-minfara">
-                            <i class="bi bi-lock"></i> Login
-                        </a>
+                        <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
                 </ul>
             </div>
@@ -112,39 +231,87 @@
     @yield('content')
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5 mt-5">
+    <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h5>Deutsch Lernen mit Fara</h5>
-                    <p>Portal belajar bahasa Jerman No. 1 di Indonesia</p>
-                    <div class="social-links">
-                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-logo">
+                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;"
+                            alt="Logo-Mitfara-Bulat">
                     </div>
+                    <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
+                    <p class="footer-description">
+                        Platform pembelajaran bahasa Jerman terpercaya dengan metode pembelajaran yang efektif dan
+                        menyenangkan.
+                    </p>
                 </div>
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="{{ route('home') }}" class="text-white-50">Beranda</a></li>
-                        <li><a href="{{ route('blog.index') }}" class="text-white-50">Blog</a></li>
-                        <li><a href="{{ route('teachers.index') }}" class="text-white-50">Guru</a></li>
-                        <li><a href="{{ route('about') }}" class="text-white-50">Tentang Kami</a></li>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Link</h5>
+                    <ul class="footer-links">
+                        {{-- <li><a href="#">Course</a></li> --}}
+                        <li><a href="{{ url('/') }}">Beranda</a></li>
+                        <li><a href="{{ url('/program') }}">Program</a></li>
+                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
+                        <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
+                        <li><a href="{{ url('/about') }}">About Us</a></li>
+                        {{-- <li><a href="#">Career</a></li>
+                        <li><a href="#">Legalitas</a></li> --}}
+
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h5>Kontak</h5>
-                    <p class="text-white-50">
-                        <i class="bi bi-envelope me-2"></i> info@deutschlernen.id<br>
-                        <i class="bi bi-phone me-2"></i> +62 812 3456 7890<br>
-                        <i class="bi bi-geo-alt me-2"></i> Jakarta, Indonesia
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Get In Touch</h5>
+                    <div class="contact-info">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                href="https://wa.me/6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0">+62
+                                896 4789 7616</a>
+                        </span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                href="mailto:info@mitfara.com">info@mitfara.com</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <div class="d-flex gap-3 social-links mb-1">
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                    <p class="footer-description">
+                        Ikuti media sosial kami untuk tips belajar bahasa Jerman dan update program terbaru.
                     </p>
                 </div>
             </div>
-            <hr class="my-4">
-            <div class="text-center">
-                <p class="mb-0">&copy; 2024 Deutsch Lernen mit Fara. All rights reserved.</p>
+
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6 text-start">
+                        <span>© 2025 Deutsch Lernen mit Fara. All Rights Reserved</span>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <a href="#" class="me-3 text-white text-decoration-none">Terms</a>
+                        <a href="#" class="me-3 text-white text-decoration-none">Privacy</a>
+                        <a href="#" class="text-white text-decoration-none">Legal</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -153,5 +320,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     @stack('scripts')
+
+    <script>
+        // Navbar background on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
