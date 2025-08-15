@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
@@ -96,7 +99,7 @@
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -140,6 +143,7 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -264,9 +268,17 @@
             display: block;
         }
 
-        .mockup-dots span:nth-child(1) { background: #EF4444; }
-        .mockup-dots span:nth-child(2) { background: #F59E0B; }
-        .mockup-dots span:nth-child(3) { background: #10B981; }
+        .mockup-dots span:nth-child(1) {
+            background: #EF4444;
+        }
+
+        .mockup-dots span:nth-child(2) {
+            background: #F59E0B;
+        }
+
+        .mockup-dots span:nth-child(3) {
+            background: #10B981;
+        }
 
         .mockup-title {
             color: white;
@@ -619,7 +631,7 @@
             transform: translateY(-2px);
         }
 
-        @media (max-width: 576px){
+        @media (max-width: 576px) {
             .social-links {
                 justify-content: center;
             }
@@ -1015,10 +1027,12 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;" alt="Logo-Mitfara-Panjang">
+                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;"
+                    alt="Logo-Mitfara-Panjang">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -1069,13 +1083,16 @@
             <!-- Program 1: Super Intensif Regular Offline -->
             <div class="row align-items-center program-card" data-aos="fade-up">
                 <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-                    <div class="program-badge">Super Intensif</div>
+                    <div class="program-badge">Program DlmF</div>
                     <h2 class="program-title">Super Intensif Regular Offline</h2>
                     <p class="program-description">
-                        Program pembelajaran bahasa Jerman secara offline dengan metode yang intensif dan terstruktur.
-                        Cocok untuk kamu yang ingin belajar dengan interaksi langsung bersama instruktur berpengalaman
-                        dan sesama peserta dalam suasana kelas yang kondusif. Program ini dirancang untuk memberikan
-                        pengalaman belajar yang mendalam dengan fokus pada praktik speaking dan listening secara langsung.
+                        Belajar Bahasa Jerman jadi lebih cepat dan efektif bersama DlmF! Dengan 20x pertemuan intensif
+                        per bulan, kamu akan didampingi langsung oleh tutor profesional dalam kelas kecil berisi 3–8
+                        orang.
+
+                        Tersedia pilihan waktu fleksibel (pagi, sore, malam) dan level A1–B1. Nikmati beragam benefit:
+                        8x simulasi ujian GOETHE, sertifikat keikutsertaan, video pembelajaran, e-book modul, konsultasi
+                        pribadi dengan tutor, hingga rapot akhir pembelajaran.
                     </p>
                     <a href="#" class="btn-program">Daftar Sekarang</a>
                 </div>
@@ -1159,15 +1176,16 @@
             <!-- Program 2: Super Intensif Regular Online -->
             <div class="row align-items-center program-card" data-aos="fade-up">
                 <div class="col-lg-6 col-md-12 order-lg-2 mb-4 mb-lg-0">
-                    <div class="program-badge">Super Intensif</div>
+                    <div class="program-badge">Program DlmF</div>
                     <h2 class="program-title">Super Intensif Regular Online</h2>
                     <p class="program-description">
-                        Belajar bahasa Jerman secara online dengan fleksibilitas waktu dan tempat. Program ini dirancang
-                        dengan teknologi pembelajaran modern dan interaktif, memungkinkan kamu belajar dari mana saja
-                        dengan kualitas yang sama seperti pembelajaran offline. Dilengkapi dengan live session, recorded
-                        materials, dan interactive assignments untuk memastikan progress belajar yang optimal.
+                        Belajar Bahasa Jerman jadi lebih fleksibel dan tetap intensif dari mana saja! Dapatkan 20
+                        pertemuan per bulan dalam kelas kecil (3–8 orang) dengan tutor profesional.
+
+                        Pilih jadwal pagi, sore, atau malam, dan nikmati berbagai benefit seperti simulasi ujian GOETHE,
+                        video pembelajaran, e-book, hingga konsultasi personal.
                     </p>
-                    <a href="#" class="btn-program">Mulai Belajar</a>
+                    <a href="#" class="btn-program">Daftar Sekarang</a>
                 </div>
                 <div class="col-lg-6 col-md-12 order-lg-1">
                     <div class="program-mockup">
@@ -1249,15 +1267,19 @@
             <!-- Program 3: Kelas Private Gramatik -->
             <div class="row align-items-center program-card" data-aos="fade-up">
                 <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-                    <div class="program-badge">Program Spesial</div>
+                    <div class="program-badge">Program DlmF</div>
                     <h2 class="program-title">Kelas Private Gramatik</h2>
                     <p class="program-description">
-                        Program khusus untuk memperdalam pemahaman tata bahasa Jerman dengan pendekatan personal.
-                        Cocok untuk kamu yang ingin fokus pada aspek gramatik dengan bimbingan intensif one-on-one
-                        dari instruktur ahli. Materi disesuaikan dengan kebutuhan spesifik dan tingkat kemampuan
-                        individual untuk hasil belajar yang maksimal dalam waktu yang relatif singkat.
+                        Program ini dirancang khusus bagi kamu yang ingin fokus mendalami materi grammatik Bahasa Jerman
+                        secara mendalam dan personal. Materi disesuaikan dengan kebutuhanmu (by request), sehingga cocok
+                        untuk kamu yang ingin memperkuat area tertentu dalam waktu yang fleksibel.
+
+                        Tersedia untuk level A1–B1 serta pilihan kelas Private (sendiri) atau Semi Private (berdua)
+                        dengan durasi 60–90 menit per sesi. Kamu bisa menentukan jumlah dan jadwal pertemuan sesuai
+                        kesepakatan dengan pengajar. Disarankan mengambil minimal 20 sesi per bulan agar hasilnya
+                        maksimal.
                     </p>
-                    <a href="#" class="btn-program">Konsultasi Gratis</a>
+                    <a href="#" class="btn-program">Daftar Sekarang</a>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="program-mockup">
@@ -1339,15 +1361,19 @@
             <!-- Program 4: Super Intensif Regular Online (Alternative) -->
             <div class="row align-items-center program-card" data-aos="fade-up">
                 <div class="col-lg-6 col-md-12 order-lg-2 mb-4 mb-lg-0">
-                    <div class="program-badge">Super Intensif</div>
+                    <div class="program-badge">Program DlmF</div>
                     <h2 class="program-title">Super Intensif Regular Online</h2>
                     <p class="program-description">
-                        Varian lanjutan dari program online dengan fitur-fitur premium dan dukungan pembelajaran yang
-                        lebih komprehensif. Dilengkapi dengan AI learning assistant dan community support untuk
-                        pengalaman belajar yang optimal. Program ini cocok untuk learners yang ingin mendapatkan
-                        experience belajar yang lebih advanced dengan teknologi terdepan dan support system yang lengkap.
+                        Siap hadapi ujian sertifikasi Bahasa Jerman dengan percaya diri! Kelas ini dirancang khusus
+                        untuk membahas empat bagian utama ujian: Lesen, Hören, Schreiben, dan Sprechen. Materi disusun
+                        sesuai kebutuhanmu dan difokuskan untuk membantu kamu lulus ujian dengan hasil maksimal.
+
+                        Kelas tersedia untuk level A1 - B1 serta dalam format Private (sendiri) atau Semi Private (2
+                        orang), berdurasi 60–90 menit per sesi. Kamu bisa menentukan jadwal dan jumlah sesi sesuai
+                        kesepakatan dengan pengajar. DlmF merekomendasikan minimal 20 pertemuan dalam sebulan untuk
+                        hasil yang optimal.
                     </p>
-                    <a href="#" class="btn-program">Bergabung Sekarang</a>
+                    <a href="#" class="btn-program">Daftar Sekarang</a>
                 </div>
                 <div class="col-lg-6 col-md-12 order-lg-1">
                     <div class="program-mockup">
@@ -1498,7 +1524,10 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <h2 class="cta-title">Siap Mulai Belajar Bahasa Jerman?</h2>
-                    <a href="#" class="btn-cta">Mulai Perjalananmu Sekarang</a>
+                    <p class="cta-subtitle">Bergabunglah dengan ribuan siswa yang telah merasakan kemudahan belajar
+                        bahasa
+                        Jerman bersama kami di DlmF</p>
+                    <a href="#" class="btn-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a>
                 </div>
             </div>
         </div>
@@ -1596,7 +1625,7 @@
     <!-- Custom JavaScript -->
     <script>
         // Navbar scroll effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
                 navbar.style.background = 'rgba(255, 255, 255, 0.98)';
@@ -1627,7 +1656,7 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
@@ -1652,14 +1681,14 @@
 
         // Add hover effects to program cards
         document.querySelectorAll('.program-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
+            card.addEventListener('mouseenter', function () {
                 if (window.innerWidth > 768) {
                     this.style.transform = 'translateY(-10px) scale(1.02)';
                     this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
                 }
             });
 
-            card.addEventListener('mouseleave', function() {
+            card.addEventListener('mouseleave', function () {
                 if (window.innerWidth > 768) {
                     this.style.transform = 'translateY(0) scale(1)';
                 }
@@ -1667,7 +1696,7 @@
         });
 
         // Add loading animation
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             document.body.style.opacity = '0';
             document.body.style.transition = 'opacity 0.5s ease';
 
@@ -1678,7 +1707,7 @@
 
         // Add interactive button effects
         document.querySelectorAll('.btn-program, .btn-cta, .btn-login').forEach(button => {
-            button.addEventListener('click', function(e) {
+            button.addEventListener('click', function (e) {
                 if (this.getAttribute('href') === '#') {
                     e.preventDefault();
                 }
@@ -1753,7 +1782,7 @@
         }
 
         // Handle window resize for responsive adjustments
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function () {
             // Reset any hover effects on resize
             document.querySelectorAll('.program-card').forEach(card => {
                 card.style.transform = 'translateY(0) scale(1)';
@@ -1767,11 +1796,11 @@
             // Disable hover effects on touch devices
             const hoverElements = document.querySelectorAll('.program-card, .btn-program, .btn-cta');
             hoverElements.forEach(element => {
-                element.addEventListener('touchstart', function() {
+                element.addEventListener('touchstart', function () {
                     this.classList.add('touch-active');
                 });
 
-                element.addEventListener('touchend', function() {
+                element.addEventListener('touchend', function () {
                     setTimeout(() => {
                         this.classList.remove('touch-active');
                     }, 300);
@@ -1780,4 +1809,5 @@
         }
     </script>
 </body>
+
 </html>

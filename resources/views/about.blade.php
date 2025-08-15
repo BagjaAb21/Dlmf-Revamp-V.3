@@ -321,9 +321,9 @@
             background-image: url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
 
-        /* Values Section - Sesuai Gambar */
+        /* Values Section - Modified to Card Style */
         .values-section {
-            background: white;
+            background: var(--light-gray);
             padding: 4rem 0;
         }
 
@@ -349,13 +349,48 @@
         }
 
         .value-item {
-            background: transparent;
-            padding: 0;
-            border: none;
-            box-shadow: none;
+            background: white;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
             opacity: 0;
             transform: translateY(20px);
-            transition: all 0.6s ease;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .value-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .value-item::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            opacity: 0.08;
+            transition: all 0.4s ease;
         }
 
         .value-item.animate {
@@ -364,21 +399,112 @@
         }
 
         .value-item:hover {
-            transform: translateY(-2px);
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+        }
+
+        .value-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .value-item:hover::after {
+            opacity: 0.2;
+            transform: scale(1.2);
         }
 
         .value-item h5 {
             color: var(--dark-blue);
-            font-weight: bold;
-            margin-bottom: 0.8rem;
-            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            line-height: 1.3;
+        }
+
+        .value-item:hover h5 {
+            color: var(--primary-color);
         }
 
         .value-item p {
-            color: var(--text-dark);
+            color: #64748b;
             font-size: 0.9rem;
             line-height: 1.6;
             margin: 0;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            width: 100%;
+            text-align: justify;
+            hyphens: auto;
+            word-wrap: break-word;
+        }
+
+        .value-item:hover p {
+            color: var(--text-dark);
+        }
+
+        /* Reset any conflicting JavaScript styles */
+        .value-item {
+            background: white !important;
+            color: initial !important;
+            padding: 2rem !important;
+            border-radius: 20px !important;
+        }
+
+        /* Responsive untuk Values Section */
+        @media (max-width: 768px) {
+            .values-content {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                gap: 1.5rem;
+            }
+
+            .value-item {
+                padding: 1.8rem;
+                min-height: 200px;
+            }
+
+            .value-item h5 {
+                font-size: 1rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .value-item p {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .values-content {
+                grid-template-columns: 1fr;
+            }
+
+            .value-item {
+                padding: 1.5rem;
+                min-height: 180px;
+            }
+
+            .value-item h5 {
+                font-size: 1rem;
+            }
+
+            .value-item p {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .value-item::after {
+                width: 30px;
+                height: 30px;
+                top: 12px;
+                right: 12px;
+            }
         }
 
         /* Journey Section - Layout sesuai gambar dengan animasi bergerak */
@@ -1184,10 +1310,8 @@
                         baru serta memperkuat kualitas pengajaran melalui pengajar tersertifikasi. Kami percaya bahwa
                         langkah-
                         langkah kecil yang dilakukan secara konsisten dapat menciptakan perubahan besar dalam dunia
-                        pendidikan.
-                    </p>
-                    <p class="journey-desc">
-                        Perjalanan kami dimulai dari hal-hal sederhana yang terus tumbuh seiring waktu. Berikut adalah
+                        pendidikan. Perjalanan kami dimulai dari hal-hal sederhana yang terus tumbuh seiring waktu.
+                        Berikut adalah
                         tonggak
                         yang menandai perkembangan DlmF.
                     </p>
@@ -1323,43 +1447,39 @@
 
             <div class="teachers-grid">
                 <div class="teacher-card" data-delay="0">
-                    <div class="teacher-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Jara.png')">
                     </div>
-                    <div class="teacher-name">Frau Caca</div>
-                    <div class="teacher-level">Level B1</div>
-                    <div class="teacher-description">Sastra Jerman Universitas Padjadjaran</div>
-                    <div class="teacher-experience">2 Tahun Pengalaman</div>
+                    <div class="teacher-name">Frau Jara</div>
+                    <div class="teacher-level">Level B2</div>
+                    <!-- <div class="teacher-description">Sastra Jerman Universitas Padjadjaran</div> -->
+                    <div class="teacher-experience">5 Tahun Pengalaman Mengajar</div>
                 </div>
 
                 <div class="teacher-card" data-delay="200">
-                    <div class="teacher-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7bf874e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Herr_Fadhil.png')">
                     </div>
-                    <div class="teacher-name">Frau Fila</div>
-                    <div class="teacher-level">Level A1</div>
-                    <div class="teacher-description">Sertifikasi GOETHE A2</div>
-                    <div class="teacher-experience">1.5 Tahun Pengalaman</div>
+                    <div class="teacher-name">Herr Fadhil</div>
+                    <div class="teacher-level">Level B1</div>
+                    <!-- <div class="teacher-description">Sertifikasi GOETHE A2</div> -->
+                    <div class="teacher-experience">1.5 Tahun Pengalaman Mengajar</div>
                 </div>
 
                 <div class="teacher-card" data-delay="400">
-                    <div class="teacher-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Assyifa.png')">
                     </div>
-                    <div class="teacher-name">Frau Azizah</div>
-                    <div class="teacher-level">Level B2</div>
-                    <div class="teacher-description">Native Speaker dari Jerman</div>
-                    <div class="teacher-experience">3 Tahun Pengalaman</div>
+                    <div class="teacher-name">Frau Assyifa</div>
+                    <div class="teacher-level">Level B1</div>
+                    <!-- <div class="teacher-description">Native Speaker dari Jerman</div> -->
+                    <div class="teacher-experience">2 Tahun Pengalaman Mengajar</div>
                 </div>
 
                 <div class="teacher-card" data-delay="600">
-                    <div class="teacher-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1544005313-94dc1d8a9d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Herr_Iqbal.png')">
                     </div>
-                    <div class="teacher-name">Frau Rara</div>
+                    <div class="teacher-name">Herr Iqbalsyah</div>
                     <div class="teacher-level">Level B2</div>
-                    <div class="teacher-description">Lulusan Deutschkurs München</div>
-                    <div class="teacher-experience">2.5 Tahun Pengalaman</div>
+                    <!-- <div class="teacher-description">Lulusan Deutschkurs München</div> -->
+                    <div class="teacher-experience">3 Tahun Pengalaman Mengajar</div>
                 </div>
             </div>
         </div>
@@ -1671,33 +1791,6 @@
         });
 
         // Add dynamic gradient backgrounds
-        document.addEventListener('DOMContentLoaded', () => {
-            const gradients = [
-                'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-                'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-                'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-                'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-                'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
-            ];
-
-            const valueCards = document.querySelectorAll('.value-item');
-            valueCards.forEach((card, index) => {
-                card.addEventListener('mouseenter', () => {
-                    card.style.background = `linear-gradient(135deg, ${gradients[index % gradients.length]})`;
-                    card.style.color = 'white';
-                    card.style.padding = '1.5rem';
-                    card.style.borderRadius = '15px';
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    card.style.background = 'transparent';
-                    card.style.color = '';
-                    card.style.padding = '0';
-                    card.style.borderRadius = '';
-                });
-            });
-        });
 
         // Add typing effect for hero title
         document.addEventListener('DOMContentLoaded', () => {

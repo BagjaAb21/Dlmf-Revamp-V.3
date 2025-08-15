@@ -297,14 +297,24 @@
         }
 
         .program-type {
-            display: inline-block;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            background: rgba(124, 58, 237, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #000000;
             margin-bottom: 1rem;
+        }
+
+        .program-price-container {
+            margin-bottom: 0.5rem;
+        }
+
+        .program-price-old {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #94a3b8;
+            text-decoration: line-through;
+            margin-bottom: 0.2rem;
+            display: block;
         }
 
         .program-price {
@@ -325,6 +335,7 @@
             font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: 2rem;
+            text-align: justify;
         }
 
         .benefits-title {
@@ -592,7 +603,7 @@
             transform: translateY(-2px);
         }
 
-        @media (max-width: 576px){
+        @media (max-width: 576px) {
             .social-links {
                 justify-content: center;
             }
@@ -650,6 +661,34 @@
             border-top: 2px solid var(--primary-color);
             padding-top: 1rem;
             margin-top: 1rem;
+        }
+
+        .whatsapp-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
         }
 
         /* Floating Elements */
@@ -775,8 +814,6 @@
                 opacity: 1;
             }
         }
-
-
     </style>
 </head>
 
@@ -785,7 +822,8 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;" alt="Logo-Mitfara-Panjang">
+                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;"
+                    alt="Logo-Mitfara-Panjang">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -851,136 +889,142 @@
                 </div>
             </div>
 
-            <!-- First Row Programs -->
+            <!-- Programs Row -->
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                     <div class="program-card">
-                        <div class="program-type">Kelas Private Grammatik</div>
-                        <div class="program-price">Rp100.000</div>
-                        <div class="program-duration">Fleksibel</div>
+                        <div class="program-type">Super Intensif Reguler Offline</div>
+                        <div class="program-price-container">
+                            <span class="program-price-old">Rp2.000.000</span>
+                            <div class="program-price">Rp1.750.000</div>
+                        </div>
+                        <div class="program-duration">20x Pertemuan</div>
                         <p class="program-description">
-                            Kelas privat khusus untuk memperdalam tata bahasa Jerman dengan pendekatan personal sesuai
-                            kebutuhan dan level kemampuan Anda.
+                            Belajar langsung di kelas dengan suasana interaktif. Cocok untuk kamu yang ingin cepat
+                            memahami Bahasa Jerman secara menyeluruh dengan bimbingan tatap muka.
                         </p>
 
                         <div class="benefits-title">Benefit:</div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>1-6 Sesi belajar ONLINE</span>
+                            <span>8x Simulasi Ujian GOETHE</span>
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Sertifikat hasil kelulusan</span>
+                            <span>Sertifikat Keikutsertaan</span>
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Gratis Video Pembelajaran</span>
+                            <span><b>Gratis</b> Video Pembelajaran</span>
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Gratis Konsultasi dengan Guru</span>
+                            <span><b>Gratis</b> Konsultasi dengan Tutor di Luar Jam Pembelajaran</span>
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Free Akses ke platform</span>
+                            <span><b>Gratis</b> E-Book Modul Lengkap</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span><b>Gratis</b> Konsultasi Program yang ingin diikuti di Jerman</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span><b>Gratis</b> Rapot Akhir Pembelajaran</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Terdapat pilihan Level A1, A2, B1</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Jadwal Fleksibel Pagi, Sore, Malam</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Kelas eksklusif berisi hanya 3 hingga 8 siswa</span>
                         </div>
 
                         <button class="btn btn-program mt-auto"
-                            onclick="showPricingModal('Kelas Private Grammatik', 'Rp100.000')">
+                            onclick="showPricingModal('Super Intensif Reguler Offline', 'Rp1.750.000')">
                             Daftar Sekarang
                         </button>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                     <div class="program-card">
-                        <div class="program-type">Kelas Private Grammatik</div>
-                        <div class="program-price">Rp100.000</div>
-                        <div class="program-duration">Fleksibel</div>
+                        <div class="program-type">Kelas Private Gramatik</div>
+                        <div class="program-price-container">
+                            <span class="program-price-old">Rp150.000</span>
+                            <div class="program-price">Rp100.000</div>
+                        </div>
+                        <div class="program-duration">1x Pertemuan</div>
                         <p class="program-description">
-                            Kelas privat khusus untuk memperdalam tata bahasa Jerman dengan pendekatan personal sesuai
-                            kebutuhan dan level kemampuan Anda.
+                            Kelas Private Grammatik sangat cocok bagi kamu yang ingin mendalami grammatik tertentu.
+                            Waktu dan kuantitas kelas dapat disesuaikan dengan kebutuhanmu.
                         </p>
 
                         <div class="benefits-title">Benefit:</div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>1-6 Sesi belajar ONLINE</span>
+                            <span>8x Simulasi Ujian GOETHE</span>
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Sertifikat hasil kelulusan</span>
+                            <span>Sertifikat Keikutsertaan</span>
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Gratis Video Pembelajaran</span>
+                            <span><b>Gratis</b> Video Pembelajaran</span>
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Gratis Konsultasi dengan Guru</span>
+                            <span><b>Gratis</b> Konsultasi dengan Tutor di Luar Jam Pembelajaran</span>
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Free Akses ke platform</span>
+                            <span><b>Gratis</b> E-Book Modul Lengkap</span>
                         </div>
-
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span><b>Gratis</b> Konsultasi Program yang ingin diikuti di Jerman</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span><b>Gratis</b> Rapot Akhir Pembelajaran</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Terdapat pilihan Level A1, A2, B1</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Jadwal Fleksibel Pagi, Sore, Malam</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span><b>Kelas eksklusif berisi hanya 1 s.d 2 Siswa</b></span>
+                        </div>
                         <button class="btn btn-program mt-auto"
-                            onclick="showPricingModal('Kelas Private Grammatik', 'Rp100.000')">
+                            onclick="showPricingModal('Program Au Pair', 'Rp100.000')">
                             Daftar Sekarang
                         </button>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                     <div class="program-card">
-                        <div class="program-type">Kelas Private Grammatik</div>
-                        <div class="program-price">Rp100.000</div>
-                        <div class="program-duration">Fleksibel</div>
+                        <div class="program-type">Super Intensif Regular Online</div>
+                        <div class="program-price-container">
+                            <span class="program-price-old">Rp1.700.000</span>
+                            <div class="program-price">Rp1.250.000</div>
+                        </div>
+                        <div class="program-duration">20x Pertemuan</div>
                         <p class="program-description">
-                            Kelas privat khusus untuk memperdalam tata bahasa Jerman dengan pendekatan personal sesuai
-                            kebutuhan dan level kemampuan Anda.
-                        </p>
-
-                        <div class="benefits-title">Benefit:</div>
-                        <div class="benefit-item">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>1-6 Sesi belajar ONLINE</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Sertifikat hasil kelulusan</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Gratis Video Pembelajaran</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Gratis Konsultasi dengan Guru</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Free Akses ke platform</span>
-                        </div>
-
-                        <button class="btn btn-program mt-auto"
-                            onclick="showPricingModal('Kelas Private Grammatik', 'Rp100.000')">
-                            Daftar Sekarang
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Second Row Programs -->
-            <div class="row mt-4">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="program-card">
-                        <div class="program-type">Persiapan Ujian</div>
-                        <div class="program-price">Rp100.000</div>
-                        <div class="program-duration">2-3 minggu</div>
-                        <p class="program-description">
-                            Kelas Persiapan ujian apapun seperti GOETHE Institut, ÖSD, TestDaF untuk meningkatkan
-                            kemampuan berbahasa Jerman. Dengan kurikulum terakreditasi internasional.
+                            Belajar dari mana saja dengan metode intensif. Dirancang untuk kamu yang ingin fasih Bahasa
+                            Jerman secara efektif melalui sesi live online yang terarah.
                         </p>
 
                         <div class="benefits-title">Benefit:</div>
@@ -1006,69 +1050,34 @@
                         </div>
 
                         <button class="btn btn-program mt-auto"
-                            onclick="showPricingModal('Persiapan Ujian', 'Rp100.000')">
+                            onclick="showPricingModal('Super Intensif Regular Online', 'Rp1.250.000')">
                             Daftar Sekarang
                         </button>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                     <div class="program-card">
-                        <div class="program-type">Au Pair</div>
-                        <div class="program-price">Rp10.000.000</div>
-                        <div class="program-duration">12 bulan</div>
+                        <div class="program-type">Kelas Persiapan Ujian</div>
+                        <div class="program-price-container">
+                            <span class="program-price-old">Rp125.000</span>
+                            <div class="program-price">Rp100.000</div>
+                        </div>
+                        <div class="program-duration">1x Pertemuan</div>
                         <p class="program-description">
-                            Program Au Pair lengkap untuk pengalaman bekerja dan belajar di Jerman. Termasuk persiapan
-                            visa, bahasa, dan budaya dengan bimbingan lengkap.
+                            Kelas Persiapan Ujian sangat cocok bagi kamu yang sedang menyiapkan ujian sertifikasi Bahasa
+                            Jerman. Waktu dan kuantitas kelas dapat disesuaikan dengan kebutuhanmu. Dalam kelas
+                            persiapan ujian ini, fokusnya akan membahas soal-soal lesen, hören, schreiben dan sprechen.
                         </p>
 
                         <div class="benefits-title">Benefit:</div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Bimbingan persiapan visa A1</span>
+                            <span>Lesen (Membaca)</span>
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Persiapan wawancara lengkap</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Perka persiapan berbagai A1 host</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Perka komunikasi dari dengan host</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Bantuan berbagai visa match</span>
-                        </div>
-
-                        <button class="btn btn-program mt-auto"
-                            onclick="showPricingModal('Program Au Pair', 'Rp10.000.000')">
-                            Daftar Sekarang
-                        </button>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="program-card">
-                        <div class="program-type">Course Bahasa Jerman</div>
-                        <div class="program-price">Rp150.000</div>
-                        <div class="program-duration">1-2 bulan</div>
-                        <p class="program-description">
-                            Kursus bahasa Jerman dengan metode pembelajaran modern dan interaktif untuk tingkat pemula
-                            hingga menengah dengan harga terjangkau.
-                        </p>
-
-                        <div class="benefits-title">Benefit:</div>
-                        <div class="benefit-item">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Akses Seluler 24/7 melalui platform LMS DlmF</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Materi pembelajaran interaktif</span>
+                            <span>Schreiben (Menulis)</span>
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
@@ -1076,19 +1085,125 @@
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Sertifikat penyelesaian</span>
+                            <span>Hören (Mendengar)</span>
                         </div>
                         <div class="benefit-item">
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Mobile app access</span>
+                            <span>Sprechen (Berbicara)</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span><b>Kelas Private 1 s.d. 2 Siswa</b></span>
                         </div>
 
                         <button class="btn btn-program mt-auto"
-                            onclick="showPricingModal('Course Bahasa Jerman', 'Rp150.000')">
+                            onclick="showPricingModal('Course Bahasa Jerman', 'Rp100.000')">
                             Daftar Sekarang
                         </button>
                     </div>
                 </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
+                    <div class="program-card">
+                        <div class="program-type">Au Pair</div>
+                        <div class="program-price-container">
+                            <span class="program-price-old">Rp12.000.000</span>
+                            <div class="program-price">Rp10.000.000</div>
+                        </div>
+                        <div class="program-duration">1x Pertemuan</div>
+                        <p class="program-description">
+                            Au Pair secara singkat adalah program pertukaran budaya antar negara. Au Pair memberikan
+                            kesempatan bagi anak muda yang berusia 18 hingga 26 tahun untuk mengenal budaya dan
+                            memperdalam bahasa Jerman secara langsung bersama keluarga asuh di Jerman dengan durasi
+                            kontraknya rata-rata setahun.
+                        </p>
+
+                        <div class="benefits-title">Benefit:</div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Biaya kursus level A1</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Biaya konsultasi terkait program</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Biaya pencarian keluarga di negara tujuan</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Biaya latihan interview</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Biaya pengurusan VISA</span>
+                        </div>
+
+                        <button class="btn btn-program mt-auto" onclick="showPricingModal('Au Pair', 'Rp10.000.000')">
+                            Daftar Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                {{-- <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
+                    <div class="program-card">
+                        <div class="program-type">Course Bahasa Jerman</div>
+                        <div class="program-price-container">
+                            <span class="program-price-old">Rp200.000</span>
+                            <div class="program-price">Rp150.000</div>
+                        </div>
+                        <div class="program-duration">30 Hari</div>
+                        <p class="program-description">
+                            Belajar Bahasa Jerman jadi lebih mudah dengan sistem Learning Management System (LMS) DlmF.
+                            Akses materi kapan saja dan di mana saja, sesuai ritmemu. Fleksibel, terstruktur, dan cocok
+                            untuk kamu yang ingin belajar mandiri.
+                        </p>
+
+                        <div class="benefits-title">Benefit:</div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Akses belajar 24/7 melalui platform LMS DlmF</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Bisa diakses dari mana saja, cukup koneksi internet</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Materi lengkap: video, modul PDF, dan latihan soal</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Cocok untuk pemula maupun pengulangan materi tertentu</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Biaya terjangkau, bisa langganan bulanan</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Support teknis dan akademik melalui chat/email</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Progress belajar tercatat otomatis di sistem</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Kurikulum disusun oleh tutor berpengalaman</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Dapat digunakan sebagai persiapan ujian resmi seperti Goethe</span>
+                        </div>
+
+                        <button class="btn btn-program mt-auto"
+                            onclick="showPricingModal('Intensive German Bootcamp', 'Rp150.000')">
+                            Daftar Sekarang
+                        </button>
+                    </div>
+                </div> --}}
             </div>
         </div>
     </section>
@@ -1291,11 +1406,18 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <a href="https://wa.me/6289675765648?text=Halo,%20saya%20tertarik%20untuk%20mendaftar%20program%20"
-                                target="_blank" class="btn btn-program btn-lg" id="whatsappButton">
-                                <i class="bi bi-whatsapp me-2"></i>
-                                Daftar via WhatsApp
-                            </a>
+                            <div class="whatsapp-buttons">
+                                <a href="https://wa.me/6289675765648?text=Halo,%20saya%20tertarik%20untuk%20mendaftar%20program%20"
+                                    target="_blank" class="btn-whatsapp" id="whatsappButton1">
+                                    <i class="bi bi-whatsapp me-2"></i>
+                                    Daftar WhatsApp MinFara 1
+                                </a>
+                                <a href="https://wa.me/6289647897616?text=Halo,%20saya%20tertarik%20untuk%20mendaftar%20program%20"
+                                    target="_blank" class="btn-whatsapp" id="whatsappButton2">
+                                    <i class="bi bi-whatsapp me-2"></i>
+                                    Daftar WhatsApp MinFara 2
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1320,11 +1442,12 @@
                         <a href="https://wa.me/6289675765648?text=Halo,%20saya%20tertarik%20untuk%20bergabung%20dengan%20program%20belajar%20bahasa%20Jerman"
                             class="btn btn-success btn-lg" target="_blank">
                             <i class="bi bi-whatsapp me-2"></i>
-                            WhatsApp: +62 896 7576 5648
+                            WhatsApp MinFara 1: +62 896 7576 5648
                         </a>
-                        <a href="tel:+6289675765648" class="btn btn-outline-success btn-lg">
-                            <i class="bi bi-telephone me-2"></i>
-                            Telepon: +62 896 7576 5648
+                        <a href="https://wa.me/6289647897616?text=Halo,%20saya%20tertarik%20untuk%20bergabung%20dengan%20program%20belajar%20bahasa%20Jerman"
+                            class="btn btn-success btn-lg" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i>
+                            WhatsApp MinFara 2: +62 896 4789 7616
                         </a>
                     </div>
                 </div>
@@ -1402,15 +1525,17 @@
             const modalTitle = document.getElementById('modalTitle');
             const programPriceEl = document.getElementById('programPrice');
             const totalPriceEl = document.getElementById('totalPrice');
-            const whatsappButton = document.getElementById('whatsappButton');
+            const whatsappButton1 = document.getElementById('whatsappButton1');
+            const whatsappButton2 = document.getElementById('whatsappButton2');
 
             modalTitle.textContent = `Detail Harga - ${programName}`;
             programPriceEl.textContent = totalPrice;
             totalPriceEl.textContent = totalPrice;
 
-            // Update WhatsApp link
+            // Update WhatsApp links
             const message = `Halo,%20saya%20tertarik%20untuk%20mendaftar%20program%20${encodeURIComponent(programName)}`;
-            whatsappButton.href = `https://wa.me/6289675765648?text=${message}`;
+            whatsappButton1.href = `https://wa.me/6289675765648?text=${message}`;
+            whatsappButton2.href = `https://wa.me/6289647897616?text=${message}`;
 
             modal.show();
         }

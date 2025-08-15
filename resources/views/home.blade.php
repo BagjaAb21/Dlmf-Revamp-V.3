@@ -216,7 +216,7 @@
             color: white;
         }
 
-        .btn-hero-secondary {
+        .btn-hero-secondary a {
             background: transparent;
             color: white;
             border: 2px solid white;
@@ -227,7 +227,7 @@
             transition: all 0.3s ease;
         }
 
-        .btn-hero-secondary:hover {
+        .btn-hero-secondary a:hover {
             background: white;
             color: var(--primary-color);
         }
@@ -753,174 +753,174 @@
         }
 
         /* Course Cards Section */
-    .courses-section {
-      padding: 5rem 0;
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    }
+        .courses-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
 
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      text-align: center;
-      margin-bottom: 1rem;
-    }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
 
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: var(--text-light);
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-    .course-card {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-      height: 100%;
-      position: relative;
-    }
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+        }
 
-    .course-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(124, 58, 237, 0.2);
-    }
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(124, 58, 237, 0.2);
+        }
 
-    .course-image {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
+        .course-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
 
-    .course-card:hover .course-image {
-      transform: scale(1.05);
-    }
+        .course-card:hover .course-image {
+            transform: scale(1.05);
+        }
 
-    .course-content {
-      padding: 1.8rem;
-    }
+        .course-content {
+            padding: 1.8rem;
+        }
 
-    .course-badge {
-      background: linear-gradient(135deg, var(--primary-color), #9333ea);
-      color: white;
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      display: inline-block;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+        .course-badge {
+            background: linear-gradient(135deg, var(--primary-color), #9333ea);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-    .course-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      color: var(--text-dark);
-      line-height: 1.4;
-    }
+        .course-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+            line-height: 1.4;
+        }
 
-    .course-description {
-      color: var(--text-light);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
-    }
+        .course-description {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
 
-    .course-instructor {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      color: var(--text-light);
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
-    }
+        .course-instructor {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
 
-    .instructor-avatar {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary-color), #9333ea);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
+        .instructor-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), #9333ea);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
 
-    .course-price {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-    }
+        .course-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
 
-    .price-btn {
-      background: linear-gradient(135deg, var(--primary-color), #9333ea);
-      color: white;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      width: 100%;
-      justify-content: center;
-    }
+        .price-btn {
+            background: linear-gradient(135deg, var(--primary-color), #9333ea);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            justify-content: center;
+        }
 
-    .price-btn:hover {
-      background: linear-gradient(135deg, #6d28d9, #7c3aed);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
-      color: white;
-    }
+        .price-btn:hover {
+            background: linear-gradient(135deg, #6d28d9, #7c3aed);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+            color: white;
+        }
 
-    .price-btn i {
-      font-size: 0.8rem;
-      transition: transform 0.3s ease;
-    }
+        .price-btn i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
 
-    .price-btn:hover i {
-      transform: translateX(3px);
-    }
+        .price-btn:hover i {
+            transform: translateX(3px);
+        }
 
-    @media (max-width: 768px) {
-      .section-title {
-        font-size: 2rem;
-      }
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
 
-      .courses-section {
-        padding: 3rem 0;
-      }
+            .courses-section {
+                padding: 3rem 0;
+            }
 
-      .course-image {
-        height: 200px;
-      }
+            .course-image {
+                height: 200px;
+            }
 
-      .course-content {
-        padding: 1.5rem;
-      }
-    }
+            .course-content {
+                padding: 1.5rem;
+            }
+        }
 
-    @media (max-width: 480px) {
-      .section-title {
-        font-size: 1.8rem;
-      }
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
 
-      .course-image {
-        height: 180px;
-      }
-    }
+            .course-image {
+                height: 180px;
+            }
+        }
 
         .instructor-avatar {
             width: 24px;
@@ -928,6 +928,7 @@
             border-radius: 50%;
             background: var(--primary-color);
         }
+
         /* Teachers Section */
         .teachers-section {
             padding: 5rem 0;
@@ -941,11 +942,13 @@
             text-align: center;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
+            border: 1px solid rgba(124, 58, 237, 0.1);
         }
 
         .teacher-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);
+            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.15);
+            border-color: var(--primary-color);
         }
 
         .teacher-avatar {
@@ -990,42 +993,67 @@
             box-shadow: 0 15px 40px rgba(124, 58, 237, 0.15);
         }
 
-        /* Testimonials Section with Carousel */
+        /* Testimonials Section with Dynamic Carousel */
         .testimonials-section {
             padding: 5rem 0;
             overflow: hidden;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6c757d;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .testimonial-carousel {
             display: flex;
-            animation: scroll 20s linear infinite;
-            width: calc(100% * 2);
+            gap: 2rem;
+            width: max-content;
+            animation: autoScroll var(--animation-duration, 40s) linear infinite;
         }
 
         .testimonial-carousel:hover {
             animation-play-state: paused;
         }
 
-        @keyframes scroll {
+        /* Dynamic keyframes */
+        @keyframes autoScroll {
             0% {
                 transform: translateX(0);
             }
 
             100% {
-                transform: translateX(-50%);
+                transform: translateX(var(--scroll-distance));
             }
         }
 
         .testimonial-card {
             background: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            margin-bottom: 2rem;
             border-left: 4px solid var(--primary-color);
-            flex: 0 0 33.333%;
-            margin-right: 2rem;
-            min-height: 280px;
+            flex: 0 0 420px;
+            /* Diperbesar dari 350px ke 420px */
+            min-height: 350px;
+            /* Diperbesar dari 280px ke 350px */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
 
         .testimonial-rating {
@@ -1033,10 +1061,23 @@
             margin-bottom: 1rem;
         }
 
+        .testimonial-rating i {
+            margin-right: 0.2rem;
+        }
+
         .testimonial-text {
             font-style: italic;
             margin-bottom: 1.5rem;
             color: var(--text-dark);
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 8;
+            /* Diperbesar dari 6 ke 8 baris */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 160px;
+            /* Tinggi minimum untuk konsistensi */
         }
 
         .testimonial-author {
@@ -1050,6 +1091,17 @@
             height: 50px;
             border-radius: 50%;
             background: var(--primary-color);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
         .author-info h6 {
@@ -1060,6 +1112,36 @@
 
         .author-info small {
             color: #64748B;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .testimonial-card {
+                flex: 0 0 340px;
+                /* Diperbesar dari 280px ke 340px */
+                padding: 2rem;
+                min-height: 320px;
+            }
+
+            .testimonial-text {
+                -webkit-line-clamp: 6;
+                /* Diperbesar dari 4 ke 6 baris */
+                min-height: 120px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .testimonial-card {
+                flex: 0 0 300px;
+                /* Diperbesar dari 250px ke 300px */
+                padding: 1.8rem;
+                min-height: 300px;
+            }
+
+            .testimonial-text {
+                -webkit-line-clamp: 5;
+                min-height: 100px;
+            }
         }
 
         /* FAQ Section with Smooth Animations */
@@ -1247,7 +1329,7 @@
             transform: translateY(-2px);
         }
 
-        @media (max-width: 576px){
+        @media (max-width: 576px) {
             .social-links {
                 justify-content: center;
             }
@@ -1343,7 +1425,7 @@
             }
 
             .btn-hero-primary,
-            .btn-hero-secondary {
+            .btn-hero-secondary a {
                 padding: 0.75rem 1.5rem;
                 font-size: 1rem;
                 width: 100%;
@@ -1521,6 +1603,7 @@
                 font-size: 0.8rem;
                 line-height: 1.4;
             }
+
             .teacher-card {
                 padding: 1.25rem;
             }
@@ -1639,7 +1722,8 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;" alt="Logo-Mitfara-Panjang">
+                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;"
+                    alt="Logo-Mitfara-Panjang">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -1684,8 +1768,10 @@
                     <p class="hero-subtitle">Bergabunglah dengan ribuan pelajar yang telah berhasil menguasai bahasa
                         Jerman bersama kami. Dari level A1 hingga B2, kami siap membantu perjalanan belajar Anda.</p>
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-hero-primary">Mulai Belajar</a>
-                        <button class="btn btn-hero-secondary">Tonton Video</button>
+                        <a href="{{ url('/harga') }}" class="btn btn-hero-primary">Mulai Belajar</a>
+                        <button class="btn btn-hero-secondary"><a class="text-decoration-none"
+                                href="https://www.youtube.com/channel/UCcS9tozqtk4gmy7A5u4vlkQ" target="_blank">Tonton
+                                Video</a></button>
                     </div>
                 </div>
                 <div class="col-lg-6 hero-images">
@@ -1822,14 +1908,16 @@
                 <!-- Right Column - Content -->
                 <div class="col-lg-6 col-md-12">
                     <div class="features-content">
-                        <p class="section-subtitle" style="text-align: justify; margin-left: -0.1rem">Di DlmF, kamu bisa belajar bahasa Jerman secara online maupun
-                                offline dengan jadwal yang fleksibel dan metode pengajaran yang menyenangkan. Tak perlu
-                                khawatir jarak atau waktu semua materi kami bisa diakses sesuai kebutuhanmu. Dapatkan
-                                pengalaman belajar yang interaktif, efektif, dan bisa kamu jalani dari rumah, kampus,
-                                atau bahkan tempat kerja.</p>
+                        <p class="section-subtitle"
+                            style="text-align: justify; margin-left: -0.1rem; margin-top: -3rem">Di DlmF, kamu bisa
+                            belajar bahasa Jerman secara online maupun
+                            offline dengan jadwal yang fleksibel dan metode pengajaran yang menyenangkan. Tak perlu
+                            khawatir jarak atau waktu semua materi kami bisa diakses sesuai kebutuhanmu. Dapatkan
+                            pengalaman belajar yang interaktif, efektif, dan bisa kamu jalani dari rumah, kampus,
+                            atau bahkan tempat kerja.</p>
                         <!-- Feature Points -->
                         <div class="row">
-                            <div class="col-md-6 col-sm-6 mb-3">
+                            <div class="col-md-6 col-sm-6 mb-3 mt-3">
                                 <div class="feature-point">
                                     <i class="bi bi-clock feature-point-icon"></i>
                                     <span class="feature-point-text">Jadwal Fleksibel</span>
@@ -1916,113 +2004,119 @@
     </section>
 
     <!-- Courses Section -->
-  <section class="courses-section">
-    <div class="container">
-      <h2 class="section-title">Pilih Program Kursus Bahasa Jerman Sesuai Tujuanmu</h2>
-      <p class="section-subtitle">Kami menyediakan berbagai program pembelajaran yang disesuaikan dengan kebutuhan dan
-        level kemampuan Anda</p>
+    <section class="courses-section">
+        <div class="container">
+            <h2 class="section-title">Pilih Program Kursus Bahasa Jerman Sesuai Tujuanmu</h2>
+            <p class="section-subtitle">Kami menyediakan berbagai program pembelajaran yang disesuaikan dengan kebutuhan
+                dan
+                level kemampuan Anda</p>
 
-      <div class="row mt-5">
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="course-card">
-            <img
-              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Kelas Reguler Offline" class="course-image">
-            <div class="course-content">
-              <span class="course-badge">Reguler Offline</span>
-              <h5 class="course-title">Super Intensif Reguler Offline</h5>
-              <p class="course-description">Belajar langsung di kelas dengan suasana interaktif. Cocok untuk kamu yang ingin cepat memahami Bahasa Jerman secara menyeluruh dengan bimbingan tatap muka.</p>
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Kelas Reguler Offline" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Reguler Offline</span>
+                            <h5 class="course-title">Super Intensif Reguler Offline</h5>
+                            <p class="course-description">Belajar langsung di kelas dengan suasana interaktif. Cocok
+                                untuk kamu yang ingin cepat memahami Bahasa Jerman secara menyeluruh dengan bimbingan
+                                tatap muka.</p>
 
-              <a href="#" class="price-btn">
-                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
-              </a>
+                            <a href="{{ url('/harga') }}" class="price-btn">
+                                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Kelas Online" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Reguler Online</span>
+                            <h5 class="course-title">Super Intensif Reguler Online</h5>
+                            <p class="course-description">Belajar dari mana saja dengan metode intensif. Dirancang untuk
+                                kamu yang ingin fasih Bahasa Jerman secara efektif melalui sesi live online yang
+                                terarah.</p>
+                            <a href="{{ url('/harga') }}" class="price-btn">
+                                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Persiapan Ujian" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Private</span>
+                            <h5 class="course-title">Private Gramatik</h5>
+                            <p class="course-description">Kelas Private Grammatik sangat cocok bagi kamu yang ingin
+                                mendalami grammatik tertentu dengan waktu dan kuantitas kelas yang dapat disesuaikan.
+                            </p>
+                            <a href="{{ url('/harga') }}" class="price-btn">
+                                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Kelas Au Pair" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Persiapan</span>
+                            <h5 class="course-title">Kelas Persiapan Ujian</h5>
+                            <p class="course-description">Kelas Persiapan Ujian sangat cocok bagi kamu yang sedang
+                                menyiapkan ujian sertifikasi Bahasa Jerman dengan waktu dan kuantitas kelas yang dapat
+                                disesuaikan</p>
+                            <a href="{{ url('/harga') }}" class="price-btn">
+                                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Business German" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Au Pair</span>
+                            <h5 class="course-title">Kelas Au Pair</h5>
+                            <p class="course-description">Au Pair secara singkat adalah program pertukaran budaya antar
+                                negara. Au Pair memberikan kesempatan bagi anak muda yang berusia 18 hingga 26 tahun.
+                            </p>
+                            <a href="{{ url('/harga') }}" class="price-btn">
+                                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Business German" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Course Online</span>
+                            <h5 class="course-title">Course Bahasa Jerman</h5>
+                            <p class="course-description">Belajar Bahasa Jerman jadi lebih mudah dengan sistem Learning
+                                Management System (LMS) DlmF.</p>
+                            <a href="#" class="price-btn">
+                                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> --}}
+
             </div>
-          </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="course-card">
-            <img
-              src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Kelas Online" class="course-image">
-            <div class="course-content">
-              <span class="course-badge">Reguler Online</span>
-              <h5 class="course-title">Super Intensif Reguler Online</h5>
-              <p class="course-description">Belajar dari mana saja dengan metode intensif. Dirancang untuk kamu yang ingin fasih Bahasa Jerman secara efektif melalui sesi live online yang terarah.</p>
-              <a href="#" class="price-btn">
-                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="course-card">
-            <img
-              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Persiapan Ujian" class="course-image">
-            <div class="course-content">
-              <span class="course-badge">Private</span>
-              <h5 class="course-title">Private Gramatik</h5>
-              <p class="course-description">Kelas Private Grammatik sangat cocok bagi kamu yang ingin mendalami grammatik tertentu dengan waktu dan kuantitas kelas yang dapat disesuaikan.</p>
-              <a href="#" class="price-btn">
-                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="course-card">
-            <img
-              src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Kelas Au Pair" class="course-image">
-            <div class="course-content">
-              <span class="course-badge">Persiapan</span>
-              <h5 class="course-title">Kelas Persiapan Ujian</h5>
-              <p class="course-description">Kelas Persiapan Ujian sangat cocok bagi kamu yang sedang menyiapkan ujian sertifikasi Bahasa Jerman dengan waktu dan kuantitas kelas yang dapat disesuaikan</p>
-              <a href="3" class="price-btn">
-                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="course-card">
-            <img
-              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Business German" class="course-image">
-            <div class="course-content">
-              <span class="course-badge">Au Pair</span>
-              <h5 class="course-title">Kelas Au Pair</h5>
-              <p class="course-description">Au Pair secara singkat adalah program pertukaran budaya antar negara. Au Pair memberikan kesempatan bagi anak muda yang berusia 18 hingga 26 tahun.</p>
-              <a href="#" class="price-btn">
-                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {{-- <div class="col-lg-4 col-md-6 mb-4">
-          <div class="course-card">
-            <img
-              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-              alt="Business German" class="course-image">
-            <div class="course-content">
-              <span class="course-badge">Course Online</span>
-              <h5 class="course-title">Course Bahasa Jerman</h5>
-              <p class="course-description">Belajar Bahasa Jerman jadi lebih mudah dengan sistem Learning Management System (LMS) DlmF.</p>
-              <a href="#" class="price-btn">
-                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div> --}}
-
-      </div>
-    </div>
-  </section>
+    </section>
 
     <!-- Teachers Section -->
     <section class="teachers-section">
@@ -2034,48 +2128,48 @@
             <div class="row mt-5">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="teacher-card">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                            alt="Frau Carla" class="teacher-avatar">
-                        <h5 class="teacher-name">Frau Carla</h5>
-                        <p class="teacher-level">German Tutor A1-A2</p>
-                        <p class="teacher-description">Magister Pendidikan Bahasa Jerman, Universitas Munich</p>
-                        <p class="small text-primary">5+ tahun pengalaman</p>
+                        <img src="{{ asset('asset/img/teachers/Frau_Assyifa.png') }}" alt="Frau Assyifa"
+                            class="teacher-avatar">
+                        <h5 class="teacher-name">Frau Assyifa</h5>
+                        <p class="teacher-level">German Tutor B1</p>
+                        {{-- <p class="teacher-description">Magister Pendidikan Bahasa Jerman, Universitas Munich</p>
+                        <p class="small text-primary">5+ tahun pengalaman</p> --}}
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="teacher-card">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                            alt="Herr Mueller" class="teacher-avatar">
-                        <h5 class="teacher-name">Herr Mueller</h5>
-                        <p class="teacher-level">German Tutor B1-B2</p>
-                        <p class="teacher-description">Native Speaker dari Berlin, Sertifikat Goethe Institut</p>
-                        <p class="small text-primary">8+ tahun pengalaman</p>
+                        <img src="{{ asset('asset/img/teachers/Herr_Fadhil.png') }}" alt="Herr Fadhil"
+                            class="teacher-avatar">
+                        <h5 class="teacher-name">Herr Fadhil</h5>
+                        <p class="teacher-level">German Tutor B1</p>
+                        {{-- <p class="teacher-description">Native Speaker dari Berlin, Sertifikat Goethe Institut</p>
+                        <p class="small text-primary">8+ tahun pengalaman</p> --}}
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="teacher-card">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                            alt="Frau Schmidt" class="teacher-avatar">
-                        <h5 class="teacher-name">Frau Schmidt</h5>
-                        <p class="teacher-level">German Tutor C1-B2</p>
-                        <p class="teacher-description">PhD Linguistik, Spesialis Exam Preparation</p>
-                        <p class="small text-primary">10+ tahun pengalaman</p>
+                        <img src="{{ asset('asset/img/teachers/Frau_Jara.png') }}" alt="Frau Jara"
+                            class="teacher-avatar">
+                        <h5 class="teacher-name">Frau Jara</h5>
+                        <p class="teacher-level">German Tutor B2</p>
+                        {{-- <p class="teacher-description">PhD Linguistik, Spesialis Exam Preparation</p>
+                        <p class="small text-primary">10+ tahun pengalaman</p> --}}
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="teacher-card">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                            alt="Frau Zahra" class="teacher-avatar">
-                        <h5 class="teacher-name">Frau Zahra</h5>
-                        <p class="teacher-level">German Tutor Business</p>
-                        <p class="teacher-description">MBA International Business, Alumni DAAD Scholarship</p>
-                        <p class="small text-primary">7+ tahun pengalaman</p>
+                        <img src="{{ asset('asset/img/teachers/Herr_Iqbal.png') }}" alt="Herr Iqbal"
+                            class="teacher-avatar">
+                        <h5 class="teacher-name">Herr Iqbal</h5>
+                        <p class="teacher-level">German Tutor B2</p>
+                        {{-- <p class="teacher-description">MBA International Business, Alumni DAAD Scholarship</p>
+                        <p class="small text-primary">7+ tahun pengalaman</p> --}}
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-4">
-                <a href="#" class="btn btn-outline-primary">Lihat Semua Guru</a>
+                <a href="{{ url('/teachers') }}" class="btn btn-outline-primary">Lihat Semua Guru</a>
             </div>
         </div>
     </section>
@@ -2088,7 +2182,7 @@
                 bahasa Jerman bersama kami</p>
 
             <div class="testimonial-carousel mt-5">
-                <!-- First set of testimonials -->
+                <!-- Testimonial cards -->
                 <div class="testimonial-card">
                     <div class="testimonial-rating">
                         <i class="bi bi-star-fill"></i>
@@ -2097,17 +2191,20 @@
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                     </div>
-                    <p class="testimonial-text">"Happy bgt bisa diterima gk kerasa udah hampir 3 tahun di Jerman, dari
-                        nggak tau apa-apa bisa bahasa germany sekarang, alhamdulillah bisa dapat fellowship kesini 🤲"
-                    </p>
+                    <p class="testimonial-text">"Seru bgt! Walaupun kelas online tapi mudah di mengerti. Frau Zizah baik
+                        dan sabar juga."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-avatar" style="background: none; padding: 0;">
+                            <img src="{{ asset('asset/img/testi/Picture1.jpg') }}" alt="Afriliana B" width="50"
+                                height="50" style="border-radius: 50%; object-fit: cover;">
+                        </div>
                         <div class="author-info">
-                            <h6>Ayu Permatasari</h6>
+                            <h6>Afriliana B</h6>
                             <small>Alumni</small>
                         </div>
                     </div>
                 </div>
+
                 <div class="testimonial-card">
                     <div class="testimonial-rating">
                         <i class="bi bi-star-fill"></i>
@@ -2116,16 +2213,22 @@
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                     </div>
-                    <p class="testimonial-text">"Ternyata belajar bahasa itu bukan sepenuhnya susah. Asal ada tekad dan
-                        menggunakan platform yang tepat lagi yang mudah dipahami juga seperti DlmF"</p>
+                    <p class="testimonial-text">"Pertama secara budget terjangkau. Terus pilihan jam kelasnya sangat
+                        beragam, jadi sangat membantu buat yang sambil kerja. Terus Lehrerin nya sangat amat baik,
+                        terlihat sangat menguasai bidangnya juga, jadi ilmu nya banyak banget yang didapet. Terus sabar,
+                        apalagi kalau kelas malem."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-avatar" style="background: none; padding: 0;">
+                            <img src="{{ asset('asset/img/testi/Picture2.jpg') }}" alt="Luis Anastasia" width="50"
+                                height="50" style="border-radius: 50%; object-fit: cover;">
+                        </div>
                         <div class="author-info">
-                            <h6>Zahra Permatasari</h6>
-                            <small>Mahasiswa</small>
+                            <h6>Luis Anastasia</h6>
+                            <small>Alumni</small>
                         </div>
                     </div>
                 </div>
+
                 <div class="testimonial-card">
                     <div class="testimonial-rating">
                         <i class="bi bi-star-fill"></i>
@@ -2134,13 +2237,132 @@
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                     </div>
-                    <p class="testimonial-text">"Alhamdulillah rog mamah, gara-gara ikut program ini saya bisa dapet
-                        beasiswa. Itu yang gue cari setelah berbulan bulan susah cari online"</p>
+                    <p class="testimonial-text">"sangat membantu belajar bahasa jerman, kelasnya fun dan teman2nya
+                        helpful👍🏻"</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-avatar" style="background: none; padding: 0;">
+                            <img src="{{ asset('asset/img/testi/Picture3.jpg') }}" alt="Retta Anissa" width="50"
+                                height="50" style="border-radius: 50%; object-fit: cover;">
+                        </div>
                         <div class="author-info">
-                            <h6>Salsa</h6>
-                            <small>Pekerja</small>
+                            <h6>Retta Anissa</h6>
+                            <small>Alumni</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">"Aku muridnya Frau Tissa, aku mau berterimakasih banget sama tim Deutsch
+                        lernen mit Fara yang udah ramah banget merespon aku selama masa les. Berkat methode belajar yang
+                        diterapin Frau Tissa aku bisa ngelewatin proses belajar sampai lulus ujian tanpa kendala yang
+                        berarti."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: none; padding: 0;">
+                            <img src="{{ asset('asset/img/testi/Picture4.jpg') }}" alt="Putri R.F" width="50"
+                                height="50" style="border-radius: 50%; object-fit: cover;">
+                        </div>
+                        <div class="author-info">
+                            <h6>Putri R.F</h6>
+                            <small>Alumni</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">"Love how passionate the teachers in DLmF"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: none; padding: 0;">
+                            <img src="{{ asset('asset/img/testi/Picture5.jpg') }}" alt="Kay Rool" width="50" height="50"
+                                style="border-radius: 50%; object-fit: cover;">
+                        </div>
+                        <div class="author-info">
+                            <h6>Kay Rool</h6>
+                            <small>Alumni</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">"Menemukan kursus ini dari iklan Instagram dan langsung mendaftar.
+                        Guru-gurunya sangat sabar & penjelasannya detail, membuat materi mudah dipahami. Sangat
+                        direkomendasikan untuk belajar bahasa Jerman yang efisien, cepat, dan terjangkau!. Danke
+                        Minfara, Frau Jara und Frau Tissa ❤️ "</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: none; padding: 0;">
+                            <img src="{{ asset('asset/img/testi/Picture11.jpg') }}" alt="EV" width="50" height="50"
+                                style="border-radius: 50%; object-fit: cover;">
+                        </div>
+                        <div class="author-info">
+                            <h6>EV</h6>
+                            <small>Alumni</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">"Frau Zizah baik banget pokoknya, tulus banget ngajarinnya, selalu
+                        nanyain dan ngajarin dengan sabar meskipun aku agak lemot, lope banget pokoknya 🩷🩷🩷"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: none; padding: 0;">
+                            <img src="{{ asset('asset/img/testi/Picture6.png') }}" alt="Kia" width="50" height="50"
+                                style="border-radius: 50%; object-fit: cover;">
+                        </div>
+                        <div class="author-info">
+                            <h6>Kia</h6>
+                            <small>Alumni</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="testimonial-text">"DlmF ist der beste Platz um Deutsch zu lernen. Ich habe an den Kurzen
+                        A1-B1 teilgenommen. Und Letzten Monat habe ich auch den Gesprächsunterricht gemacht. Die
+                        Lehrerin, Frau Inez, hat mir Deutsch sehr gut beigebracht.
+                        Ich bin gerade in Deutschland und spreche gut Deutsch. Vielen vielen Dank DlmF ❤️ Grüße aus
+                        Deutschland 🇩🇪"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: none; padding: 0;">
+                            <img src="{{ asset('asset/img/testi/Picture9.jpg') }}" alt="Citra Schwarz" width="50"
+                                height="50" style="border-radius: 50%; object-fit: cover;">
+                        </div>
+                        <div class="author-info">
+                            <h6>Citra Schwarz</h6>
+                            <small>Alumni</small>
                         </div>
                     </div>
                 </div>
@@ -2216,9 +2438,10 @@
     <section class="cta-section">
         <div class="container text-center">
             <h2 class="cta-title">Siap Mulai Belajar Bahasa Jerman?</h2>
-            <p class="cta-subtitle">Wujudkan impian Anda untuk menguasai bahasa Jerman bersama tutor terbaik dan metode
-                pembelajaran yang terbukti efektif</p>
-            <a href="#" class="btn btn-hero-primary btn-lg">Mulai Sekarang</a>
+            <p class="cta-subtitle">Bergabunglah dengan ribuan siswa yang telah merasakan kemudahan belajar bahasa
+                Jerman bersama kami di DlmF</p>
+            <a href="https://wa.me/62859106869302" target="_blank" class="btn btn-hero-primary btn-lg"><i
+                    class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a>
         </div>
     </section>
 
@@ -2311,6 +2534,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    {{-- Counter animation JS --}}
     <script>
         // Counter Animation Function
         function animateCounter(element, target, suffix = '+') {
@@ -2337,7 +2561,11 @@
                 element.textContent = displayValue + suffix;
             }, 20);
         }
+    </script>
+    {{-- End Counter animation JS --}}
 
+    {{-- Stats Counter Observer --}}
+    <script>
         // Stats Counter Observer
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -2353,7 +2581,11 @@
                 }
             });
         }, { threshold: 0.5 });
+    </script>
+    {{-- End Stats Counter Observer --}}
 
+    {{-- FAQ Toggle Function with Animation --}}
+    <script>
         // FAQ Toggle Function with Animation
         function toggleFaq(element) {
             const content = element.nextElementSibling;
@@ -2381,7 +2613,11 @@
                 element.classList.add('active');
             }
         }
+    </script>
+    {{-- End FAQ Toggle Function with Animation --}}
 
+    {{-- smooth scrolling --}}
+    <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -2394,18 +2630,6 @@
                     });
                 }
             });
-        });
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = 'none';
-            }
         });
 
         // Animation on scroll for other elements
@@ -2421,7 +2645,28 @@
                 }
             });
         }, observerOptions);
+    </script>
+    {{-- End smooth scrolling --}}
 
+
+    {{-- Navbar --}}
+    <script>
+        // Navbar background on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+    {{-- End Navbar --}}
+
+    {{-- Initialize Animations --}}
+    <script>
         // Initialize all animations
         document.addEventListener('DOMContentLoaded', function () {
             // Observe stat items for counter animation
@@ -2435,5 +2680,80 @@
             });
         });
     </script>
+    {{-- End Initialize Animations --}}
+
+    {{-- Testimonial Carousel --}}
+    <script>
+        // Dynamic Testimonial Carousel
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.testimonial-carousel');
+            const cards = carousel.querySelectorAll('.testimonial-card');
+
+            if (!carousel || cards.length === 0) return;
+
+            // Setup carousel untuk infinite loop
+            function setupCarousel() {
+                const cardWidth = 420; // Disesuaikan dengan CSS flex: 0 0 420px
+                const gap = 32; // 2rem = 32px
+                const totalWidth = (cardWidth + gap) * cards.length;
+
+                // Clone semua cards untuk seamless loop
+                cards.forEach(card => {
+                    const clone = card.cloneNode(true);
+                    carousel.appendChild(clone);
+                });
+
+                // Hitung jarak scroll dan durasi animasi
+                const scrollDistance = totalWidth;
+                const animationDuration = cards.length * 8; // 8 detik per card
+
+                // Set CSS custom properties
+                document.documentElement.style.setProperty('--scroll-distance', `-${scrollDistance}px`);
+                document.documentElement.style.setProperty('--animation-duration', `${animationDuration}s`);
+
+                // Reset posisi saat animasi selesai untuk seamless loop
+                carousel.addEventListener('animationiteration', function () {
+                    // Reset transform tanpa animasi
+                    carousel.style.animation = 'none';
+                    carousel.style.transform = 'translateX(0)';
+
+                    // Restart animasi setelah frame berikutnya
+                    requestAnimationFrame(() => {
+                        carousel.style.animation = '';
+                    });
+                });
+            }
+
+            // Jalankan setup
+            setupCarousel();
+
+            // Handle responsive behavior
+            let resizeTimeout;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    // Recalculate untuk responsive
+                    const isMobile = window.innerWidth <= 768;
+                    const isSmallMobile = window.innerWidth <= 576;
+
+                    let cardWidth;
+                    if (isSmallMobile) {
+                        cardWidth = 300;
+                    } else if (isMobile) {
+                        cardWidth = 340;
+                    } else {
+                        cardWidth = 420;
+                    }
+
+                    const gap = 32;
+                    const totalWidth = (cardWidth + gap) * cards.length;
+
+                    document.documentElement.style.setProperty('--scroll-distance', `-${totalWidth}px`);
+                }, 250);
+            });
+        });
+    </script>
+    {{-- End Testimonial Carousel --}}
 </body>
+
 </html>

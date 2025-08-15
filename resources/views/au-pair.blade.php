@@ -10,7 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-color: #7C3AED;
@@ -557,7 +558,7 @@
             transform: translateY(-2px);
         }
 
-        @media (max-width: 576px){
+        @media (max-width: 576px) {
             .social-links {
                 justify-content: center;
             }
@@ -565,6 +566,7 @@
 
         /* Responsive */
         @media (max-width: 968px) {
+
             .program-content,
             .mission-content,
             .faq-content {
@@ -645,7 +647,8 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;" alt="Logo-Mitfara-Panjang">
+                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;"
+                    alt="Logo-Mitfara-Panjang">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -695,7 +698,9 @@
             </div>
             <div class="program-content">
                 <div class="program-text">
-                    <p>Program Au Pair membuka kesempatan bagi anak muda Indonesia untuk tinggal bersama keluarga angkat di Jerman selama satu tahun penuh. Selain mengenal budaya dan kehidupan baru, peserta juga akan memperdalam kemampuan Bahasa Jerman secara langsung di lingkungan penduduk asli.</p>
+                    <p>Program Au Pair membuka kesempatan bagi anak muda Indonesia untuk tinggal bersama keluarga angkat
+                        di Jerman selama satu tahun penuh. Selain mengenal budaya dan kehidupan baru, peserta juga akan
+                        memperdalam kemampuan Bahasa Jerman secara langsung di lingkungan penduduk asli.</p>
                 </div>
                 <div class="program-images">
                     <div class="program-img large"></div>
@@ -712,11 +717,17 @@
             <div class="mission-content">
                 <div class="mission-text">
                     <h3>Our mission</h3>
-                    <p>Kami percaya bahwa pengalaman hidup budaya adalah sarana yang paling baik untuk belajar secara akurat dan profesional. Melalui program Au Pair, kami memberikan peluang Indonesia memperoleh kesempatan di tingkat dunia negara untuk yang memperkenalkan kegiatan Jerman, memperluas kreatif, dan memperkuat karakter terbentuk kelas untuk internasional.</p>
+                    <p>Kami percaya bahwa pengalaman hidup budaya adalah sarana yang paling baik untuk belajar secara
+                        akurat dan profesional. Melalui program Au Pair, kami memberikan peluang Indonesia memperoleh
+                        kesempatan di tingkat dunia negara untuk yang memperkenalkan kegiatan Jerman, memperluas
+                        kreatif, dan memperkuat karakter terbentuk kelas untuk internasional.</p>
 
-                    <p>Program lokal kepala pemimpin pengalaman manajemen kelas atau juga berpenampilan dengan bantuan, mendorong lembaga baru, dan membangun jalinan internasional.</p>
+                    <p>Program lokal kepala pemimpin pengalaman manajemen kelas atau juga berpenampilan dengan bantuan,
+                        mendorong lembaga baru, dan membangun jalinan internasional.</p>
 
-                    <p>Kami mendampingi setiap peserta mulai dari proses pendaftaran, pelatihan bahasa, pengurusan visa, hingga tau di negeri hakim. Dengan pendidikan yang bermatang dan profesional, kami helir sebagai mitra pertamanan yang baik memerlukan untuk tingkat pelajaran.</p>
+                    <p>Kami mendampingi setiap peserta mulai dari proses pendaftaran, pelatihan bahasa, pengurusan visa,
+                        hingga tau di negeri hakim. Dengan pendidikan yang bermatang dan profesional, kami helir sebagai
+                        mitra pertamanan yang baik memerlukan untuk tingkat pelajaran.</p>
                 </div>
                 <div class="mission-images">
                     <div class="mission-img large"></div>
@@ -766,7 +777,8 @@
                             <i class="bi bi-chevron-down faq-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Tentu saja program yang kami tawarkan dan bertugas dalam persiapan bahasa Jerman, sampai aplikasi 🙂</p>
+                            <p>Tentu saja program yang kami tawarkan dan bertugas dalam persiapan bahasa Jerman, sampai
+                                aplikasi 🙂</p>
                         </div>
                     </div>
 
@@ -776,7 +788,8 @@
                             <i class="bi bi-chevron-down faq-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Program Au Pair tersedia di berbagai kota di Jerman, termasuk Berlin, Munich, Hamburg, dan kota-kota lainnya.</p>
+                            <p>Program Au Pair tersedia di berbagai kota di Jerman, termasuk Berlin, Munich, Hamburg,
+                                dan kota-kota lainnya.</p>
                         </div>
                     </div>
 
@@ -786,7 +799,8 @@
                             <i class="bi bi-chevron-down faq-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Program Au Pair memiliki durasi 6-12 bulan dengan berbagai pilihan paket sesuai kebutuhan Anda.</p>
+                            <p>Program Au Pair memiliki durasi 6-12 bulan dengan berbagai pilihan paket sesuai kebutuhan
+                                Anda.</p>
                         </div>
                     </div>
 
@@ -796,7 +810,8 @@
                             <i class="bi bi-chevron-down faq-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Kami menyediakan layanan konsultasi dan pendampingan lengkap untuk program Au Pair dengan berbagai pilihan pembayaran.</p>
+                            <p>Kami menyediakan layanan konsultasi dan pendampingan lengkap untuk program Au Pair dengan
+                                berbagai pilihan pembayaran.</p>
                         </div>
                     </div>
                 </div>
@@ -809,8 +824,10 @@
         <div class="container">
             <div class="cta-content">
                 <h3>Siap Mulai Belajar Bahasa Jerman?</h3>
-                <p>Wujudkan mimpi dan ratusan pengalaman dengan belajar yang memingat, efektif dari smartphone. Bergabunglah sekarang berikan-berikan kelas dan kelas!</p>
-                <button class="cta-button">WhatsApp MinFara</button>
+                <p>Bergabunglah dengan ribuan siswa yang telah merasakan kemudahan belajar bahasa Jerman bersama kami di DlmF</p>
+                <button class="cta-button"><a class="text-white text-decoration-none"
+                        href="https://wa.me/6289647897616?text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan."
+                        target="_blank"><i class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a></button>
             </div>
         </div>
     </section>
