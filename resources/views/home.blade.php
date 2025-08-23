@@ -234,6 +234,7 @@
 
         .hero-images {
             position: relative;
+            margin-top: 3rem;
         }
 
         .hero-image-main {
@@ -371,7 +372,7 @@
         .features-image-container {
             position: relative;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .features-main-image {
@@ -1712,6 +1713,7 @@
 
             .section-title {
                 font-size: 1.8rem;
+                margin-top: 1rem;
             }
         }
     </style>
@@ -1882,7 +1884,7 @@
     <!-- Features Section -->
     <section class="features-section">
         <div class="container">
-            <h2 class="section-title">Akses Belajar Bahasa Jerman dari Mana Saja, Kapan Saja</h2>
+            <h2 class="section-title" style="margin-bottom: 3rem;">Akses Belajar Bahasa Jerman dari Mana Saja, Kapan Saja</h2>
 
             <!-- Main Content Row -->
             <div class="row align-items-center">
@@ -1923,7 +1925,7 @@
                                     <span class="feature-point-text">Jadwal Fleksibel</span>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 mb-3">
+                            <div class="col-md-6 col-sm-6 mb-3 mt-3">
                                 <div class="feature-point">
                                     <i class="bi bi-currency-dollar feature-point-icon"></i>
                                     <span class="feature-point-text">Harga Terjangkau</span>
