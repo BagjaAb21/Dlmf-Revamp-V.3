@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda - DlmF</title>
-    <link rel="icon" href="{{ asset('asset/img/logo/logo-bulet.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
             --primary-color: #7C3AED;
             --secondary-color: #A855F7;
             --accent-color: #FDE047;
-            --dark-blue: #1E293B;
+            --dark-blue: #283750;
             --light-gray: #F8FAFC;
             --text-dark: #334155;
         }
@@ -38,10 +38,11 @@
             line-height: 1.6;
             color: var(--text-dark);
             margin: 0;
-            color: var(--text-dark);
+            padding-top: 90px;
+            /* Tambahkan padding untuk fixed navbar */
         }
 
-        /* Header & Navigation */
+        /* Header & Navigation - Perbaikan */
         .navbar {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -51,6 +52,10 @@
             top: 0;
             width: 100%;
             z-index: 1000;
+            height: auto;
+            /* Pastikan tinggi navbar otomatis */
+            min-height: 70px;
+            /* Tinggi minimum navbar */
         }
 
         .navbar-brand {
@@ -85,13 +90,16 @@
             transform: translateY(-1px);
         }
 
-        /* Hero Section */
+        /* Hero Section - Perbaikan */
         .hero-section {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
-            padding: 120px 0 80px;
+            padding: 60px 0 80px;
+            /* Kurangi padding-top karena sudah ada padding di body */
             position: relative;
             overflow: hidden;
+            margin-top: 0;
+            /* Hapus margin-top jika ada */
         }
 
         /* Hero Animations */
@@ -131,6 +139,7 @@
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 1s ease-out 1s forwards;
+            justify-content: justify;
         }
 
         .hero-buttons {
@@ -189,6 +198,7 @@
             font-size: 1.25rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            justify-content: justify;
         }
 
         .hero-buttons {
@@ -240,6 +250,74 @@
         .hero-image-main {
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            body {
+                padding-top: 80px;
+            }
+
+            .hero-section {
+                padding: 50px 0 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 75px;
+            }
+
+            .navbar {
+                min-height: 65px;
+                padding: 0.75rem 0;
+            }
+
+            .hero-section {
+                padding: 40px 0 50px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                padding-top: 70px;
+            }
+
+            .navbar {
+                min-height: 60px;
+                padding: 0.5rem 0;
+            }
+
+            .hero-section {
+                padding: 30px 0 40px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        /* Perbaikan untuk logo navbar */
+        .navbar-brand img {
+            max-height: 150px;
+            width: auto;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                max-height: 120px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                max-height: 100px;
+            }
         }
 
         .floating-elements {
@@ -1228,13 +1306,13 @@
         .footer {
             background: var(--dark-blue);
             color: white;
-            padding: 60px 0 20px;
+            padding: 30px 0 10px;
         }
 
         .footer-logo {
             display: flex;
             align-items: center;
-            margin-bottom: 2rem;
+
         }
 
         .footer-brand {
@@ -1245,12 +1323,10 @@
         .footer-description {
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.6;
-            margin-bottom: 2rem;
         }
 
         .footer-links {
             list-style: none;
-            padding: 0;
         }
 
         .footer-links li {
@@ -1278,7 +1354,6 @@
 
         .contact-info {
             display: flex;
-            align-items: center;
             margin-bottom: 1rem;
             color: rgba(255, 255, 255, 0.7);
         }
@@ -1416,6 +1491,7 @@
 
             .hero-subtitle {
                 font-size: 1.1rem;
+                justify-content: justify;
             }
 
             .hero-buttons {
@@ -1535,6 +1611,7 @@
 
             .hero-subtitle {
                 font-size: 1rem;
+                justify-content: justify;
             }
 
             .section-title {
@@ -1724,7 +1801,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;"
+                <img src="{{ asset('asset/img/logo/logo-Transparant2-v2.png') }}" style="width: 200px; height: auto;"
                     alt="Logo-Mitfara-Panjang">
             </a>
 
@@ -1765,15 +1842,15 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
-                    <h1 class="hero-title">Kursus Bahasa Jerman Terpercaya di <span
-                            style="color: var(--accent-color);">Indonesia</span></h1>
-                    <p class="hero-subtitle">Bergabunglah dengan ribuan pelajar yang telah berhasil menguasai bahasa
-                        Jerman bersama kami. Dari level A1 hingga B2, kami siap membantu perjalanan belajar Anda.</p>
+                    <h1 class="hero-title">Gerbang Eksklusif Menuju Masa Depan di<span
+                            style="color: var(--accent-color);">Jerman</span></h1>
+                    <p class="hero-subtitle">Deutsch Lernen mit Fara bukan sekadar kursus bahasa. Kami adalah investasi
+                        untuk masa depanmu. Dengan standar terbaik, tutor berpengalaman, dan pendekatan personal dari
+                        level A1 hingga B2, kami memastikan kamu siap studi/berkarir di Jerman.</p>
                     <div class="hero-buttons">
                         <a href="{{ url('/harga') }}" class="btn btn-hero-primary">Mulai Belajar</a>
                         <button class="btn btn-hero-secondary"><a class="text-decoration-none"
-                                href="https://www.youtube.com/channel/UCcS9tozqtk4gmy7A5u4vlkQ" target="_blank">Tonton
-                                Video</a></button>
+                                href="{{ url('/program') }}" target="_blank">Lihat Program</a></button>
                     </div>
                 </div>
                 <div class="col-lg-6 hero-images">
@@ -1826,54 +1903,55 @@
     <!-- Learning Method Section -->
     <section class="learning-method-section">
         <div class="container">
-            <h2 class="section-title">Cara Belajar di DlmF</h2>
-            <p class="section-subtitle">Belajar di sini tak dengan buru-buru. Kapan kamu stress, bisa istirahat dulu
+            <h2 class="section-title">4 Pilar Metode Belajar</h2>
+            <p class="section-subtitle">Belajar di sini tidak terburu-buru. Kapan kamu stress, bisa istirahat dulu
                 sambil cari kenapa kamu benci Bahasa Jerman!</p>
-
             <div class="row mt-5">
                 <div class="col-lg-6 mb-4">
                     <div class="method-card animate-on-scroll">
                         <div class="method-icon">
-                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-clock-history"></i>
                         </div>
                         <div class="method-content">
                             <h4 class="method-title">Fleksibel</h4>
-                            <p class="method-description">Wujudkan waktu belajar sesuai jadwal dan kebutuhanmu.</p>
+                            <p class="method-description">Jadwal belajar yang menyesuaikan kebutuhanmu, tetap konsisten
+                                tanpa mengurangi kualitas.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                     <div class="method-card animate-on-scroll">
                         <div class="method-icon">
-                            <i class="bi bi-diagram-3"></i>
+                            <i class="bi bi-list-check"></i>
                         </div>
                         <div class="method-content">
                             <h4 class="method-title">Sistematis</h4>
-                            <p class="method-description">Belajar dari A-Z kursus target pass, komplit progress skill
-                                Learning > Testing.</p>
+                            <p class="method-description">Kurikulum komprehensif dari A1 hingga B1, disertai evaluasi
+                                progres yang transparan dan terukur.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                     <div class="method-card animate-on-scroll">
                         <div class="method-icon">
-                            <i class="bi bi-people"></i>
+                            <i class="bi bi-person-workspace"></i>
                         </div>
                         <div class="method-content">
                             <h4 class="method-title">Private Mentoring</h4>
-                            <p class="method-description">Diskusi belajar dengan personal untuk solusi progress belajar
-                                lebih cepat.</p>
+                            <p class="method-description">Pendampingan personal dari tutor bersertifikasi, memberikan
+                                arahan tepat sesuai tujuanmu.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                     <div class="method-card animate-on-scroll">
                         <div class="method-icon">
-                            <i class="bi bi-emoji-smile"></i>
+                            <i class="bi bi-chat-dots"></i>
                         </div>
                         <div class="method-content">
                             <h4 class="method-title">Interaktif</h4>
-                            <p class="method-description">Tutor kelas belajar lebih hidup dan relax.</p>
+                            <p class="method-description">Pembelajaran aktif dan aplikatif, menghadirkan pengalaman yang
+                                relevan dengan studi maupun karier di Jerman.</p>
                         </div>
                     </div>
                 </div>
@@ -1884,7 +1962,8 @@
     <!-- Features Section -->
     <section class="features-section">
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 3rem;">Akses Belajar Bahasa Jerman dari Mana Saja, Kapan Saja</h2>
+            <h2 class="section-title" style="margin-bottom: 3rem;">Belajar Bahasa Jerman dengan Kebebasan Tanpa Batas
+            </h2>
 
             <!-- Main Content Row -->
             <div class="row align-items-center">
@@ -1911,12 +1990,11 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="features-content">
                         <p class="section-subtitle"
-                            style="text-align: justify; margin-left: -0.1rem; margin-top: -3rem">Di DlmF, kamu bisa
-                            belajar bahasa Jerman secara online maupun
-                            offline dengan jadwal yang fleksibel dan metode pengajaran yang menyenangkan. Tak perlu
-                            khawatir jarak atau waktu semua materi kami bisa diakses sesuai kebutuhanmu. Dapatkan
-                            pengalaman belajar yang interaktif, efektif, dan bisa kamu jalani dari rumah, kampus,
-                            atau bahkan tempat kerja.</p>
+                            style="text-align: justify; margin-left: -0.1rem; margin-top: -3rem">Di DlmF, Anda bebas
+                            memilih cara belajar yang paling sesuai: interaktif bersama tutor secara online/offline,
+                            atau melalui kelas asinkronus yang dapat diakses kapan saja. Semua program dirancang dengan
+                            metode efektif dan terarah, memastikan kamu tetap berkembang dengan ritme belajar yang
+                            fleksibel, dimanapun kamu berada.</p>
                         <!-- Feature Points -->
                         <div class="row">
                             <div class="col-md-6 col-sm-6 mb-3 mt-3">
@@ -1963,41 +2041,40 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
                         <div class="feature-item animate-on-scroll">
                             <div class="feature-item-icon">
-                                <i class="bi bi-heart"></i>
+                                <i class="bi bi-award"></i>
                             </div>
-                            <h4 class="feature-item-title">Fleksibel</h4>
-                            <p class="feature-item-description">Bisa pilih waktu belajar sesuai jadwal dan kebutuhanmu
-                                tanpa terikat waktu tertentu</p>
+                            <h4 class="feature-item-title">Tutor Bersertifikasi</h4>
+                            <p class="feature-item-description">Dipilih dengan ketat untuk memastikan kualitas
+                                pembelajaran terbaik</p>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
                         <div class="feature-item animate-on-scroll">
                             <div class="feature-item-icon">
-                                <i class="bi bi-diagram-3"></i>
+                                <i class="bi bi-journal-bookmark"></i>
                             </div>
-                            <h4 class="feature-item-title">Sistematis</h4>
-                            <p class="feature-item-description">Setiap level punya target jelas dengan kurikulum
-                                terstruktur dari A1 hingga B2</p>
+                            <h4 class="feature-item-title">Materi Eksklusif & Selalu Terupdate</h4>
+                            <p class="feature-item-description">Dirancang untuk kebutuhan akademis, profesional, dan
+                                kehidupan nyata di Jerman</p>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
                         <div class="feature-item animate-on-scroll">
                             <div class="feature-item-icon">
-                                <i class="bi bi-people"></i>
+                                <i class="bi bi-globe2"></i>
                             </div>
-                            <h4 class="feature-item-title">Private Mentoring</h4>
-                            <p class="feature-item-description">Tersedia sesi bimbingan personal one-on-one untuk
-                                percepatan progress belajar</p>
+                            <h4 class="feature-item-title">Komunitas Alumni di Seluruh Dunia</h4>
+                            <p class="feature-item-description">Jaringan global yang membuka peluang lebih luas di Eropa
+                            </p>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
                         <div class="feature-item animate-on-scroll">
                             <div class="feature-item-icon">
-                                <i class="bi bi-emoji-smile"></i>
+                                <i class="bi bi-people-fill"></i>
                             </div>
-                            <h4 class="feature-item-title">Interaktif</h4>
-                            <p class="feature-item-description">Diskusi langsung dengan native speaker dan tutor
-                                berpengalaman</p>
+                            <h4 class="feature-item-title">5.000+ Pelajar</h4>
+                            <p class="feature-item-description">Telah Mempercayakan Masa Depannya pada Kami</p>
                         </div>
                     </div>
                 </div>
@@ -2008,25 +2085,24 @@
     <!-- Courses Section -->
     <section class="courses-section">
         <div class="container">
-            <h2 class="section-title">Pilih Program Kursus Bahasa Jerman Sesuai Tujuanmu</h2>
+            <h2 class="section-title">Best Seller Programs</h2>
             <p class="section-subtitle">Kami menyediakan berbagai program pembelajaran yang disesuaikan dengan kebutuhan
-                dan
-                level kemampuan Anda</p>
+                dan level kemampuan Anda</p>
 
             <div class="row mt-5">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
                             alt="Kelas Reguler Offline" class="course-image">
                         <div class="course-content">
                             <span class="course-badge">Reguler Offline</span>
-                            <h5 class="course-title">Super Intensif Reguler Offline</h5>
-                            <p class="course-description">Belajar langsung di kelas dengan suasana interaktif. Cocok
-                                untuk kamu yang ingin cepat memahami Bahasa Jerman secara menyeluruh dengan bimbingan
-                                tatap muka.</p>
+                            <h5 class="course-title">Reguler A1 - B1</h5>
+                            <p class="course-description">Dengan kurikulum sistematis, bimbingan tutor berpengalaman,
+                                dan suasana kelas yang interaktif, kamu akan menguasai Bahasa Jerman dengan fondasi yang
+                                kuat.</p>
 
                             <a href="{{ url('/harga') }}" class="price-btn">
-                                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+                                Lihat Detail Program <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -2034,16 +2110,16 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Kelas Online" class="course-image">
+                        <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Private Sprechen" class="course-image">
                         <div class="course-content">
-                            <span class="course-badge">Reguler Online</span>
-                            <h5 class="course-title">Super Intensif Reguler Online</h5>
-                            <p class="course-description">Belajar dari mana saja dengan metode intensif. Dirancang untuk
-                                kamu yang ingin fasih Bahasa Jerman secara efektif melalui sesi live online yang
-                                terarah.</p>
+                            <span class="course-badge">Private Speaking</span>
+                            <h5 class="course-title">Private Sprechen mit Muttersprachler</h5>
+                            <p class="course-description">Latihan berbicara langsung dengan penutur asli Jerman. Cocok
+                                untuk Anda yang ingin meningkatkan kefasihan dan kepercayaan diri dalam komunikasi
+                                sehari-hari maupun profesional.</p>
                             <a href="{{ url('/harga') }}" class="price-btn">
-                                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+                                Lihat Detail Program <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -2051,8 +2127,25 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Persiapan Ujian" class="course-image">
+                        <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="FlexiLearn Online" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Asinkronus</span>
+                            <h5 class="course-title">Deutsch FlexiLearn (Asinkronus)</h5>
+                            <p class="course-description">Kelas Bahasa Jerman yang dapat diakses kapan saja. Belajar
+                                dengan materi eksklusif, video pembelajaran, dan latihan interaktif. Cocok untuk kamu
+                                yang membutuhkan fleksibilitas penuh.</p>
+                            <a href="{{ url('/harga') }}" class="price-btn">
+                                Lihat Detail Program <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Private Grammar" class="course-image">
                         <div class="course-content">
                             <span class="course-badge">Private</span>
                             <h5 class="course-title">Private Gramatik</h5>
@@ -2068,16 +2161,16 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Kelas Au Pair" class="course-image">
+                        <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Persiapan Ujian" class="course-image">
                         <div class="course-content">
-                            <span class="course-badge">Persiapan</span>
+                            <span class="course-badge">Preparation</span>
                             <h5 class="course-title">Kelas Persiapan Ujian</h5>
                             <p class="course-description">Kelas Persiapan Ujian sangat cocok bagi kamu yang sedang
                                 menyiapkan ujian sertifikasi Bahasa Jerman dengan waktu dan kuantitas kelas yang dapat
                                 disesuaikan</p>
                             <a href="{{ url('/harga') }}" class="price-btn">
-                                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+                                Lihat Detail Program <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -2085,8 +2178,8 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Business German" class="course-image">
+                        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Kelas Au Pair" class="course-image">
                         <div class="course-content">
                             <span class="course-badge">Au Pair</span>
                             <h5 class="course-title">Kelas Au Pair</h5>
@@ -2094,27 +2187,11 @@
                                 negara. Au Pair memberikan kesempatan bagi anak muda yang berusia 18 hingga 26 tahun.
                             </p>
                             <a href="{{ url('/harga') }}" class="price-btn">
-                                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
+                                Lihat Detail Program <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-
-                {{-- <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Business German" class="course-image">
-                        <div class="course-content">
-                            <span class="course-badge">Course Online</span>
-                            <h5 class="course-title">Course Bahasa Jerman</h5>
-                            <p class="course-description">Belajar Bahasa Jerman jadi lebih mudah dengan sistem Learning
-                                Management System (LMS) DlmF.</p>
-                            <a href="#" class="price-btn">
-                                Lihat Detail Harga <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div> --}}
 
             </div>
         </div>
@@ -2123,9 +2200,10 @@
     <!-- Teachers Section -->
     <section class="teachers-section">
         <div class="container">
-            <h2 class="section-title">Belajar Bersama Tutor Terbaik</h2>
-            <p class="section-subtitle">Tim pengajar kami terdiri dari native speaker dan tutor berpengalaman yang siap
-                membantu perjalanan belajar Anda</p>
+            <h2 class="section-title">Belajar Bersama Tutor Terpilih</h2>
+            <p class="section-subtitle">Setiap tutor di DlmF dipilih melalui proses seleksi ketat, terdiri dari native
+                speaker dan pengajar bersertifikasi yang berpengalaman dalam membimbing siswa menuju keberhasilan di
+                Jerman./p>
 
             <div class="row mt-5">
                 <div class="col-lg-3 col-md-6 mb-4">
@@ -2388,46 +2466,100 @@
                     <div class="faq-list mt-4">
                         <div class="faq-item">
                             <button class="faq-header" onclick="toggleFaq(this)">
-                                Gimana cara mulai kursus di DlmF?
+                                Apakah kelas tersedia online atau offline?
                                 <i class="bi bi-chevron-down ms-auto"></i>
                             </button>
                             <div class="faq-content">
-                                <p>Untuk memulai kursus, Anda hanya perlu mendaftar melalui website kami, memilih
-                                    program yang sesuai dengan level Anda, dan melakukan pembayaran. Setelah itu, Anda
-                                    langsung bisa mengakses materi pembelajaran.</p>
+                                <p>Ya, kami menyediakan kelas online maupun offline. Kamu dapat memilih level sesuai
+                                    kebutuhan: A1, A2, atau B1.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <button class="faq-header" onclick="toggleFaq(this)">
-                                Lokasi DlmF itu ada dimana aja MinFar?
+                                Di mana lokasi offline DlmF?
                                 <i class="bi bi-chevron-down ms-auto"></i>
                             </button>
                             <div class="faq-content">
-                                <p>DlmF memiliki cabang di Jakarta, Bandung, Surabaya, dan Yogyakarta. Kami juga
-                                    menyediakan kelas online untuk siswa di seluruh Indonesia.</p>
+                                <p>Lokasi kelas offline kami berada di Jalan Terusan Sari Asih No.76, Sarijadi, Kota
+                                    Bandung. Indonesia</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <button class="faq-header" onclick="toggleFaq(this)">
-                                Berapa di DlmF online atau offline ya, MinFar?
+                                Program apa saja yang tersedia di Deutsch lernen mit Fara?
                                 <i class="bi bi-chevron-down ms-auto"></i>
                             </button>
                             <div class="faq-content">
-                                <p>Kami menyediakan kedua opsi. Kelas online mulai dari Rp 750.000 dan kelas offline
-                                    mulai dari Rp 1.250.000 per level, tergantung program yang dipilih.</p>
+                                <p>Kami menawarkan berbagai program belajar bahasa Jerman, antara lain: </p>
+                                <ul>
+                                    <li>Kelas reguler dan private (dari level A1 – B1)</li>
+                                    <li>Kelas Sprechen mit Muttersprachler (speaking with native speaker)</li>
+                                    <li>Kelas private grammatik & persiapan ujian A1 – B1 (dengan pengantar bahasa
+                                        Indonesia atau Inggris)</li>
+                                    <li>Kelas private anak (dengan pengantar bahasa Indonesia atau Inggris)</li>
+                                    <li>Program pendampingan persiapan Au Pair</li>
+                                    <li>Program kelas asinkronus (melalui website FlexiLearn)</li>
+                                </ul>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <button class="faq-header" onclick="toggleFaq(this)">
-                                Butuh request tutor negara aja, MinFar?
+                                Apa perbedaan kelas reguler dan private?
                                 <i class="bi bi-chevron-down ms-auto"></i>
                             </button>
                             <div class="faq-content">
-                                <p>Ya, kami bisa mengatur request khusus untuk tutor dari negara tertentu. Silakan
-                                    hubungi customer service kami untuk pengaturan lebih lanjut.</p>
+                                <ul>
+                                    <li>Private: One-on-one dengan pengajar</li>
+                                    <li>Reguler: 3 – 8 orang per kelas</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-header" onclick="toggleFaq(this)">
+                                Apa itu Program Au Pair?
+                                <i class="bi bi-chevron-down ms-auto"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>Au Pair adalah program tinggal di Jerman bersama keluarga angkat. Selain membantu
+                                    mereka menjaga anak, kamu juga bisa belajar bahasa dan budaya Jerman secara
+                                    langsung, plus mendapatkan uang saku dan pengalaman internasional yang bernilai.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-header" onclick="toggleFaq(this)">
+                                Apakah ada sertifikat nya?
+                                <i class="bi bi-chevron-down ms-auto"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>Ya, kami memberikan sertifikat keikutsertaan untuk setiap peserta. Jika ingin
+                                    mendapatkan sertifikat resmi, kamu dapat mengikuti ujian Goethe secara mandiri.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-header" onclick="toggleFaq(this)">
+                                Apakah ada garansi?
+                                <i class="bi bi-chevron-down ms-auto"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>Kami memberikan garansi free class bagi siswa yang sudah mengikuti program di Deutsch
+                                    lernen mit Fara tetapi belum lulus ujian (S&K berlaku).</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-header" onclick="toggleFaq(this)">
+                                Aplikasi apa yang digunakan dalam proses belajar online?
+                                <i class="bi bi-chevron-down ms-auto"></i>
+                            </button>
+                            <div class="faq-content">
+                                <p>Kami menggunakan Microsoft Teams sebagai platform belajar. Semua kelas dan grup
+                                    diskusi sudah terintegrasi di dalam aplikasi tersebut.</p>
                             </div>
                         </div>
                     </div>
@@ -2439,11 +2571,11 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container text-center">
-            <h2 class="cta-title">Siap Mulai Belajar Bahasa Jerman?</h2>
+            <h2 class="cta-title">Siap Studi & Berkarir di Jerman?</h2>
             <p class="cta-subtitle">Bergabunglah dengan ribuan siswa yang telah merasakan kemudahan belajar bahasa
                 Jerman bersama kami di DlmF</p>
             <a href="https://wa.me/62859106869302" target="_blank" class="btn btn-hero-primary btn-lg"><i
-                    class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a>
+                    class="bi bi-whatsapp me-2"></i>Konsultasi Sekarang</a>
         </div>
     </section>
 
@@ -2453,7 +2585,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
-                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;"
+                        <img src="{{ asset('asset/img/logo/logo-Transparant3.png') }}" style="width: 180px;"
                             alt="Logo-Mitfara-Bulat">
                     </div>
                     <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
