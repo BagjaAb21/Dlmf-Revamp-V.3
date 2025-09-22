@@ -18,7 +18,7 @@
             --primary-color: #7C3AED;
             --secondary-color: #A855F7;
             --accent-color: #FDE047;
-            --dark-blue: #283750;
+            --dark-blue: #243046;
             --light-gray: #F8FAFC;
             --text-dark: #334155;
         }
