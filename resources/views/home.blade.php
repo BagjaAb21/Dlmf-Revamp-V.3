@@ -42,6 +42,38 @@
             /* Tambahkan padding untuk fixed navbar */
         }
 
+         /* Custom CSS untuk button outline dengan hover purple */
+        .btn-outline-custom {
+            color: #7C3AED;
+            border-color: #7C3AED;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        /* Button custom */
+        .btn-outline-custom:hover {
+            background-color: #7C3AED;
+            border-color: #7C3AED;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+
+        .btn-outline-custom:focus,
+        .btn-outline-custom.focus {
+            box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.25);
+            background-color: #7C3AED;
+            border-color: #7C3AED;
+            color: white;
+        }
+
+        .btn-outline-custom:active,
+        .btn-outline-custom.active {
+            background-color: #6D28D9;
+            border-color: #6D28D9;
+            color: white;
+        }
+
         /* Header & Navigation - Perbaikan */
         .navbar {
             background: rgba(255, 255, 255, 0.95);
@@ -2249,7 +2281,7 @@
             </div>
 
             <div class="text-center mt-4">
-                <a href="{{ url('/teachers') }}" class="btn btn-outline-primary">Lihat Semua Guru</a>
+                <a href="{{ url('/teachers') }}" class="btn btn-outline-custom">Lihat Semua Guru</a>
             </div>
         </div>
     </section>
@@ -2637,7 +2669,7 @@
                     <div class="d-flex gap-3 social-links mb-1">
                         <a href="#" class="text-white"><i class="bi bi-facebook"></i>
                         </a>
-                        <a href="#" class="text-white"><i class="bi bi-instagram"></i>
+                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank" class="text-white"><i class="bi bi-instagram"></i>
                         </a>
                         <a href="#" class="text-white"><i class="bi bi-youtube"></i>
                         </a>

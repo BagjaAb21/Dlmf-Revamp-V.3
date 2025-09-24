@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Kami - DlmF</title>
-    <link rel="icon" href="{{ asset('asset/img/logo/logo-bulet.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -939,7 +939,6 @@
 
         .contact-info {
             display: flex;
-            align-items: center;
             margin-bottom: 1rem;
             color: rgba(255, 255, 255, 0.7);
         }
@@ -1121,7 +1120,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;"
+                <img src="{{ asset('asset/img/logo/logo-Transparant2-v2.png') }}" style="width: 200px;"
                     alt="Logo-Mitfara-Panjang">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -1161,16 +1160,14 @@
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <div class="hero-content">
-                        <h1 class="display-4 fw-bold mb-4">Dari Indonesia Menuju Jerman, Bersama DlmF</h1>
+                        <h1 class="display-4 fw-bold mb-4">Bahasa Jerman adalah Investasi Masa Depan</h1>
                         <p class="lead mb-4">
-                            Kami adalah platform pembelajaran bahasa Jerman terdepan yang membantu ribuan siswa
-                            Indonesia meraih
-                            impian mereka untuk belajar, bekerja, atau tinggal di Jerman. Dengan metode pembelajaran
-                            yang efektif dan
-                            guru-guru berpengalaman, kami memberikan solusi terbaik untuk menguasai bahasa Jerman dengan
-                            cepat dan
-                            mudah.
+                            Dengan bergabung di Deutsch lernen mit Fara (DlmF), kamu tidak sekedar belajar bahasa
+                            Jerman. Tapi, kamu juga membuka peluang baru. Dengan modul eksklusif, pengajar
+                            berpengalaman, dan metode pembelajaran yang terbukti, ribuan siswa Indonesia telah berhasil
+                            mewujudkan mimpi mereka untuk belajar, bekerja, dan tinggal di Jerman.
                         </p>
+                        <h3 class="display-8 fw-bold mb-4">#WeBridgeYoutoGermany</h3>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -1191,7 +1188,7 @@
             <div class="row">
                 <div class="col-6 col-md-3">
                     <div class="stat-item">
-                        <span class="stat-number">5576</span>
+                        <span class="stat-number">5000+</span>
                         <span class="stat-label">Siswa</span>
                     </div>
                 </div>
@@ -1224,18 +1221,24 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <h2 class="section-title">Visi Kami</h2>
                     <p class="mb-4">
-                        Menjadi platform pembelajaran bahasa Jerman terdepan di Indonesia yang menyediakan pendidikan
-                        berkualitas tinggi dan terjangkau untuk semua kalangan, sehingga setiap individu dapat meraih
-                        impian mereka untuk belajar, bekerja, atau tinggal di Jerman.
+                        Menjadikan Deutsch Lernen mit Fara sebagai pionir kursus bahasa Jerman premium yang modern,
+                        dinamis, dan mudah diakses oleh semua kalangan. Kami hadir sebagai mitra terpercaya bagi
+                        generasi muda Indonesia untuk mempelajari bahasa Jerman dengan cara yang menyenangkan, relevan,
+                        dan fleksibel dari mana saja.
                     </p>
 
                     <h3 class="h4 mb-3">Misi Kami</h3>
                     <ul class="mission-list">
-                        <li>Menyediakan materi pembelajaran bahasa Jerman yang komprehensif dan mudah dipahami</li>
-                        <li>Menghadirkan guru-guru berpengalaman dan bersertifikat internasional</li>
-                        <li>Membantu siswa mencapai target pembelajaran bahasa Jerman mereka dengan efektif</li>
-                        <li>Memberikan layanan pendidikan yang terjangkau dan berkualitas tinggi</li>
-                        <li>Membangun komunitas pembelajar bahasa Jerman yang solid dan saling mendukung</li>
+                        <li>Menyediakan program pembelajaran bahasa Jerman premium dengan metode interaktif dan
+                            berkualitas tinggi.</li>
+                        <li>Menghadirkan pengajar muda yang inspiratif, kompeten, dan mampu menciptakan pengalaman
+                            belajar yang berkesan.</li>
+                        <li>Menyajikan konten edukasi bahasa Jerman di berbagai platform digital dengan bahasa yang
+                            sederhana namun bernilai tinggi.</li>
+                        <li>Memberikan akses kelas online yang fleksibel dan dapat diikuti dari berbagai lokasi.</li>
+                        <li>Menawarkan kelas tatap muka dengan suasana eksklusif dan fasilitas yang nyaman.</li>
+                        <li>Menghadirkan rangkaian event eksklusif yang memperkaya pengalaman belajar sekaligus
+                            memperluas jejaring.</li>
                     </ul>
                 </div>
                 <div class="col-lg-6">
@@ -1265,34 +1268,36 @@
 
             <!-- Values Content Grid 3x2 -->
             <div class="values-content">
-                <div class="value-item" data-delay="0">
+                <!-- <div class="value-item" data-delay="0">
                     <h5>Fun Learning</h5>
                     <p>Kami percaya bahwa proses belajar yang menyenangkan akan memudahkan pemahaman. Di DlmF, setiap
                         kelas dirancang interaktif agar siswa betah dan aktif belajar.</p>
-                </div>
+                </div> -->
 
                 <div class="value-item" data-delay="200">
                     <h5>Integrity</h5>
-                    <p>Kami menjunjung tinggi transparansi dan etika. Semua pengajaran dan layanan kami dilakukan dengan
-                        tanggung jawab dan niat tulus untuk membantu siswa berkembang.</p>
+                    <p>Integritas adalah fondasi kami. Setiap pengajaran dan layanan dilakukan dengan transparansi,
+                        etika, dan komitmen tulus untuk mendampingi siswa meraih potensi terbaiknya.</p>
                 </div>
 
                 <div class="value-item" data-delay="400">
                     <h5>Excellence</h5>
-                    <p>Kami terus mendorong diri untuk memberikan hasil terbaik dari kualitas pengajaran, materi, hingga
-                        layanan siswa karena kami ingin setiap siswa sukses dengan fondasi yang kuat.</p>
+                    <p>Kami berkomitmen pada keunggulan di setiap aspek—dari kualitas pengajaran, materi, hingga
+                        layanan. Bagi kami, kesuksesan siswa bukan hanya tujuan, melainkan standar yang harus selalu
+                        kami capai.</p>
                 </div>
 
                 <div class="value-item" data-delay="600">
                     <h5>Empowerment</h5>
-                    <p>Kami hadir untuk memberdayakan siswa agar percaya diri dalam belajar dan mengambil keputusan
-                        penting untuk masa depan mereka, baik di dalam maupun luar negeri.</p>
+                    <p>Kami hadir untuk menumbuhkan kepercayaan diri setiap siswa—agar berani belajar, mengambil
+                        keputusan besar, dan meraih masa depan gemilang, baik di Indonesia maupun di Jerman.</p>
                 </div>
 
                 <div class="value-item" data-delay="800">
                     <h5>Growth</h5>
-                    <p>Kami mendorong pertumbuhan berkelanjutan baik secara akademis, pribadi, maupun profesional.
-                        Setiap proses belajar adalah langkah menuju versi terbaik dari siswa.</p>
+                    <p>Kami mendorong pertumbuhan berkelanjutan dalam aspek akademis, pribadi, dan profesional. Setiap
+                        pembelajaran di DlmF bukan sekadar pelajaran, tetapi sebuah perjalanan menuju versi terbaik dari
+                        diri siswa.</p>
                 </div>
             </div>
         </div>
@@ -1306,14 +1311,13 @@
                 <div class="journey-content">
                     <h2 class="section-title">Perjalanan Kami</h2>
                     <p class="journey-intro">
-                        Dalam lima tahun perjalanannya, DlmF terus berkembang dengan menghadirkan berbagai layanan
-                        baru serta memperkuat kualitas pengajaran melalui pengajar tersertifikasi. Kami percaya bahwa
-                        langkah-
-                        langkah kecil yang dilakukan secara konsisten dapat menciptakan perubahan besar dalam dunia
-                        pendidikan. Perjalanan kami dimulai dari hal-hal sederhana yang terus tumbuh seiring waktu.
-                        Berikut adalah
-                        tonggak
-                        yang menandai perkembangan DlmF.
+                        Selama lebih dari lima tahun, DlmF terus berkembang menjadi kursus bahasa Jerman yang terpercaya
+                        dan premium. Kami menghadirkan layanan yang selalu relevan, ditopang oleh pengajar
+                        bersertifikasi serta metode pengajaran yang terus diperbarui. <br>
+                        Kami percaya, setiap langkah kecil yang konsisten akan melahirkan perubahan besar. Dari awal
+                        yang sederhana hingga menjadi pilihan ribuan siswa, perjalanan kami adalah bukti nyata bahwa
+                        mimpi untuk belajar, bekerja, dan hidup di Jerman dapat diwujudkan dengan pendidikan yang tepat.
+
                     </p>
                 </div>
                 <div class="journey-main-image">
@@ -1488,9 +1492,8 @@
     <!-- Contact Section -->
     <section class="content-section contact-section">
         <div class="container">
-            <h2 class="section-title">Yuk, Terhubung dengan Kami!</h2>
-            <p class="lead mb-5">Punya pertanyaan atau ingin bergabung? Jangan ragu untuk menghubungi kami kapan saja
-            </p>
+            <h2 class="section-title">Langkah Pertama Menuju Jerman Dimulai di Sini</h2>
+            <p class="lead mb-5">Jangan ragu menghubungi kami!</p>
 
             <div class="contact-methods">
                 <div class="contact-method" data-delay="0">
@@ -1531,7 +1534,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
-                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;"
+                        <img src="{{ asset('asset/img/logo/logo-Transparant3.png') }}" style="width: 180px;"
                             alt="Logo-Mitfara-Bulat">
                     </div>
                     <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
@@ -1583,7 +1586,8 @@
                     <div class="d-flex gap-3 social-links mb-1">
                         <a href="#" class="text-white"><i class="bi bi-facebook"></i>
                         </a>
-                        <a href="#" class="text-white"><i class="bi bi-instagram"></i>
+                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank"
+                            class="text-white"><i class="bi bi-instagram"></i>
                         </a>
                         <a href="#" class="text-white"><i class="bi bi-youtube"></i>
                         </a>
@@ -1633,7 +1637,7 @@
                 } else if (target >= 100) {
                     element.textContent = Math.floor(current) + '+';
                 } else if (target >= 50 && element.parentElement.querySelector('.stat-label').textContent === 'Jam Belajar') {
-                    element.textContent = Math.floor(current) + 'K+';
+                    element.textContent = Math.floor(current) + '';
                 } else {
                     element.textContent = Math.floor(current) + '%';
                 }
@@ -1660,7 +1664,7 @@
                         let targetNumber = parseInt(targetText.replace(/[^0-9]/g, ''));
 
                         // Adjust target numbers based on labels
-                        if (labelElement.textContent === 'Siswa') targetNumber = 5576;
+                        if (labelElement.textContent === 'Siswa') targetNumber = 5000;
                         else if (labelElement.textContent === 'Lulusan') targetNumber = 300;
                         else if (labelElement.textContent === 'Jam Belajar') targetNumber = 50;
                         else if (labelElement.textContent === 'Kepuasan') targetNumber = 98;
