@@ -1891,7 +1891,7 @@
                             alt="Learning German" class="img-fluid hero-image-main w-100">
                         <div class="floating-elements d-none d-lg-block">
                             <div class="floating-card">
-                                <i class="bi bi-people-fill me-2 text-primary"></i>5.576+ Siswa
+                                <i class="bi bi-people-fill me-2 text-primary"></i>5.000+ Siswa
                             </div>
                         </div>
                     </div>
@@ -1905,8 +1905,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-6">
-                    <div class="stat-item" data-target="5576">
-                        <span class="stat-number" data-count="5576">0+</span>
+                    <div class="stat-item" data-target="5000">
+                        <span class="stat-number" data-count="5000">0+</span>
                         <span class="stat-label">Siswa</span>
                     </div>
                 </div>

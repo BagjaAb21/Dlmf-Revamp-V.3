@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harga - DlmF</title>
-    <link rel="icon" href="{{ asset('asset/img/logo/logo-bulet.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -551,7 +551,6 @@
 
         .contact-info {
             display: flex;
-            align-items: center;
             margin-bottom: 1rem;
             color: rgba(255, 255, 255, 0.7);
         }
@@ -821,8 +820,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;"
+            <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                <img src="{{ asset('asset/img/logo/logo-Transparant2-v2.png') }}" style="width: 200px; height: auto;"
                     alt="Logo-Mitfara-Panjang">
             </a>
 
@@ -840,6 +839,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
                             <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                         </ul>
                     </li>
@@ -847,7 +847,7 @@
                         <a class="nav-link" href="#">Produk Digital</a>
                     </li> --}}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
+                        <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
@@ -1297,7 +1297,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
-                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;"
+                        <img src="{{ asset('asset/img/logo/logo-Transparant3.png') }}" style="width: 180px;"
                             alt="Logo-Mitfara-Bulat">
                     </div>
                     <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
@@ -1349,7 +1349,7 @@
                     <div class="d-flex gap-3 social-links mb-1">
                         <a href="#" class="text-white"><i class="bi bi-facebook"></i>
                         </a>
-                        <a href="#" class="text-white"><i class="bi bi-instagram"></i>
+                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank" class="text-white"><i class="bi bi-instagram"></i>
                         </a>
                         <a href="#" class="text-white"><i class="bi bi-youtube"></i>
                         </a>

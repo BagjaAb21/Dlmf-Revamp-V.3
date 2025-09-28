@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Au Pair - DlmF</title>
-    <link rel="icon" href="{{ asset('asset/img/logo/logo-bulet.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,7 +100,7 @@
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(124, 58, 237, 0.8)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(124, 58, 237, 0.8)), url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -201,7 +201,7 @@
         .program-img.large {
             grid-column: 1 / 3;
             grid-row: 1;
-            background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-image: url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
 
         .program-img.small1 {
@@ -209,44 +209,44 @@
         }
 
         .program-img.small2 {
-            background-image: url('https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');
+            background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');
         }
 
-        /* Mission Section */
-        .mission-section {
+        /* Assistance Program Section */
+        .assistance-section {
             padding: 5rem 0;
             background: var(--light-gray);
         }
 
-        .mission-content {
+        .assistance-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: start;
         }
 
-        .mission-text h3 {
+        .assistance-text h3 {
             font-size: 2rem;
             font-weight: bold;
             color: var(--dark-blue);
             margin-bottom: 2rem;
         }
 
-        .mission-text p {
+        .assistance-text p {
             font-size: 1rem;
             line-height: 1.8;
             color: var(--text-dark);
             margin-bottom: 1.5rem;
         }
 
-        .mission-images {
+        .assistance-images {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 180px 120px;
             gap: 1rem;
         }
 
-        .mission-img {
+        .assistance-img {
             border-radius: 15px;
             overflow: hidden;
             background-size: cover;
@@ -255,158 +255,159 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
 
-        .mission-img:hover {
+        .assistance-img:hover {
             transform: scale(1.05);
         }
 
-        .mission-img.large {
+        .assistance-img.large {
             grid-column: 1 / 3;
             grid-row: 1;
-            background-image: url('https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-image: url('https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
         }
 
-        .mission-img.small1 {
-            background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');
+        .assistance-img.small1 {
+            background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');
         }
 
-        .mission-img.small2 {
-            background-image: url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');
+        .assistance-img.small2 {
+            background-image: url('https://images.unsplash.com/photo-1506452305024-9d3f02d1c9b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');
         }
 
-        /* Stats Section */
-        .stats-section {
-            padding: 4rem 0;
+        /* Pricing Section */
+        .pricing-section {
+            padding: 5rem 0;
             background: white;
         }
 
-        .stats-title {
+        .pricing-title {
             text-align: center;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
         }
 
-        .stats-grid {
+        .pricing-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 4rem;
+            opacity: 0.8;
+        }
+
+        .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .stat-item {
-            text-align: center;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .stat-item.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            padding: 5rem 0;
-            background: var(--light-gray);
-        }
-
-        .faq-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .faq-image {
-            position: relative;
+        .pricing-card {
+            background: white;
             border-radius: 20px;
-            overflow: hidden;
-            height: 400px;
-            background: url('https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;
+            padding: 2.5rem;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
 
-        .faq-text h3 {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--dark-blue);
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .pricing-card.featured {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.02), rgba(168, 85, 247, 0.02));
+        }
+
+        .pricing-card.featured:hover {
+            border-color: var(--secondary-color);
+        }
+
+        .pricing-header {
+            text-align: center;
             margin-bottom: 2rem;
         }
 
-        .faq-item {
-            background: white;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
+        .pricing-type {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
         }
 
-        .faq-question {
-            padding: 1.2rem;
-            background: white;
-            border: none;
-            width: 100%;
-            text-align: left;
-            font-weight: 600;
-            color: var(--dark-blue);
-            cursor: pointer;
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-description {
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-content {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
+            align-items: flex-start;
+            width: 100%;
+            gap: 1rem;
         }
 
-        .faq-question:hover {
-            background: rgba(124, 58, 237, 0.05);
+        .feature-name {
+            flex: 1;
+            line-height: 1.4;
         }
 
-        .faq-question.active {
-            background: rgba(124, 58, 237, 0.1);
+        .pricing-features .price {
+            font-weight: 600;
             color: var(--primary-color);
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
-        .faq-answer {
-            padding: 0 1.2rem;
-            max-height: 0;
-            overflow: hidden;
+        .feature-icon {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .pricing-button {
+            width: 100%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 1rem;
             transition: all 0.3s ease;
-            background: white;
         }
 
-        .faq-answer.active {
-            max-height: 200px;
-            padding: 0 1.2rem 1.2rem;
-        }
-
-        .faq-answer p {
-            color: var(--text-dark);
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .faq-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .faq-question.active .faq-icon {
-            transform: rotate(180deg);
+        .pricing-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
         }
 
         /* CTA Section */
@@ -506,7 +507,6 @@
 
         .contact-info {
             display: flex;
-            align-items: center;
             margin-bottom: 1rem;
             color: rgba(255, 255, 255, 0.7);
         }
@@ -568,21 +568,20 @@
         @media (max-width: 968px) {
 
             .program-content,
-            .mission-content,
-            .faq-content {
+            .assistance-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
 
             .program-images,
-            .mission-images {
+            .assistance-images {
                 order: -1;
                 max-width: 500px;
                 margin: 0 auto;
             }
 
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .pricing-grid {
+                grid-template-columns: 1fr;
                 gap: 2rem;
             }
         }
@@ -606,19 +605,14 @@
                 grid-row: 1;
             }
 
-            .mission-images {
+            .assistance-images {
                 grid-template-columns: 1fr;
                 grid-template-rows: 180px 120px 120px;
             }
 
-            .mission-img.large {
+            .assistance-img.large {
                 grid-column: 1;
                 grid-row: 1;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
             }
 
             .footer-content {
@@ -644,15 +638,17 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;"
+            <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                <img src="{{ asset('asset/img/logo/logo-Transparant2-v2.png') }}" style="width: 200px; height: auto;"
                     alt="Logo-Mitfara-Panjang">
             </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
@@ -667,13 +663,12 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
+                        <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
                 </ul>
-                <a href="#" class="btn btn-primary">Daftar</a>
             </div>
         </div>
     </nav>
@@ -682,7 +677,7 @@
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1>Empowering Indonesian youth to explore Germany through the Au Pair experience</h1>
+                <h1>Program Au Pair - Pengalaman Budaya Jerman yang Tak Terlupakan</h1>
             </div>
         </div>
     </section>
@@ -692,15 +687,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <span class="program-badge">Program Dent</span>
-                    <h2 class="program-title">Au Pair</h2>
+                    <span class="program-badge">Program Au Pair</span>
+                    <h2 class="program-title">Apa itu Au Pair?</h2>
                 </div>
             </div>
             <div class="program-content">
                 <div class="program-text">
-                    <p>Program Au Pair membuka kesempatan bagi anak muda Indonesia untuk tinggal bersama keluarga angkat
-                        di Jerman selama satu tahun penuh. Selain mengenal budaya dan kehidupan baru, peserta juga akan
-                        memperdalam kemampuan Bahasa Jerman secara langsung di lingkungan penduduk asli.</p>
+                    <p><strong>Au Pair</strong> adalah sebuah program internasional di mana anak muda (usia 18–27 tahun)
+                        tinggal bersama keluarga angkat (<em>Gastfamilie</em>) di Jerman untuk membantu mengurus anak
+                        dan pekerjaan ringan rumah tangga. Sebagai gantinya, peserta mendapatkan fasilitas seperti
+                        tempat tinggal, uang saku bulanan, serta kesempatan mendalami budaya dan bahasa Jerman secara
+                        langsung.</p>
+
+                    <p>Program ini sangat populer bagi mereka yang ingin mendapatkan pengalaman budaya, sekaligus
+                        menjadi pintu awal sebelum melanjutkan studi atau karier di Jerman.</p>
                 </div>
                 <div class="program-images">
                     <div class="program-img large"></div>
@@ -711,109 +711,136 @@
         </div>
     </section>
 
-    <!-- Mission Section -->
-    <section class="mission-section">
+    <!-- Assistance Program Section -->
+    <section class="assistance-section">
         <div class="container">
-            <div class="mission-content">
-                <div class="mission-text">
-                    <h3>Our mission</h3>
-                    <p>Kami percaya bahwa pengalaman hidup budaya adalah sarana yang paling baik untuk belajar secara
-                        akurat dan profesional. Melalui program Au Pair, kami memberikan peluang Indonesia memperoleh
-                        kesempatan di tingkat dunia negara untuk yang memperkenalkan kegiatan Jerman, memperluas
-                        kreatif, dan memperkuat karakter terbentuk kelas untuk internasional.</p>
+            <div class="assistance-content">
+                <div class="assistance-text">
+                    <h3>Program Pendampingan Persiapan Au Pair</h3>
+                    <p>Mengikuti program Au Pair bukan hanya soal mencari keluarga angkat, tetapi juga membutuhkan
+                        persiapan matang. Mulai dari dokumen, bahasa, hingga wawancara. Karena itu, Deutsch Lernen mit
+                        Fara menghadirkan <strong>program pendampingan persiapan au pair ke Jerman</strong>.</p>
 
-                    <p>Program lokal kepala pemimpin pengalaman manajemen kelas atau juga berpenampilan dengan bantuan,
-                        mendorong lembaga baru, dan membangun jalinan internasional.</p>
+                    <p>Melalui program ini, kamu akan dibantu mulai dari <strong>pencarian keluarga angkat
+                            (Gastfamilie)</strong>, pembuatan dokumen seperti <strong>motivation letter</strong>, hingga
+                        <strong>latihan wawancara</strong> dengan keluarga maupun pihak kedutaan Jerman.
+                    </p>
 
-                    <p>Kami mendampingi setiap peserta mulai dari proses pendaftaran, pelatihan bahasa, pengurusan visa,
-                        hingga tau di negeri hakim. Dengan pendidikan yang bermatang dan profesional, kami helir sebagai
-                        mitra pertamanan yang baik memerlukan untuk tingkat pelajaran.</p>
+                    <p>Tujuannya agar prosesmu lebih terarah, lancar, dan peluang keberhasilan lebih besar.</p>
                 </div>
-                <div class="mission-images">
-                    <div class="mission-img large"></div>
-                    <div class="mission-img small1"></div>
-                    <div class="mission-img small2"></div>
+                <div class="assistance-images">
+                    <div class="assistance-img large"></div>
+                    <div class="assistance-img small1"></div>
+                    <div class="assistance-img small2"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
+    <!-- Pricing Section -->
+    <section class="pricing-section">
         <div class="container">
-            <h3 class="stats-title">The Numbers</h3>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">6-12</span>
-                    <span class="stat-label">Bulan</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Host Families Europe</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">150+</span>
-                    <span class="stat-label">Keluarga Host</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Pendampingan Visa & Keberangkatan</span>
-                </div>
-            </div>
-        </div>
-    </section>
+            <h3 class="pricing-title">Pricelist Program Pendampingan Persiapan Au Pair</h3>
+            <p class="pricing-subtitle">Pilih paket yang sesuai dengan kebutuhan Anda</p>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="faq-content">
-                <div class="faq-image"></div>
-                <div class="faq-text">
-                    <h3>Freunde Bertanya, MinFara Menjawab</h3>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Darf Au pair als MinFara?
-                            <i class="bi bi-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Tentu saja program yang kami tawarkan dan bertugas dalam persiapan bahasa Jerman, sampai
-                                aplikasi 🙂</p>
-                        </div>
+            <div class="pricing-grid">
+                <!-- Ala Carte Package -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="pricing-type">🔹 Ala Carte</h4>
+                        <p class="pricing-description">Pilih sesuai kebutuhan</p>
                     </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Lokasi Dent/ Au pair dimana saja, MinFara?
-                            <i class="bi bi-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Program Au Pair tersedia di berbagai kota di Jerman, termasuk Berlin, Munich, Hamburg,
-                                dan kota-kota lainnya.</p>
-                        </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <div class="feature-content">
+                                <span class="feature-name">Pencarian Gastfamilie</span>
+                                <span class="price">Rp 6.000.000</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <div class="feature-content">
+                                <span class="feature-name">Konsultasi dengan Inez</span>
+                                <span class="price">Rp 600.000/sesi</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <div class="feature-content">
+                                <span class="feature-name">Pembuatan Motivation Letter</span>
+                                <span class="price">Rp 1.250.000</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <div class="feature-content">
+                                <span class="feature-name">Penerjemahan Motivation Letter</span>
+                                <span class="price">Rp 750.000</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <div class="feature-content">
+                                <span class="feature-name">Pembuatan Termin di Kedutaan Jerman</span>
+                                <span class="price">Rp 1.250.000</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <div class="feature-content">
+                                <span class="feature-name">Latihan Wawancara (dengan GF & Kedutaan)</span>
+                                <span class="price">Rp 1.250.000</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="pricing-button">Konsultasi Sekarang</button>
+                </div>
+
+                <!-- All-in Package -->
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h4 class="pricing-type">🔹 All-in Package</h4>
+                        <div class="pricing-price">Rp 10.000.000</div>
+                        <p class="pricing-description">Semua layanan dengan harga khusus</p>
                     </div>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Berapa at Dent/ ombre plus offline ya, MinFara?
-                            <i class="bi bi-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Program Au Pair memiliki durasi 6-12 bulan dengan berbagai pilihan paket sesuai kebutuhan
-                                Anda.</p>
-                        </div>
-                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <span>Pencarian Gastfamilie</span>
+                            <i class="bi bi-check-lg text-success"></i>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <span>Konsultasi dengan Inez</span>
+                            <i class="bi bi-check-lg text-success"></i>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <span>Pembuatan Motivation Letter</span>
+                            <i class="bi bi-check-lg text-success"></i>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <span>Penerjemahan Motivation Letter</span>
+                            <i class="bi bi-check-lg text-success"></i>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <span>Pembuatan Termin di Kedutaan Jerman</span>
+                            <i class="bi bi-check-lg text-success"></i>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle feature-icon"></i>
+                            <span>Latihan Wawancara (dengan GF & Kedutaan)</span>
+                            <i class="bi bi-check-lg text-success"></i>
+                        </li>
+                    </ul>
 
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Butuh request tutor rupiah yah, MinFara?
-                            <i class="bi bi-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Kami menyediakan layanan konsultasi dan pendampingan lengkap untuk program Au Pair dengan
-                                berbagai pilihan pembayaran.</p>
-                        </div>
-                    </div>
+                    <button class="pricing-button">Pilih All-in Package</button>
                 </div>
             </div>
         </div>
@@ -823,10 +850,12 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h3>Siap Mulai Belajar Bahasa Jerman?</h3>
-                <p>Bergabunglah dengan ribuan siswa yang telah merasakan kemudahan belajar bahasa Jerman bersama kami di DlmF</p>
+                <h3>Siap Memulai Program Au Pair?</h3>
+                <p>Dengan adanya program pendampingan ini, kamu tidak perlu bingung menghadapi proses au pair yang cukup
+                    panjang dan detail. Semua langkah akan didampingi, sehingga kamu bisa fokus mempersiapkan diri dan
+                    berangkat ke Jerman dengan lebih percaya diri.</p>
                 <button class="cta-button"><a class="text-white text-decoration-none"
-                        href="https://wa.me/6289647897616?text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan."
+                        href="https://wa.me/6289647897616?text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+program+Au+Pair+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+pendampingan+yang+ditawarkan."
                         target="_blank"><i class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a></button>
             </div>
         </div>
@@ -838,7 +867,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
-                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;"
+                        <img src="{{ asset('asset/img/logo/logo-Transparant3.png') }}" style="width: 180px;"
                             alt="Logo-Mitfara-Bulat">
                     </div>
                     <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
@@ -851,16 +880,11 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h5 class="footer-title">Quick Link</h5>
                     <ul class="footer-links">
-                        {{-- <li><a href="#">Course</a></li> --}}
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
                         <li><a href="{{ url('/blog') }}">Blog</a></li>
-                        {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
-                        {{-- <li><a href="#">Career</a></li>
-                        <li><a href="#">Legalitas</a></li> --}}
-
                     </ul>
                 </div>
 
@@ -890,7 +914,8 @@
                     <div class="d-flex gap-3 social-links mb-1">
                         <a href="#" class="text-white"><i class="bi bi-facebook"></i>
                         </a>
-                        <a href="#" class="text-white"><i class="bi bi-instagram"></i>
+                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank"
+                            class="text-white"><i class="bi bi-instagram"></i>
                         </a>
                         <a href="#" class="text-white"><i class="bi bi-youtube"></i>
                         </a>
@@ -921,99 +946,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Count-up animation for statistics
-        function countUp(element, target, duration = 2000) {
-            const start = 0;
-            let current = start;
-            const increment = target / (duration / 16);
-
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-
-                // Format numbers based on content
-                const text = element.textContent;
-                if (text.includes('-')) {
-                    element.textContent = text; // Keep range format
-                } else if (text.includes('+')) {
-                    element.textContent = Math.floor(current) + '+';
-                } else if (text.includes('%')) {
-                    element.textContent = Math.floor(current) + '%';
-                } else {
-                    element.textContent = Math.floor(current);
-                }
-            }, 16);
-        }
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const element = entry.target;
-
-                    if (element.classList.contains('stat-item')) {
-                        element.classList.add('animate');
-
-                        const numberElement = element.querySelector('.stat-number');
-                        const originalText = numberElement.textContent;
-
-                        setTimeout(() => {
-                            if (originalText === '6-12') {
-                                // Keep range format
-                                return;
-                            } else if (originalText === '500+') {
-                                countUp(numberElement, 500);
-                            } else if (originalText === '150+') {
-                                countUp(numberElement, 150);
-                            } else if (originalText === '100%') {
-                                countUp(numberElement, 100);
-                            }
-                        }, 500);
-                    }
-
-                    observer.unobserve(element);
-                }
-            });
-        }, observerOptions);
-
-        // FAQ functionality
+        // Smooth scrolling for navigation links
         document.addEventListener('DOMContentLoaded', () => {
-            const faqQuestions = document.querySelectorAll('.faq-question');
-
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const faqItem = question.parentElement;
-                    const answer = faqItem.querySelector('.faq-answer');
-                    const isActive = question.classList.contains('active');
-
-                    // Close all other FAQ items
-                    faqQuestions.forEach(q => {
-                        q.classList.remove('active');
-                        q.parentElement.querySelector('.faq-answer').classList.remove('active');
-                    });
-
-                    // Toggle current FAQ item
-                    if (!isActive) {
-                        question.classList.add('active');
-                        answer.classList.add('active');
-                    }
-                });
-            });
-
-            // Observe stat items
-            document.querySelectorAll('.stat-item').forEach(item => {
-                observer.observe(item);
-            });
-
-            // Smooth scrolling for navigation links
             const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
@@ -1032,7 +966,7 @@
             });
 
             // Add hover effects to images
-            const images = document.querySelectorAll('.program-img, .mission-img');
+            const images = document.querySelectorAll('.program-img, .assistance-img');
             images.forEach(img => {
                 img.addEventListener('mouseenter', () => {
                     img.style.transform = 'scale(1.05)';
@@ -1055,6 +989,29 @@
                     navbar.style.background = 'white';
                     navbar.style.backdropFilter = 'none';
                 }
+            });
+
+            // Pricing card hover effects
+            const pricingCards = document.querySelectorAll('.pricing-card');
+            pricingCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px)';
+                    card.style.boxShadow = '0 25px 60px rgba(0, 0, 0, 0.15)';
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.1)';
+                });
+            });
+
+            // Button click handlers
+            const pricingButtons = document.querySelectorAll('.pricing-button');
+            pricingButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const whatsappUrl = "https://wa.me/6289647897616?text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+program+Au+Pair+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+pendampingan+yang+ditawarkan.";
+                    window.open(whatsappUrl, '_blank');
+                });
             });
         });
     </script>
