@@ -10,7 +10,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         as="style">
     <link rel="preload" href="{{ asset('asset/img/logo/logo-panjang.png') }}" as="image">
-    <link rel="icon" href="{{ asset('asset/img/logo/logo-bulet.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}" type="image/x-icon">
 
     <!-- Critical Above-the-fold CSS -->
     <style>
@@ -94,8 +94,8 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;"
-                    alt="Logo-Mitfara-Panjang" loading="eager" width="180" height="auto">
+                <img src="{{ asset('asset/img/logo/logo-Transparant2-v2.png') }}" style="width: 200px; height: auto;"
+                    alt="Logo-Mitfara-Panjang">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -112,9 +112,13 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
                             <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                         </ul>
                     </li>
+                    {{-- <li class="nav-item">
+                        <a class="nav-link" href="#">Produk Digital</a>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
                     </li>
@@ -237,8 +241,8 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
-                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;"
-                            alt="Logo-Mitfara-Bulat" loading="lazy" width="180" height="auto">
+                        <img src="{{ asset('asset/img/logo/logo-Transparant3.png') }}" style="width: 180px;"
+                            alt="Logo-Mitfara-Bulat">
                     </div>
                     <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
                     <p class="footer-description">
@@ -250,11 +254,16 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h5 class="footer-title">Quick Link</h5>
                     <ul class="footer-links">
+                        {{-- <li><a href="#">Course</a></li> --}}
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
                         <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
+                        {{-- <li><a href="#">Career</a></li>
+                        <li><a href="#">Legalitas</a></li> --}}
+
                     </ul>
                 </div>
 
@@ -267,22 +276,30 @@
                     <div class="contact-info">
                         <i class="bi bi-telephone-fill"></i>
                         <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
-                                href="https://wa.me/6289647897616">+62 896 4789 7616</a></span>
+                                href="https://wa.me/6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0">+62
+                                896 4789 7616</a>
+                        </span>
                     </div>
                     <div class="contact-info">
                         <i class="bi bi-envelope-fill"></i>
                         <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
-                                href="mailto:info@mitfara.com">info@mitfara.com</a></span>
+                                href="mailto:info@mitfara.com">info@mitfara.com</a>
+                        </span>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5 class="footer-title">Follow Us</h5>
                     <div class="d-flex gap-3 social-links mb-1">
-                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank"
+                            class="text-white"><i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                     <p class="footer-description">
                         Ikuti media sosial kami untuk tips belajar bahasa Jerman dan update program terbaru.
@@ -899,7 +916,6 @@
 
         .contact-info {
             display: flex;
-            align-items: center;
             margin-bottom: 1rem;
             color: rgba(255, 255, 255, 0.7);
         }
