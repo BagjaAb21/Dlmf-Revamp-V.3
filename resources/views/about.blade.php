@@ -1162,8 +1162,8 @@
                     <div class="hero-content">
                         <h1 class="display-4 fw-bold mb-4">Bahasa Jerman adalah Investasi Masa Depan</h1>
                         <p class="lead mb-4">
-                            Dengan bergabung di Deutsch lernen mit Fara (DlmF), kamu tidak sekedar belajar bahasa
-                            Jerman. Tapi, kamu juga membuka peluang baru. Dengan modul eksklusif, pengajar
+                            Dengan bergabung di Deutsch lernen mit Fara (DlmF), anda tidak sekedar belajar bahasa
+                            Jerman. Tapi, anda juga membuka peluang baru. Dengan modul eksklusif, pengajar
                             berpengalaman, dan metode pembelajaran yang terbukti, ribuan siswa Indonesia telah berhasil
                             mewujudkan mimpi mereka untuk belajar, bekerja, dan tinggal di Jerman.
                         </p>
@@ -1188,25 +1188,25 @@
             <div class="row">
                 <div class="col-6 col-md-3">
                     <div class="stat-item">
-                        <span class="stat-number">5000+</span>
+                        <span class="stat-number" style="color: white;">5000+</span>
                         <span class="stat-label">Siswa</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="stat-item">
-                        <span class="stat-number">300</span>
+                        <span class="stat-number" style="color: white;">300</span>
                         <span class="stat-label">Lulusan</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="stat-item">
-                        <span class="stat-number">50</span>
+                        <span class="stat-number" style="color: white;">50</span>
                         <span class="stat-label">Jam Belajar</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="stat-item">
-                        <span class="stat-number">98</span>
+                        <span class="stat-number" style="color: white;">98</span>
                         <span class="stat-label">Kepuasan</span>
                     </div>
                 </div>
@@ -1219,7 +1219,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="section-title">Visi Kami</h2>
+                    <h2 class="h4 mb-3"><b>Visi Kami</b></h2>
                     <p class="mb-4">
                         Menjadikan Deutsch Lernen mit Fara sebagai pionir kursus bahasa Jerman premium yang modern,
                         dinamis, dan mudah diakses oleh semua kalangan. Kami hadir sebagai mitra terpercaya bagi
@@ -1227,7 +1227,7 @@
                         dan fleksibel dari mana saja.
                     </p>
 
-                    <h3 class="h4 mb-3">Misi Kami</h3>
+                    <h2 class="h4 mb-3"><b>Misi Kami</b></h2>
                     <ul class="mission-list">
                         <li>Menyediakan program pembelajaran bahasa Jerman premium dengan metode interaktif dan
                             berkualitas tinggi.</li>
@@ -1256,7 +1256,7 @@
     <section class="values-section">
         <div class="container">
             <div class="text-center mb-4">
-                <h2 class="section-title">Nilai Kami</h2>
+                <h2 class="section-title" style="color: #334155">Nilai Kami</h2>
                 <p class="section-subtitle">Kami Percaya, Nilai Baik Melahirkan Pembelajaran yang Bermakna</p>
             </div>
 
@@ -1309,7 +1309,7 @@
             <!-- Journey Header -->
             <div class="journey-header">
                 <div class="journey-content">
-                    <h2 class="section-title">Perjalanan Kami</h2>
+                    <h2 class="section-title" style="color: #334155">Perjalanan Kami</h2>
                     <p class="journey-intro">
                         Selama lebih dari lima tahun, DlmF terus berkembang menjadi kursus bahasa Jerman yang terpercaya
                         dan premium. Kami menghadirkan layanan yang selalu relevan, ditopang oleh pengajar
@@ -1445,7 +1445,7 @@
     <!-- Teachers Section -->
     <section class="content-section teachers-section">
         <div class="container">
-            <h2 class="section-title">Kenalan dengan Tutor Hebat Kami</h2>
+            <h2 class="section-title" style="color:#334155">Kenalan dengan Tutor Hebat Kami</h2>
             <p class="section-subtitle">Tim pengajar kami terdiri dari native speaker dan tutor berpengalaman yang siap
                 membantu perjalanan belajar Anda</p>
 
@@ -1492,8 +1492,8 @@
     <!-- Contact Section -->
     <section class="content-section contact-section">
         <div class="container">
-            <h2 class="section-title">Langkah Pertama Menuju Jerman Dimulai di Sini</h2>
-            <p class="lead mb-5">Jangan ragu menghubungi kami!</p>
+            <h2 class="section-title" style="color: #334155">Langkah Pertama Menuju Jerman Dimulai di Sini</h2>
+            <p class="lead mb-5" style="color: #6c757d;">Jangan ragu menghubungi kami!</p>
 
             <div class="contact-methods">
                 <div class="contact-method" data-delay="0">

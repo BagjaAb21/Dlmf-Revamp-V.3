@@ -900,7 +900,7 @@
                         </div>
                         <div class="program-duration">20x Pertemuan</div>
                         <p class="program-description">
-                            Belajar langsung di kelas dengan suasana interaktif. Cocok untuk kamu yang ingin cepat
+                            Belajar langsung di kelas dengan suasana interaktif. Cocok untuk anda yang ingin cepat
                             memahami Bahasa Jerman secara menyeluruh dengan bimbingan tatap muka.
                         </p>
 
@@ -962,7 +962,7 @@
                         </div>
                         <div class="program-duration">1x Pertemuan</div>
                         <p class="program-description">
-                            Kelas Private Grammatik sangat cocok bagi kamu yang ingin mendalami grammatik tertentu.
+                            Kelas Private Grammatik sangat cocok bagi anda yang ingin mendalami grammatik tertentu.
                             Waktu dan kuantitas kelas dapat disesuaikan dengan kebutuhanmu.
                         </p>
 
@@ -1023,7 +1023,7 @@
                         </div>
                         <div class="program-duration">20x Pertemuan</div>
                         <p class="program-description">
-                            Belajar dari mana saja dengan metode intensif. Dirancang untuk kamu yang ingin fasih Bahasa
+                            Belajar dari mana saja dengan metode intensif. Dirancang untuk anda yang ingin fasih Bahasa
                             Jerman secara efektif melalui sesi live online yang terarah.
                         </p>
 
@@ -1065,7 +1065,7 @@
                         </div>
                         <div class="program-duration">1x Pertemuan</div>
                         <p class="program-description">
-                            Kelas Persiapan Ujian sangat cocok bagi kamu yang sedang menyiapkan ujian sertifikasi Bahasa
+                            Kelas Persiapan Ujian sangat cocok bagi anda yang sedang menyiapkan ujian sertifikasi Bahasa
                             Jerman. Waktu dan kuantitas kelas dapat disesuaikan dengan kebutuhanmu. Dalam kelas
                             persiapan ujian ini, fokusnya akan membahas soal-soal lesen, hören, schreiben dan sprechen.
                         </p>
@@ -1157,7 +1157,7 @@
                         <p class="program-description">
                             Belajar Bahasa Jerman jadi lebih mudah dengan sistem Learning Management System (LMS) DlmF.
                             Akses materi kapan saja dan di mana saja, sesuai ritmemu. Fleksibel, terstruktur, dan cocok
-                            untuk kamu yang ingin belajar mandiri.
+                            untuk anda yang ingin belajar mandiri.
                         </p>
 
                         <div class="benefits-title">Benefit:</div>
@@ -1349,7 +1349,8 @@
                     <div class="d-flex gap-3 social-links mb-1">
                         <a href="#" class="text-white"><i class="bi bi-facebook"></i>
                         </a>
-                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank" class="text-white"><i class="bi bi-instagram"></i>
+                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank"
+                            class="text-white"><i class="bi bi-instagram"></i>
                         </a>
                         <a href="#" class="text-white"><i class="bi bi-youtube"></i>
                         </a>

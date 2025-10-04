@@ -22,6 +22,27 @@ Route::get('/program', function () {
 Route::get('/harga', function () {
     return view('harga');
 });
+Route::get('/program/reguler', function () {
+    return view('program.reguler');
+});
+Route::get('/program/grammatik', function () {
+    return view('program.grammatik');
+});
+Route::get('/program/prep-ex-goethe', function () {
+    return view('program.prep-ex-goethe');
+});
+Route::get('/program/muttersprachler', function () {
+    return view('program.muttersprachler');
+});
+Route::get('/program/kinder', function () {
+    return view('program.kinder');
+});
+Route::get('/program/flexilearn', function () {
+    return view('program.flexilearn');
+});
+route::get('/program/netzwerk', function () {
+    return view('program.netzwerk');
+});
 
 // Au Pair
 Route::get('/au-pair', function () {

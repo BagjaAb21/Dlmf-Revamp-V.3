@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Deutsch Lernen mit Fara')</title>
-    <link rel="icon" href="{{ asset('asset/img/logo/logo-bulet.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}" type="image/x-icon">
     <meta name="description" content="@yield('description', 'Belajar bahasa Jerman dengan cara yang menyenangkan dan efektif bersama Deutsch Lernen mit Fara.')">
     <meta name="keywords" content="@yield('keywords', 'Bahasa Jerman, Kursus Bahasa Jerman, Deutsch Lernen mit Fara')">
 
@@ -121,7 +121,6 @@
 
         .contact-info {
             display: flex;
-            align-items: center;
             margin-bottom: 1rem;
             color: rgba(255, 255, 255, 0.7);
         }
@@ -192,7 +191,8 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                <img src="{{ asset('asset/img/logo/logo-panjang.png') }}" style="width: 180px;" alt="Logo-Mitfara-Panjang">
+                <img src="{{ asset('asset/img/logo/logo-Transparant2-v2.png') }}" style="width: 200px; height: auto;"
+                    alt="Logo-Mitfara-Panjang">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -236,7 +236,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
-                        <img src="{{ asset('asset/img/logo/logo-bulet.png') }}" style="width: 180px;"
+                        <img src="{{ asset('asset/img/logo/logo-Transparant3.png') }}" style="width: 180px;"
                             alt="Logo-Mitfara-Bulat">
                     </div>
                     <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>

@@ -787,7 +787,7 @@
             </div>
 
             <h1>
-                Temukan Wawasan Baru Seputar<br>
+                Temukan Wawasan Baru<br>
                 <span class="gradient-text">Bahasa & Budaya Jerman</span>
             </h1>
 

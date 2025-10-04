@@ -721,7 +721,7 @@
                         persiapan matang. Mulai dari dokumen, bahasa, hingga wawancara. Karena itu, Deutsch Lernen mit
                         Fara menghadirkan <strong>program pendampingan persiapan au pair ke Jerman</strong>.</p>
 
-                    <p>Melalui program ini, kamu akan dibantu mulai dari <strong>pencarian keluarga angkat
+                    <p>Melalui program ini, anda akan dibantu mulai dari <strong>pencarian keluarga angkat
                             (Gastfamilie)</strong>, pembuatan dokumen seperti <strong>motivation letter</strong>, hingga
                         <strong>latihan wawancara</strong> dengan keluarga maupun pihak kedutaan Jerman.
                     </p>
@@ -851,8 +851,8 @@
         <div class="container">
             <div class="cta-content">
                 <h3>Siap Memulai Program Au Pair?</h3>
-                <p>Dengan adanya program pendampingan ini, kamu tidak perlu bingung menghadapi proses au pair yang cukup
-                    panjang dan detail. Semua langkah akan didampingi, sehingga kamu bisa fokus mempersiapkan diri dan
+                <p>Dengan adanya program pendampingan ini, anda tidak perlu bingung menghadapi proses au pair yang cukup
+                    panjang dan detail. Semua langkah akan didampingi, sehingga anda bisa fokus mempersiapkan diri dan
                     berangkat ke Jerman dengan lebih percaya diri.</p>
                 <button class="cta-button"><a class="text-white text-decoration-none"
                         href="https://wa.me/6289647897616?text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+program+Au+Pair+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+pendampingan+yang+ditawarkan."

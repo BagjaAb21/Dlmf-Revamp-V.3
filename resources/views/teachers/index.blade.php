@@ -158,15 +158,15 @@
                 <!-- Stats Section -->
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number">16+</span>
+                        <span class="stat-number">19+</span>
                         <span class="stat-label">Deutsche Tutoren</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">A1-C2</span>
+                        <span class="stat-number">A1-B1</span>
                         <span class="stat-label">Alle Niveaus</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">1000+</span>
+                        <span class="stat-number">5000+</span>
                         <span class="stat-label">Erfolgreiche Schüler</span>
                     </div>
                     <div class="stat-item">
@@ -327,16 +327,16 @@
         // Teachers data - moved to JS for better performance
         const teachersData = [
             {
-                id: 1, name: 'Frau Clara',
-                photo: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                id: 1, name: 'Frau Afifah',
+                photo: '{{ asset('asset/img/teachers/Frau_Afifah.jpg') }}',
                 level: 'A1-B2, Grammar & Speaking, GOETHE Preparation',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'Sertifikasi GOETHE B1',
                 experience: '2 Tahun Mengajar'
             },
             {
-                id: 2, name: 'Frau Fila',
-                photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7bf874e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                id: 2, name: 'Frau Assyifa',
+                photo: '{{ asset('asset/img/teachers/Frau_Assyifa.png') }}',
                 level: 'A1-A2, Basic German, Conversation',
                 education: 'Pendidikan Bahasa Jerman UPI',
                 certification: 'Sertifikasi GOETHE A2',
@@ -344,15 +344,135 @@
             },
             {
                 id: 3, name: 'Frau Azizah',
-                photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                photo: '{{ asset('asset/img/teachers/Frau_Azizah.jpg') }}',
                 level: 'B1-C1, Advanced Grammar, Business German',
                 education: 'Native Speaker dari Jerman',
                 certification: 'Native Speaker Certificate',
                 experience: '3 Tahun Mengajar'
             },
             {
-                id: 4, name: 'Frau Rara',
-                photo: 'https://images.unsplash.com/photo-1544005313-94dc1d8a9d30?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                id: 4, name: 'Frau Caca',
+                photo: '{{ asset('asset/img/teachers/Frau_Caca.jpg') }}',
+                level: 'B2-C2, Test Preparation, Academic German',
+                education: 'Lulusan Deutschkurs München',
+                certification: 'TELC B2 Certificate',
+                experience: '2.5 Tahun Mengajar'
+            },
+            {
+                id: 5, name: 'Frau Cindy',
+                photo: '{{ asset('asset/img/teachers/Frau_Cindy.jpg') }}',
+                level: 'A1-B2, Grammar & Speaking, GOETHE Preparation',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: 'Sertifikasi GOETHE B1',
+                experience: '2 Tahun Mengajar'
+            },
+            {
+                id: 6, name: 'Frau Dwi',
+                photo: '{{ asset('asset/img/teachers/Frau_Dwi.jpg') }}',
+                level: 'A1-A2, Basic German, Conversation',
+                education: 'Pendidikan Bahasa Jerman UPI',
+                certification: 'Sertifikasi GOETHE A2',
+                experience: '1.5 Tahun Mengajar'
+            },
+            {
+                id: 7, name: 'Frau Esti',
+                photo: '{{ asset('asset/img/teachers/Frau_Esti.jpg') }}',
+                level: 'B1-C1, Advanced Grammar, Business German',
+                education: 'Native Speaker dari Jerman',
+                certification: 'Native Speaker Certificate',
+                experience: '3 Tahun Mengajar'
+            },
+            {
+                id: 8, name: 'Frau Fia',
+                photo: '{{ asset('asset/img/teachers/Frau_Fia.jpg') }}',
+                level: 'B2-C2, Test Preparation, Academic German',
+                education: 'Lulusan Deutschkurs München',
+                certification: 'TELC B2 Certificate',
+                experience: '2.5 Tahun Mengajar'
+            },
+            {
+                id: 9, name: 'Frau Jara',
+                photo: '{{ asset('asset/img/teachers/Frau_Jara.png') }}',
+                level: 'A1-B2, Grammar & Speaking, GOETHE Preparation',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: 'Sertifikasi GOETHE B1',
+                experience: '2 Tahun Mengajar'
+            },
+            {
+                id: 10, name: 'Frau Jojo',
+                photo: '{{ asset('asset/img/teachers/Frau_Jojo.JPG') }}',
+                level: 'A1-A2, Basic German, Conversation',
+                education: 'Pendidikan Bahasa Jerman UPI',
+                certification: 'Sertifikasi GOETHE A2',
+                experience: '1.5 Tahun Mengajar'
+            },
+            {
+                id: 11, name: 'Frau Mia',
+                photo: '{{ asset('asset/img/teachers/Frau_Mia.png') }}',
+                level: 'B1-C1, Advanced Grammar, Business German',
+                education: 'Native Speaker dari Jerman',
+                certification: 'Native Speaker Certificate',
+                experience: '3 Tahun Mengajar'
+            },
+            {
+                id: 12, name: 'Frau Olin',
+                photo: '{{ asset('asset/img/teachers/Frau_Olin.jpg') }}',
+                level: 'B2-C2, Test Preparation, Academic German',
+                education: 'Lulusan Deutschkurs München',
+                certification: 'TELC B2 Certificate',
+                experience: '2.5 Tahun Mengajar'
+            },
+            {
+                id: 13, name: 'Frau Putri',
+                photo: '{{ asset('asset/img/teachers/Frau_Putri.jpg') }}',
+                level: 'A1-B2, Grammar & Speaking, GOETHE Preparation',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: 'Sertifikasi GOETHE B1',
+                experience: '2 Tahun Mengajar'
+            },
+            {
+                id: 14, name: 'Frau Sofi',
+                photo: '{{ asset('asset/img/teachers/Frau_Sofi.jpg') }}',
+                level: 'A1-A2, Basic German, Conversation',
+                education: 'Pendidikan Bahasa Jerman UPI',
+                certification: 'Sertifikasi GOETHE A2',
+                experience: '1.5 Tahun Mengajar'
+            },
+            {
+                id: 15, name: 'Frau Tanaya',
+                photo: '{{ asset('asset/img/teachers/Frau_Tanaya.png') }}',
+                level: 'B1-C1, Advanced Grammar, Business German',
+                education: 'Native Speaker dari Jerman',
+                certification: 'Native Speaker Certificate',
+                experience: '3 Tahun Mengajar'
+            },
+            {
+                id: 16, name: 'Frau Zahra',
+                photo: '{{ asset('asset/img/teachers/Frau_Zahra.jpg') }}',
+                level: 'B2-C2, Test Preparation, Academic German',
+                education: 'Lulusan Deutschkurs München',
+                certification: 'TELC B2 Certificate',
+                experience: '2.5 Tahun Mengajar'
+            },
+            {
+                id: 17, name: 'Herr Fadhil',
+                photo: '{{ asset('asset/img/teachers/Herr_Fadhil.png') }}',
+                level: 'A1-A2, Basic German, Conversation',
+                education: 'Pendidikan Bahasa Jerman UPI',
+                certification: 'Sertifikasi GOETHE A2',
+                experience: '1.5 Tahun Mengajar'
+            },
+            {
+                id: 18, name: 'Frau Farabi',
+                photo: '{{ asset('asset/img/teachers/Herr_Farabi.png') }}',
+                level: 'B1-C1, Advanced Grammar, Business German',
+                education: 'Native Speaker dari Jerman',
+                certification: 'Native Speaker Certificate',
+                experience: '3 Tahun Mengajar'
+            },
+            {
+                id: 19, name: 'Herr Iqbal',
+                photo: '{{ asset('asset/img/teachers/Herr_Iqbal.png') }}',
                 level: 'B2-C2, Test Preparation, Academic German',
                 education: 'Lulusan Deutschkurs München',
                 certification: 'TELC B2 Certificate',
@@ -360,21 +480,12 @@
             }
         ];
 
-        // Duplicate teachers to show 16 total
-        const allTeachers = [];
-        for (let i = 0; i < 4; i++) {
-            allTeachers.push(...teachersData.map(teacher => ({
-                ...teacher,
-                id: teacher.id + (i * 4)
-            })));
-        }
-
         // DOM manipulation functions
         function loadTeachers() {
             const grid = document.getElementById('teachers-grid');
             const fragment = document.createDocumentFragment();
 
-            allTeachers.forEach(teacher => {
+            teachersData.forEach(teacher => {
                 const col = document.createElement('div');
                 col.className = 'col-lg-3 col-md-4 col-sm-6 col-6';
 
@@ -725,8 +836,8 @@
         }
 
         .teacher-photo {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 25px;
             object-fit: cover;
             margin: 0 auto 15px;

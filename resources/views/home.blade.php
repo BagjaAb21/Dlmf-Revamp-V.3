@@ -42,7 +42,7 @@
             /* Tambahkan padding untuk fixed navbar */
         }
 
-         /* Custom CSS untuk button outline dengan hover purple */
+        /* Custom CSS untuk button outline dengan hover purple */
         .btn-outline-custom {
             color: #7C3AED;
             border-color: #7C3AED;
@@ -1875,10 +1875,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
                     <h1 class="hero-title">Gerbang Eksklusif Menuju Masa Depan di<span
-                            style="color: var(--accent-color);">Jerman</span></h1>
+                            style="color: var(--accent-color);"> Jerman</span></h1>
                     <p class="hero-subtitle">Deutsch Lernen mit Fara bukan sekadar kursus bahasa. Kami adalah investasi
                         untuk masa depanmu. Dengan standar terbaik, tutor berpengalaman, dan pendekatan personal dari
-                        level A1 hingga B2, kami memastikan kamu siap studi/berkarir di Jerman.</p>
+                        level A1 hingga B2, kami memastikan anda siap studi/berkarir di Jerman.</p>
                     <div class="hero-buttons">
                         <a href="{{ url('/harga') }}" class="btn btn-hero-primary">Mulai Belajar</a>
                         <button class="btn btn-hero-secondary"><a class="text-decoration-none"
@@ -1936,8 +1936,8 @@
     <section class="learning-method-section">
         <div class="container">
             <h2 class="section-title">4 Pilar Metode Belajar</h2>
-            <p class="section-subtitle">Belajar di sini tidak terburu-buru. Kapan kamu stress, bisa istirahat dulu
-                sambil cari kenapa kamu benci Bahasa Jerman!</p>
+            <p class="section-subtitle">Belajar di sini tidak terburu-buru. Kapan anda stress, bisa istirahat dulu
+                sambil cari kenapa anda benci Bahasa Jerman!</p>
             <div class="row mt-5">
                 <div class="col-lg-6 mb-4">
                     <div class="method-card animate-on-scroll">
@@ -2025,8 +2025,8 @@
                             style="text-align: justify; margin-left: -0.1rem; margin-top: -3rem">Di DlmF, Anda bebas
                             memilih cara belajar yang paling sesuai: interaktif bersama tutor secara online/offline,
                             atau melalui kelas asinkronus yang dapat diakses kapan saja. Semua program dirancang dengan
-                            metode efektif dan terarah, memastikan kamu tetap berkembang dengan ritme belajar yang
-                            fleksibel, dimanapun kamu berada.</p>
+                            metode efektif dan terarah, memastikan anda tetap berkembang dengan ritme belajar yang
+                            fleksibel, dimanapun anda berada.</p>
                         <!-- Feature Points -->
                         <div class="row">
                             <div class="col-md-6 col-sm-6 mb-3 mt-3">
@@ -2130,7 +2130,7 @@
                             <span class="course-badge">Reguler Offline</span>
                             <h5 class="course-title">Reguler A1 - B1</h5>
                             <p class="course-description">Dengan kurikulum sistematis, bimbingan tutor berpengalaman,
-                                dan suasana kelas yang interaktif, kamu akan menguasai Bahasa Jerman dengan fondasi yang
+                                dan suasana kelas yang interaktif, anda akan menguasai Bahasa Jerman dengan fondasi yang
                                 kuat.</p>
 
                             <a href="{{ url('/harga') }}" class="price-btn">
@@ -2165,7 +2165,7 @@
                             <span class="course-badge">Asinkronus</span>
                             <h5 class="course-title">Deutsch FlexiLearn (Asinkronus)</h5>
                             <p class="course-description">Kelas Bahasa Jerman yang dapat diakses kapan saja. Belajar
-                                dengan materi eksklusif, video pembelajaran, dan latihan interaktif. Cocok untuk kamu
+                                dengan materi eksklusif, video pembelajaran, dan latihan interaktif. Cocok untuk anda
                                 yang membutuhkan fleksibilitas penuh.</p>
                             <a href="{{ url('/harga') }}" class="price-btn">
                                 Lihat Detail Program <i class="fas fa-arrow-right"></i>
@@ -2181,7 +2181,7 @@
                         <div class="course-content">
                             <span class="course-badge">Private</span>
                             <h5 class="course-title">Private Gramatik</h5>
-                            <p class="course-description">Kelas Private Grammatik sangat cocok bagi kamu yang ingin
+                            <p class="course-description">Kelas Private Grammatik sangat cocok bagi anda yang ingin
                                 mendalami grammatik tertentu dengan waktu dan kuantitas kelas yang dapat disesuaikan.
                             </p>
                             <a href="{{ url('/harga') }}" class="price-btn">
@@ -2198,7 +2198,7 @@
                         <div class="course-content">
                             <span class="course-badge">Preparation</span>
                             <h5 class="course-title">Kelas Persiapan Ujian</h5>
-                            <p class="course-description">Kelas Persiapan Ujian sangat cocok bagi kamu yang sedang
+                            <p class="course-description">Kelas Persiapan Ujian sangat cocok bagi anda yang sedang
                                 menyiapkan ujian sertifikasi Bahasa Jerman dengan waktu dan kuantitas kelas yang dapat
                                 disesuaikan</p>
                             <a href="{{ url('/harga') }}" class="price-btn">
@@ -2240,9 +2240,9 @@
             <div class="row mt-5">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="teacher-card">
-                        <img src="{{ asset('asset/img/teachers/Frau_Assyifa.png') }}" alt="Frau Assyifa"
+                        <img src="{{ asset('asset/img/teachers/user.png') }}" alt="Frau Assyifa"
                             class="teacher-avatar">
-                        <h5 class="teacher-name">Frau Assyifa</h5>
+                        <h5 class="teacher-name">Herr Yasin</h5>
                         <p class="teacher-level">German Tutor B1</p>
                         {{-- <p class="teacher-description">Magister Pendidikan Bahasa Jerman, Universitas Munich</p>
                         <p class="small text-primary">5+ tahun pengalaman</p> --}}
@@ -2250,9 +2250,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="teacher-card">
-                        <img src="{{ asset('asset/img/teachers/Herr_Fadhil.png') }}" alt="Herr Fadhil"
+                        <img src="{{ asset('asset/img/teachers/Frau_Zahra.jpg') }}" alt="Frau Zahra"
                             class="teacher-avatar">
-                        <h5 class="teacher-name">Herr Fadhil</h5>
+                        <h5 class="teacher-name">Frau Zahra</h5>
                         <p class="teacher-level">German Tutor B1</p>
                         {{-- <p class="teacher-description">Native Speaker dari Berlin, Sertifikat Goethe Institut</p>
                         <p class="small text-primary">8+ tahun pengalaman</p> --}}
@@ -2260,9 +2260,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="teacher-card">
-                        <img src="{{ asset('asset/img/teachers/Frau_Jara.png') }}" alt="Frau Jara"
+                        <img src="{{ asset('asset/img/teachers/Frau_Olin.jpg') }}" alt="Frau Olin"
                             class="teacher-avatar">
-                        <h5 class="teacher-name">Frau Jara</h5>
+                        <h5 class="teacher-name">Frau Olin</h5>
                         <p class="teacher-level">German Tutor B2</p>
                         {{-- <p class="teacher-description">PhD Linguistik, Spesialis Exam Preparation</p>
                         <p class="small text-primary">10+ tahun pengalaman</p> --}}
@@ -2502,7 +2502,7 @@
                                 <i class="bi bi-chevron-down ms-auto"></i>
                             </button>
                             <div class="faq-content">
-                                <p>Ya, kami menyediakan kelas online maupun offline. Kamu dapat memilih level sesuai
+                                <p>Ya, kami menyediakan kelas online maupun offline. anda dapat memilih level sesuai
                                     kebutuhan: A1, A2, atau B1.</p>
                             </div>
                         </div>
@@ -2557,7 +2557,7 @@
                             </button>
                             <div class="faq-content">
                                 <p>Au Pair adalah program tinggal di Jerman bersama keluarga angkat. Selain membantu
-                                    mereka menjaga anak, kamu juga bisa belajar bahasa dan budaya Jerman secara
+                                    mereka menjaga anak, anda juga bisa belajar bahasa dan budaya Jerman secara
                                     langsung, plus mendapatkan uang saku dan pengalaman internasional yang bernilai.</p>
                             </div>
                         </div>
@@ -2569,7 +2569,7 @@
                             </button>
                             <div class="faq-content">
                                 <p>Ya, kami memberikan sertifikat keikutsertaan untuk setiap peserta. Jika ingin
-                                    mendapatkan sertifikat resmi, kamu dapat mengikuti ujian Goethe secara mandiri.</p>
+                                    mendapatkan sertifikat resmi, anda dapat mengikuti ujian Goethe secara mandiri.</p>
                             </div>
                         </div>
 
@@ -2669,7 +2669,8 @@
                     <div class="d-flex gap-3 social-links mb-1">
                         <a href="#" class="text-white"><i class="bi bi-facebook"></i>
                         </a>
-                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank" class="text-white"><i class="bi bi-instagram"></i>
+                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank"
+                            class="text-white"><i class="bi bi-instagram"></i>
                         </a>
                         <a href="#" class="text-white"><i class="bi bi-youtube"></i>
                         </a>
