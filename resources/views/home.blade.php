@@ -1850,17 +1850,18 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                             <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
                             {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
-                            <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                         </ul>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="#">Produk Digital</a>
                     </li> --}}
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
@@ -2281,7 +2282,7 @@
             </div>
 
             <div class="text-center mt-4">
-                <a href="{{ url('/teachers') }}" class="btn btn-outline-custom">Lihat Semua Guru</a>
+                <a href="{{ url('/teachers') }}" class="btn btn-outline-custom">Lihat Profil Lengkap Tutor</a>
             </div>
         </div>
     </section>
@@ -2633,7 +2634,7 @@
                         {{-- <li><a href="#">Course</a></li> --}}
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>

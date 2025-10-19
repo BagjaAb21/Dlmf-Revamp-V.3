@@ -311,20 +311,61 @@
             text-align: center;
             font-size: 1.1rem;
             color: var(--text-dark);
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             opacity: 0.8;
             position: relative;
             z-index: 1;
         }
 
+        /* Pricing Tabs */
+        .pricing-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-tab {
+            background: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            border: 2px solid #E2E8F0;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pricing-tab:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .pricing-tab.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Pricing Grid */
         .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: none;
+            grid-template-columns: repeat(3, 1fr);
             gap: 3rem;
-            max-width: 900px;
+            max-width: 1300px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
+        }
+
+        .pricing-grid.active {
+            display: grid;
         }
 
         .pricing-card {
@@ -452,6 +493,41 @@
         .pricing-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .pricing-tabs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-title {
+                font-size: 2rem;
+            }
+
+            .pricing-subtitle {
+                font-size: 1rem;
+            }
+
+            .pricing-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .pricing-type {
+                font-size: 1.3rem;
+            }
+
+            .pricing-price {
+                font-size: 2rem;
+            }
         }
 
         /* Benefits Section */
@@ -753,13 +829,15 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
@@ -793,7 +871,8 @@
                     <p><strong>Kelas Private Grammatik</strong> adalah versi personal dari kelas reguler dengan fokus
                         intensif pada tata bahasa (Grammatik). Materinya sama, mencakup pembelajaran lengkap mulai dari
                         <strong>level A1 hingga B1</strong>, sehingga tetap cocok untuk <strong>pemula yang benar-benar
-                            baru belajar bahasa Jerman</strong>.</p>
+                            baru belajar bahasa Jerman</strong>.
+                    </p>
 
                     <div class="highlight-box">
                         <p><strong>Bedanya:</strong> Seluruh proses belajar dilakukan secara privat sehingga tempo dan
@@ -823,15 +902,17 @@
         <div class="container">
             <div class="text-center">
                 <span class="program-badge">Level Tersedia</span>
-                <h2 class="program-title">Pilih Level Sesuai Kemampuan</h2>
-                <p class="pricing-subtitle">Materi lengkap dari A1 hingga B1, cocok untuk pemula hingga menengah</p>
+                <h2 class="program-title">Temukan Level yang Tepat untuk Perjalanan Belajarmu</h2>
+                <p class="pricing-subtitle">Setiap level disusun dengan kurikulum terarah dan sistematis untuk
+                    memastikan kemajuan belajar yang optimal.</p>
             </div>
 
             <div class="level-cards">
                 <div class="level-card">
                     <div class="level-badge">Level A1</div>
                     <div class="level-description">
-                        Level pemula untuk yang baru memulai belajar bahasa Jerman dari nol dengan fokus grammatik dasar
+                        Level dasar bagi pemula yang baru mulai belajar bahasa Jerman dari nol. Fokus pada kosakata dan
+                        struktur kalimat sederhana untuk komunikasi sehari-hari.
                     </div>
                     <div class="level-info">
                         <i class="bi bi-person"></i>
@@ -846,7 +927,8 @@
                 <div class="level-card">
                     <div class="level-badge">Level A2</div>
                     <div class="level-description">
-                        Lanjutan dari A1, memperdalam struktur kalimat dan grammatik bahasa Jerman
+                        Tahapan lanjutan untuk memperdalam kemampuan berkomunikasi dalam situasi umum. Peserta mulai
+                        mampu memahami percakapan dan teks sederhana dalam konteks kehidupan sehari-hari.
                     </div>
                     <div class="level-info">
                         <i class="bi bi-person"></i>
@@ -861,7 +943,9 @@
                 <div class="level-card">
                     <div class="level-badge">Level B1</div>
                     <div class="level-description">
-                        Level menengah dengan grammatik kompleks untuk menguasai bahasa Jerman lebih dalam
+                        Level menengah bagi peserta yang ingin meningkatkan kelancaran berbicara dan memahami topik yang
+                        lebih kompleks. Ditekankan pada kepercayaan diri dalam berinteraksi dan kesiapan menghadapi
+                        ujian sertifikasi.
                     </div>
                     <div class="level-info">
                         <i class="bi bi-person"></i>
@@ -879,62 +963,30 @@
     <!-- Pricing Section -->
     <section class="pricing-section">
         <div class="container">
-            <h3 class="pricing-title">Biaya Program</h3>
+            <h3 class="pricing-title">Biaya Investasi</h3>
             <p class="pricing-subtitle">Sistem pembayaran per meeting dengan fleksibilitas menentukan jumlah pertemuan
             </p>
 
-            <div class="pricing-grid">
-                <!-- Offline Private -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h4 class="pricing-type">Offline Private Class</h4>
-                        <div class="pricing-price">Rp 175.000</div>
-                        <div class="pricing-per">per meeting</div>
-                    </div>
-
-                    <ul class="pricing-features">
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Pembelajaran tatap muka 1-on-1</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Fokus mendalam pada Grammatik</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Materi lengkap A1-B1</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Tempo belajar disesuaikan</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Jumlah pertemuan fleksibel</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Latihan intensif setiap sesi</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Modul pembelajaran</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Konsultasi langsung dengan tutor</span>
-                        </li>
-                    </ul>
-
-                    <button class="pricing-button">Daftar Sekarang</button>
+            <!-- Pricing Tabs -->
+            <div class="pricing-tabs">
+                <div class="pricing-tab active" onclick="switchPrivateTab('online')">
+                    <i class="bi bi-laptop"></i>
+                    <span>Online Private Class</span>
                 </div>
 
-                <!-- Online Private -->
+                <div class="pricing-tab" onclick="switchPrivateTab('offline')">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Offline Private Class</span>
+                </div>
+            </div>
+
+            <!-- Online Private Grid -->
+            <div class="pricing-grid active" id="online">
+                <!-- Online Private Class A-1 -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h4 class="pricing-type">Online Private Class</h4>
-                        <div class="pricing-price">Rp 125.000</div>
+                        <h4 class="pricing-type">Online Private Class A-1</h4>
+                        <div class="pricing-price">Rp 195.000</div>
                         <div class="pricing-per">per meeting</div>
                     </div>
 
@@ -949,7 +1001,7 @@
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Materi lengkap A1-B1</span>
+                            <span>Materi lengkap Level A-1</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
@@ -973,19 +1025,263 @@
                         </li>
                     </ul>
 
-                    <button class="pricing-button">Daftar Sekarang</button>
+                    <button class="pricing-button"
+                        onclick="pilihPaketPrivate('Online Private Class A-1', 'Rp 195.000/meeting')">Daftar
+                        Sekarang</button>
+                </div>
+                <!-- Online Private Class A-2 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="pricing-type">Online Private Class A-2</h4>
+                        <div class="pricing-price">Rp 195.000</div>
+                        <div class="pricing-per">per meeting</div>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pembelajaran online 1-on-1</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Fokus mendalam pada Grammatik</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Materi lengkap Level A-2</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Tempo belajar disesuaikan</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Jumlah pertemuan fleksibel</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Latihan intensif setiap sesi</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Modul PDF</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Rekaman video pembelajaran</span>
+                        </li>
+                    </ul>
+
+                    <button class="pricing-button"
+                        onclick="pilihPaketPrivate('Online Private Class A-2', 'Rp 195.000/meeting')">Daftar
+                        Sekarang</button>
+                </div>
+                <!-- Online Private Class B-1 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="pricing-type">Online Private Class B-1</h4>
+                        <div class="pricing-price">Rp 219.000</div>
+                        <div class="pricing-per">per meeting</div>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pembelajaran online 1-on-1</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Fokus mendalam pada Grammatik</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Materi lengkap Level B-1</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Tempo belajar disesuaikan</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Jumlah pertemuan fleksibel</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Latihan intensif setiap sesi</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Modul PDF</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Rekaman video pembelajaran</span>
+                        </li>
+                    </ul>
+
+                    <button class="pricing-button"
+                        onclick="pilihPaketPrivate('Online Private Class B-1', 'Rp 219.000/meeting')">Daftar
+                        Sekarang</button>
                 </div>
             </div>
+
+            <!-- Offline Private Grid -->
+            <div class="pricing-grid" id="offline">
+                <!-- Offline Private Class A-1 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="pricing-type">Offline Private Class A-1</h4>
+                        <div class="pricing-price">Rp 280.000</div>
+                        <div class="pricing-per">per meeting</div>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pembelajaran tatap muka 1-on-1</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Fokus mendalam pada Grammatik</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Materi lengkap Level A-1</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Tempo belajar disesuaikan</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Jumlah pertemuan fleksibel</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Latihan intensif setiap sesi</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Modul pembelajaran</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Konsultasi langsung dengan tutor</span>
+                        </li>
+                    </ul>
+
+                    <button class="pricing-button"
+                        onclick="pilihPaketPrivate('Offline Private Class A-1', 'Rp 280.000/meeting')">Daftar
+                        Sekarang</button>
+                </div>
+                <!-- Offline Private Class A-2 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="pricing-type">Offline Private Class A-2</h4>
+                        <div class="pricing-price">Rp 280.000</div>
+                        <div class="pricing-per">per meeting</div>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pembelajaran tatap muka 1-on-1</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Fokus mendalam pada Grammatik</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Materi lengkap Lengkap A-2</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Tempo belajar disesuaikan</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Jumlah pertemuan fleksibel</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Latihan intensif setiap sesi</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Modul pembelajaran</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Konsultasi langsung dengan tutor</span>
+                        </li>
+                    </ul>
+
+                    <button class="pricing-button"
+                        onclick="pilihPaketPrivate('Offline Private Class A-2', 'Rp 280.000/meeting')">Daftar
+                        Sekarang</button>
+                </div>
+                <!-- Offline Private Class B-1 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="pricing-type">Offline Private Class B-1</h4>
+                        <div class="pricing-price">Rp 300.000</div>
+                        <div class="pricing-per">per meeting</div>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pembelajaran tatap muka 1-on-1</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Fokus mendalam pada Grammatik</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Materi lengkap Level-B1</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Tempo belajar disesuaikan</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Jumlah pertemuan fleksibel</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Latihan intensif setiap sesi</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Modul pembelajaran</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Konsultasi langsung dengan tutor</span>
+                        </li>
+                    </ul>
+
+                    <button class="pricing-button"
+                        onclick="pilihPaketPrivate('Offline Private Class B-1', 'Rp 300.000/meeting')">Daftar
+                        Sekarang</button>
+                </div>
+            </div>
+
         </div>
     </section>
+
 
     <!-- Benefits Section -->
     <section class="benefits-section">
         <div class="container">
             <div class="text-center">
-                <span class="program-badge">Keuntungan</span>
+                <span class="program-badge">Benefit</span>
                 <h2 class="program-title">Mengapa Memilih Kelas Private Grammatik?</h2>
-                <p class="pricing-subtitle">Keunggulan pembelajaran private yang disesuaikan dengan kebutuhanmu</p>
+                <p class="pricing-subtitle">Pendekatan personal untuk membantu kamu memahami tata bahasa Jerman secara
+                    mendalam, sistematis, dan aplikatif.</p>
             </div>
 
             <div class="benefits-grid">
@@ -994,8 +1290,8 @@
                         <i class="bi bi-person-check"></i>
                     </div>
                     <h4 class="benefit-title">Pembelajaran Personal</h4>
-                    <p class="benefit-text">Sesi 1-on-1 dengan tutor yang memberikan perhatian penuh pada progress
-                        belajarmu</p>
+                    <p class="benefit-text">Sesi 1-on-1 bersama tutor berpengalaman yang memberikan perhatian penuh
+                        terhadap perkembangan dan kebutuhan belajarmu.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -1003,8 +1299,8 @@
                         <i class="bi bi-speedometer2"></i>
                     </div>
                     <h4 class="benefit-title">Tempo Fleksibel</h4>
-                    <p class="benefit-text">Kecepatan belajar disesuaikan dengan kemampuan dan kenyamananmu tanpa
-                        tekanan</p>
+                    <p class="benefit-text">Proses belajar disesuaikan dengan kemampuan dan ritme belajarmu, sehingga
+                        kamu dapat berkembang tanpa tekanan.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -1012,7 +1308,8 @@
                         <i class="bi bi-bullseye"></i>
                     </div>
                     <h4 class="benefit-title">Fokus Grammatik</h4>
-                    <p class="benefit-text">Penjelasan tata bahasa yang mendalam dan detail dengan latihan yang intensif
+                    <p class="benefit-text">Pendalaman struktur bahasa secara sistematis dengan latihan intensif untuk
+                        meningkatkan ketepatan berbahasa.
                     </p>
                 </div>
 
@@ -1021,7 +1318,8 @@
                         <i class="bi bi-calendar-check"></i>
                     </div>
                     <h4 class="benefit-title">Jadwal Bebas</h4>
-                    <p class="benefit-text">Tentukan sendiri jadwal belajar yang sesuai dengan aktivitasmu sehari-hari
+                    <p class="benefit-text">Atur jadwal belajar sesuai rutinitas harianmu untuk menjaga konsistensi
+                        tanpa mengganggu aktivitas lainnya.
                     </p>
                 </div>
 
@@ -1030,8 +1328,8 @@
                         <i class="bi bi-graph-up-arrow"></i>
                     </div>
                     <h4 class="benefit-title">Progress Terukur</h4>
-                    <p class="benefit-text">Evaluasi berkala untuk memantau perkembangan dan menyesuaikan strategi
-                        belajar</p>
+                    <p class="benefit-text">Evaluasi rutin dilakukan untuk memantau perkembangan dan menyesuaikan
+                        strategi pembelajaran secara efektif.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -1039,8 +1337,8 @@
                         <i class="bi bi-lightning-charge"></i>
                     </div>
                     <h4 class="benefit-title">Efektif & Efisien</h4>
-                    <p class="benefit-text">Pembelajaran yang lebih cepat dan tepat sasaran karena disesuaikan dengan
-                        kebutuhanmu</p>
+                    <p class="benefit-text">Proses belajar yang terarah dan hasilnya optimal karena disusun sesuai
+                        dengan tujuan dan kebutuhan spesifikmu.</p>
                 </div>
             </div>
         </div>
@@ -1050,9 +1348,7 @@
     <section class="cta-section">
         <div class="container">
             <h2 class="cta-title">Siap Menguasai Grammatik Bahasa Jerman?</h2>
-            <p class="mb-4">Dengan pembelajaran private yang intensif dan personal, anda bisa menguasai tata bahasa
-                Jerman dengan lebih cepat dan efektif. Mulai dari level A1 hingga B1, sesuaikan dengan tempo dan target
-                belajarmu!</p>
+            <p class="mb-4">Konsultasikan langkah pertamamu bersama tim kami.</p>
             <a href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+Kelas+Private+Grammatik+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0"
                 class="btn-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a>
         </div>
@@ -1079,7 +1375,7 @@
                     <ul class="footer-links">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                     </ul>
@@ -1141,6 +1437,36 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Switch Private Tab Function
+        function switchPrivateTab(tabType) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.pricing-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Remove active class from all grids
+            document.querySelectorAll('.pricing-grid').forEach(grid => {
+                grid.classList.remove('active');
+            });
+
+            // Add active class to clicked tab
+            event.target.closest('.pricing-tab').classList.add('active');
+
+            // Show corresponding grid
+            document.getElementById(tabType).classList.add('active');
+        }
+
+        // WhatsApp Function for Private Grammatik
+        function pilihPaketPrivate(namaPaket, harga) {
+            const nomorWA = '6289647897616';
+            const pesan = `Halo MinFara, saya tertarik untuk mendaftar *Kelas Private Grammatik*.%0A%0A*Paket yang dipilih:*%0A${namaPaket}%0A*Harga:* ${harga}%0A%0AMohon informasi lebih lanjut untuk proses pendaftaran. Terima kasih!`;
+
+            const urlWA = `https://api.whatsapp.com/send?phone=${nomorWA}&text=${pesan}`;
+            window.open(urlWA, '_blank');
+        }
+    </script>
 
     <script>
         // Smooth scrolling for navigation links

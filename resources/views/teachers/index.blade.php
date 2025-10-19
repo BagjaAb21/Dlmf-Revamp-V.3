@@ -111,17 +111,18 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                             <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
                             {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
-                            <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                         </ul>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="#">Produk Digital</a>
                     </li> --}}
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
@@ -198,7 +199,7 @@
                 <div class="modal-body">
                     <img id="modalTeacherPhoto" src="" alt="" class="modal-teacher-photo">
                     <h3 id="modalTeacherName" class="modal-teacher-name"></h3>
-                    <p id="modalTeacherLevel" class="modal-teacher-level"></p>
+                    <p id="modalTeacherLevel" class="modal-teacher-level">level</p>
 
                     <div class="teacher-details">
                         <div class="detail-item">
@@ -257,7 +258,7 @@
                         {{-- <li><a href="#">Course</a></li> --}}
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
@@ -329,154 +330,154 @@
             {
                 id: 1, name: 'Frau Afifah',
                 photo: '{{ asset('asset/img/teachers/Frau_Afifah.jpg') }}',
-                level: 'A1-B2, Grammar & Speaking, GOETHE Preparation',
+                level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: 'Sertifikasi GOETHE B1',
-                experience: '2 Tahun Mengajar'
+                certification: '-',
+                experience: '2.5 Tahun Mengajar'
             },
             {
                 id: 2, name: 'Frau Assyifa',
                 photo: '{{ asset('asset/img/teachers/Frau_Assyifa.png') }}',
-                level: 'A1-A2, Basic German, Conversation',
-                education: 'Pendidikan Bahasa Jerman UPI',
-                certification: 'Sertifikasi GOETHE A2',
-                experience: '1.5 Tahun Mengajar'
+                level: 'Level: B-1',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '1 Tahun Mengajar'
             },
             {
                 id: 3, name: 'Frau Azizah',
                 photo: '{{ asset('asset/img/teachers/Frau_Azizah.jpg') }}',
-                level: 'B1-C1, Advanced Grammar, Business German',
-                education: 'Native Speaker dari Jerman',
-                certification: 'Native Speaker Certificate',
+                level: 'Level: B-2',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
                 experience: '3 Tahun Mengajar'
             },
             {
                 id: 4, name: 'Frau Caca',
                 photo: '{{ asset('asset/img/teachers/Frau_Caca.jpg') }}',
-                level: 'B2-C2, Test Preparation, Academic German',
-                education: 'Lulusan Deutschkurs München',
-                certification: 'TELC B2 Certificate',
-                experience: '2.5 Tahun Mengajar'
+                level: 'Level: B-1',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '3 Tahun Mengajar'
             },
             {
                 id: 5, name: 'Frau Cindy',
                 photo: '{{ asset('asset/img/teachers/Frau_Cindy.jpg') }}',
-                level: 'A1-B2, Grammar & Speaking, GOETHE Preparation',
+                level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: 'Sertifikasi GOETHE B1',
+                certification: '-',
                 experience: '2 Tahun Mengajar'
             },
             {
                 id: 6, name: 'Frau Dwi',
                 photo: '{{ asset('asset/img/teachers/Frau_Dwi.jpg') }}',
-                level: 'A1-A2, Basic German, Conversation',
-                education: 'Pendidikan Bahasa Jerman UPI',
-                certification: 'Sertifikasi GOETHE A2',
-                experience: '1.5 Tahun Mengajar'
+                level: 'Level: B-2',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '3 Tahun Mengajar'
             },
             {
                 id: 7, name: 'Frau Esti',
                 photo: '{{ asset('asset/img/teachers/Frau_Esti.jpg') }}',
-                level: 'B1-C1, Advanced Grammar, Business German',
-                education: 'Native Speaker dari Jerman',
-                certification: 'Native Speaker Certificate',
-                experience: '3 Tahun Mengajar'
+                level: 'Level: B-1',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '1 Tahun Mengajar'
             },
             {
                 id: 8, name: 'Frau Fia',
                 photo: '{{ asset('asset/img/teachers/Frau_Fia.jpg') }}',
-                level: 'B2-C2, Test Preparation, Academic German',
-                education: 'Lulusan Deutschkurs München',
-                certification: 'TELC B2 Certificate',
-                experience: '2.5 Tahun Mengajar'
+                level: 'Level: B-1',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '2 Tahun Mengajar'
             },
             {
                 id: 9, name: 'Frau Jara',
                 photo: '{{ asset('asset/img/teachers/Frau_Jara.png') }}',
-                level: 'A1-B2, Grammar & Speaking, GOETHE Preparation',
+                level: 'Level: B-2',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: 'Sertifikasi GOETHE B1',
-                experience: '2 Tahun Mengajar'
+                certification: '-',
+                experience: '5 Tahun Mengajar'
             },
             {
                 id: 10, name: 'Frau Jojo',
                 photo: '{{ asset('asset/img/teachers/Frau_Jojo.JPG') }}',
-                level: 'A1-A2, Basic German, Conversation',
-                education: 'Pendidikan Bahasa Jerman UPI',
-                certification: 'Sertifikasi GOETHE A2',
-                experience: '1.5 Tahun Mengajar'
+                level: 'Level: B-1',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '1 Tahun Mengajar'
             },
             {
                 id: 11, name: 'Frau Mia',
                 photo: '{{ asset('asset/img/teachers/Frau_Mia.png') }}',
-                level: 'B1-C1, Advanced Grammar, Business German',
-                education: 'Native Speaker dari Jerman',
-                certification: 'Native Speaker Certificate',
-                experience: '3 Tahun Mengajar'
+                level: 'Level: B-1',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '1 Tahun Mengajar'
             },
             {
                 id: 12, name: 'Frau Olin',
                 photo: '{{ asset('asset/img/teachers/Frau_Olin.jpg') }}',
-                level: 'B2-C2, Test Preparation, Academic German',
-                education: 'Lulusan Deutschkurs München',
-                certification: 'TELC B2 Certificate',
-                experience: '2.5 Tahun Mengajar'
+                level: 'Level: B-1',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '2 Tahun Mengajar'
             },
             {
                 id: 13, name: 'Frau Putri',
                 photo: '{{ asset('asset/img/teachers/Frau_Putri.jpg') }}',
-                level: 'A1-B2, Grammar & Speaking, GOETHE Preparation',
+                level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: 'Sertifikasi GOETHE B1',
-                experience: '2 Tahun Mengajar'
+                certification: '-',
+                experience: '1.5 Tahun Mengajar'
             },
             {
                 id: 14, name: 'Frau Sofi',
                 photo: '{{ asset('asset/img/teachers/Frau_Sofi.jpg') }}',
-                level: 'A1-A2, Basic German, Conversation',
-                education: 'Pendidikan Bahasa Jerman UPI',
-                certification: 'Sertifikasi GOETHE A2',
-                experience: '1.5 Tahun Mengajar'
+                level: 'Level: B-1',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '2 Tahun Mengajar'
             },
             {
                 id: 15, name: 'Frau Tanaya',
                 photo: '{{ asset('asset/img/teachers/Frau_Tanaya.png') }}',
-                level: 'B1-C1, Advanced Grammar, Business German',
-                education: 'Native Speaker dari Jerman',
-                certification: 'Native Speaker Certificate',
+                level: 'Level: B-1',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
                 experience: '3 Tahun Mengajar'
             },
             {
                 id: 16, name: 'Frau Zahra',
                 photo: '{{ asset('asset/img/teachers/Frau_Zahra.jpg') }}',
-                level: 'B2-C2, Test Preparation, Academic German',
-                education: 'Lulusan Deutschkurs München',
-                certification: 'TELC B2 Certificate',
-                experience: '2.5 Tahun Mengajar'
+                level: 'Level: B-2',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '2 Tahun Mengajar'
             },
             {
                 id: 17, name: 'Herr Fadhil',
                 photo: '{{ asset('asset/img/teachers/Herr_Fadhil.png') }}',
-                level: 'A1-A2, Basic German, Conversation',
-                education: 'Pendidikan Bahasa Jerman UPI',
-                certification: 'Sertifikasi GOETHE A2',
-                experience: '1.5 Tahun Mengajar'
+                level: 'Level: B-1',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '1 Tahun Mengajar'
             },
             {
                 id: 18, name: 'Frau Farabi',
                 photo: '{{ asset('asset/img/teachers/Herr_Farabi.png') }}',
-                level: 'B1-C1, Advanced Grammar, Business German',
-                education: 'Native Speaker dari Jerman',
-                certification: 'Native Speaker Certificate',
+                level: 'Level: B-2',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
                 experience: '3 Tahun Mengajar'
             },
             {
                 id: 19, name: 'Herr Iqbal',
                 photo: '{{ asset('asset/img/teachers/Herr_Iqbal.png') }}',
-                level: 'B2-C2, Test Preparation, Academic German',
-                education: 'Lulusan Deutschkurs München',
-                certification: 'TELC B2 Certificate',
-                experience: '2.5 Tahun Mengajar'
+                level: 'Level: B-2',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: '-',
+                experience: '3 Tahun Mengajar'
             }
         ];
 

@@ -34,68 +34,37 @@
             color: var(--text-dark);
         }
 
-        /* Navigation */
+        /* Header & Navigation - Perbaikan */
         .navbar {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(124, 58, 237, 0.1);
             padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
             z-index: 1000;
+            height: auto;
+            /* Pastikan tinggi navbar otomatis */
+            min-height: 70px;
+            /* Tinggi minimum navbar */
         }
 
         .navbar-brand {
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 1.25rem;
             color: var(--primary-color) !important;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .navbar-nav {
-            margin-left: auto;
-            margin-right: 2rem;
         }
 
         .navbar-nav .nav-link {
             color: var(--text-dark) !important;
             font-weight: 500;
-            margin: 0 1rem;
-            padding: 0.5rem 0 !important;
-            transition: all 0.3s ease;
-            position: relative;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
         }
 
         .navbar-nav .nav-link:hover {
             color: var(--primary-color) !important;
-        }
-
-        .navbar-nav .nav-link.active {
-            color: var(--primary-color) !important;
-        }
-
-        .navbar-nav .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary-color);
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            border: none;
-            padding: 0.6rem 1.8rem;
-            border-radius: 25px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background: var(--secondary-color);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
         }
 
         /* Hero Section */
@@ -658,13 +627,18 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
+                        <a class="nav-link" href="#">Produk Digital</a>
+                    </li> --}}
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
@@ -677,7 +651,8 @@
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1>Program Au Pair - Pengalaman Budaya Jerman yang Tak Terlupakan</h1>
+                <h1>Program Pendampingan Persiapan Au Pair</h1>
+                <p>Dengan dukungan mentor berpengalaman, program ini memastikan setiap peserta siap menjalani proses keberangkatan dengan percaya diri dan profesional.</p>
             </div>
         </div>
     </section>
@@ -747,7 +722,7 @@
                 <!-- Ala Carte Package -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h4 class="pricing-type">🔹 Ala Carte</h4>
+                        <h4 class="pricing-type">Ala Carte</h4>
                         <p class="pricing-description">Pilih sesuai kebutuhan</p>
                     </div>
 
@@ -762,7 +737,7 @@
                         <li>
                             <i class="bi bi-check-circle feature-icon"></i>
                             <div class="feature-content">
-                                <span class="feature-name">Konsultasi dengan Inez</span>
+                                <span class="feature-name">Konsultasi dengan Alumni Au Pair Kami</span>
                                 <span class="price">Rp 600.000/sesi</span>
                             </div>
                         </li>
@@ -802,41 +777,35 @@
                 <!-- All-in Package -->
                 <div class="pricing-card featured">
                     <div class="pricing-header">
-                        <h4 class="pricing-type">🔹 All-in Package</h4>
+                        <h4 class="pricing-type">All-in Package</h4>
                         <div class="pricing-price">Rp 10.000.000</div>
-                        <p class="pricing-description">Semua layanan dengan harga khusus</p>
+                        <p class="pricing-description">Dapatkan semua layanan dengan harga spesial</p>
                     </div>
 
                     <ul class="pricing-features">
                         <li>
                             <i class="bi bi-check-circle feature-icon"></i>
                             <span>Pencarian Gastfamilie</span>
-                            <i class="bi bi-check-lg text-success"></i>
                         </li>
                         <li>
                             <i class="bi bi-check-circle feature-icon"></i>
-                            <span>Konsultasi dengan Inez</span>
-                            <i class="bi bi-check-lg text-success"></i>
+                            <span>Konsultasi dengan Alumni Au Pair Kami</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle feature-icon"></i>
                             <span>Pembuatan Motivation Letter</span>
-                            <i class="bi bi-check-lg text-success"></i>
                         </li>
                         <li>
                             <i class="bi bi-check-circle feature-icon"></i>
                             <span>Penerjemahan Motivation Letter</span>
-                            <i class="bi bi-check-lg text-success"></i>
                         </li>
                         <li>
                             <i class="bi bi-check-circle feature-icon"></i>
                             <span>Pembuatan Termin di Kedutaan Jerman</span>
-                            <i class="bi bi-check-lg text-success"></i>
                         </li>
                         <li>
                             <i class="bi bi-check-circle feature-icon"></i>
                             <span>Latihan Wawancara (dengan GF & Kedutaan)</span>
-                            <i class="bi bi-check-lg text-success"></i>
                         </li>
                     </ul>
 
@@ -850,10 +819,8 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h3>Siap Memulai Program Au Pair?</h3>
-                <p>Dengan adanya program pendampingan ini, anda tidak perlu bingung menghadapi proses au pair yang cukup
-                    panjang dan detail. Semua langkah akan didampingi, sehingga anda bisa fokus mempersiapkan diri dan
-                    berangkat ke Jerman dengan lebih percaya diri.</p>
+                <h3>Siap Menjadi Au Pair?</h3>
+                <p>Dengan pendampingan yang tepat, perjalananmu menuju Jerman bukan lagi sekadar impian. Bersama kami, setiap langkah jadi lebih mudah, terarah, dan pasti.</p>
                 <button class="cta-button"><a class="text-white text-decoration-none"
                         href="https://wa.me/6289647897616?text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+program+Au+Pair+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+pendampingan+yang+ditawarkan."
                         target="_blank"><i class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a></button>
@@ -882,7 +849,7 @@
                     <ul class="footer-links">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                     </ul>

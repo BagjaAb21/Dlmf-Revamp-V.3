@@ -335,7 +335,7 @@
             opacity: 0.8;
         }
 
-        /* Pricing Section - Enhanced Styling */
+        /* Pricing Section */
         .pricing-section {
             padding: 5rem 0;
             background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
@@ -354,17 +354,6 @@
             border-radius: 50%;
         }
 
-        .pricing-section::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
         .pricing-title {
             text-align: center;
             font-size: 2.5rem;
@@ -379,27 +368,67 @@
             text-align: center;
             font-size: 1.1rem;
             color: var(--text-dark);
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             opacity: 0.8;
             position: relative;
             z-index: 1;
         }
 
+        /* Pricing Tabs */
+        .pricing-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-tab {
+            background: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            border: 2px solid #E2E8F0;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pricing-tab:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .pricing-tab.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Pricing Grid */
         .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            display: none;
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
-            max-width: 1400px;
+            max-width: 1300px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
+        }
+
+        .pricing-grid.active {
+            display: grid;
         }
 
         .pricing-card {
             background: white;
             border-radius: 25px;
             padding: 2rem 1.5rem;
-            /* Ubah dari 2.5rem */
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid transparent;
@@ -435,18 +464,15 @@
             margin-bottom: 2rem;
             padding-bottom: 1.5rem;
             border-bottom: 2px solid rgba(124, 58, 237, 0.1);
-            position: relative;
         }
 
         .pricing-type {
             font-size: 1.1rem;
-            /* Ubah dari 1.4rem */
             font-weight: bold;
             color: var(--dark-blue);
             margin-bottom: 1rem;
             line-height: 1.3;
             min-height: 50px;
-            /* Tambahkan ini agar semua card sejajar */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -454,20 +480,12 @@
 
         .pricing-price {
             font-size: 1.8rem;
-            /* Ubah dari 2.2rem */
             font-weight: bold;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 0.5rem;
-        }
-
-        .pricing-installment {
-            font-size: 0.95rem;
-            color: var(--text-dark);
-            opacity: 0.7;
-            font-weight: 500;
         }
 
         .pricing-features {
@@ -478,16 +496,12 @@
 
         .pricing-features li {
             padding: 0.7rem 0;
-            /* Ubah dari 1rem 0 */
             display: flex;
             align-items: flex-start;
-            /* Ubah dari center */
             gap: 0.8rem;
-            /* Ubah dari 1rem */
             color: var(--text-dark);
             transition: all 0.3s ease;
             font-size: 0.9rem;
-            /* Tambahkan ini */
         }
 
         .pricing-features li:hover {
@@ -534,6 +548,54 @@
         .pricing-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .pricing-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .pricing-tabs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .pricing-card {
+                padding: 2.5rem;
+            }
+
+            .pricing-type {
+                font-size: 1.4rem;
+                min-height: auto;
+            }
+
+            .pricing-price {
+                font-size: 2.2rem;
+            }
+
+            .pricing-features li {
+                font-size: 1rem;
+                padding: 0.8rem 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-title {
+                font-size: 2rem;
+            }
+
+            .pricing-subtitle {
+                font-size: 1rem;
+            }
         }
 
         /* Benefits Section - Enhanced Styling */
@@ -997,13 +1059,15 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
@@ -1064,15 +1128,17 @@
         <div class="container">
             <div class="text-center">
                 <span class="program-badge">Level Tersedia</span>
-                <h2 class="program-title">Pilih Level Sesuai Kemampuan</h2>
-                <p class="pricing-subtitle">Setiap level dirancang dengan kurikulum yang sistematis dan terstruktur</p>
+                <h2 class="program-title">Temukan Level yang Tepat untuk Perjalanan Belajarmu</h2>
+                <p class="pricing-subtitle">Setiap level disusun dengan kurikulum terarah dan sistematis untuk
+                    memastikan kemajuan belajar yang optimal.</p>
             </div>
 
             <div class="level-cards">
                 <div class="level-card">
                     <div class="level-badge">Level A1</div>
                     <div class="level-description">
-                        Level pemula untuk yang baru memulai belajar bahasa Jerman dari nol
+                        Level dasar bagi pemula yang baru mulai belajar bahasa Jerman dari nol. Fokus pada kosakata dan
+                        struktur kalimat sederhana untuk komunikasi sehari-hari.
                     </div>
                     <div class="level-info">
                         <i class="bi bi-calendar-check"></i>
@@ -1087,7 +1153,8 @@
                 <div class="level-card">
                     <div class="level-badge">Level A2</div>
                     <div class="level-description">
-                        Lanjutan dari A1, memperdalam kemampuan dasar bahasa Jerman
+                        Tahapan lanjutan untuk memperdalam kemampuan berkomunikasi dalam situasi umum. Peserta mulai
+                        mampu memahami percakapan dan teks sederhana dalam konteks kehidupan sehari-hari.
                     </div>
                     <div class="level-info">
                         <i class="bi bi-calendar-check"></i>
@@ -1102,7 +1169,9 @@
                 <div class="level-card">
                     <div class="level-badge">Level B1</div>
                     <div class="level-description">
-                        Level menengah untuk yang ingin menguasai bahasa Jerman lebih dalam
+                        Level menengah bagi peserta yang ingin meningkatkan kelancaran berbicara dan memahami topik yang
+                        lebih kompleks. Ditekankan pada kepercayaan diri dalam berinteraksi dan kesiapan menghadapi
+                        ujian sertifikasi.
                     </div>
                     <div class="level-info">
                         <i class="bi bi-calendar-check"></i>
@@ -1165,176 +1234,300 @@
     <!-- Pricing Section -->
     <section class="pricing-section">
         <div class="container">
-            <h3 class="pricing-title">Biaya Program</h3>
-            <p class="pricing-subtitle">Pilih format kelas yang sesuai dengan kebutuhan Anda</p>
+            <h3 class="pricing-title">Biaya Investasi</h3>
+            <p class="pricing-subtitle">Pilih format kelas yang sesuai dengan kebutuhanmu</p>
 
-            <div class="pricing-grid">
+            <!-- Pricing Tabs -->
+            <div class="pricing-tabs">
+                <div class="pricing-tab active" onclick="switchClassTab('online')">
+                    <i class="bi bi-laptop"></i>
+                    <span>Online Class</span>
+                </div>
+                <div class="pricing-tab" onclick="switchClassTab('offline')">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Offline Class</span>
+                </div>
+            </div>
+
+            <!-- Online Class Grid -->
+            <div class="pricing-grid active" id="online">
                 <!-- Online A1 -->
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h4 class="pricing-type">Online Class - Level A1</h4>
-                        <div class="pricing-price">Rp 2.500.000</div>
-                        <div class="pricing-installment">atau Rp 1.250.000/bulan (2x cicilan)</div>
+                        <div class="pricing-price">Rp 1.499.000</div>
                     </div>
 
                     <ul class="pricing-features">
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>40 kali pertemuan</span>
+                            <span>20x pertemuan</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Durasi 2 bulan</span>
+                            <span>Free Modul</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Modul PDF</span>
+                            <span>Free Konsultasi</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Rekaman video pembelajaran</span>
+                            <span>Free akses video record kelas 24/7</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Konsultasi dengan tutor</span>
+                            <span>Free 20 e-book Bahasa jerman</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Sertifikat kelulusan</span>
+                            <span>Free 1x sesi kelasan dengan native</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Include simulasi ujian Goethe 8x</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Sertifikat</span>
                         </li>
                     </ul>
 
-                    <button class="pricing-button">Daftar Sekarang</button>
+                    <button class="pricing-button"
+                        onclick="pilihPaketProgram('Online Class - Level A1', 'Rp 1.499.000')">Daftar Sekarang</button>
                 </div>
 
                 <!-- Online A2 -->
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h4 class="pricing-type">Online Class - Level A2</h4>
-                        <div class="pricing-price">Rp 2.500.000</div>
-                        <div class="pricing-installment">atau Rp 1.250.000/bulan (2x cicilan)</div>
+                        <div class="pricing-price">Rp 1.499.000</div>
                     </div>
 
                     <ul class="pricing-features">
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>40 kali pertemuan</span>
+                            <span>20x pertemuan</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Durasi 2 bulan</span>
+                            <span>Free Modul</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Modul PDF</span>
+                            <span>Free Konsultasi</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Rekaman video pembelajaran</span>
+                            <span>Free akses video record kelas 24/7</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Konsultasi dengan tutor</span>
+                            <span>Free 20 e-book Bahasa jerman</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Sertifikat kelulusan</span>
+                            <span>Free 1x sesi kelasan dengan native</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Include simulasi ujian Goethe 8x</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Sertifikat</span>
                         </li>
                     </ul>
 
-                    <button class="pricing-button">Daftar Sekarang</button>
+                    <button class="pricing-button"
+                        onclick="pilihPaketProgram('Online Class - Level A2', 'Rp 1.499.000')">Daftar Sekarang</button>
                 </div>
 
                 <!-- Online B1 -->
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h4 class="pricing-type">Online Class - Level B1</h4>
-                        <div class="pricing-price">Rp 3.000.000</div>
-                        <div class="pricing-installment">atau Rp 1.500.000/bulan (2x cicilan)</div>
+                        <div class="pricing-price">Rp 1.699.000</div>
                     </div>
 
                     <ul class="pricing-features">
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>40 kali pertemuan</span>
+                            <span>20x pertemuan</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Durasi 2 bulan</span>
+                            <span>Free Modul</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Modul PDF</span>
+                            <span>Free Konsultasi</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Rekaman video pembelajaran</span>
+                            <span>Free akses video record kelas 24/7</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Konsultasi dengan tutor</span>
+                            <span>Free 20 e-book Bahasa jerman</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Sertifikat kelulusan</span>
+                            <span>Free 1x sesi kelasan dengan native</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Include simulasi ujian Goethe 8x</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Sertifikat</span>
                         </li>
                     </ul>
 
-                    <button class="pricing-button">Daftar Sekarang</button>
+                    <button class="pricing-button"
+                        onclick="pilihPaketProgram('Online Class - Level B1', 'Rp 1.699.000')">Daftar Sekarang</button>
                 </div>
+            </div>
 
-                <!-- Offline Class -->
+            <!-- Offline Class Grid -->
+            <div class="pricing-grid" id="offline">
+                <!-- Offline Level A1 -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h4 class="pricing-type">Offline Class - Semua Level</h4>
-                        <div class="pricing-price">Rp 3.500.000</div>
-                        <div class="pricing-installment">atau Rp 1.750.000/bulan (2x cicilan)</div>
+                        <h4 class="pricing-type">Offline Class - Level A1</h4>
+                        <div class="pricing-price">Rp 2.099.000</div>
                     </div>
 
                     <ul class="pricing-features">
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>40 kali pertemuan</span>
+                            <span>20x pertemuan</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Durasi 2 bulan</span>
+                            <span>Free Modul</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Modul fisik (buku cetak)</span>
+                            <span>Free Konsultasi</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Rekaman video pembelajaran</span>
+                            <span>Free 20 e-book Bahasa jerman</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Konsultasi langsung dengan tutor</span>
+                            <span>Free 1x sesi kelasan dengan native</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Sertifikat kelulusan</span>
+                            <span>Include simulasi ujian Goethe 8x</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Berlaku untuk Level A1, A2, B1</span>
+                            <span>Sertifikat</span>
                         </li>
                     </ul>
 
-                    <button class="pricing-button">Daftar Sekarang</button>
+                    <button class="pricing-button"
+                        onclick="pilihPaketProgram('Offline Class - Level A1', 'Rp 2.099.000')">Daftar Sekarang</button>
+                </div>
+                <!-- Offline Level A2 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="pricing-type">Offline Class - Level A2</h4>
+                        <div class="pricing-price">Rp 2.099.000</div>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>20x pertemuan</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Free Modul</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Free Konsultasi</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Free 20 e-book Bahasa jerman</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Free 1x sesi kelasan dengan native</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Include simulasi ujian Goethe 8x</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Sertifikat</span>
+                        </li>
+                    </ul>
+
+                    <button class="pricing-button"
+                        onclick="pilihPaketProgram('Offline Class - Level A2', 'Rp 2.099.000')">Daftar Sekarang</button>
+                </div>
+                <!-- Offline Level A1 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="pricing-type">Offline Class - Level B1</h4>
+                        <div class="pricing-price">Rp 2.250.000</div>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>20x pertemuan</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Free Modul</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Free Konsultasi</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Free 20 e-book Bahasa jerman</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Free 1x sesi kelasan dengan native</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Include simulasi ujian Goethe 8x</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Sertifikat</span>
+                        </li>
+                    </ul>
+
+                    <button class="pricing-button"
+                        onclick="pilihPaketProgram('Offline Class - Level B1', 'Rp 2.250.000')">Daftar Sekarang</button>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Benefits Section -->
     <section class="benefits-section">
         <div class="container">
             <div class="text-center">
-                <span class="program-badge">Keuntungan</span>
-                <h2 class="program-title">Apa yang anda Dapatkan?</h2>
-                <p class="pricing-subtitle">Fasilitas lengkap untuk mendukung pembelajaran bahasa Jerman Anda</p>
+                <span class="program-badge">Benefit</span>
+                <h2 class="program-title">Apa Yang Akan Kamu Dapatkan?</h2>
+                <p class="pricing-subtitle">Fasilitas lengkap untuk mendukung proses belajar bahasa Jermanmu secara
+                    optimal</p>
             </div>
 
             <div class="benefits-grid">
@@ -1342,17 +1535,18 @@
                     <div class="benefit-icon">
                         <i class="bi bi-book"></i>
                     </div>
-                    <h4 class="benefit-title">Modul Pembelajaran</h4>
-                    <p class="benefit-text">Modul dalam bentuk PDF (online) atau buku cetak (offline) yang mudah
-                        dipahami dan terstruktur</p>
+                    <h4 class="benefit-title">Modul Eksklusif</h4>
+                    <p class="benefit-text">Modul digital (PDF) dan buku cetak yang disusun secara terstruktur. Mudah
+                        dipahami dan praktis digunakan di setiap level.</p>
                 </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="bi bi-camera-video"></i>
                     </div>
-                    <h4 class="benefit-title">Rekaman Video</h4>
-                    <p class="benefit-text">Semua sesi kelas direkam dan dapat diunduh untuk ditonton ulang kapan saja
+                    <h4 class="benefit-title">Rekaman Kelas</h4>
+                    <p class="benefit-text">Setiap sesi pembelajaran direkam agar kamu bisa menonton ulang kapan pun dan
+                        memperdalam materi dengan nyaman.
                     </p>
                 </div>
 
@@ -1361,8 +1555,8 @@
                         <i class="bi bi-chat-dots"></i>
                     </div>
                     <h4 class="benefit-title">Konsultasi Tutor</h4>
-                    <p class="benefit-text">Bisa bertanya dan berkonsultasi dengan tutor di luar jam kelas untuk
-                        memastikan pemahaman materi</p>
+                    <p class="benefit-text">Bebas berdiskusi dan berkonsultasi langsung dengan tutor di luar jam kelas
+                        untuk memastikan kamu benar-benar paham materi.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -1370,8 +1564,8 @@
                         <i class="bi bi-clock-history"></i>
                     </div>
                     <h4 class="benefit-title">Fleksibilitas Jadwal</h4>
-                    <p class="benefit-text">Pilihan waktu belajar yang beragam dari pagi hingga larut malam sesuai
-                        kebutuhan Anda</p>
+                    <p class="benefit-text">Pilih waktu belajar sesuai rutinitasmu. Tersedia kelas pagi, siang, hingga
+                        malam, menyesuaikan kebutuhan dan kenyamananmu.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -1379,7 +1573,8 @@
                         <i class="bi bi-people"></i>
                     </div>
                     <h4 class="benefit-title">Kelas Interaktif</h4>
-                    <p class="benefit-text">Pembelajaran yang engaging dengan metode komunikatif dan praktik langsung
+                    <p class="benefit-text">Belajar jadi lebih seru lewat metode komunikatif dan latihan langsung,
+                        mendorong kamu aktif berbicara sejak awal.
                     </p>
                 </div>
 
@@ -1387,9 +1582,9 @@
                     <div class="benefit-icon">
                         <i class="bi bi-award"></i>
                     </div>
-                    <h4 class="benefit-title">Sertifikat</h4>
-                    <p class="benefit-text">Sertifikat kelulusan setelah menyelesaikan program untuk mendukung
-                        perjalanan akademik atau karier Anda</p>
+                    <h4 class="benefit-title">Kelas dengan Native Speaker</h4>
+                    <p class="benefit-text">Rasakan pengalaman belajar otentik bersama pengajar penutur asli Jerman
+                        untuk melatih pelafalan dan kepercayaan diri berbicara.</p>
                 </div>
             </div>
         </div>
@@ -1398,11 +1593,8 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">Siap Mulai Belajar Bahasa Jerman?</h2>
-            <p class="mb-4">Dengan kurikulum yang sistematis, jadwal fleksibel, dan opsi pembayaran yang bisa dicicil,
-                program
-                ini dirancang untuk membantu anda belajar bahasa Jerman secara efektif dan menyenangkan, baik untuk
-                tujuan akademik, karier, maupun persiapan studi di Jerman.</p>
+            <h2 class="cta-title">Waktunya Wujudkan Mimpi ke Jerman!</h2>
+            <p class="mb-4">Konsultasikan langkah pertamamu bersama tim kami.</p>
             <a href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0"
                 class="btn-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a>
         </div>
@@ -1429,7 +1621,7 @@
                     <ul class="footer-links">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                     </ul>
@@ -1492,6 +1684,35 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script>
+        // Switch Class Tab Function
+        function switchClassTab(tabType) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.pricing-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Remove active class from all grids
+            document.querySelectorAll('.pricing-grid').forEach(grid => {
+                grid.classList.remove('active');
+            });
+
+            // Add active class to clicked tab
+            event.target.closest('.pricing-tab').classList.add('active');
+
+            // Show corresponding grid
+            document.getElementById(tabType).classList.add('active');
+        }
+
+        // WhatsApp Function for Program
+        function pilihPaketProgram(namaPaket, harga) {
+            const nomorWA = '6289647897616';
+            const pesan = `Halo MinFara, saya tertarik untuk mendaftar *Kelas Reguler*.%0A%0A*Paket yang dipilih:* ${namaPaket}%0A*Harga:* ${harga}%0A%0AMohon informasi lebih lanjut untuk proses pendaftaran. Terima kasih!`;
+
+            const urlWA = `https://api.whatsapp.com/send?phone=${nomorWA}&text=${pesan}`;
+            window.open(urlWA, '_blank');
+        }
+    </script>
     <script>
         // Smooth scrolling for navigation links
         document.addEventListener('DOMContentLoaded', () => {

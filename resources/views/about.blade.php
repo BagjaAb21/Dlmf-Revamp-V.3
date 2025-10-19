@@ -167,22 +167,22 @@
         }
 
         .hero-img:nth-child(1) {
-            background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
             animation-delay: 0s;
         }
 
         .hero-img:nth-child(2) {
-            background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
             animation-delay: 0.5s;
         }
 
         .hero-img:nth-child(3) {
-            background-image: url('https://images.unsplash.com/photo-1543269664-647b6d91ec1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
             animation-delay: 1s;
         }
 
         .hero-img:nth-child(4) {
-            background-image: url('https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-image: url('https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
             animation-delay: 1.5s;
         }
 
@@ -343,7 +343,7 @@
 
         .values-content {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             gap: 2rem;
         }
@@ -1129,23 +1129,24 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">Beranda</a>
+                        <a class="nav-link" href="{{ url('/') }}">BerKamu</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                             <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
                             {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
-                            <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                         </ul>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="#">Produk Digital</a>
                     </li> --}}
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
@@ -1162,8 +1163,8 @@
                     <div class="hero-content">
                         <h1 class="display-4 fw-bold mb-4">Bahasa Jerman adalah Investasi Masa Depan</h1>
                         <p class="lead mb-4">
-                            Dengan bergabung di Deutsch lernen mit Fara (DlmF), anda tidak sekedar belajar bahasa
-                            Jerman. Tapi, anda juga membuka peluang baru. Dengan modul eksklusif, pengajar
+                            Dengan bergabung di Deutsch lernen mit Fara (DlmF), Kamu tidak sekedar belajar bahasa
+                            Jerman. Tapi, Kamu juga membuka peluang baru. Dengan modul eksklusif, pengajar
                             berpengalaman, dan metode pembelajaran yang terbukti, ribuan siswa Indonesia telah berhasil
                             mewujudkan mimpi mereka untuk belajar, bekerja, dan tinggal di Jerman.
                         </p>
@@ -1186,27 +1187,21 @@
     <section class="stats-section">
         <div class="container">
             <div class="row">
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-4">
                     <div class="stat-item">
                         <span class="stat-number" style="color: white;">5000+</span>
                         <span class="stat-label">Siswa</span>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-4">
                     <div class="stat-item">
                         <span class="stat-number" style="color: white;">300</span>
                         <span class="stat-label">Lulusan</span>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-4">
                     <div class="stat-item">
-                        <span class="stat-number" style="color: white;">50</span>
-                        <span class="stat-label">Jam Belajar</span>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-item">
-                        <span class="stat-number" style="color: white;">98</span>
+                        <span class="stat-number" style="color: white;">99</span>
                         <span class="stat-label">Kepuasan</span>
                     </div>
                 </div>
@@ -1219,7 +1214,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="h4 mb-3"><b>Visi Kami</b></h2>
+                    <h2 class="h4 mb-3"><b>Visi</b></h2>
                     <p class="mb-4">
                         Menjadikan Deutsch Lernen mit Fara sebagai pionir kursus bahasa Jerman premium yang modern,
                         dinamis, dan mudah diakses oleh semua kalangan. Kami hadir sebagai mitra terpercaya bagi
@@ -1227,7 +1222,7 @@
                         dan fleksibel dari mana saja.
                     </p>
 
-                    <h2 class="h4 mb-3"><b>Misi Kami</b></h2>
+                    <h2 class="h4 mb-3"><b>Misi</b></h2>
                     <ul class="mission-list">
                         <li>Menyediakan program pembelajaran bahasa Jerman premium dengan metode interaktif dan
                             berkualitas tinggi.</li>
@@ -1256,8 +1251,9 @@
     <section class="values-section">
         <div class="container">
             <div class="text-center mb-4">
-                <h2 class="section-title" style="color: #334155">Nilai Kami</h2>
-                <p class="section-subtitle">Kami Percaya, Nilai Baik Melahirkan Pembelajaran yang Bermakna</p>
+                <h2 class="section-title" style="color: #334155">Core Values</h2>
+                <p class="section-subtitle">Kami meyakini bahwa ketika nilai dijunjung tinggi, proses belajar menjadi
+                    lebih bermakna dan berdampak bagi setiap individu.</p>
             </div>
 
             <!-- Values Hero Image -->
@@ -1268,32 +1264,26 @@
 
             <!-- Values Content Grid 3x2 -->
             <div class="values-content">
-                <!-- <div class="value-item" data-delay="0">
-                    <h5>Fun Learning</h5>
-                    <p>Kami percaya bahwa proses belajar yang menyenangkan akan memudahkan pemahaman. Di DlmF, setiap
-                        kelas dirancang interaktif agar siswa betah dan aktif belajar.</p>
-                </div> -->
-
-                <div class="value-item" data-delay="200">
+                <div class="value-item" data-delay="0">
                     <h5>Integrity</h5>
                     <p>Integritas adalah fondasi kami. Setiap pengajaran dan layanan dilakukan dengan transparansi,
                         etika, dan komitmen tulus untuk mendampingi siswa meraih potensi terbaiknya.</p>
                 </div>
 
-                <div class="value-item" data-delay="400">
+                <div class="value-item" data-delay="200">
                     <h5>Excellence</h5>
                     <p>Kami berkomitmen pada keunggulan di setiap aspek—dari kualitas pengajaran, materi, hingga
-                        layanan. Bagi kami, kesuksesan siswa bukan hanya tujuan, melainkan standar yang harus selalu
+                        layanan. Bagi kami, kesuksesan siswa bukan hanya tujuan, melainkan stKamur yang harus selalu
                         kami capai.</p>
                 </div>
 
-                <div class="value-item" data-delay="600">
+                <div class="value-item" data-delay="400">
                     <h5>Empowerment</h5>
                     <p>Kami hadir untuk menumbuhkan kepercayaan diri setiap siswa—agar berani belajar, mengambil
                         keputusan besar, dan meraih masa depan gemilang, baik di Indonesia maupun di Jerman.</p>
                 </div>
 
-                <div class="value-item" data-delay="800">
+                <div class="value-item" data-delay="600">
                     <h5>Growth</h5>
                     <p>Kami mendorong pertumbuhan berkelanjutan dalam aspek akademis, pribadi, dan profesional. Setiap
                         pembelajaran di DlmF bukan sekadar pelajaran, tetapi sebuah perjalanan menuju versi terbaik dari
@@ -1370,14 +1360,14 @@
                         <p class="timeline-description">DlmF mulai mengembangkan kehadirannya secara digital melalui
                             platform pembelajaran dan penyebaran konten edukatif di media sosial. Peserta dari berbagai
                             daerah di Indonesia mulai bergabung, dan kurikulum berbasis CEFR diperkenalkan untuk
-                            mendukung standar pembelajaran internasional.</p>
+                            mendukung stKamur pembelajaran internasional.</p>
                     </div>
 
                     <div class="timeline-card" data-year="2023">
                         <div class="timeline-year">2023</div>
                         <h5 class="timeline-title">Legalitas, Diversifikasi, dan Kolaborasi Strategis</h5>
                         <p class="timeline-description">Tahun ini menjadi tonggak penting dengan pendirian badan hukum
-                            sebagai landasan PT Fara Kreatif Sejahtera. DlmF juga mulai membuka kelas online dari level
+                            sebagai lKamusan PT Fara Kreatif Sejahtera. DlmF juga mulai membuka kelas online dari level
                             B1 dan diversifikasi layanan, sekaligus memperluas kerja sama dengan mitra pendidikan dan
                             konsultan studi ke Jerman. Kurikulum A1-B1 disusun secara sistematis, didukung sistem
                             evaluasi internal yang lebih matang.</p>
@@ -1387,7 +1377,7 @@
                         <div class="timeline-year">2025</div>
                         <h5 class="timeline-title">Kantor Baru dan Langkah Menuju Akreditasi</h5>
                         <p class="timeline-description">DlmF resmi membuka kantor fisik pertamanya di Jalan Trengguli
-                            Sari Asih No. 76, Bandung. Tahun ini juga menandai langkah strategis dan menuju akreditasi
+                            Sari Asih No. 76, Bandung. Tahun ini juga menKamui langkah strategis dan menuju akreditasi
                             sebagai lembaga pendidikan non-formal, sekaligus pengembangan platform pembelajaran digital
                             mandiri untuk memperkuat daya saing nasional dan internasional.</p>
                     </div>
@@ -1416,14 +1406,14 @@
                         <p class="timeline-description">DlmF mulai mengembangkan kehadirannya secara digital melalui
                             platform pembelajaran dan penyebaran konten edukatif di media sosial. Peserta dari berbagai
                             daerah di Indonesia mulai bergabung, dan kurikulum berbasis CEFR diperkenalkan untuk
-                            mendukung standar pembelajaran internasional.</p>
+                            mendukung stKamur pembelajaran internasional.</p>
                     </div>
 
                     <div class="timeline-card" data-year="2023">
                         <div class="timeline-year">2023</div>
                         <h5 class="timeline-title">Legalitas, Diversifikasi, dan Kolaborasi Strategis</h5>
                         <p class="timeline-description">Tahun ini menjadi tonggak penting dengan pendirian badan hukum
-                            sebagai landasan PT Fara Kreatif Sejahtera. DlmF juga mulai membuka kelas online dari level
+                            sebagai lKamusan PT Fara Kreatif Sejahtera. DlmF juga mulai membuka kelas online dari level
                             B1 dan diversifikasi layanan, sekaligus memperluas kerja sama dengan mitra pendidikan dan
                             konsultan studi ke Jerman. Kurikulum A1-B1 disusun secara sistematis, didukung sistem
                             evaluasi internal yang lebih matang.</p>
@@ -1433,7 +1423,7 @@
                         <div class="timeline-year">2025</div>
                         <h5 class="timeline-title">Kantor Baru dan Langkah Menuju Akreditasi</h5>
                         <p class="timeline-description">DlmF resmi membuka kantor fisik pertamanya di Jalan Trengguli
-                            Sari Asih No. 76, Bandung. Tahun ini juga menandai langkah strategis dan menuju akreditasi
+                            Sari Asih No. 76, Bandung. Tahun ini juga menKamui langkah strategis dan menuju akreditasi
                             sebagai lembaga pendidikan non-formal, sekaligus pengembangan platform pembelajaran digital
                             mandiri untuk memperkuat daya saing nasional dan internasional.</p>
                     </div>
@@ -1445,46 +1435,41 @@
     <!-- Teachers Section -->
     <section class="content-section teachers-section">
         <div class="container">
-            <h2 class="section-title" style="color:#334155">Kenalan dengan Tutor Hebat Kami</h2>
-            <p class="section-subtitle">Tim pengajar kami terdiri dari native speaker dan tutor berpengalaman yang siap
-                membantu perjalanan belajar Anda</p>
+            <h2 class="section-title" style="color:#334155">Belajar Bersama Tutor Terpilih</h2>
+            <p class="section-subtitle">Setiap tutor di DlmF dipilih melalui proses seleksi ketat, terdiri dari native
+                speaker dan pengajar bersertifikasi yang berpengalaman dalam membimbing siswa menuju keberhasilan di
+                Jerman.</p>
 
             <div class="teachers-grid">
                 <div class="teacher-card" data-delay="0">
-                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Jara.png')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/user.png')">
                     </div>
-                    <div class="teacher-name">Frau Jara</div>
+                    <div class="teacher-name">Herr Yasin</div>
                     <div class="teacher-level">Level B2</div>
                     <!-- <div class="teacher-description">Sastra Jerman Universitas Padjadjaran</div> -->
                     <div class="teacher-experience">5 Tahun Pengalaman Mengajar</div>
                 </div>
 
                 <div class="teacher-card" data-delay="200">
-                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Herr_Fadhil.png')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Zahra.jpg')">
                     </div>
-                    <div class="teacher-name">Herr Fadhil</div>
-                    <div class="teacher-level">Level B1</div>
+                    <div class="teacher-name">Frau Zahra</div>
+                    <div class="teacher-level">Level B2</div>
                     <!-- <div class="teacher-description">Sertifikasi GOETHE A2</div> -->
-                    <div class="teacher-experience">1.5 Tahun Pengalaman Mengajar</div>
+                    <div class="teacher-experience">2 Tahun Pengalaman Mengajar</div>
                 </div>
 
                 <div class="teacher-card" data-delay="400">
-                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Assyifa.png')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Olin.jpg')">
                     </div>
-                    <div class="teacher-name">Frau Assyifa</div>
+                    <div class="teacher-name">Frau Olin</div>
                     <div class="teacher-level">Level B1</div>
                     <!-- <div class="teacher-description">Native Speaker dari Jerman</div> -->
                     <div class="teacher-experience">2 Tahun Pengalaman Mengajar</div>
                 </div>
-
-                <div class="teacher-card" data-delay="600">
-                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Herr_Iqbal.png')">
-                    </div>
-                    <div class="teacher-name">Herr Iqbalsyah</div>
-                    <div class="teacher-level">Level B2</div>
-                    <!-- <div class="teacher-description">Lulusan Deutschkurs München</div> -->
-                    <div class="teacher-experience">3 Tahun Pengalaman Mengajar</div>
-                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="{{ url('/teachers') }}" class="btn btn-outline-custom">Lihat Profil Lengkap Tutor</a>
             </div>
         </div>
     </section>
@@ -1513,7 +1498,7 @@
                     <h5>Phone</h5>
                     <a class="text-decoration-none" style="color: var(--primary-color);"
                         href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0">
-                        <p>+62 896 7576 5648</p>
+                        <p>Admin MinFara</p>
                     </a>
                 </div>
 
@@ -1548,9 +1533,9 @@
                     <h5 class="footer-title">Quick Link</h5>
                     <ul class="footer-links">
                         {{-- <li><a href="#">Course</a></li> --}}
-                        <li><a href="{{ url('/') }}">Beranda</a></li>
+                        <li><a href="{{ url('/') }}">BerKamu</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
@@ -1636,8 +1621,6 @@
                     element.textContent = Math.floor(current).toLocaleString() + '+';
                 } else if (target >= 100) {
                     element.textContent = Math.floor(current) + '+';
-                } else if (target >= 50 && element.parentElement.querySelector('.stat-label').textContent === 'Jam Belajar') {
-                    element.textContent = Math.floor(current) + '';
                 } else {
                     element.textContent = Math.floor(current) + '%';
                 }
@@ -1666,8 +1649,7 @@
                         // Adjust target numbers based on labels
                         if (labelElement.textContent === 'Siswa') targetNumber = 5000;
                         else if (labelElement.textContent === 'Lulusan') targetNumber = 300;
-                        else if (labelElement.textContent === 'Jam Belajar') targetNumber = 50;
-                        else if (labelElement.textContent === 'Kepuasan') targetNumber = 98;
+                        else if (labelElement.textContent === 'Kepuasan') targetNumber = 99;
 
                         setTimeout(() => {
                             countUp(numberElement, targetNumber);

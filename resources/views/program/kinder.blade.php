@@ -713,11 +713,13 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li>
+                    {{-- <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li> --}}
                     <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a></li>
                 </ul>
             </div>
@@ -728,8 +730,8 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Program Private Kinder <br> Bahasa Jerman</h1>
-                <p>Pembelajaran bahasa Jerman yang menyenangkan dan personal untuk anak usia 8-12 tahun dengan metode
-                    yang sesuai perkembangan mereka</p>
+                <p>Belajar bahasa Jerman jadi seru dan mudah! Dirancang untuk anak usia 8–12 tahun dengan pendekatan
+                    yang menyenangkan dan personal sesuai gaya belajar anak.</p>
             </div>
         </div>
     </section>
@@ -827,20 +829,21 @@
 
     <section class="pricing-section">
         <div class="container">
-            <h3 class="pricing-title">Biaya Program</h3>
+            <h3 class="pricing-title">Biaya Investasi</h3>
             <p class="pricing-subtitle">Pilih format kelas yang sesuai dengan kebutuhan anak Anda</p>
-
             <div class="pricing-grid">
+                <!-- Online Class -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h4 class="pricing-type">Kelas Offline</h4>
-                        <div class="pricing-price">Rp 175.000</div>
+                        <h4 class="pricing-type">Kelas Online</h4>
+                        <div class="pricing-price">Rp 179.000</div>
                         <div class="pricing-per">per meeting</div>
                     </div>
 
                     <ul class="pricing-features">
                         <li><i class="bi bi-check-circle-fill"></i><span>Durasi 60 menit per sesi</span></li>
-                        <li><i class="bi bi-check-circle-fill"></i><span>Pembelajaran tatap muka langsung</span></li>
+                        <li><i class="bi bi-check-circle-fill"></i><span>Akses video recording kelas 24/7</span></li>
+                        <li><i class="bi bi-check-circle-fill"></i><span>Belajar dari rumah dengan nyaman</span></li>
                         <li><i class="bi bi-check-circle-fill"></i><span>Materi interaktif dan menyenangkan</span></li>
                         <li><i class="bi bi-check-circle-fill"></i><span>Jadwal fleksibel sesuai kesepakatan</span></li>
                         <li><i class="bi bi-check-circle-fill"></i><span>Tutor berpengalaman dengan anak</span></li>
@@ -849,17 +852,18 @@
 
                     <button class="pricing-button">Daftar Sekarang</button>
                 </div>
-
+                <!-- Online Class (auf englisch) -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h4 class="pricing-type">Kelas Online</h4>
-                        <div class="pricing-price">Rp 125.000</div>
+                        <h4 class="pricing-type">Kelas Online (auf englisch)</h4>
+                        <div class="pricing-price">Rp 200.000</div>
                         <div class="pricing-per">per meeting</div>
                     </div>
 
                     <ul class="pricing-features">
                         <li><i class="bi bi-check-circle-fill"></i><span>Durasi 60 menit per sesi</span></li>
-                        <li><i class="bi bi-check-circle-fill"></i><span>Belajar dari rumah dengan nyaman</span></li>
+                        <li><i class="bi bi-check-circle-fill"></i><span>Akses video recording kelas 24/7</span></li>
+                        <li><i class="bi bi-check-circle-fill"></i><span>Pembelajaran tatap muka langsung</span></li>
                         <li><i class="bi bi-check-circle-fill"></i><span>Materi interaktif dan menyenangkan</span></li>
                         <li><i class="bi bi-check-circle-fill"></i><span>Jadwal fleksibel sesuai kesepakatan</span></li>
                         <li><i class="bi bi-check-circle-fill"></i><span>Tutor berpengalaman dengan anak</span></li>
@@ -929,9 +933,8 @@
     <section class="cta-section">
         <div class="container">
             <h2 class="cta-title">Siap Daftarkan Anak Anda?</h2>
-            <p class="mb-4">Berikan kesempatan kepada anak Anda untuk belajar bahasa Jerman sejak dini dengan metode
-                yang menyenangkan, personal, dan efektif. Jadwal fleksibel dan biaya per meeting membuat pembelajaran
-                lebih mudah disesuaikan dengan kebutuhan keluarga Anda.</p>
+            <p class="mb-4">Bekali anak Anda dengan kemampuan bahasa Jerman sejak dini! Investasi cerdas untuk masa
+                depan di dunia yang semakin global.</p>
             <a href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftarkan+anak+saya+di+Program+Private+Kinder+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+lebih+lanjut.&type=phone_number&app_absent=0"
                 class="btn-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a>
         </div>
@@ -955,7 +958,7 @@
                     <ul class="footer-links">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about-us') }}">About Us</a></li>
                     </ul>

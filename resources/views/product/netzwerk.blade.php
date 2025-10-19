@@ -476,6 +476,20 @@
             color: var(--primary-color);
         }
 
+        .btn-cta-shopee {
+            background: linear-gradient(135deg, #EE4D2D, #FF6340);
+            color: white;
+        }
+
+        .btn-cta-shopee:hover {
+            background: linear-gradient(135deg, #D43D1D, #EE5330);
+            color: white;
+        }
+
+        .d-flex.gap-3 {
+            gap: 1rem !important;
+        }
+
         /* Footer */
         .footer {
             background: var(--dark-blue);
@@ -650,16 +664,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">BerKamu</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            <!-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> -->
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a></li>
                 </ul>
             </div>
@@ -672,7 +688,7 @@
             <div class="hero-content">
                 <div class="hero-badge">Buku Ajar Internasional</div>
                 <h1 class="hero-title">Netzwerk Neu</h1>
-                <p class="hero-subtitle">Buku ajar bahasa Jerman standar internasional yang mengantarkan Anda dari
+                <p class="hero-subtitle">Buku ajar bahasa Jerman stKamur internasional yang mengantarkan Kamu dari
                     pemula hingga mahir dengan metode pembelajaran modern dan interaktif</p>
             </div>
         </div>
@@ -703,7 +719,7 @@
         <div class="container">
             <div class="package-header">
                 <div class="section-badge">Isi Paket Lengkap</div>
-                <h2 class="section-title">Yang Anda Dapatkan</h2>
+                <h2 class="section-title">Yang Kamu Dapatkan</h2>
             </div>
 
             <div class="package-split">
@@ -711,7 +727,7 @@
                     <div class="package-number">1</div>
                     <h3>Kursbuch (Buku Kursus)</h3>
                     <p>Berisi materi utama, dialog, kosakata, tata bahasa, serta latihan komunikasi sehari-hari yang
-                        dirancang untuk membangun kemampuan bahasa Jerman Anda secara komprehensif dan terstruktur.</p>
+                        dirancang untuk membangun kemampuan bahasa Jerman Kamu secara komprehensif dan terstruktur.</p>
                     <ul>
                         <li>Materi pembelajaran sistematis dan mudah dipahami</li>
                         <li>Dialog autentik dari kehidupan nyata di Jerman</li>
@@ -750,9 +766,9 @@
                     <div class="feature-icon-wrapper">
                         <i class="bi bi-patch-check-fill"></i>
                     </div>
-                    <h4>Standar Goethe-Institut & GER (CEFR)</h4>
-                    <p>Netzwerk neu mengikuti standar Gemeinsamer Europäischer Referenzrahmen (GER) atau Common European
-                        Framework of Reference (CEFR) yang diakui secara internasional. Sertifikat Anda akan diakui di
+                    <h4>StKamur Goethe-Institut & GER (CEFR)</h4>
+                    <p>Netzwerk neu mengikuti stKamur Gemeinsamer Europäischer Referenzrahmen (GER) atau Common European
+                        Framework of Reference (CEFR) yang diakui secara internasional. Sertifikat Kamu akan diakui di
                         seluruh Eropa dan dunia.</p>
                 </div>
 
@@ -772,7 +788,7 @@
                     </div>
                     <h4>Pendekatan Interaktif & Komunikatif</h4>
                     <p>Metode pembelajaran yang interaktif dan komunikatif membuat proses belajar lebih menyenangkan dan
-                        efektif. Anda akan lebih banyak berlatih berbicara, menulis, dan berinteraksi dalam bahasa
+                        efektif. Kamu akan lebih banyak berlatih berbicara, menulis, dan berinteraksi dalam bahasa
                         Jerman sejak awal.</p>
                 </div>
 
@@ -781,7 +797,7 @@
                         <i class="bi bi-globe-americas"></i>
                     </div>
                     <h4>Materi Relevan dengan Kehidupan Sehari-hari</h4>
-                    <p>Semua materi dirancang relevan dengan kehidupan sehari-hari dan budaya Jerman. Anda akan belajar
+                    <p>Semua materi dirancang relevan dengan kehidupan sehari-hari dan budaya Jerman. Kamu akan belajar
                         bahasa Jerman yang benar-benar digunakan dalam situasi nyata, sehingga lebih mudah
                         diaplikasikan.</p>
                 </div>
@@ -794,7 +810,7 @@
         <div class="container">
             <div class="levels-header">
                 <h2>Level yang Tersedia</h2>
-                <p>Pilih level yang sesuai dengan kemampuan Anda</p>
+                <p>Mulai dari level dasar hingga lanjutan, sesuaikan dengan kebutuhan belajarmu.</p>
             </div>
 
             <div class="levels-container">
@@ -815,21 +831,27 @@
                 <div class="level-item">
                     <span class="level-badge">B1</span>
                     <h4>Tingkat Menengah</h4>
-                    <p>Level menengah yang mempersiapkan Anda untuk komunikasi mandiri dan ujian sertifikasi
+                    <p>Level menengah yang mempersiapkan Kamu untuk komunikasi mandiri dan ujian sertifikasi
                         internasional.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    {{-- CTA Section --}}
+    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">Mulai Perjalanan Belajar Bahasa Jermanmu Sekarang!</h2>
-            <p class="mb-4">Dengan Deutsch FlexiLearn, belajar bahasa Jerman jadi lebih fleksibel, praktis, dan efektif
-                tanpa terikat jadwal tertentu</p>
-            <a href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+Deutsch+FlexiLearn.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0"
-                class="btn-cta"><i class="bi bi-whatsapp me-2"></i>Hubungi MinFara</a>
+            <h2 class="cta-title">Dapatkan Netzwerk Neu Sekarang!</h2>
+            <p class="mb-4">Langkah pertama menuju penguasaan bahasa Jerman yang efektif dan terarah.</p>
+
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="https://vt.tokopedia.com/t/ZSH7hyT5qooLn-CksX4/" target="_blank" class="btn-cta">
+                    <i class="bi bi-tiktok me-2"></i>TikTok Shop
+                </a>
+                <a href="https://id.shp.ee/ZufqCVd" target="_blank" class="btn-cta">
+                    <i class="bi bi-cart-fill me-2"></i>Shopee
+                </a>
+            </div>
         </div>
     </section>
 
@@ -851,9 +873,9 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h5 class="footer-title">Quick Link</h5>
                     <ul class="footer-links">
-                        <li><a href="{{ url('/') }}">Beranda</a></li>
+                        <li><a href="{{ url('/') }}">BerKamu</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                     </ul>

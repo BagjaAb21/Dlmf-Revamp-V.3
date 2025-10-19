@@ -646,7 +646,8 @@
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Langkah Awal Menuju Jerman Dimulai dari Program yang Tepat</h1>
+                <h1 class="hero-title">Materi berstandar global dengan metode modern dan interaktif, membantu kamu
+                    berkembang dari pemula hingga mahir.</h1>
             </div>
         </div>
     </section>
@@ -658,128 +659,19 @@
             <div class="row align-items-center program-card">
                 <div class="col-lg-6 order-1">
                     <div class="program-text-content">
-                        <div class="program-badge">Reguler</div>
-                        <h2 class="program-title">Kelas Intensif</h2>
+                        <div class="program-badge">Buku Ajar</div>
+                        <h2 class="program-title">Netzwerk Neu</h2>
                         <p class="program-description">
-                            Program ini dirancang bagi kamu yang ingin belajar Bahasa Jerman secara intensif dan
-                            terarah. Dengan materi terstruktur dari A1–B1, pilihan jadwal beragam, dan banyak benefit
-                            pendukung. Level B2 juga segera tersedia untuk tahap lanjutan.
+                            Edisi terbaru dari buku ajar bahasa Jerman tingkat dasar yang telah sukses digunakan secara
+                            luas di berbagai institusi internasional.
                         </p>
-                        <a href="{{ url('/program/reguler') }}" class="btn-program">Lihat Detail Program</a>
+                        <a href="{{ url('/product/netzwerk') }}" class="btn-program">Lihat Detail Product</a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-2">
                     <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
-                            alt="Kelas Reguler" class="program-image">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Program 2 -->
-            <div class="row align-items-center program-card">
-                <div class="col-lg-6 order-2 order-lg-1">
-                    <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                            alt="Private Gramatik" class="program-image">
-                    </div>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2">
-                    <div class="program-text-content">
-                        <div class="program-badge">Private</div>
-                        <h2 class="program-title">Kelas Private Grammatik</h2>
-                        <p class="program-description">
-                            Kelas Private Grammatik adalah versi personal dari kelas reguler. Materinya sama, mencakup
-                            pembelajaran lengkap mulai dari level A1 hingga B1, sehingga tetap cocok juga untuk pemula
-                            yang benar-benar baru belajar bahasa Jerman.
-                        </p>
-                        <a href="{{ url('/program/grammatik') }}" class="btn-program">Lihat Detail Program</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Program 3 -->
-            <div class="row align-items-center program-card">
-                <div class="col-lg-6 order-1">
-                    <div class="program-text-content">
-                        <div class="program-badge">Private</div>
-                        <h2 class="program-title">Persiapan Ujian Goethe</h2>
-                        <p class="program-description">
-                            Kelas Private Persiapan Ujian dirancang khusus untuk membantu anda menghadapi ujian bahasa
-                            Jerman dengan lebih percaya diri. Fokus pada empat skill utama: Lesen, Hören, Schreiben, dan
-                            Sprechen.
-                        </p>
-                        <a href="{{ url('/program/prep-ex-goethe') }}" class="btn-program">Lihat Detail Program</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-2">
-                    <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80"
-                            alt="Persiapan Ujian" class="program-image">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Program 4 -->
-            <div class="row align-items-center program-card">
-                <div class="col-lg-6 order-2 order-lg-1">
-                    <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
-                            alt="Native Speaker" class="program-image">
-                    </div>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2">
-                    <div class="program-text-content">
-                        <div class="program-badge">Private</div>
-                        <h2 class="program-title">Sprachkurs mit Muttersprachler</h2>
-                        <p class="program-description">
-                            Kelas ini merupakan kelas private dengan native speaker yang berfokus pada peningkatan skill
-                            berbicara kamu dalam Bahasa Jerman.
-                        </p>
-                        <a href="{{ url('/program/muttersprachler') }}" class="btn-program">Lihat Detail Program</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Program 5 -->
-            <div class="row align-items-center program-card">
-                <div class="col-lg-6 order-1">
-                    <div class="program-text-content">
-                        <div class="program-badge">Private</div>
-                        <h2 class="program-title">Kinder (Anak)</h2>
-                        <p class="program-description">
-                            Kelas Private Kinder dirancang khusus untuk anak-anak usia 8–12 tahun yang ingin mulai
-                            belajar bahasa Jerman dengan cara yang menyenangkan dan sesuai usia mereka.
-                        </p>
-                        <a href="{{ url('/program/kinder') }}" class="btn-program">Lihat Detail Program</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-2">
-                    <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
-                            alt="Kelas Anak" class="program-image">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Program 6 -->
-            <div class="row align-items-center program-card">
-                <div class="col-lg-6 order-2 order-lg-1">
-                    <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=800&q=80"
-                            alt="FlexiLearn" class="program-image">
-                    </div>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2">
-                    <div class="program-text-content">
-                        <div class="program-badge">Asinkronus</div>
-                        <h2 class="program-title">Deutsch FlexiLearn</h2>
-                        <p class="program-description">
-                            Deutsch Flexilearn adalah Learning Management System (LMS) eksklusif dari Deutsch lernen mit
-                            Fara yang dirancang untuk kamu yang ingin belajar bahasa Jerman secara fleksibel, kapan
-                            saja, dan di mana saja.
-                        </p>
-                        <a href="{{ url('/program/flexilearn') }}" class="btn-program">Lihat Detail Program</a>
+                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80"
+                            alt="Netzwerk" class="program-image">
                     </div>
                 </div>
             </div>

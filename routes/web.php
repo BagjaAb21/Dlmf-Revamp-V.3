@@ -40,8 +40,16 @@ Route::get('/program/kinder', function () {
 Route::get('/program/flexilearn', function () {
     return view('program.flexilearn');
 });
-route::get('/program/netzwerk', function () {
-    return view('program.netzwerk');
+
+// product routes
+Route::get('/product', function () {
+    return view('product');
+});
+Route::get('/product/netzwerk', function () {
+    return view('product.netzwerk');
+});
+Route::get('/product/deutschkit', function () {
+    return view('product.deutschkit');
 });
 
 // Au Pair

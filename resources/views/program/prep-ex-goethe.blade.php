@@ -793,13 +793,15 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
@@ -956,61 +958,15 @@
     <!-- Pricing Section -->
     <section class="pricing-section">
         <div class="container">
-            <h3 class="pricing-title">Biaya Program</h3>
+            <h3 class="pricing-title">Biaya Investasi</h3>
             <p class="pricing-subtitle">Sistem pembayaran per meeting dengan fleksibilitas penuh</p>
 
             <div class="pricing-grid">
-                <!-- Offline Private -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h4 class="pricing-type">Offline Private Class</h4>
-                        <div class="pricing-price">Rp 175.000</div>
-                        <div class="pricing-per">per meeting</div>
-                    </div>
-
-                    <ul class="pricing-features">
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Pembelajaran tatap muka 1-on-1</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Pilih 1 atau lebih modul</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Durasi maksimal 90 menit/sesi</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Fokus latihan soal ujian</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Strategi menjawab efektif</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Feedback langsung dari tutor</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Simulasi ujian</span>
-                        </li>
-                        <li>
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Evaluasi progress berkala</span>
-                        </li>
-                    </ul>
-
-                    <button class="pricing-button">Daftar Sekarang</button>
-                </div>
-
                 <!-- Online Private -->
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h4 class="pricing-type">Online Private Class</h4>
-                        <div class="pricing-price">Rp 125.000</div>
+                        <div class="pricing-price">Rp 195.000</div>
                         <div class="pricing-per">per meeting</div>
                     </div>
 
@@ -1051,6 +1007,51 @@
 
                     <button class="pricing-button">Daftar Sekarang</button>
                 </div>
+                <!-- Offline Private -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4 class="pricing-type">Offline Private Class</h4>
+                        <div class="pricing-price">Rp 280.000</div>
+                        <div class="pricing-per">per meeting</div>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pembelajaran tatap muka 1-on-1</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pilih 1 atau lebih modul</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Durasi maksimal 90 menit/sesi</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Fokus latihan soal ujian</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Strategi menjawab efektif</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Feedback langsung dari tutor</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Simulasi ujian</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Evaluasi progress berkala</span>
+                        </li>
+                    </ul>
+
+                    <button class="pricing-button">Daftar Sekarang</button>
+                </div>
             </div>
         </div>
     </section>
@@ -1059,9 +1060,9 @@
     <section class="benefits-section">
         <div class="container">
             <div class="text-center">
-                <span class="program-badge">Keuntungan</span>
+                <span class="program-badge">Benefit</span>
                 <h2 class="program-title">Mengapa Memilih Kelas Private Persiapan Ujian?</h2>
-                <p class="pricing-subtitle">Keunggulan pembelajaran yang disesuaikan dengan target ujianmu</p>
+                <p class="pricing-subtitle">Pendekatan belajar yang terarah dan disesuaikan dengan standar ujian Goethe untuk hasil maksimal.</p>
             </div>
 
             <div class="benefits-grid">
@@ -1070,8 +1071,7 @@
                         <i class="bi bi-bullseye"></i>
                     </div>
                     <h4 class="benefit-title">Fokus Spesifik</h4>
-                    <p class="benefit-text">Pilih modul yang ingin diperdalam sesuai kelemahan atau kebutuhan ujianmu.
-                        Tidak perlu belajar semua jika hanya butuh beberapa skill tertentu</p>
+                    <p class="benefit-text">Pilih modul sesuai kebutuhan ujianmu. Belajar hanya pada skill yang benar-benar perlu kamu kuasai.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -1079,8 +1079,7 @@
                         <i class="bi bi-person-check"></i>
                     </div>
                     <h4 class="benefit-title">Pembelajaran Personal</h4>
-                    <p class="benefit-text">Sesi 1-on-1 dengan tutor berpengalaman yang memberikan perhatian penuh pada
-                        progress dan kesulitan belajarmu</p>
+                    <p class="benefit-text">Sesi 1-on-1 bersama tutor berpengalaman yang memantau progres dan membantu mengatasi kesulitan belajar secara langsung.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -1088,8 +1087,7 @@
                         <i class="bi bi-gear"></i>
                     </div>
                     <h4 class="benefit-title">Materi Fleksibel</h4>
-                    <p class="benefit-text">Materi disesuaikan langsung dengan fokus latihan dan tipe soal ujian yang
-                        akan anda hadapi, tanpa modul kaku</p>
+                    <p class="benefit-text">Materi disesuaikan dengan tipe soal ujian yang akan kamu hadapi. Tanpa modul baku, hanya latihan yang relevan dan terarah.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -1097,8 +1095,7 @@
                         <i class="bi bi-trophy"></i>
                     </div>
                     <h4 class="benefit-title">Strategi Ujian</h4>
-                    <p class="benefit-text">Pelajari tips dan trik menjawab soal dengan efektif, manajemen waktu, dan
-                        strategi menghadapi berbagai tipe soal ujian</p>
+                    <p class="benefit-text">Pelajari teknik menjawab soal dengan efektif, mengatur waktu, dan menghadapi berbagai format ujian dengan percaya diri.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -1106,8 +1103,7 @@
                         <i class="bi bi-graph-up-arrow"></i>
                     </div>
                     <h4 class="benefit-title">Progress Terukur</h4>
-                    <p class="benefit-text">Evaluasi berkala dan simulasi ujian untuk mengukur perkembangan dan
-                        kesiapanmu menghadapi ujian sebenarnya</p>
+                    <p class="benefit-text">Dapatkan evaluasi berkala dan simulasi ujian untuk memantau perkembangan serta kesiapan menghadapi ujian sebenarnya.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -1115,8 +1111,7 @@
                         <i class="bi bi-shield-check"></i>
                     </div>
                     <h4 class="benefit-title">Tingkat Kepercayaan Diri</h4>
-                    <p class="benefit-text">Dengan latihan intensif dan bimbingan personal, tingkatkan rasa percaya diri
-                        untuk menghadapi ujian dengan tenang</p>
+                    <p class="benefit-text">Latihan intensif dan bimbingan personal membantu kamu menghadapi ujian dengan tenang dan yakin pada kemampuanmu.</p>
                 </div>
             </div>
         </div>
@@ -1125,9 +1120,8 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">Siap Menghadapi Ujian Bahasa Jerman?</h2>
-            <p class="mb-4">Dengan persiapan yang tepat dan bimbingan personal, anda bisa menghadapi ujian sertifikasi
-                bahasa Jerman dengan lebih percaya diri. Pilih modul sesuai kebutuhanmu dan raih hasil terbaik!</p>
+            <h2 class="cta-title">Siap Menghadapi Ujian Goethe?</h2>
+            <p class="mb-4">Konsultasikan kebutuhanmu bersama tim kami.</p>
             <a href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+Kelas+Private+Persiapan+Ujian+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0"
                 class="btn-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a>
         </div>
@@ -1154,7 +1148,7 @@
                     <ul class="footer-links">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                     </ul>

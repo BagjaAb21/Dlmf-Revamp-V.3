@@ -274,7 +274,7 @@
 
         .pricing-grid {
             display: none;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
 
@@ -633,11 +633,13 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li>
+                    {{-- <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li> --}}
                     <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a></li>
                 </ul>
             </div>
@@ -653,8 +655,8 @@
                     </div>
                     <h1 class="hero-title">Deutsch FlexiLearn</h1>
                     <p class="hero-subtitle">
-                        Belajar bahasa Jerman dengan sistem yang fleksibel, kapan saja dan di mana saja sesuai kecepatan
-                        belajar Anda sendiri
+                        Nikmati kebebasan belajar bahasa Jerman kapan saja dan dari mana saja, dengan sistem yang
+                        menyesuaikan kebutuhan dan ritme belajarmu.
                     </p>
                     <div class="hero-features">
                         <div class="hero-feature-item">
@@ -663,7 +665,11 @@
                         </div>
                         <div class="hero-feature-item">
                             <i class="bi bi-play-circle"></i>
-                            <span>Video Pembelajaran</span>
+                            <span>Akses Video Pembelajaran 24/7</span>
+                        </div>
+                        <div class="hero-feature-item">
+                            <i class="bi bi-journal-check"></i>
+                            <span>Evaluasi & Quiz</span>
                         </div>
                         <div class="hero-feature-item">
                             <i class="bi bi-award"></i>
@@ -695,9 +701,10 @@
                         fleksibel, kapan saja, dan di mana saja.
                     </p>
                     <p class="section-text">
-                        Program ini cocok banget untuk kamu yang punya jadwal padat, tapi tetap ingin produktif belajar
-                        bahasa Jerman. Saat ini, materi tersedia untuk <strong>level A1</strong>, lengkap dengan modul,
-                        latihan soal, dan video pembelajaran.
+                        Program ini cocok untuk kamu yang punya jadwal padat namun ingin produktif belajar Bahasa
+                        Jerman. Deutsch FlexiLearn akan tersedia dalam <strong>level A1 hingga B2</strong>. Lengkap
+                        dengan modul, latihan
+                        soal, dan video pembelajaran yang bisa diakses kapan saja dan di mana saja.
                     </p>
                     <p class="section-text">
                         Sistem belajarnya asinkronus, jadi kamu bisa belajar mandiri sesuai ritme masing-masing. Setelah
@@ -712,16 +719,17 @@
                     <div class="feature-icon">
                         <i class="bi bi-book"></i>
                     </div>
-                    <h4 class="feature-title">Modul Lengkap</h4>
-                    <p class="feature-desc">Materi pembelajaran terstruktur untuk level A1 dengan penjelasan yang mudah
-                        dipahami</p>
+                    <h4 class="feature-title">Modul Eksklusif</h4>
+                    <p class="feature-desc">Materi pembelajaran terstruktur untuk level A1-B2, disusun secara sistematis
+                        dengan penjelasan yang mudah dipahami.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="bi bi-camera-video"></i>
                     </div>
                     <h4 class="feature-title">Video Pembelajaran</h4>
-                    <p class="feature-desc">Video berkualitas tinggi yang membantu pemahaman materi dengan lebih baik
+                    <p class="feature-desc">Video interaktif dan berkualitas tinggi yang membantu kamu memahami konsep
+                        bahasa Jerman dengan lebih jelas.
                     </p>
                 </div>
                 <div class="feature-card">
@@ -729,16 +737,16 @@
                         <i class="bi bi-clipboard-check"></i>
                     </div>
                     <h4 class="feature-title">Latihan Soal</h4>
-                    <p class="feature-desc">Berbagai latihan untuk menguji pemahaman dan mengasah kemampuan bahasa
-                        Jerman</p>
+                    <p class="feature-desc">Ragam latihan yang dirancang untuk menguji pemahaman dan melatih kemampuan
+                        bahasa Jerman secara konsisten.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="bi bi-patch-check"></i>
                     </div>
                     <h4 class="feature-title">Sertifikat</h4>
-                    <p class="feature-desc">Dapatkan sertifikat penyelesaian course sebagai bukti pencapaian
-                        pembelajaran</p>
+                    <p class="feature-desc">Dapatkan sertifikat penyelesaian sebagai bentuk pengakuan atas pencapaian
+                        dan kemajuan belajarmu./p>
                 </div>
             </div>
         </div>
@@ -748,20 +756,21 @@
         <div class="container">
             <div class="pricing-header">
                 <div class="section-badge">Pilihan Paket</div>
-                <h2 class="section-title">Pilih Paket yang Sesuai dengan Kebutuhanmu</h2>
-                <p class="section-text">Berbagai pilihan paket dengan harga terjangkau dan akses yang fleksibel</p>
+                <h2 class="section-title">Pilih Sesuai Kebutuhanmu</h2>
+                <p class="section-text">Beragam paket belajar dengan harga terjangkau dan fleksibilitas tinggi.</p>
             </div>
 
             <div class="pricing-tabs">
                 <div class="pricing-tab active" onclick="switchTab('monthly')">
-                    <i class="bi bi-calendar-month me-2"></i>Paket Bulanan
+                    <i class="bi bi-calendar me-2"></i>Paket Bulanan
                 </div>
                 <div class="pricing-tab" onclick="switchTab('lifetime')">
                     <i class="bi bi-infinity me-2"></i>Paket Lifetime
                 </div>
             </div>
-
+            <!-- Paket Monthly -->
             <div class="pricing-grid active" id="monthly">
+                <!-- 149k/bln -->
                 <div class="pricing-card">
                     <div class="pricing-duration">2 Bulan</div>
                     <div class="pricing-price">Rp 149.000</div>
@@ -773,53 +782,120 @@
                         <li><i class="bi bi-check-circle-fill"></i> 10 Digital Product</li>
                         <li><i class="bi bi-check-circle-fill"></i> Sertifikat</li>
                     </ul>
-                    <button class="btn-pricing">Pilih Paket</button>
+                    <button class="btn-pricing" onclick="pilihPaket('2 Bulan', 'Rp 149.000')">Pilih Paket</button>
                 </div>
+                <!-- 169k/bln -->
+                <div class="pricing-card">
+                    <div class="pricing-duration">6 Bulan</div>
+                    <div class="pricing-price">Rp 169.000</div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Akses 2 bulan</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Materi Level A1</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Video pembelajaran</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Latihan soal</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 10 Digital Product</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sertifikat</li>
+                    </ul>
+                    <button class="btn-pricing" onclick="pilihPaket('6 Bulan', 'Rp 169.000')">Pilih Paket</button>
+                </div>
+                <!-- 189k/bln -->
+                <div class="pricing-card">
+                    <div class="pricing-duration">12 Bulan</div>
+                    <div class="pricing-price">Rp 189.000</div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Akses 2 bulan</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Materi Level A1</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Video pembelajaran</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Latihan soal</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 10 Digital Product</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sertifikat</li>
+                    </ul>
+                    <button class="btn-pricing" onclick="pilihPaket('12 Bulan', 'Rp 189.000')">Pilih Paket</button>
+                </div>
+            </div>
 
+            <!-- Paket Lifetime -->
+            <div class="pricing-grid" id="lifetime">
+                <!-- 199k/lifetime -->
+                <div class="pricing-card">
+                    <div class="pricing-duration">Lifetime Basic</div>
+                    <div class="pricing-price">Rp 199.000</div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Akses seumur hidup</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Materi Lengkap</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Video pembelajaran</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Latihan soal</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sertifikat</li>
+                    </ul>
+                    <button class="btn-pricing" onclick="pilihPaket('Lifetime Basic', 'Rp 199.000')">Pilih
+                        Paket</button>
+                </div>
+                <!-- 299k/lifetime -->
+                <div class="pricing-card">
+                    <div class="pricing-duration">Lifetime + 10 Digital Product</div>
+                    <div class="pricing-price">Rp 299.000</div>
+                    <ul class="pricing-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Akses seumur hidup</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Materi Lengkap</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Video pembelajaran</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Latihan soal</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 10 Digital Product</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sertifikat</li>
+                    </ul>
+                    <button class="btn-pricing"
+                        onclick="pilihPaket('Lifetime + 10 Digital Product', 'Rp 299.000')">Pilih Paket</button>
+                </div>
+                <!-- 399k/lifetime -->
                 <div class="pricing-card">
                     <div class="pricing-duration">Lifetime + 20 Digital Product</div>
                     <div class="pricing-price">Rp 399.000</div>
                     <ul class="pricing-features">
                         <li><i class="bi bi-check-circle-fill"></i> Akses seumur hidup</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Materi Level A1</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Materi Lengkap</li>
                         <li><i class="bi bi-check-circle-fill"></i> Video pembelajaran</li>
                         <li><i class="bi bi-check-circle-fill"></i> Latihan soal</li>
                         <li><i class="bi bi-check-circle-fill"></i> 20 Digital Product</li>
                         <li><i class="bi bi-check-circle-fill"></i> Sertifikat</li>
                     </ul>
-                    <button class="btn-pricing">Pilih Paket</button>
+                    <button class="btn-pricing"
+                        onclick="pilihPaket('Lifetime + 20 Digital Product', 'Rp 399.000')">Pilih Paket</button>
                 </div>
-
-                <div class="pricing-card popular">
-                    <div class="pricing-duration">Lifetime + Private Session (1x)</div>
+                <!-- 599k/lifetime -->
+                <div class="pricing-card popular" style="margin-top: 1rem;">
+                    <div class="pricing-duration">Lifetime + 20 Digital Product + Private Session (1x)</div>
                     <div class="pricing-price">Rp 599.000</div>
                     <ul class="pricing-features">
                         <li><i class="bi bi-check-circle-fill"></i> Akses seumur hidup</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Materi Level A1</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Materi Lengkap</li>
                         <li><i class="bi bi-check-circle-fill"></i> Video pembelajaran</li>
                         <li><i class="bi bi-check-circle-fill"></i> Latihan soal</li>
                         <li><i class="bi bi-check-circle-fill"></i> 20 Digital Product</li>
                         <li><i class="bi bi-check-circle-fill"></i> Private Session 1x</li>
                         <li><i class="bi bi-check-circle-fill"></i> Sertifikat</li>
                     </ul>
-                    <button class="btn-pricing">Pilih Paket</button>
+                    <button class="btn-pricing"
+                        onclick="pilihPaket('Lifetime + 20 Digital Product + Private Session (1x)', 'Rp 599.000')">Pilih
+                        Paket</button>
                 </div>
-
+                <!-- 699k/lifetime -->
                 <div class="pricing-card">
-                    <div class="pricing-duration">Lifetime + Private Session (2x)</div>
+                    <div class="pricing-duration">Lifetime + 20 Digital Product + Private Session (2x)</div>
                     <div class="pricing-price">Rp 699.000</div>
                     <ul class="pricing-features">
                         <li><i class="bi bi-check-circle-fill"></i> Akses seumur hidup</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Materi Level A1</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Materi Lengkap</li>
                         <li><i class="bi bi-check-circle-fill"></i> Video pembelajaran</li>
                         <li><i class="bi bi-check-circle-fill"></i> Latihan soal</li>
                         <li><i class="bi bi-check-circle-fill"></i> 20 Digital Product</li>
                         <li><i class="bi bi-check-circle-fill"></i> Private Session 2x</li>
                         <li><i class="bi bi-check-circle-fill"></i> Sertifikat</li>
                     </ul>
-                    <button class="btn-pricing">Pilih Paket</button>
+                    <button class="btn-pricing"
+                        onclick="pilihPaket('Lifetime + 20 Digital Product + Private Session (2x)', 'Rp 699.000')">Pilih
+                        Paket</button>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -852,7 +928,7 @@
                         <div class="benefit-number">3</div>
                         <div class="benefit-content">
                             <h4>Materi Terstruktur</h4>
-                            <p>Kurikulum yang dirancang sistematis untuk level A1 dengan modul yang mudah dipahami.</p>
+                            <p>Kurikulum yang dirancang sistematis setiap level dengan modul yang mudah dipahami.</p>
                         </div>
                     </div>
 
@@ -887,9 +963,8 @@
 
     <section class="cta-section">
         <div class="container">
-
-            <p class="mb-4">Dengan Deutsch FlexiLearn, belajar bahasa Jerman jadi lebih fleksibel, praktis, dan efektif
-                tanpa terikat jadwal tertentu</p>
+            <h2 class="cta-title">Siap Belajar Bahasa Jerman dengan Fleksibel?</h2>
+            <p class="mb-4">Konsultasikan kebutuhanmu dengan tim kami.</p>
             <a href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+Deutsch+FlexiLearn.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0"
                 class="btn-cta"><i class="bi bi-whatsapp me-2"></i>Hubungi MinFara</a>
         </div>
@@ -914,7 +989,7 @@
                     <ul class="footer-links">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                     </ul>
@@ -982,6 +1057,13 @@
 
             event.target.closest('.pricing-tab').classList.add('active');
             document.getElementById(tab).classList.add('active');
+        }
+        function pilihPaket(namaPaket, harga) {
+            const nomorWA = '6289647897616';
+            const pesan = `Halo MinFara, saya tertarik untuk mendaftar *Deutsch FlexiLearn*.%0A%0A*Paket yang dipilih:* ${namaPaket} %0A*Harga:* ${harga}%0A%0AMohon informasi lebih lanjut untuk proses pendaftaran. Terima kasih!`;
+
+            const urlWA = `https://api.whatsapp.com/send?phone=${nomorWA}&text=${pesan}`;
+            window.open(urlWA, '_blank');
         }
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

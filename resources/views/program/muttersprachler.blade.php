@@ -705,19 +705,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">Beranda</a>
+                        <a class="nav-link" href="{{ url('/') }}">BerKamu</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="/about">Tentang Kami</a>
                     </li>
@@ -730,7 +732,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Sprachkurs mit Muttersprachler</h1>
-                <p>Tingkatkan kemampuan berbicara bahasa Jerman Anda secara intensif dengan bimbingan langsung dari
+                <p>Tingkatkan kemampuan berbicara bahasa Jerman Kamu secara intensif dengan bimbingan langsung dari
                     native speaker dalam format one-on-one</p>
             </div>
         </div>
@@ -746,18 +748,20 @@
             </div>
             <div class="program-content">
                 <div class="program-text">
-                    <p>Kelas ini dirancang khusus buat anda yang ingin melatih kemampuan berbicara (<em>Sprechen</em>)
+                    <p>Kelas ini dirancang khusus buat Kamu yang ingin melatih kemampuan berbicara (<em>Sprechen</em>)
                         langsung dengan <strong>native speaker bahasa Jerman</strong>. Karena sifatnya
                         <strong>private</strong>, pembelajaran dilakukan <strong>one-on-one</strong>, sehingga fokus
-                        sepenuhnya pada perkembanganmu.</p>
+                        sepenuhnya pada perkembanganmu.
+                    </p>
                     <div class="highlight-box">
                         <p><strong>Jumlah pertemuan bisa fleksibel sesuai kebutuhan</strong>. Setiap sesi berlangsung
                             selama <strong>60 menit</strong>.</p>
                     </div>
-                    <p>Format ini memastikan anda punya cukup waktu untuk berlatih percakapan sekaligus mendapat koreksi
+                    <p>Format ini memastikan Kamu punya cukup waktu untuk berlatih percakapan sekaligus mendapat koreksi
                         langsung dari pengajar native speaker.</p>
-                    <p>Dalam kelas ini, pengantar yang digunakan adalah <strong>bahasa Jerman</strong>. Metode ini
-                        membantu anda terbiasa berpikir langsung dalam bahasa Jerman, sekaligus meningkatkan kepercayaan
+                    <p>Dalam kelas ini, pengantar yang digunakan adalah <strong>bahasa Inggris dan Jerman</strong>.
+                        Metode ini
+                        membantu Kamu terbiasa berpikir langsung dalam bahasa Jerman, sekaligus meningkatkan kepercayaan
                         diri dalam percakapan sehari-hari.</p>
                 </div>
                 <div class="program-images">
@@ -772,10 +776,10 @@
     <section class="features-section">
         <div class="container">
             <div class="text-center">
-                <span class="program-badge">Keunggulan Kelas</span>
+                <span class="program-badge">Benefit</span>
                 <h2 class="program-title">Mengapa Memilih Sprachkurs mit Muttersprachler?</h2>
-                <p class="pricing-subtitle">Pembelajaran intensif dengan pendekatan personal yang disesuaikan dengan
-                    kebutuhanmu</p>
+                <p class="pricing-subtitle">Belajar lebih efektif melalui pendekatan personal yang dirancang khusus
+                    sesuai kebutuhan dan target bahasamu.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
@@ -783,32 +787,33 @@
                         <i class="bi bi-person-video3"></i>
                     </div>
                     <h4 class="feature-title">Native Speaker</h4>
-                    <p class="feature-description">Belajar langsung dari native speaker Jerman untuk mendapatkan
-                        pelafalan dan penggunaan bahasa yang autentik</p>
+                    <p class="feature-description">Belajar langsung dengan penutur asli Bahasa Jerman yang menguasai
+                        berbagai dialek untuk memahami pelafalan, ekspresi, dan nuansa bahasa yang benar-benar autentik.
+                    </p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="bi bi-person-check"></i>
                     </div>
                     <h4 class="feature-title">One-on-One Session</h4>
-                    <p class="feature-description">Pembelajaran privat yang fokus 100% pada perkembangan kemampuan
-                        berbicara Anda</p>
+                    <p class="feature-description">Sesi privat dengan fokus penuh pada peningkatan kemampuan berbicara
+                        dan pemahaman bahasa sesuai ritmemu.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="bi bi-clock"></i>
                     </div>
                     <h4 class="feature-title">Fleksibel</h4>
-                    <p class="feature-description">Jumlah pertemuan dapat disesuaikan dengan kebutuhan dan target
-                        pembelajaran Anda</p>
+                    <p class="feature-description">Atur jumlah dan jadwal pertemuan sesuai kebutuhan serta target
+                        belajarmu.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="bi bi-chat-left-quote"></i>
                     </div>
                     <h4 class="feature-title">Praktik Percakapan</h4>
-                    <p class="feature-description">Fokus pada kemampuan berbicara dengan praktik percakapan intensif
-                        dalam setiap sesi</p>
+                    <p class="feature-description">Bangun kepercayaan diri lewat latihan berbicara intensif dan
+                        interaktif di setiap sesi.</p>
                 </div>
             </div>
         </div>
@@ -856,8 +861,8 @@
                     </div>
                     <div class="benefit-content">
                         <h4>Pembelajaran Full Immersion</h4>
-                        <p>Pengantar 100% dalam bahasa Jerman membantu Anda terbiasa berpikir langsung dalam bahasa
-                            Jerman dengan lebih natural dan cepat</p>
+                        <p>Pengantar utama menggunakan bahasa Jerman dan Inggris, membantu Anda terbiasa memahami
+                            konteks secara natural tanpa merasa sulit beradaptasi.</p>
                     </div>
                 </div>
             </div>
@@ -866,10 +871,11 @@
 
     <section class="pricing-section">
         <div class="container">
-            <h3 class="pricing-title">Biaya Sprachkurs mit Muttersprachler</h3>
+            <h3 class="pricing-title">Biaya Investasi</h3>
             <p class="pricing-subtitle">Investasi per pertemuan dengan native speaker untuk kemampuan berbicara yang
                 lebih baik</p>
             <div class="pricing-grid">
+                {{-- Offline Class --}}
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h4 class="pricing-type">Offline Class</h4>
@@ -887,7 +893,7 @@
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Pengantar 100% bahasa Jerman</span>
+                            <span>Pengantar Bahasa Inggris & Jerman</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
@@ -908,6 +914,7 @@
                     </ul>
                     <button class="pricing-button">Daftar Offline Class</button>
                 </div>
+                {{-- Online Class --}}
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h4 class="pricing-type">Online Class</h4>
@@ -925,7 +932,11 @@
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
-                            <span>Pengantar 100% bahasa Jerman</span>
+                            <span>Akses record kelas 24/7</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pengantar Bahasa Inggris & Jerman</span>
                         </li>
                         <li>
                             <i class="bi bi-check-circle-fill"></i>
@@ -949,16 +960,17 @@
             </div>
             <div class="text-center mt-5">
                 <p class="text-muted"><i class="bi bi-info-circle me-2"></i>Jumlah pertemuan dapat disesuaikan dengan
-                    kebutuhan dan target pembelajaran Anda</p>
+                    kebutuhan dan target pembelajaran Kamu</p>
             </div>
         </div>
     </section>
 
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">Siap Meningkatkan Kemampuan Berbicara Bahasa Jerman Anda?</h2>
+            <h2 class="cta-title">Wujudkan Bahasa Jerman Lancar dan Percaya Diri!
+                Konsultasikan kebutuhanmu dengan tim kami.</h2>
             <p class="mb-4">Dengan pendekatan privat dan bimbingan langsung dari native speaker, Sprachkurs mit
-                Muttersprachler memastikan perkembangan kemampuan berbicara bahasa Jerman Anda lebih cepat dan efektif.
+                Muttersprachler memastikan perkembangan kemampuan berbicara bahasa Jerman Kamu lebih cepat dan efektif.
                 Cocok untuk persiapan ujian, wawancara, atau sekadar meningkatkan kepercayaan diri dalam berkomunikasi.
             </p>
             <a href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+Sprachkurs+mit+Muttersprachler+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0"
@@ -981,9 +993,9 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h5 class="footer-title">Quick Link</h5>
                     <ul class="footer-links">
-                        <li><a href="{{ url('/') }}">Beranda</a></li>
+                        <li><a href="{{ url('/') }}">BerKamu</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                     </ul>
