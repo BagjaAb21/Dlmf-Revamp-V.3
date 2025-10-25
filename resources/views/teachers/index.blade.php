@@ -149,7 +149,7 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <i class="bi bi-patch-check-fill"></i>
-                    <span class="german-word">Zertifizierte</span> Deutsche Tutoren
+                    <span class="german-word">Zertifizierte</span>&ensp;Deutsche Tutoren
                 </div>
                 <h1 class="hero-title">Bersama <span class="german-word">Deutschlehrer</span> Terbaik,</h1>
                 <h2 class="hero-title" style="font-size: clamp(1.8rem, 4.5vw, 2.8rem); margin-bottom: 25px;">

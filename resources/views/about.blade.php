@@ -839,6 +839,21 @@
             margin-bottom: 0;
         }
 
+        /* Custom CSS untuk button outline dengan hover purple */
+        .btn-outline-custom {
+            color: #7C3AED;
+            border-color: #7C3AED;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-custom:hover {
+            background-color: #7C3AED;
+            border-color: #7C3AED;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+
         /* Contact Section */
         .contact-section {
             background: var(--light-gray);
@@ -1129,7 +1144,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">BerKamu</a>
+                        <a class="nav-link" href="{{ url('/') }}">Beranda</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
@@ -1533,7 +1548,7 @@
                     <h5 class="footer-title">Quick Link</h5>
                     <ul class="footer-links">
                         {{-- <li><a href="#">Course</a></li> --}}
-                        <li><a href="{{ url('/') }}">BerKamu</a></li>
+                        <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
                         {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}

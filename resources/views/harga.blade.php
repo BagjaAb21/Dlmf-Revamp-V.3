@@ -2692,7 +2692,7 @@
             </div>
 
             <!-- Paket Netzwerk -->
-            <div class="pricing-grid active" id="deutschkit">
+            <div class="pricing-grid" id="deutschkit">
                 <!-- Netzwerk Neu -->
                 <div class="program-card">
                     <div class="program-type">Netzwerk Neu</div>
