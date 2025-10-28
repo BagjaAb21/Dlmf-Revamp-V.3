@@ -902,7 +902,7 @@
 
         .course-image {
             width: 100%;
-            height: 240px;
+            height: auto;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
@@ -1015,7 +1015,8 @@
             }
 
             .course-image {
-                height: 200px;
+                height: auto;
+                max-height: 200px;
             }
 
             .course-content {
@@ -1029,7 +1030,8 @@
             }
 
             .course-image {
-                height: 180px;
+                height: auto;
+                max-height: 180px;
             }
         }
 
@@ -1381,6 +1383,10 @@
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .footer-contact {
             color: white;
         }
 
@@ -1924,8 +1930,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
-                    <div class="stat-item" data-target="50000">
-                        <span class="stat-number" data-count="50000">0k+</span>
+                    <div class="stat-item" data-target="5000">
+                        <span class="stat-number" data-count="5000">0k+</span>
                         <span class="stat-label">Alumni</span>
                     </div>
                 </div>
@@ -2125,8 +2131,7 @@
             <div class="row mt-5">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Kelas Reguler Offline" class="course-image">
+                        <img src="{{ asset('asset/img/banner/15.png') }}" alt="Kelas Reguler Offline" class="course-image">
                         <div class="course-content">
                             <span class="course-badge">Reguler Offline</span>
                             <h5 class="course-title">Reguler A1 - B1</h5>
@@ -2143,8 +2148,7 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Private Sprechen" class="course-image">
+                        <img src="{{ asset('asset/img/banner/17(1).png') }}" alt="Private Sprechen" class="course-image">
                         <div class="course-content">
                             <span class="course-badge">Private Speaking</span>
                             <h5 class="course-title">Private Sprechen mit Muttersprachler</h5>
@@ -2160,8 +2164,7 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="FlexiLearn Online" class="course-image">
+                        <img src="{{ asset('asset/img/banner/21.png') }}" alt="FlexiLearn Online" class="course-image">
                         <div class="course-content">
                             <span class="course-badge">Asinkronus</span>
                             <h5 class="course-title">Deutsch FlexiLearn (Asinkronus)</h5>
@@ -2177,8 +2180,7 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Private Grammar" class="course-image">
+                        <img src="{{ asset('asset/img/banner/16.png') }}" alt="Private Grammar" class="course-image">
                         <div class="course-content">
                             <span class="course-badge">Private</span>
                             <h5 class="course-title">Private Gramatik</h5>
@@ -2194,8 +2196,7 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Persiapan Ujian" class="course-image">
+                        <img src="{{ asset('asset/img/banner/17.png') }}" alt="Persiapan Ujian" class="course-image">
                         <div class="course-content">
                             <span class="course-badge">Preparation</span>
                             <h5 class="course-title">Kelas Persiapan Ujian</h5>
@@ -2211,8 +2212,7 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="course-card">
-                        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Kelas Au Pair" class="course-image">
+                        <img src="{{ asset('asset/img/banner/18.png') }}" alt="Kelas Au Pair" class="course-image">
                         <div class="course-content">
                             <span class="course-badge">Au Pair</span>
                             <h5 class="course-title">Kelas Au Pair</h5>
@@ -2628,7 +2628,7 @@
                     </p>
                 </div>
 
-                <div class="col-lg-2 col-md-6 mb-4">
+                <div class="col-lg-2 col-md-6 mb-">
                     <h5 class="footer-title">Quick Link</h5>
                     <ul class="footer-links">
                         {{-- <li><a href="#">Course</a></li> --}}

@@ -664,7 +664,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">BerKamu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Beranda</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
@@ -873,7 +873,7 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h5 class="footer-title">Quick Link</h5>
                     <ul class="footer-links">
-                        <li><a href="{{ url('/') }}">BerKamu</a></li>
+                        <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
                         {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>

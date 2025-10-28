@@ -311,8 +311,14 @@
         .program-image {
             border-radius: 16px;
             width: 100%;
-            height: 450px;
-            object-fit: cover;
+            height: auto;
+            /* Ubah dari 450px ke auto */
+            max-height: 450px;
+            /* Tambahkan max-height untuk membatasi tinggi maksimal */
+            object-fit: contain;
+            /* Ubah dari cover ke contain */
+            object-position: center;
+            /* Pastikan gambar berada di tengah */
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
             transition: all 0.4s;
         }
@@ -558,7 +564,8 @@
             }
 
             .program-image {
-                height: 350px;
+                height: auto;
+                max-height: 350px;
             }
         }
 
@@ -591,7 +598,8 @@
             }
 
             .program-image {
-                height: 280px;
+                height: auto;
+                max-height: 280px;
             }
 
             .section-title {
@@ -670,8 +678,7 @@
                 </div>
                 <div class="col-lg-6 order-2">
                     <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
-                            alt="Kelas Reguler" class="program-image">
+                        <img src="{{ asset('asset/img/banner/15.png') }}" alt="Kelas Reguler" class="program-image">
                     </div>
                 </div>
             </div>
@@ -680,8 +687,7 @@
             <div class="row align-items-center program-card">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                            alt="Private Gramatik" class="program-image">
+                        <img src="{{ asset('asset/img/banner/16.png') }}" alt="Private Gramatik" class="program-image">
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
@@ -714,8 +720,7 @@
                 </div>
                 <div class="col-lg-6 order-2">
                     <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80"
-                            alt="Persiapan Ujian" class="program-image">
+                        <img src="{{ asset('asset/img/banner/17.png') }}" alt="Persiapan Ujian" class="program-image">
                     </div>
                 </div>
             </div>
@@ -724,8 +729,7 @@
             <div class="row align-items-center program-card">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
-                            alt="Native Speaker" class="program-image">
+                        <img src="{{ asset('asset/img/banner/17(1).png') }}" alt="Native Speaker" class="program-image">
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
@@ -756,8 +760,7 @@
                 </div>
                 <div class="col-lg-6 order-2">
                     <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
-                            alt="Kelas Anak" class="program-image">
+                        <img src="{{ asset('asset/img/banner/20.png') }}" alt="Kelas Anak" class="program-image">
                     </div>
                 </div>
             </div>
@@ -766,8 +769,7 @@
             <div class="row align-items-center program-card">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=800&q=80"
-                            alt="FlexiLearn" class="program-image">
+                        <img src="{{ asset('asset/img/banner/21.png') }}" alt="FlexiLearn" class="program-image">
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">

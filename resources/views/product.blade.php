@@ -311,7 +311,7 @@
         .program-image {
             border-radius: 16px;
             width: 100%;
-            height: 450px;
+            height: auto;
             object-fit: cover;
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
             transition: all 0.4s;
@@ -558,7 +558,8 @@
             }
 
             .program-image {
-                height: 350px;
+                height: auto;
+                max-height: 350px;
             }
         }
 
@@ -591,7 +592,8 @@
             }
 
             .program-image {
-                height: 280px;
+                height: auto;
+                max-height: 280px;
             }
 
             .section-title {
@@ -670,8 +672,7 @@
                 </div>
                 <div class="col-lg-6 order-2">
                     <div class="program-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80"
-                            alt="Netzwerk" class="program-image">
+                        <img src="{{ asset('asset/img/banner/22(1).png') }}" alt="Netzwerk" class="program-image">
                     </div>
                 </div>
             </div>

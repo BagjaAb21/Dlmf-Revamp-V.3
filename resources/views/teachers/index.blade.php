@@ -332,7 +332,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Afifah.jpg') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '2.5 Tahun Mengajar'
             },
             {
@@ -340,7 +340,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Assyifa.png') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '1 Tahun Mengajar'
             },
             {
@@ -348,7 +348,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Azizah.jpg') }}',
                 level: 'Level: B-2',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-2',
                 experience: '3 Tahun Mengajar'
             },
             {
@@ -356,7 +356,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Caca.jpg') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '3 Tahun Mengajar'
             },
             {
@@ -364,7 +364,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Cindy.jpg') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '2 Tahun Mengajar'
             },
             {
@@ -372,7 +372,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Dwi.jpg') }}',
                 level: 'Level: B-2',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '3 Tahun Mengajar'
             },
             {
@@ -380,7 +380,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Esti.jpg') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '1 Tahun Mengajar'
             },
             {
@@ -388,7 +388,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Fia.jpg') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '2 Tahun Mengajar'
             },
             {
@@ -396,7 +396,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Jara.png') }}',
                 level: 'Level: B-2',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-2',
                 experience: '5 Tahun Mengajar'
             },
             {
@@ -404,7 +404,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Jojo.JPG') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '1 Tahun Mengajar'
             },
             {
@@ -412,7 +412,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Mia.png') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '1 Tahun Mengajar'
             },
             {
@@ -420,7 +420,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Olin.jpg') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '2 Tahun Mengajar'
             },
             {
@@ -428,7 +428,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Putri.jpg') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '1.5 Tahun Mengajar'
             },
             {
@@ -436,7 +436,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Sofi.jpg') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '2 Tahun Mengajar'
             },
             {
@@ -444,7 +444,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Tanaya.png') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '3 Tahun Mengajar'
             },
             {
@@ -452,7 +452,7 @@
                 photo: '{{ asset('asset/img/teachers/Frau_Zahra.jpg') }}',
                 level: 'Level: B-2',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-2',
                 experience: '2 Tahun Mengajar'
             },
             {
@@ -460,7 +460,7 @@
                 photo: '{{ asset('asset/img/teachers/Herr_Fadhil.png') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-1',
                 experience: '1 Tahun Mengajar'
             },
             {
@@ -468,7 +468,7 @@
                 photo: '{{ asset('asset/img/teachers/Herr_Farabi.png') }}',
                 level: 'Level: B-2',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-2',
                 experience: '3 Tahun Mengajar'
             },
             {
@@ -476,7 +476,7 @@
                 photo: '{{ asset('asset/img/teachers/Herr_Iqbal.png') }}',
                 level: 'Level: B-2',
                 education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: '-',
+                certification: 'B-2',
                 experience: '3 Tahun Mengajar'
             }
         ];

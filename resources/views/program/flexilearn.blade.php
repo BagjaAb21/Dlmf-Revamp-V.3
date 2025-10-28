@@ -167,23 +167,23 @@
             font-size: 0.75rem;
             font-weight: 700;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             font-weight: 800;
             color: var(--dark-blue);
-            margin-bottom: 25px;
+            margin-bottom: 20x;
             line-height: 1.3;
         }
 
         .section-text {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #64748B;
-            line-height: 1.9;
+            line-height: 1.5;
             margin-bottom: 20px;
         }
 
@@ -688,9 +688,12 @@
     <section class="about-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
-                        alt="Learning Platform" class="img-fluid rounded-4 shadow-lg">
+                <div class="col-lg-6">
+                    <div class="h-100">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+                            alt="Learning Platform" class="img-fluid rounded-4 shadow-lg w-100 h-100"
+                            style="object-fit: cover; object-position: center;">
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="section-badge">Tentang Program</div>
