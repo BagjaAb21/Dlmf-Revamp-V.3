@@ -4,14 +4,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program - DlmF</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- {{-- Primary SEO Meta Tags --}} -->
+    <title>Program Kursus Bahasa Jerman Online & Offline A1-B2 | Deutsch Lernen mit Fara</title>
+    <meta name="description"
+        content="Pilih program kursus bahasa Jerman terbaik di DlmF. Kelas intensif, private grammatik, persiapan ujian Goethe, native speaker, hingga kelas anak. Daftar sekarang!">
+    <meta name="keywords"
+        content="kursus bahasa jerman, les bahasa jerman, belajar bahasa jerman online, kursus jerman A1, kursus jerman B1, persiapan ujian goethe, kelas bahasa jerman private, native speaker jerman, kursus jerman anak">
+    <meta name="author" content="Deutsch Lernen mit Fara">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- {{-- Canonical URL --}} -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- {{-- Open Graph Meta Tags (Facebook, LinkedIn) --}} -->
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Program Kursus Bahasa Jerman Online & Offline A1-B2 | Deutsch Lernen mit Fara">
+    <meta property="og:description"
+        content="Pilih program kursus bahasa Jerman terbaik di DlmF. Kelas intensif, private grammatik, persiapan ujian Goethe, native speaker, hingga kelas anak. Daftar sekarang!">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:site_name" content="Deutsch Lernen mit Fara">
+    <meta property="og:image" content="{{ asset('asset/img/banner/15.png') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Program kursus bahasa Jerman di Deutsch Lernen mit Fara">
+
+    <!-- {{-- Twitter Card Meta Tags --}} -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Program Kursus Bahasa Jerman Online & Offline A1-B2 | Deutsch Lernen mit Fara">
+    <meta name="twitter:description"
+        content="Pilih program kursus bahasa Jerman terbaik di DlmF. Kelas intensif, private grammatik, persiapan ujian Goethe, native speaker, hingga kelas anak. Daftar sekarang!">
+    <meta name="twitter:image" content="{{ asset('asset/img/banner/15.png') }}">
+    <meta name="twitter:image:alt" content="Program kursus bahasa Jerman di Deutsch Lernen mit Fara">
+
+    <!-- {{-- Favicon --}} -->
     <link rel="icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="apple-touch-icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}">
+
+    <!-- {{-- Preconnect for Performance --}} -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- {{-- CSS Resources --}} -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+
+    <!-- {{-- JSON-LD Structured Data: Organization --}} -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Deutsch Lernen mit Fara",
+        "alternateName": "DlmF",
+        "url": "{{ url('/') }}",
+        "logo": "{{ asset('asset/img/logo/logo-Transparant3.png') }}",
+        "description": "Platform pembelajaran bahasa Jerman terpercaya dengan metode pembelajaran yang efektif dan menyenangkan",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jalan Terusan Sari Asih No. 76, Sarijadi",
+            "addressLocality": "Bandung",
+            "addressRegion": "Jawa Barat",
+            "addressCountry": "ID"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-896-4789-7616",
+            "contactType": "Customer Service",
+            "availableLanguage": ["Indonesian", "German"]
+        },
+        "sameAs": [
+            "https://www.instagram.com/deutschlernen.mit.fara/",
+            "https://www.facebook.com/deutschlernenmitfara"
+        ]
+    }
+    </script>
+
+    <!-- {{-- JSON-LD Structured Data: Breadcrumb --}} -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Beranda",
+                "item": "{{ url('/') }}"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Program",
+                "item": "{{ url('/program') }}"
+            }
+        ]
+    }
+    </script>
+
+    <!-- {{-- JSON-LD Structured Data: FAQ Schema --}} -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Gimana cara mulai kursus di DlmF?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Untuk memulai kursus, Anda hanya perlu mendaftar melalui website kami, memilih program yang sesuai dengan level Anda, dan melakukan pembayaran."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Lokasi DlmF itu ada dimana aja MinFar?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DlmF memiliki cabang di Jakarta, Bandung, Surabaya, dan Yogyakarta. Kami juga menyediakan kelas online untuk siswa di seluruh Indonesia."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Berapa biaya kursus di DlmF?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kelas online mulai dari Rp 750.000 dan kelas offline mulai dari Rp 1.250.000 per level, tergantung program yang dipilih."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- {{-- JSON-LD Structured Data: Course List --}} -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "Course",
+                "position": 1,
+                "name": "Kelas Intensif Bahasa Jerman",
+                "description": "Program intensif belajar Bahasa Jerman secara terstruktur dari A1 hingga B1 dengan jadwal beragam dan benefit pendukung lengkap",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Deutsch Lernen mit Fara"
+                },
+                "url": "{{ url('/program/reguler') }}"
+            },
+            {
+                "@type": "Course",
+                "position": 2,
+                "name": "Kelas Private Grammatik",
+                "description": "Kelas private bahasa Jerman dengan fokus pembelajaran grammatik dari level A1 hingga B1, cocok untuk pemula",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Deutsch Lernen mit Fara"
+                },
+                "url": "{{ url('/program/grammatik') }}"
+            },
+            {
+                "@type": "Course",
+                "position": 3,
+                "name": "Persiapan Ujian Goethe",
+                "description": "Kelas private persiapan menghadapi ujian bahasa Jerman dengan fokus pada empat skill: Lesen, Hören, Schreiben, dan Sprechen",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Deutsch Lernen mit Fara"
+                },
+                "url": "{{ url('/program/prep-ex-goethe') }}"
+            },
+            {
+                "@type": "Course",
+                "position": 4,
+                "name": "Sprachkurs mit Muttersprachler",
+                "description": "Kelas private dengan native speaker untuk meningkatkan skill berbicara dalam Bahasa Jerman",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Deutsch Lernen mit Fara"
+                },
+                "url": "{{ url('/program/muttersprachler') }}"
+            },
+            {
+                "@type": "Course",
+                "position": 5,
+                "name": "Kelas Kinder (Anak)",
+                "description": "Kelas private khusus anak usia 8-12 tahun untuk belajar bahasa Jerman dengan metode menyenangkan",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Deutsch Lernen mit Fara"
+                },
+                "url": "{{ url('/program/kinder') }}"
+            },
+            {
+                "@type": "Course",
+                "position": 6,
+                "name": "Deutsch FlexiLearn",
+                "description": "Learning Management System eksklusif untuk belajar bahasa Jerman secara fleksibel kapan saja dan di mana saja",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Deutsch Lernen mit Fara"
+                },
+                "url": "{{ url('/program/flexilearn') }}"
+            }
+        ]
+    }
+    </script>
 
     <style>
         :root {
@@ -312,13 +515,9 @@
             border-radius: 16px;
             width: 100%;
             height: auto;
-            /* Ubah dari 450px ke auto */
             max-height: 450px;
-            /* Tambahkan max-height untuk membatasi tinggi maksimal */
             object-fit: contain;
-            /* Ubah dari cover ke contain */
             object-position: center;
-            /* Pastikan gambar berada di tengah */
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
             transition: all 0.4s;
         }
@@ -615,29 +814,29 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="{{ url('/') }}" aria-label="Deutsch Lernen mit Fara - Beranda">
                 <img src="{{ asset('asset/img/logo/logo-Transparant2-v2.png') }}" style="width: 200px; height: auto;"
-                    alt="Logo-Mitfara-Panjang">
+                    alt="Logo Deutsch Lernen mit Fara - Kursus Bahasa Jerman Terbaik" width="200" height="auto">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Beranda</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
                             <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
                             <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
-                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         </ul>
                     </li>
-                    {{-- <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li> --}}
                     <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a></li>
                 </ul>
             </div>
@@ -645,8 +844,8 @@
     </nav>
 
     <!-- Hero -->
-    <section class="hero-section">
-        <div class="hero-floating-elements">
+    <header class="hero-section">
+        <div class="hero-floating-elements" aria-hidden="true">
             <i class="bi bi-book floating-icon"></i>
             <i class="bi bi-chat-dots floating-icon"></i>
             <i class="bi bi-mortarboard floating-icon"></i>
@@ -654,179 +853,213 @@
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Langkah Awal Menuju Jerman Dimulai dari Program yang Tepat</h1>
+                <h1 class="hero-title">Program Kursus Bahasa Jerman Online & Offline Terbaik di Indonesia</h1>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Programs -->
-    <section class="program-section">
+    <section class="program-section" id="program-list">
         <div class="container">
-            <!-- Program 1 -->
-            <div class="row align-items-center program-card">
+            <!-- Program 1: Kelas Intensif -->
+            <article class="row align-items-center program-card" itemscope itemtype="https://schema.org/Course">
                 <div class="col-lg-6 order-1">
                     <div class="program-text-content">
-                        <div class="program-badge">Reguler</div>
-                        <h2 class="program-title">Kelas Intensif</h2>
-                        <p class="program-description">
+                        <span class="program-badge">Reguler</span>
+                        <h2 class="program-title" itemprop="name">Kelas Intensif Bahasa Jerman Level A1 hingga B1</h2>
+                        <p class="program-description" itemprop="description">
                             Program ini dirancang bagi kamu yang ingin belajar Bahasa Jerman secara intensif dan
                             terarah. Dengan materi terstruktur dari A1–B1, pilihan jadwal beragam, dan banyak benefit
                             pendukung. Level B2 juga segera tersedia untuk tahap lanjutan.
                         </p>
-                        <a href="{{ url('/program/reguler') }}" class="btn-program">Lihat Detail Program</a>
+                        <a href="{{ url('/program/reguler') }}" class="btn-program" itemprop="url"
+                            aria-label="Lihat detail program kelas intensif bahasa Jerman">Lihat Detail Program</a>
+                        <meta itemprop="provider" content="Deutsch Lernen mit Fara">
                     </div>
                 </div>
                 <div class="col-lg-6 order-2">
                     <div class="program-image-wrapper">
-                        <img src="{{ asset('asset/img/banner/15.png') }}" alt="Kelas Reguler" class="program-image">
+                        <img src="{{ asset('asset/img/banner/15.png') }}"
+                            alt="Siswa belajar di kelas intensif bahasa Jerman online dan offline level A1 hingga B1 di Deutsch lernen mit Fara"
+                            class="program-image" itemprop="image" loading="lazy" width="600" height="450">
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Program 2 -->
-            <div class="row align-items-center program-card">
+            <!-- Program 2: Private Grammatik -->
+            <article class="row align-items-center program-card" itemscope itemtype="https://schema.org/Course">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="program-image-wrapper">
-                        <img src="{{ asset('asset/img/banner/16.png') }}" alt="Private Gramatik" class="program-image">
+                        <img src="{{ asset('asset/img/banner/16.png') }}"
+                            alt="Kelas private grammatik bahasa Jerman one-on-one dengan pengajar berpengalaman DlmF"
+                            class="program-image" itemprop="image" loading="lazy" width="600" height="450">
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
                     <div class="program-text-content">
-                        <div class="program-badge">Private</div>
-                        <h2 class="program-title">Kelas Private Grammatik</h2>
-                        <p class="program-description">
+                        <span class="program-badge">Private</span>
+                        <h2 class="program-title" itemprop="name">Kelas Private Grammatik A1 - B1</h2>
+                        <p class="program-description" itemprop="description">
                             Kelas Private Grammatik adalah versi personal dari kelas reguler. Materinya sama, mencakup
                             pembelajaran lengkap mulai dari level A1 hingga B1, sehingga tetap cocok juga untuk pemula
                             yang benar-benar baru belajar bahasa Jerman.
                         </p>
-                        <a href="{{ url('/program/grammatik') }}" class="btn-program">Lihat Detail Program</a>
+                        <a href="{{ url('/program/grammatik') }}" class="btn-program" itemprop="url"
+                            aria-label="Lihat detail program kelas private grammatik">Lihat Detail Program</a>
+                        <meta itemprop="provider" content="Deutsch Lernen mit Fara">
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Program 3 -->
-            <div class="row align-items-center program-card">
+            <!-- Program 3: Persiapan Ujian Goethe -->
+            <article class="row align-items-center program-card" itemscope itemtype="https://schema.org/Course">
                 <div class="col-lg-6 order-1">
                     <div class="program-text-content">
-                        <div class="program-badge">Private</div>
-                        <h2 class="program-title">Persiapan Ujian Goethe</h2>
-                        <p class="program-description">
+                        <span class="program-badge">Private</span>
+                        <h2 class="program-title" itemprop="name">Persiapan Ujian Goethe Institut (Lesen, Hören,
+                            Schreiben, Sprechen)</h2>
+                        <p class="program-description" itemprop="description">
                             Kelas Private Persiapan Ujian dirancang khusus untuk membantu anda menghadapi ujian bahasa
                             Jerman dengan lebih percaya diri. Fokus pada empat skill utama: Lesen, Hören, Schreiben, dan
                             Sprechen.
                         </p>
-                        <a href="{{ url('/program/prep-ex-goethe') }}" class="btn-program">Lihat Detail Program</a>
+                        <a href="{{ url('/program/prep-ex-goethe') }}" class="btn-program" itemprop="url"
+                            aria-label="Lihat detail program persiapan ujian Goethe">Lihat Detail Program</a>
+                        <meta itemprop="provider" content="Deutsch Lernen mit Fara">
                     </div>
                 </div>
                 <div class="col-lg-6 order-2">
                     <div class="program-image-wrapper">
-                        <img src="{{ asset('asset/img/banner/17.png') }}" alt="Persiapan Ujian" class="program-image">
+                        <img src="{{ asset('asset/img/banner/17.png') }}"
+                            alt="Program persiapan ujian Goethe Institut bahasa Jerman dengan strategi efektif lulus tes"
+                            class="program-image" itemprop="image" loading="lazy" width="600" height="450">
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Program 4 -->
-            <div class="row align-items-center program-card">
+            <!-- Program 4: Native Speaker -->
+            <article class="row align-items-center program-card" itemscope itemtype="https://schema.org/Course">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="program-image-wrapper">
-                        <img src="{{ asset('asset/img/banner/17(1).png') }}" alt="Native Speaker" class="program-image">
+                        <img src="{{ asset('asset/img/banner/17(1).png') }}"
+                            alt="Belajar bahasa Jerman dengan native speaker asli Jerman untuk meningkatkan kemampuan berbicara"
+                            class="program-image" itemprop="image" loading="lazy" width="600" height="450">
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
                     <div class="program-text-content">
-                        <div class="program-badge">Private</div>
-                        <h2 class="program-title">Sprachkurs mit Muttersprachler</h2>
-                        <p class="program-description">
+                        <span class="program-badge">Private</span>
+                        <h2 class="program-title" itemprop="name">Sprachkurs mit Muttersprachler (Native Speaker)</h2>
+                        <p class="program-description" itemprop="description">
                             Kelas ini merupakan kelas private dengan native speaker yang berfokus pada peningkatan skill
                             berbicara kamu dalam Bahasa Jerman.
                         </p>
-                        <a href="{{ url('/program/muttersprachler') }}" class="btn-program">Lihat Detail Program</a>
+                        <a href="{{ url('/program/muttersprachler') }}" class="btn-program" itemprop="url"
+                            aria-label="Lihat detail program dengan native speaker">Lihat Detail Program</a>
+                        <meta itemprop="provider" content="Deutsch Lernen mit Fara">
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Program 5 -->
-            <div class="row align-items-center program-card">
+            <!-- Program 5: Kinder -->
+            <article class="row align-items-center program-card" itemscope itemtype="https://schema.org/Course">
                 <div class="col-lg-6 order-1">
                     <div class="program-text-content">
-                        <div class="program-badge">Private</div>
-                        <h2 class="program-title">Kinder (Anak)</h2>
-                        <p class="program-description">
+                        <span class="program-badge">Private</span>
+                        <h2 class="program-title" itemprop="name">Kelas Kinder - Kursus Bahasa Jerman untuk Anak Usia
+                            8-12 Tahun</h2>
+                        <p class="program-description" itemprop="description">
                             Kelas Private Kinder dirancang khusus untuk anak-anak usia 8–12 tahun yang ingin mulai
                             belajar bahasa Jerman dengan cara yang menyenangkan dan sesuai usia mereka.
                         </p>
-                        <a href="{{ url('/program/kinder') }}" class="btn-program">Lihat Detail Program</a>
+                        <a href="{{ url('/program/kinder') }}" class="btn-program" itemprop="url"
+                            aria-label="Lihat detail program kelas anak">Lihat Detail Program</a>
+                        <meta itemprop="provider" content="Deutsch Lernen mit Fara">
                     </div>
                 </div>
                 <div class="col-lg-6 order-2">
                     <div class="program-image-wrapper">
-                        <img src="{{ asset('asset/img/banner/20.png') }}" alt="Kelas Anak" class="program-image">
+                        <img src="{{ asset('asset/img/banner/20.png') }}"
+                            alt="Anak-anak belajar bahasa Jerman dengan metode fun learning dan interaktif di kelas Kinder DlmF"
+                            class="program-image" itemprop="image" loading="lazy" width="600" height="450">
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Program 6 -->
-            <div class="row align-items-center program-card">
+            <!-- Program 6: FlexiLearn -->
+            <article class="row align-items-center program-card" itemscope itemtype="https://schema.org/Course">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="program-image-wrapper">
-                        <img src="{{ asset('asset/img/banner/21.png') }}" alt="FlexiLearn" class="program-image">
+                        <img src="{{ asset('asset/img/banner/21.png') }}"
+                            alt="Platform Learning Management System Deutsch FlexiLearn untuk belajar bahasa Jerman secara mandiri dan fleksibel"
+                            class="program-image" itemprop="image" loading="lazy" width="600" height="450">
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
                     <div class="program-text-content">
-                        <div class="program-badge">Asinkronus</div>
-                        <h2 class="program-title">Deutsch FlexiLearn</h2>
-                        <p class="program-description">
+                        <span class="program-badge">Asinkronus</span>
+                        <h2 class="program-title" itemprop="name">Deutsch FlexiLearn - Belajar Bahasa Jerman Kapan Saja
+                            dan Di Mana Saja</h2>
+                        <p class="program-description" itemprop="description">
                             Deutsch Flexilearn adalah Learning Management System (LMS) eksklusif dari Deutsch lernen mit
                             Fara yang dirancang untuk kamu yang ingin belajar bahasa Jerman secara fleksibel, kapan
                             saja, dan di mana saja.
                         </p>
-                        <a href="{{ url('/program/flexilearn') }}" class="btn-program">Lihat Detail Program</a>
+                        <a href="{{ url('/program/flexilearn') }}" class="btn-program" itemprop="url"
+                            aria-label="Lihat detail program FlexiLearn">Lihat Detail Program</a>
+                        <meta itemprop="provider" content="Deutsch Lernen mit Fara">
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq-section">
+    <section class="faq-section" id="faq">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
-                        alt="FAQ" class="img-fluid rounded-4 shadow-lg">
+                        alt="Ilustrasi FAQ pertanyaan seputar program kursus bahasa Jerman di DlmF"
+                        class="img-fluid rounded-4 shadow-lg" loading="lazy" width="600" height="400">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="section-title">Freunde Bertanya, MinFara Menjawab</h2>
                     <p class="section-subtitle">Temukan jawaban untuk pertanyaan yang sering diajukan</p>
                     <div class="faq-list">
-                        <div class="faq-item">
-                            <button class="faq-header" onclick="toggleFaq(this)">
-                                Gimana cara mulai kursus di DlmF?
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)" aria-expanded="false">
+                                <span itemprop="name">Gimana cara mulai kursus di DlmF?</span>
                                 <i class="bi bi-chevron-down"></i>
                             </button>
-                            <div class="faq-content">
-                                <p>Untuk memulai kursus, Anda hanya perlu mendaftar melalui website kami, memilih
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Untuk memulai kursus, Anda hanya perlu mendaftar melalui website
+                                    kami, memilih
                                     program yang sesuai dengan level Anda, dan melakukan pembayaran.</p>
                             </div>
                         </div>
-                        <div class="faq-item">
-                            <button class="faq-header" onclick="toggleFaq(this)">
-                                Lokasi DlmF itu ada dimana aja MinFar?
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)" aria-expanded="false">
+                                <span itemprop="name">Lokasi DlmF itu ada dimana aja MinFar?</span>
                                 <i class="bi bi-chevron-down"></i>
                             </button>
-                            <div class="faq-content">
-                                <p>DlmF memiliki cabang di Jakarta, Bandung, Surabaya, dan Yogyakarta. Kami juga
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">DlmF memiliki cabang di Jakarta, Bandung, Surabaya, dan Yogyakarta.
+                                    Kami juga
                                     menyediakan kelas online untuk siswa di seluruh Indonesia.</p>
                             </div>
                         </div>
-                        <div class="faq-item">
-                            <button class="faq-header" onclick="toggleFaq(this)">
-                                Berapa biaya kursus di DlmF?
+                        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)" aria-expanded="false">
+                                <span itemprop="name">Berapa biaya kursus di DlmF?</span>
                                 <i class="bi bi-chevron-down"></i>
                             </button>
-                            <div class="faq-content">
-                                <p>Kelas online mulai dari Rp 750.000 dan kelas offline mulai dari Rp 1.250.000 per
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Kelas online mulai dari Rp 750.000 dan kelas offline mulai dari Rp
+                                    1.250.000 per
                                     level, tergantung program yang dipilih.</p>
                             </div>
                         </div>
@@ -839,64 +1072,79 @@
     <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">Siap Mulai Belajar Bahasa Jerman?</h2>
+            <h2 class="cta-title">Siap Mulai Belajar Bahasa Jerman Bersama DlmF?</h2>
             <p class="mb-4">Bergabunglah dengan ribuan siswa yang telah merasakan kemudahan belajar bahasa Jerman
-                bersama kami</p>
+                bersama kami. Daftar sekarang dan raih impian ke Jerman!</p>
             <a href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0"
-                class="btn-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a>
+                class="btn-cta" target="_blank" rel="noopener noreferrer"
+                aria-label="Hubungi MinFara melalui WhatsApp untuk informasi pendaftaran">
+                <i class="bi bi-whatsapp me-2" aria-hidden="true"></i>WhatsApp MinFara
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="mb-3">
                         <img src="{{ asset('asset/img/logo/logo-Transparant3.png') }}" style="width: 180px;"
-                            alt="Logo-Mitfara-Bulat">
+                            alt="Logo Deutsch Lernen mit Fara" width="180" height="auto" loading="lazy">
                     </div>
-                    <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
+                    <h2 class="footer-brand"><strong>Deutsch Lernen Mit Fara</strong></h2>
                     <p class="footer-description">
                         Platform pembelajaran bahasa Jerman terpercaya dengan metode pembelajaran yang efektif dan
                         menyenangkan.
                     </p>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="footer-title">Quick Link</h5>
+                    <h3 class="footer-title">Quick Link</h3>
                     <ul class="footer-links">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="footer-title">Get In Touch</h5>
-                    <div class="contact-info">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="bi bi-telephone-fill"></i>
-                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
-                                href="https://wa.me/6289647897616">+62 896 4789 7616</a></span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="bi bi-envelope-fill"></i>
-                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
-                                href="mailto:info@mitfara.com">info@mitfara.com</a></span>
-                    </div>
+                    <h3 class="footer-title">Get In Touch</h3>
+                    <address>
+                        <div class="contact-info">
+                            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                            <span>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                            <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                    href="tel:+6289647897616">+62 896 4789 7616</a></span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                            <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                    href="mailto:info@mitfara.com">info@mitfara.com</a></span>
+                        </div>
+                    </address>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="footer-title">Follow Us</h5>
+                    <h3 class="footer-title">Follow Us</h3>
                     <div class="social-links">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank"><i
-                                class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-youtube"></i></a>
-                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/deutschlernenmitfara" target="_blank"
+                            rel="noopener noreferrer" aria-label="Facebook Deutsch Lernen mit Fara">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram Deutsch Lernen mit Fara">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@deutschlernenmitfara" target="_blank"
+                            rel="noopener noreferrer" aria-label="YouTube Deutsch Lernen mit Fara">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=6289647897616" target="_blank"
+                            rel="noopener noreferrer" aria-label="WhatsApp Deutsch Lernen mit Fara">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                     <p class="footer-description mt-3">
                         Ikuti media sosial kami untuk tips belajar bahasa Jerman dan update program terbaru.
@@ -906,7 +1154,7 @@
             <div class="footer-bottom">
                 <div class="row">
                     <div class="col-md-6 text-md-start text-center">
-                        <span>© 2025 Deutsch Lernen mit Fara. All Rights Reserved</span>
+                        <span>&copy; 2025 Deutsch Lernen mit Fara. All Rights Reserved</span>
                     </div>
                     <div class="col-md-6 text-md-end text-center mt-3 mt-md-0">
                         <a href="#" class="me-3 text-white text-decoration-none">Terms</a>
@@ -947,20 +1195,26 @@
         function toggleFaq(element) {
             const content = element.nextElementSibling;
             const isOpen = content.classList.contains('open');
+            const isExpanded = element.getAttribute('aria-expanded') === 'true';
 
             document.querySelectorAll('.faq-content').forEach(item => {
                 if (item !== content) item.classList.remove('open');
             });
             document.querySelectorAll('.faq-header').forEach(header => {
-                if (header !== element) header.classList.remove('active');
+                if (header !== element) {
+                    header.classList.remove('active');
+                    header.setAttribute('aria-expanded', 'false');
+                }
             });
 
             if (isOpen) {
                 content.classList.remove('open');
                 element.classList.remove('active');
+                element.setAttribute('aria-expanded', 'false');
             } else {
                 content.classList.add('open');
                 element.classList.add('active');
+                element.setAttribute('aria-expanded', 'true');
             }
         }
     </script>

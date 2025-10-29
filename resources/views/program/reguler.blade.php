@@ -467,7 +467,7 @@
         }
 
         .pricing-type {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: var(--dark-blue);
             margin-bottom: 1rem;

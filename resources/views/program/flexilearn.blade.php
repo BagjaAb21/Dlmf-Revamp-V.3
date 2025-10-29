@@ -173,10 +173,10 @@
         }
 
         .section-title {
-            font-size: 2.3rem;
+            font-size: 2rem;
             font-weight: 800;
             color: var(--dark-blue);
-            margin-bottom: 20x;
+            margin-bottom: 2rem;
             line-height: 1.3;
         }
 
@@ -402,7 +402,7 @@
             font-size: 1.3rem;
             font-weight: 700;
             color: var(--dark-blue);
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .benefit-content p {
@@ -695,21 +695,21 @@
                             style="object-fit: cover; object-position: center;">
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-5" style="margin-left: 30px;">
                     <div class="section-badge">Tentang Program</div>
                     <h2 class="section-title">Belajar Bahasa Jerman dengan Cara yang Lebih Fleksibel</h2>
-                    <p class="section-text">
+                    <p class="section-text" style="text-align: justify;">
                         <strong>Deutsch Flexilearn</strong> adalah Learning Management System (LMS) eksklusif dari
                         Deutsch Lernen mit Fara yang dirancang untuk kamu yang ingin belajar bahasa Jerman secara
                         fleksibel, kapan saja, dan di mana saja.
                     </p>
-                    <p class="section-text">
+                    <p class="section-text" style="text-align: justify;">
                         Program ini cocok untuk kamu yang punya jadwal padat namun ingin produktif belajar Bahasa
                         Jerman. Deutsch FlexiLearn akan tersedia dalam <strong>level A1 hingga B2</strong>. Lengkap
                         dengan modul, latihan
                         soal, dan video pembelajaran yang bisa diakses kapan saja dan di mana saja.
                     </p>
-                    <p class="section-text">
+                    <p class="section-text" style="text-align: justify;">
                         Sistem belajarnya asinkronus, jadi kamu bisa belajar mandiri sesuai ritme masing-masing. Setelah
                         berhasil menyelesaikan semua materi dan latihan, kamu akan mendapatkan <strong>sertifikat
                             penyelesaian course</strong> sebagai bukti pencapaian.

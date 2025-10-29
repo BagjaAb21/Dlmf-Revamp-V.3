@@ -13,6 +13,164 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+        <!-- Meta Tags SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Title & Description -->
+    <title>Harga Kursus Bahasa Jerman Online & Offline | DlmF</title>
+    <meta name="description" content="Cek harga kursus bahasa Jerman terbaik di DlmF. Program online mulai Rp149.000, offline mulai Rp2.099.000. Paket bundling A1-B1 hemat hingga Rp1.000.000!">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="harga kursus bahasa jerman, biaya les jerman, kursus jerman online murah, harga les jerman offline, paket bundling jerman, kursus A1 A2 B1">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Harga Kursus Bahasa Jerman Online & Offline | DlmF">
+    <meta property="og:description" content="Cek harga kursus bahasa Jerman terbaik di DlmF. Program online mulai Rp149.000, offline mulai Rp2.099.000. Paket bundling hemat!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mitfara.com/harga">
+    <meta property="og:image" content="{{ asset('asset/img/logo/logo-Transparant3.png') }}">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Harga Kursus Bahasa Jerman Online & Offline | DlmF">
+    <meta name="twitter:description" content="Cek harga kursus bahasa Jerman terbaik di DlmF. Program online mulai Rp149.000, offline mulai Rp2.099.000.">
+    <meta name="twitter:image" content="{{ asset('asset/img/logo/logo-Transparant3.png') }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mitfara.com/harga">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}" type="image/x-icon">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Structured Data - Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Deutsch Lernen Mit Fara",
+      "alternateName": "DlmF",
+      "url": "https://mitfara.com",
+      "logo": "{{ asset('asset/img/logo/logo-Transparant3.png') }}",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62-896-4789-7616",
+        "contactType": "Customer Service",
+        "areaServed": "ID",
+        "availableLanguage": ["Indonesian", "German"]
+      },
+      "sameAs": [
+        "https://www.instagram.com/deutschlernen.mit.fara/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari",
+        "addressLocality": "Bandung",
+        "addressRegion": "Jawa Barat",
+        "addressCountry": "ID"
+      }
+    }
+    </script>
+
+    <!-- Structured Data - Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Beranda",
+        "item": "https://mitfara.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Harga",
+        "item": "https://mitfara.com/harga"
+      }]
+    }
+    </script>
+
+    <!-- Structured Data - FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Gimana cara mulai kursus di DlmF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Untuk memulai kursus, Kamu hanya perlu mendaftar melalui website kami, memilih program yang sesuai dengan level Kamu, dan melakukan pembayaran. Setelah itu, Kamu langsung bisa mengakses materi pembelajaran."
+        }
+      },{
+        "@type": "Question",
+        "name": "Lokasi DlmF itu ada dimana aja?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DlmF memiliki cabang di Jakarta, Bandung, Surabaya, dan Yogyakarta. Kami juga menyediakan kelas online untuk siswa di seluruh Indonesia."
+        }
+      },{
+        "@type": "Question",
+        "name": "Berapa harga kursus di DlmF online atau offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kami menyediakan kedua opsi. Kelas online mulai dari Rp 1.499.000 dan kelas offline mulai dari Rp 2.099.000 per level, tergantung program yang dipilih."
+        }
+      },{
+        "@type": "Question",
+        "name": "Butuh request tutor native speaker?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ya, kami bisa mengatur request khusus untuk tutor native speaker dari Jerman. Silakan hubungi customer service kami untuk pengaturan lebih lanjut."
+        }
+      }]
+    }
+    </script>
+
+    <!-- Structured Data - Offer Schema untuk Pricing -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Deutsch Lernen Mit Fara",
+      "url": "https://mitfara.com/harga",
+      "offers": [{
+        "@type": "Offer",
+        "name": "Intensif Reguler Online A-1",
+        "price": "1499000",
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "description": "Kursus bahasa Jerman intensif level A1 dengan 20 pertemuan online"
+      },{
+        "@type": "Offer",
+        "name": "FlexiLearn A1 Lifetime",
+        "price": "199000",
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "description": "Program belajar bahasa Jerman asinkronus dengan akses lifetime"
+      },{
+        "@type": "Offer",
+        "name": "Bundling Reguler Intensif A1-B1 Online",
+        "price": "8394000",
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "description": "Paket bundling kursus bahasa Jerman A1 hingga B1 hemat hingga Rp1.000.000"
+      }]
+    }
+    </script>
+
     <style>
         :root {
             --primary-color: #7C3AED;
