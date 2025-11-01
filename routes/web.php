@@ -18,7 +18,7 @@ Route::get('/program', function () {
     return view('program');
 });
 
-// Program routes
+// harga routes
 Route::get('/harga', function () {
     return view('harga');
 });
