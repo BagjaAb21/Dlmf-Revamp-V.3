@@ -1472,10 +1472,10 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             aria-expanded="false">Layanan</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ url('/program') }}">Program Kursus</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk Digital</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Program Au Pair</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga & Paket</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
