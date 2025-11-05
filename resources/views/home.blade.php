@@ -1870,38 +1870,38 @@
             <div class="row mt-5">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <article class="teacher-card">
-                        <img src="{{ asset('asset/img/teachers/user.png') }}"
-                            alt="Herr Yasin tutor bahasa Jerman level B1 berpengalaman di DlmF" class="teacher-avatar"
-                            loading="lazy" title="Herr Yasin - German Tutor B1">
+                        <img src="{{ asset('asset/img/teachers/Herr_Yasin.png') }}"
+                            alt="Herr Yasin tutor bahasa Jerman level C2 berpengalaman di DlmF" class="teacher-avatar"
+                            loading="lazy" title="Herr Yasin - German Tutor C2">
                         <h3 class="teacher-name">Herr Yasin</h3>
+                        <p class="teacher-level">German Tutor C2</p>
+                    </article>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <article class="teacher-card">
+                        <img src="{{ asset('asset/img/teachers/Frau_Caca.png') }}"
+                            alt="Frau Caca tutor bahasa Jerman level B1 berpengalaman di DlmF" class="teacher-avatar"
+                            loading="lazy" title="Frau Caca - German Tutor B1">
+                        <h3 class="teacher-name">Frau Caca</h3>
                         <p class="teacher-level">German Tutor B1</p>
                     </article>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <article class="teacher-card">
-                        <img src="{{ asset('asset/img/teachers/Frau_Zahra.jpg') }}"
-                            alt="Frau Zahra tutor bahasa Jerman level B1 berpengalaman di DlmF" class="teacher-avatar"
-                            loading="lazy" title="Frau Zahra - German Tutor B1">
-                        <h3 class="teacher-name">Frau Zahra</h3>
+                        <img src="{{ asset('asset/img/teachers/Herr_Farabi.png') }}"
+                            alt="Herr Farabi tutor bahasa Jerman level B1 berpengalaman di DlmF" class="teacher-avatar"
+                            loading="lazy" title="Herr Farabi - German Tutor B1">
+                        <h3 class="teacher-name">Herr Farabi</h3>
                         <p class="teacher-level">German Tutor B1</p>
                     </article>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <article class="teacher-card">
-                        <img src="{{ asset('asset/img/teachers/Frau_Olin.jpg') }}"
-                            alt="Frau Olin tutor bahasa Jerman level B2 berpengalaman di DlmF" class="teacher-avatar"
-                            loading="lazy" title="Frau Olin - German Tutor B2">
-                        <h3 class="teacher-name">Frau Olin</h3>
-                        <p class="teacher-level">German Tutor B2</p>
-                    </article>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <article class="teacher-card">
-                        <img src="{{ asset('asset/img/teachers/Herr_Iqbal.png') }}"
-                            alt="Herr Iqbal tutor bahasa Jerman level B2 berpengalaman di DlmF" class="teacher-avatar"
-                            loading="lazy" title="Herr Iqbal - German Tutor B2">
-                        <h3 class="teacher-name">Herr Iqbal</h3>
-                        <p class="teacher-level">German Tutor B2</p>
+                        <img src="{{ asset('asset/img/teachers/Frau_Dwi.png') }}"
+                            alt="Frau Dwi tutor bahasa Jerman level B1 berpengalaman di DlmF" class="teacher-avatar"
+                            loading="lazy" title="Frau Dwi - German Tutor B1">
+                        <h3 class="teacher-name">Frau Dwi</h3>
+                        <p class="teacher-level">German Tutor B1</p>
                     </article>
                 </div>
             </div>
