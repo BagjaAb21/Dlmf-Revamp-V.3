@@ -1,7 +1,6 @@
-{{-- resources/views/blog/show.blade.php --}}
 @extends('layouts.app')
 
-@section('title', ($post->title ?? 'Blog') . ' - Deutsch Lernen mit Fara')
+@section('title', $post->title . ' - Deutsch Lernen mit Fara')
 
 @push('styles')
 <style>
@@ -9,608 +8,849 @@
         --primary-color: #7C3AED;
         --secondary-color: #A855F7;
         --accent-color: #FDE047;
-        --dark-blue: #0f172a;
+        --dark-blue: #1E293B;
         --light-gray: #F8FAFC;
         --text-dark: #334155;
-        --overlay-dark: rgba(2, 6, 23, 0.70);
-        --ring: rgba(124, 58, 237, .15);
+        --border-color: #E2E8F0;
     }
 
     body {
-        background: #fff;
+        background: #FFFFFF;
+        color: var(--text-dark);
     }
 
-    /* ===== HERO ===== */
-    .blog-hero {
-        position: relative;
-        height: 540px;
-        display: flex;
-        align-items: center;
-        overflow: hidden
-    }
-
-    .blog-hero .bg {
-        position: absolute;
-        inset: 0;
-        background-position: center;
-        background-size: cover;
-        transform: scale(1.08);
-        filter: brightness(.9)
-    }
-
-    .blog-hero::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-            radial-gradient(60% 60% at 50% 40%, rgba(124, 58, 237, .35), transparent 60%),
-            linear-gradient(180deg, var(--overlay-dark), rgba(2, 6, 23, .35) 50%, rgba(2, 6, 23, .15))
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        color: #fff;
+    /* ===== ARTICLE HEADER ===== */
+    .article-header {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95), rgba(124, 58, 237, 0.95)),
+                    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80') center/cover;
+        color: white;
+        padding: 120px 0 80px;
         text-align: center;
-        max-width: 980px;
+    }
+
+    .article-header-content {
+        max-width: 900px;
         margin: 0 auto;
-        padding: 5.75rem 1rem 2rem
+        padding: 0 1.5rem;
     }
 
-    .breadcrumbs {
+    .article-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+    }
+
+    .article-meta-info {
         display: flex;
-        gap: .5rem;
         justify-content: center;
+        gap: 3rem;
         flex-wrap: wrap;
-        margin-bottom: .5rem;
-        font-size: .925rem;
-        opacity: .9
     }
 
-    .breadcrumbs a {
-        color: #e2e8f0;
-        text-decoration: none
-    }
-
-    .breadcrumbs a:hover {
-        text-decoration: underline
-    }
-
-    .hero-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: .5rem;
-        background: rgba(255, 255, 255, .12);
-        border: 1px solid rgba(255, 255, 255, .25);
-        border-radius: 999px;
-        padding: .4rem 1rem;
-        font-weight: 600
-    }
-
-    .hero-title {
-        font-size: clamp(1.9rem, 3.4vw + .8rem, 3.25rem);
-        font-weight: 800;
-        line-height: 1.15;
-        margin: .9rem 0 1rem;
-        text-shadow: 0 8px 28px rgba(0, 0, 0, .35)
-    }
-
-    .hero-meta {
+    .meta-item {
         display: flex;
-        justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        opacity: .95
-    }
-
-    .chip {
-        display: inline-flex;
+        flex-direction: column;
         align-items: center;
-        gap: .45rem;
-        padding: .45rem .8rem;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, .10);
-        border: 1px solid rgba(255, 255, 255, .18)
     }
 
-    .author-avatar {
-        width: 36px;
-        height: 36px;
-        border-radius: 999px;
-        background: linear-gradient(135deg, var(--accent-color), #facc15);
+    .meta-label {
+        font-size: 0.85rem;
+        opacity: 0.9;
+        margin-bottom: 0.25rem;
+    }
+
+    .meta-value {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    /* ===== CONTENT SECTION ===== */
+    .article-content-section {
+        padding: 3rem 0;
+        background: white;
+    }
+
+    .article-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .content-row {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #1e293b;
-        font-weight: 800
+        gap: 3rem;
     }
 
-    /* ===== ARTICLE CARD ===== */
-    .blog-content {
-        position: relative;
-        padding: 4rem 0 5rem
+    .main-content {
+        flex: 1;
+        max-width: 750px;
     }
 
-    .content-wrapper {
-        max-width: 980px;
-        margin: -90px auto 0;
-        background: #fff;
-        border-radius: 1.25rem;
-        border: 1px solid var(--ring);
-        box-shadow: 0 18px 60px rgba(15, 23, 42, .10);
-        padding: clamp(1.25rem, 2vw + .5rem, 2.5rem)
+    .sidebar-content {
+        width: 350px;
+        flex-shrink: 0;
     }
 
-    .post-thumbnail {
-        border-radius: 1rem;
+    /* ===== FEATURED IMAGE - NO CROP ===== */
+    .featured-image-wrapper {
+        margin-bottom: 2.5rem;
+        border-radius: 12px;
         overflow: hidden;
-        position: relative;
-        margin-bottom: 1.5rem
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        background: var(--light-gray);
     }
 
-    .post-thumbnail img {
+    .featured-image-wrapper img {
         width: 100%;
-        height: 440px;
-        object-fit: cover;
+        height: auto;
         display: block;
-        transform: scale(1.01);
-        transition: transform .6s ease
+        object-fit: contain;
+        max-height: 600px;
     }
 
-    .post-thumbnail:hover img {
-        transform: scale(1.05)
+    /* ===== ARTICLE CONTENT ===== */
+    .overview-section {
+        margin-bottom: 2.5rem;
     }
 
-    .post-content {
-        color: #334155;
-        line-height: 1.85;
-        font-size: 1.08rem
+    .section-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark-blue);
+        margin-bottom: 1.25rem;
     }
 
-    .post-excerpt {
-        font-size: 1.15rem;
-        color: #475569;
-        background: linear-gradient(135deg, var(--light-gray), #eef2ff);
-        border-left: 4px solid var(--primary-color);
-        border-radius: .85rem;
-        padding: 1.1rem 1.25rem;
-        margin: 1.25rem 0 1.75rem
+    .article-content {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #374151;
     }
 
-    .post-content h2,
-    .post-content h3,
-    .post-content h4 {
-        color: #0f172a;
-        font-weight: 800;
-        margin: 2rem 0 1rem
+    .article-content p {
+        margin-bottom: 1.5rem;
     }
 
-    .post-content h2 {
+    .article-content h2,
+    .article-content h3,
+    .article-content h4 {
+        color: var(--dark-blue);
+        font-weight: 700;
+        margin-top: 2.5rem;
+        margin-bottom: 1.25rem;
+        line-height: 1.3;
+    }
+
+    .article-content h2 {
         font-size: 1.75rem;
-        border-bottom: 2px solid rgba(124, 58, 237, .25);
-        padding-bottom: .35rem
     }
 
-    .post-content img {
+    .article-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .article-content h4 {
+        font-size: 1.2rem;
+    }
+
+    .article-content ul,
+    .article-content ol {
+        margin-bottom: 1.5rem;
+        padding-left: 1.75rem;
+    }
+
+    .article-content li {
+        margin-bottom: 0.75rem;
+        line-height: 1.7;
+    }
+
+    /* Images in content - NO CROP */
+    .article-content img {
         max-width: 100%;
-        border-radius: .75rem
+        height: auto !important;
+        border-radius: 10px;
+        margin: 2rem auto;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        object-fit: contain;
     }
 
-    /* Tags */
-    .tag-list {
+    /* Hide image captions/filenames */
+    .article-content figure {
+        margin: 2rem 0;
+    }
+
+    .article-content figcaption {
+        display: none !important;
+    }
+
+    /* Hide filename links */
+    .article-content p > a[href*=".png"],
+    .article-content p > a[href*=".jpg"],
+    .article-content p > a[href*=".jpeg"],
+    .article-content p > a[href*=".gif"],
+    .article-content p > a[href*=".webp"] {
+        display: none !important;
+    }
+
+    /* Hide any text links to uploaded files */
+    .article-content a[href*="storage/uploads"] {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .article-content a[href*="storage/uploads"]:not(:has(img)) {
+        display: none !important;
+    }
+
+    /* Hide paragraphs that only contain image filenames */
+    .article-content p:has(a[href*=".png"]),
+    .article-content p:has(a[href*=".jpg"]),
+    .article-content p:has(a[href*=".jpeg"]) {
+        display: contents;
+    }
+
+    .article-content p:empty {
+        display: none !important;
+    }
+
+    .article-content blockquote {
+        border-left: 4px solid var(--primary-color);
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        font-style: italic;
+        color: #475569;
+        background: var(--light-gray);
+        padding: 1.25rem 1.5rem;
+        border-radius: 0 8px 8px 0;
+    }
+
+    /* ===== NEXT/PREV NAVIGATION ===== */
+    .post-navigation {
         display: flex;
-        flex-wrap: wrap;
-        gap: .5rem
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin: 3rem 0;
+        padding: 2rem 0;
+        border-top: 2px solid var(--border-color);
+        border-bottom: 2px solid var(--border-color);
     }
 
-    .tag {
-        display: inline-flex;
+    .nav-post {
+        flex: 1;
+        max-width: 48%;
+    }
+
+    .nav-post.next {
+        text-align: right;
+    }
+
+    .nav-post a {
+        display: flex;
         align-items: center;
-        gap: .35rem;
-        padding: .35rem .7rem;
-        border-radius: .6rem;
-        border: 1px solid var(--ring)
-    }
-
-    /* Sidebar */
-    .sidebar {
-        position: sticky;
-        top: 120px
-    }
-
-    .sidebar-section {
-        background: #fff;
-        border-radius: 1rem;
-        border: 1px solid var(--ring);
-        box-shadow: 0 12px 30px rgba(15, 23, 42, .06);
+        gap: 1rem;
         padding: 1.25rem;
-        margin-bottom: 1rem
+        background: white;
+        border: 2px solid var(--border-color);
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .nav-post.next a {
+        flex-direction: row-reverse;
+    }
+
+    .nav-post a:hover {
+        border-color: var(--primary-color);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(124, 58, 237, 0.15);
+    }
+
+    .nav-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .nav-content {
+        flex: 1;
+    }
+
+    .nav-label {
+        font-size: 0.8rem;
+        color: #64748B;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--dark-blue);
+        line-height: 1.3;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar-section {
+        background: white;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
     .sidebar-title {
-        font-weight: 800;
-        color: #0f172a;
-        text-align: center;
-        margin-bottom: .75rem
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--dark-blue);
+        margin-bottom: 1.25rem;
     }
 
     .search-input {
         width: 100%;
-        padding: .8rem 1rem;
-        border: 1.6px solid #e2e8f0;
-        border-radius: .75rem
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        font-size: 0.95rem;
     }
 
     .search-input:focus {
-        outline: 0;
+        outline: none;
         border-color: var(--primary-color);
-        box-shadow: 0 0 0 4px var(--ring)
+        box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
     }
 
-    /* Index-like Recent Cards */
-    .idx-card {
-        border-radius: 1rem;
-        overflow: hidden;
-        border: 1px solid var(--ring);
-        box-shadow: 0 14px 36px rgba(15, 23, 42, .08)
-    }
-
-    .idx-card .thumb {
-        height: 200px;
-        object-fit: cover
-    }
-
-    .idx-cat {
-        position: absolute;
-        left: 12px;
-        top: 12px;
-        background: rgba(255, 255, 255, .92);
-        color: #0f172a;
-        border: 1px solid var(--ring)
-    }
-
-    /* Related */
-    .related-posts {
-        background: var(--light-gray);
-        padding: 4rem 0 4.5rem;
-        margin-top: 3.5rem
-    }
-
-    .related-posts h3 {
-        font-weight: 800;
-        color: #0f172a;
-        text-align: center;
-        margin-bottom: .35rem
-    }
-
-    .related-desc {
-        text-align: center;
-        color: #64748b;
-        margin-bottom: 1.75rem
-    }
-
-    .related-card {
-        border: 1px solid var(--ring);
-        border-radius: 1rem;
-        overflow: hidden;
-        background: #fff;
-        transition: transform .25s ease, box-shadow .25s ease
-    }
-
-    .related-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 16px 40px rgba(124, 58, 237, .18)
-    }
-
-    .related-card .card-img-top {
-        height: 190px;
-        object-fit: cover
-    }
-
-    /* Share + Nav */
-    .share-section {
-        background: linear-gradient(135deg, var(--light-gray), #eef2ff);
-        border: 1px solid var(--ring);
-        border-radius: 1rem;
-        padding: 1.25rem;
-        margin: 1.75rem 0
-    }
-
-    .share-buttons {
+    /* Recent Post - Clickable - NO CROP */
+    .recent-post-item {
         display: flex;
-        flex-wrap: wrap;
-        gap: .5rem;
-        justify-content: center
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        transition: all 0.3s ease;
     }
 
-    .share-btn {
-        display: inline-flex;
+    .recent-post-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .recent-post-item:hover {
+        transform: translateX(4px);
+    }
+
+    .recent-post-link {
+        display: flex;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: inherit;
+        width: 100%;
+    }
+
+    .recent-post-image-wrapper {
+        width: 80px;
+        height: 60px;
+        border-radius: 6px;
+        overflow: hidden;
+        flex-shrink: 0;
+        background: var(--light-gray);
+    }
+
+    .recent-post-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .recent-post-content {
+        flex: 1;
+    }
+
+    .recent-post-content h6 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        line-height: 1.3;
+        color: var(--dark-blue);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        transition: color 0.3s ease;
+    }
+
+    .recent-post-link:hover h6 {
+        color: var(--primary-color);
+    }
+
+    .recent-post-date {
+        font-size: 0.8rem;
+        color: #64748B;
+    }
+
+    /* ===== RECOMMENDATION SECTION ===== */
+    .recommendation-section {
+        margin: 4rem 0;
+        padding: 3rem 0;
+        background: var(--light-gray);
+    }
+
+    .recommendation-title {
+        text-align: center;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--dark-blue);
+        margin-bottom: 0.5rem;
+    }
+
+    .recommendation-subtitle {
+        text-align: center;
+        color: #64748B;
+        margin-bottom: 2.5rem;
+    }
+
+    .recommendation-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .recommendation-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 1px solid var(--border-color);
+    }
+
+    .recommendation-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Recommendation Image - NO CROP */
+    .recommendation-image-wrapper {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        background: var(--light-gray);
+    }
+
+    .recommendation-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .rec-badges {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        display: flex;
+        gap: 0.5rem;
+        z-index: 2;
+    }
+
+    .rec-badge {
+        background: var(--primary-color);
+        color: white;
+        padding: 0.25rem 0.65rem;
+        border-radius: 6px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .recommendation-content {
+        padding: 1.25rem;
+    }
+
+    .rec-meta {
+        display: flex;
         align-items: center;
-        gap: .5rem;
-        padding: .55rem .9rem;
-        border-radius: .65rem;
-        border: 1px solid var(--ring)
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.8rem;
+        color: #64748B;
     }
 
-    .share-btn:hover {
-        border-color: var(--primary-color);
-        box-shadow: 0 0 0 4px var(--ring)
+    .rec-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--dark-blue);
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
-    .post-navigation {
-        border-top: 1px solid #e2e8f0;
-        margin-top: 1.5rem;
-        padding-top: 1.25rem
+    .rec-button {
+        width: 100%;
+        padding: 0.65rem;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 0.75rem;
+        text-decoration: none;
+        display: block;
+        text-align: center;
     }
 
-    .nav-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: .5rem;
-        border: 1px solid var(--ring);
-        padding: .65rem .9rem;
-        border-radius: .65rem
+    .rec-button:hover {
+        background: var(--secondary-color);
+        color: white;
     }
 
-    .nav-btn:hover {
-        border-color: var(--primary-color);
-        box-shadow: 0 0 0 4px var(--ring)
-    }
-
-    /* Anim */
-    .aos {
-        opacity: 0;
-        transform: translateY(18px);
-        transition: all .6s ease
-    }
-
-    .aos.on {
-        opacity: 1;
-        transform: none
-    }
-
-    @media (max-width:992px) {
-        .content-wrapper {
-            margin: -70px 1rem 0
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 992px) {
+        .content-row {
+            flex-direction: column;
         }
 
-        .sidebar {
-            position: static;
-            margin-top: 1rem
+        .sidebar-content {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .recommendation-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .article-title {
+            font-size: 2rem;
+        }
+
+        .post-navigation {
+            flex-direction: column;
+        }
+
+        .nav-post {
+            max-width: 100%;
+        }
+
+        .nav-post.next {
+            text-align: left;
+        }
+
+        .nav-post.next a {
+            flex-direction: row;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .article-header {
+            padding: 100px 0 60px;
+        }
+
+        .article-title {
+            font-size: 1.75rem;
+        }
+
+        .article-meta-info {
+            gap: 1.5rem;
+        }
+
+        .recommendation-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .content-row {
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .article-title {
+            font-size: 1.5rem;
+        }
+
+        .article-content {
+            font-size: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
         }
     }
 </style>
 @endpush
 
-@php
-$title = $post->title ?? 'Untitled';
-$authorName = optional($post->author)->name ?? 'Admin';
-$categoryName = optional($post->category)->name ?? 'Umum';
-$thumb = $post->thumbnail ? Storage::url($post->thumbnail)
-: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop';
-$cover = $post->cover ? Storage::url($post->cover) : $thumb;
-$date = optional($post->published_at ?? $post->created_at)->translatedFormat('d M Y');
-$readMin = max(1, (int) ceil(str_word_count(strip_tags($post->content ?? ''))/200)); /* ~200wpm */
-$recent = isset($recentPosts) ? $recentPosts : collect(); /* pass dari controller */
-@endphp
-
 @section('content')
-<!-- HERO -->
-<section class="blog-hero" aria-label="Article header">
-    <div class="bg" style="background-image:url('{{ $cover }}');" data-parallax></div>
-    <div class="container">
-        <div class="hero-content">
-            <nav class="breadcrumbs" aria-label="breadcrumb">
-                <a href="{{ url('/') }}">Beranda</a><span>›</span>
-                <a href="{{ route('blog.index') }}">Blog</a><span>›</span>
-                <span aria-current="page">{{ Str::limit($title, 60) }}</span>
-            </nav>
-            <span class="hero-badge"><i class="bi bi-tag me-1"></i>{{ $categoryName }}</span>
-            <h1 class="hero-title">{{ $title }}</h1>
-            <div class="hero-meta">
-                <span class="chip"><span class="author-avatar">{{ strtoupper(substr($authorName,0,1)) }}</span>{{
-                    $authorName }}</span>
-                <span class="chip"><i class="bi bi-calendar-event"></i> {{ $date }}</span>
-                <span class="chip"><i class="bi bi-clock"></i> {{ $readMin }} Min Read</span>
+<!-- Article Header -->
+<header class="article-header">
+    <div class="article-header-content">
+        <h1 class="article-title">{{ $post->title }}</h1>
+
+        <div class="article-meta-info">
+            <div class="meta-item">
+                <div class="meta-label">Author :</div>
+                <div class="meta-value">{{ $post->author->name }}</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">Date :</div>
+                <div class="meta-value">{{ $post->published_at->format('dS M y') }}</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">Time :</div>
+                <div class="meta-value">{{ max(1, (int) ceil(str_word_count(strip_tags($post->content))/200)) }} Min Read</div>
             </div>
         </div>
     </div>
-</section>
+</header>
 
-<!-- CONTENT -->
-<section class="blog-content">
-    <div class="container">
-        <div class="row g-4 g-lg-5">
-            <div class="col-lg-8">
-                <div class="content-wrapper">
-                    <div class="post-thumbnail aos">
-                        <noscript><img src="{{ $thumb }}" alt="{{ $title }}" class="img-fluid"></noscript>
-                        <img src="{{ $thumb }}" alt="{{ $title }}" class="img-fluid" loading="lazy"
-                            onload="this.previousElementSibling?.remove();">
+<!-- Article Content -->
+<div class="article-content-section">
+    <div class="article-container">
+        <div class="content-row">
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Featured Image -->
+                @if($post->thumbnail)
+                <div class="featured-image-wrapper">
+                    <img src="{{ Storage::url($post->thumbnail) }}"
+                         alt="{{ $post->title }}"
+                         loading="eager">
+                </div>
+                @endif
+
+                <!-- Overview Section -->
+                <div class="overview-section">
+                    <h2 class="section-title">Overview</h2>
+
+                    @if($post->excerpt)
+                    <div class="article-content">
+                        <p>{{ $post->excerpt }}</p>
                     </div>
+                    @endif
 
-                    <div class="post-content">
-                        @if(!empty($post->excerpt))
-                        <div class="post-excerpt aos">{{ $post->excerpt }}</div>
-                        @endif
-
-                        <div class="aos">{!! $post->content !!}</div>
-
-                        @if(!empty($post->tags))
-                        <hr>
-                        <div class="tag-list aos">
-                            @foreach((array) $post->tags as $tag)
-                            <a class="tag text-decoration-none" href="{{ route('blog.index', ['tag' => $tag]) }}"><i
-                                    class="bi bi-hash"></i>{{ $tag }}</a>
-                            @endforeach
-                        </div>
-                        @endif
-                    </div>
-
-                    <div class="share-section aos" aria-label="Bagikan artikel">
-                        <div class="share-buttons">
-                            <a class="share-btn" target="_blank" rel="noopener"
-                                href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->fullUrl()) }}">
-                                <i class="bi bi-facebook"></i> Facebook</a>
-                            <a class="share-btn" target="_blank" rel="noopener"
-                                href="https://twitter.com/intent/tweet?text={{ urlencode($title) }}&url={{ urlencode(request()->fullUrl()) }}">
-                                <i class="bi bi-twitter-x"></i> Twitter</a>
-                            <a class="share-btn" target="_blank" rel="noopener"
-                                href="https://wa.me/?text={{ urlencode($title.' - '.request()->fullUrl()) }}">
-                                <i class="bi bi-whatsapp"></i> WhatsApp</a>
-                            <button class="share-btn" id="copyLinkBtn" type="button"><i class="bi bi-link-45deg"></i>
-                                Copy Link</button>
-                        </div>
-                    </div>
-
-                    <div class="post-navigation d-flex justify-content-between flex-wrap gap-2 aos">
-                        @if(!empty($prevPost))
-                        <a href="{{ route('blog.show', $prevPost->slug ?? $prevPost->id) }}" class="nav-btn">
-                            <i class="bi bi-arrow-left"></i> {{ Str::limit($prevPost->title, 36) }}
-                        </a>
-                        @else
-                        <a href="{{ url()->previous() !== url()->current() ? url()->previous() : route('blog.index') }}"
-                            class="nav-btn">
-                            <i class="bi bi-arrow-left"></i> Kembali
-                        </a>
-                        @endif
-
-                        @if(!empty($nextPost))
-                        <a href="{{ route('blog.show', $nextPost->slug ?? $nextPost->id) }}" class="nav-btn">
-                            {{ Str::limit($nextPost->title, 36) }} <i class="bi bi-arrow-right"></i>
-                        </a>
-                        @else
-                        <a href="{{ route('blog.index') }}" class="nav-btn">Artikel Lainnya <i
-                                class="bi bi-arrow-right"></i></a>
-                        @endif
+                    <!-- Main Content -->
+                    <div class="article-content">
+                        {!! $post->content !!}
                     </div>
                 </div>
+
+                <!-- Next/Previous Navigation -->
+                <nav class="post-navigation">
+                    @if($prevPost)
+                    <div class="nav-post prev">
+                        <a href="{{ route('blog.show', $prevPost->slug) }}">
+                            <div class="nav-icon">
+                                <i class="bi bi-arrow-left"></i>
+                            </div>
+                            <div class="nav-content">
+                                <div class="nav-label">Previous Post</div>
+                                <div class="nav-title">{{ $prevPost->title }}</div>
+                            </div>
+                        </a>
+                    </div>
+                    @else
+                    <div class="nav-post prev"></div>
+                    @endif
+
+                    @if($nextPost)
+                    <div class="nav-post next">
+                        <a href="{{ route('blog.show', $nextPost->slug) }}">
+                            <div class="nav-icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+                            <div class="nav-content">
+                                <div class="nav-label">Next Post</div>
+                                <div class="nav-title">{{ $nextPost->title }}</div>
+                            </div>
+                        </a>
+                    </div>
+                    @else
+                    <div class="nav-post next"></div>
+                    @endif
+                </nav>
             </div>
 
-            <!-- SIDEBAR (search only, tanpa recent karena recent versi index ada di bawah) -->
-            <aside class="col-lg-4">
-                <div class="sidebar">
-                    <div class="sidebar-section aos">
-                        <h4 class="sidebar-title">Search Blog</h4>
-                        <form action="{{ route('blog.index') }}" method="GET" role="search" aria-label="Search posts">
-                            <input class="search-input" type="search" name="q" value="{{ request('q') }}"
-                                placeholder="Cari artikel…">
-                        </form>
-                    </div>
+            <!-- Sidebar -->
+            <aside class="sidebar-content">
+                <!-- Search -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Search Blog</h3>
+                    <form action="{{ route('blog.index') }}" method="GET">
+                        <input type="text"
+                               name="search"
+                               class="search-input"
+                               placeholder="Search..."
+                               value="{{ request('search') }}">
+                    </form>
                 </div>
+
+                <!-- Recent Posts -->
+                @if(isset($recentPosts) && $recentPosts->count() > 0)
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Recent Post</h3>
+                    @foreach($recentPosts as $recent)
+                    <div class="recent-post-item">
+                        <a href="{{ route('blog.show', $recent->slug) }}" class="recent-post-link">
+                            <div class="recent-post-image-wrapper">
+                                @if($recent->thumbnail)
+                                <img src="{{ Storage::url($recent->thumbnail) }}"
+                                     alt="{{ $recent->title }}"
+                                     class="recent-post-image">
+                                @else
+                                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=200&q=80"
+                                     alt="{{ $recent->title }}"
+                                     class="recent-post-image">
+                                @endif
+                            </div>
+                            <div class="recent-post-content">
+                                <h6>{{ $recent->title }}</h6>
+                                <div class="recent-post-date">{{ $recent->published_at->format('dS M y') }}</div>
+                            </div>
+                        </a>
+                    </div>
+                    @endforeach
+                </div>
+                @endif
             </aside>
         </div>
     </div>
-</section>
+</div>
 
-{{-- Recent Posts (gaya card seperti index.blade.php) --}}
-@if(isset($recent) && $recent->count())
-<section class="py-4 py-md-5" style="background:#fff;">
+<!-- Recommendation Section -->
+<section class="recommendation-section">
     <div class="container">
-        <div class="d-flex justify-content-between align-items-end mb-3 mb-md-4 aos">
-            <div>
-                <h3 class="m-0 fw-bold" style="color:#0f172a;">Recent Posts</h3>
-                <div class="text-muted">Artikel terbaru dari blog kami</div>
-            </div>
-            <a href="{{ route('blog.index') }}" class="nav-btn text-decoration-none">Lihat Semua <i
-                    class="bi bi-arrow-right"></i></a>
-        </div>
+        <h2 class="recommendation-title">Lanjut Baca Yuk! Ini Rekomendasi Buat Kamu</h2>
+        <p class="recommendation-subtitle">Baca lebih banyak tips, insight, dan informasi pembelajaran Bahasa Jerman.</p>
 
-        <div class="row g-4">
-            @foreach($recent as $item)
-            @php
-            $iTitle = $item->title ?? 'Untitled';
-            $iLink = route('blog.show', $item->slug ?? $item->id);
-            $iImg = $item->thumbnail ? Storage::url($item->thumbnail)
-            : 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=900&auto=format&fit=crop';
-            $iCat = optional($item->category)->name ?? 'Umum';
-            $iDate = optional($item->published_at ?? $item->created_at)->translatedFormat('d M Y');
-            $iExcerpt= Str::limit($item->excerpt ?: strip_tags($item->content), 120);
-            @endphp
-            <div class="col-12 col-sm-6 col-lg-4">
-                <article class="idx-card h-100 aos">
-                    <a href="{{ $iLink }}" class="d-block position-relative" style="line-height:0;">
-                        <img src="{{ $iImg }}" alt="{{ $iTitle }}" class="w-100 thumb"
-                            style="height:200px;object-fit:cover">
-                        <span class="badge rounded-pill idx-cat">{{ $iCat }}</span>
-                    </a>
-                    <div class="p-3">
-                        <a href="{{ $iLink }}" class="text-decoration-none">
-                            <h5 class="fw-bold mb-1" style="color:#0f172a;">{{ $iTitle }}</h5>
-                        </a>
-                        <div class="small text-muted mb-2">{{ $iDate }}</div>
-                        <p class="text-muted m-0">{{ $iExcerpt }}</p>
-                    </div>
-                    <div class="px-3 pb-3">
-                        <a href="{{ $iLink }}" class="nav-btn text-decoration-none">Baca Selengkapnya <i
-                                class="bi bi-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-@endif
-
-{{-- Related --}}
-@if(isset($relatedPosts) && $relatedPosts->count())
-<section class="related-posts">
-    <div class="container">
-        <h3 class="aos">Lanjut Baca Yuk! Ini Rekomendasi Buat Kamu</h3>
-        <p class="related-desc aos">Baca artikel seputar tips, teknik, dan informasi pembelajaran Bahasa Jerman.</p>
-        <div class="row g-4">
+        @if(isset($relatedPosts) && $relatedPosts->count() > 0)
+        <div class="recommendation-grid">
             @foreach($relatedPosts as $related)
-            @php
-            $rTitle = $related->title ?? 'Untitled';
-            $rLink = route('blog.show', $related->slug ?? $related->id);
-            $rImg = $related->thumbnail ? Storage::url($related->thumbnail)
-            : 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=600&auto=format&fit=crop';
-            $rDate = optional($related->published_at ?? $related->created_at)->translatedFormat('d M Y');
-            @endphp
-            <div class="col-12 col-sm-6 col-lg-4">
-                <a class="card related-card d-block text-decoration-none aos" href="{{ $rLink }}">
-                    <img src="{{ $rImg }}" class="card-img-top" alt="{{ $rTitle }}" loading="lazy">
-                    <div class="card-body">
-                        <div class="small text-muted mb-1">{{ $rDate }}</div>
-                        <div class="fw-semibold text-dark">{{ $rTitle }}</div>
+            <article class="recommendation-card">
+                <div class="recommendation-image-wrapper">
+                    @if($related->thumbnail)
+                    <img src="{{ Storage::url($related->thumbnail) }}"
+                         alt="{{ $related->title }}"
+                         class="recommendation-image"
+                         loading="lazy">
+                    @else
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80"
+                         alt="{{ $related->title }}"
+                         class="recommendation-image"
+                         loading="lazy">
+                    @endif
+                    <div class="rec-badges">
+                        <span class="rec-badge">{{ $related->category->name }}</span>
                     </div>
-                </a>
-            </div>
+                </div>
+
+                <div class="recommendation-content">
+                    <div class="rec-meta">
+                        <span><i class="bi bi-calendar-event"></i> {{ $related->published_at->format('d M Y') }}</span>
+                        <span>•</span>
+                        <span><i class="bi bi-person"></i> {{ $related->author->name }}</span>
+                    </div>
+
+                    <h3 class="rec-title">{{ $related->title }}</h3>
+
+                    <a href="{{ route('blog.show', $related->slug) }}" class="rec-button">
+                        Read More <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </article>
             @endforeach
         </div>
+        @endif
     </div>
 </section>
-@endif
 
 @push('scripts')
 <script>
-    // Parallax
-    const bg = document.querySelector('.blog-hero .bg');
-    if (bg) {
-        window.addEventListener('scroll', () => {
-            const y = Math.min(60, window.scrollY * 0.06);
-            bg.style.transform = `scale(1.08) translateY(${y}px)`;
-        }, { passive: true });
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    const articleContent = document.querySelector('.article-content');
 
-    // AOS-like intersection
-    const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
-    }, { threshold: .14, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.aos').forEach(el => io.observe(el));
+    if (articleContent) {
+        // Remove figcaptions
+        const figcaptions = articleContent.querySelectorAll('figcaption');
+        figcaptions.forEach(caption => caption.remove());
 
-    // Copy link
-    const copyBtn = document.getElementById('copyLinkBtn');
-    if (copyBtn) {
-        copyBtn.addEventListener('click', async () => {
-            try {
-                await navigator.clipboard.writeText(window.location.href);
-                copyBtn.innerHTML = '<i class="bi bi-check2"></i> Tersalin';
-                setTimeout(() => copyBtn.innerHTML = '<i class="bi bi-link-45deg"></i> Copy Link', 1800);
-            } catch (err) { alert('Gagal menyalin tautan'); }
+        // Remove text links that contain image filenames
+        const links = articleContent.querySelectorAll('a[href*="storage"]');
+        links.forEach(link => {
+            // If link doesn't contain an image, remove it
+            if (!link.querySelector('img')) {
+                const text = link.textContent.trim();
+                // Check if it looks like a filename
+                if (text.match(/\.(png|jpg|jpeg|gif|webp|pdf)/i)) {
+                    link.remove();
+                }
+            }
+        });
+
+        // Remove standalone text that looks like filenames
+        const textNodes = [];
+        const walker = document.createTreeWalker(
+            articleContent,
+            NodeFilter.SHOW_TEXT,
+            null,
+            false
+        );
+
+        while(walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach(node => {
+            const text = node.textContent.trim();
+            // Check if it's a filename pattern
+            if (text.match(/^[a-zA-Z0-9_\-\.]+\.(png|jpg|jpeg|gif|webp)\s*\d+[\.,]\d+\s*(KB|MB|GB)$/i)) {
+                node.textContent = '';
+            }
+        });
+
+        // Remove empty paragraphs that might be left behind
+        const paragraphs = articleContent.querySelectorAll('p');
+        paragraphs.forEach(p => {
+            const text = p.textContent.trim();
+            // Remove if empty or only contains filename
+            if (text === '' || text.match(/^[a-zA-Z0-9_\-\.]+\.(png|jpg|jpeg|gif|webp)/i)) {
+                p.remove();
+            }
+        });
+
+        // Wrap all content images in figure for better control
+        const contentImages = articleContent.querySelectorAll('img:not(figure img)');
+        contentImages.forEach(img => {
+            if (!img.parentElement || img.parentElement.tagName !== 'FIGURE') {
+                const figure = document.createElement('figure');
+                img.parentNode.insertBefore(figure, img);
+                figure.appendChild(img);
+            }
         });
     }
+});
 </script>
 @endpush
 @endsection
