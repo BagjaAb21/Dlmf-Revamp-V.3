@@ -5,6 +5,9 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaymentController;
+
+// Welcome route
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -72,4 +75,13 @@ Route::get('/{slug}', [BlogController::class, 'show'])->name('show');
 Route::prefix('teachers')->name('teachers.')->group(function () {
     Route::get('/', [TeacherController::class, 'index'])->name('index');
     Route::get('/{teacher:slug}', [TeacherController::class, 'show'])->name('show');
+});
+
+// Web routes untuk redirect
+Route::get('/payment-success', function() {
+    return view('payment-success');
+});
+
+Route::get('/payment-failed', function() {
+    return view('payment-failed');
 });
