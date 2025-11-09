@@ -17,6 +17,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
 
+
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ url('/') }}">
 
@@ -1501,7 +1502,7 @@
                         <a href="{{ url('/harga') }}" class="btn btn-hero-primary"
                             aria-label="Daftar kursus bahasa Jerman sekarang">Mulai Belajar</a>
                         <button class="btn btn-hero-secondary">
-                            <a class="text-decoration-none" href="{{ url('/program') }}" target="_blank"
+                            <a class="text-decoration-none" href="{{ url('/program') }}"
                                 aria-label="Lihat program kursus bahasa Jerman lengkap">Lihat Program</a>
                         </button>
                     </div>
