@@ -719,7 +719,7 @@
                             {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         </ul>
                     </li>
-                    {{-- <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li> --}}
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a></li>
                 </ul>
             </div>
@@ -958,9 +958,9 @@
                     <ul class="footer-links">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
-                        <li><a href="{{ url('/about-us') }}">About Us</a></li>
+                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        <li><a href="{{ url('/about-us') }}">Tentang Kami</a></li>
                     </ul>
                 </div>
 

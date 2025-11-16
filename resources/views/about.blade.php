@@ -1159,9 +1159,9 @@
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="#">Produk Digital</a>
                     </li> --}}
-                    {{-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ url('/blog') }}">Blog</a>
-                    </li> --}}
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
@@ -1457,7 +1457,7 @@
 
             <div class="teachers-grid">
                 <div class="teacher-card" data-delay="0">
-                    <div class="teacher-img" style="background-image: url('asset/img/teachers/user.png')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Herr_Yasin.png')">
                     </div>
                     <div class="teacher-name">Herr Yasin</div>
                     <div class="teacher-level">Level B2</div>
@@ -1466,7 +1466,7 @@
                 </div>
 
                 <div class="teacher-card" data-delay="200">
-                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Zahra.jpg')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Zahra.png')">
                     </div>
                     <div class="teacher-name">Frau Zahra</div>
                     <div class="teacher-level">Level B2</div>
@@ -1475,7 +1475,7 @@
                 </div>
 
                 <div class="teacher-card" data-delay="400">
-                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Olin.jpg')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Olin.png')">
                     </div>
                     <div class="teacher-name">Frau Olin</div>
                     <div class="teacher-level">Level B1</div>
@@ -1550,10 +1550,10 @@
                         {{-- <li><a href="#">Course</a></li> --}}
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
-                        <li><a href="{{ url('/about') }}">About Us</a></li>
+                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        <li><a href="{{ url('/about') }}">Tentang Kami</a></li>
                         {{-- <li><a href="#">Career</a></li>
                         <li><a href="#">Legalitas</a></li> --}}
 

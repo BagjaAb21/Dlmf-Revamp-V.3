@@ -704,6 +704,7 @@
                             <li><a class="dropdown-item" href="/harga">Harga</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">Tentang Kami</a></li>
                 </ul>
             </div>
@@ -3068,9 +3069,9 @@
                     <ul class="footer-links">
                         <li><a href="/">Beranda</a></li>
                         <li><a href="/program">Program</a></li>
-                        {{-- <li><a href="/blog">Blog</a></li> --}}
                         <li><a href="/au-pair">Au Pair</a></li>
-                        <li><a href="/about">About Us</a></li>
+                        <li><a href="{{ url('/blog') }}">Blog</a></li>
+                        <li><a href="/about">Tentang Kami</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">

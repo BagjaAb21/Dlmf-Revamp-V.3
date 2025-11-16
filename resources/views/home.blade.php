@@ -1479,6 +1479,7 @@
                             <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
@@ -2288,6 +2289,7 @@
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program Kursus</a></li>
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
+                        <li><a href="{{ url('/blog') }}">Blog</a></li>
                         <li><a href="{{ url('/about') }}">Tentang Kami</a></li>
                     </ul>
                 </div>

@@ -216,9 +216,9 @@
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="#">Produk Digital</a>
                     </li> --}}
-                    {{-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
-                    </li> --}}
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
@@ -255,7 +255,7 @@
                         {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
                         {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
-                        <li><a href="{{ url('/about') }}">About Us</a></li>
+                        <li><a href="{{ url('/about') }}">Tentang Kami</a></li>
                         {{-- <li><a href="#">Career</a></li>
                         <li><a href="#">Legalitas</a></li> --}}
 
