@@ -852,7 +852,7 @@
             <div class="hero-content">
                 <h1>Kelas Private Grammatik <br> Bahasa Jerman</h1>
                 <p>Pembelajaran personal dengan fokus mendalam pada tata bahasa, disesuaikan dengan tempo dan kebutuhan
-                    belajar Anda</p>
+                    belajar kamu</p>
             </div>
         </div>
     </section>
@@ -879,12 +879,12 @@
                             fokus bisa disesuaikan dengan kebutuhanmu.</p>
                     </div>
 
-                    <p>Di kelas ini, anda akan mendapatkan <strong>penjelasan tata bahasa (Grammatik) yang lebih
+                    <p>Di kelas ini, kamu akan mendapatkan <strong>penjelasan tata bahasa (Grammatik) yang lebih
                             mendalam</strong> dan langsung dipraktikkan dalam latihan-latihan. Karena bersifat private,
-                        anda juga punya <strong>fleksibilitas untuk menentukan jumlah pertemuan</strong> sesuai target
+                        kamu juga punya <strong>fleksibilitas untuk menentukan jumlah pertemuan</strong> sesuai target
                         yang ingin dicapai.</p>
 
-                    <p>Dengan pendekatan ini, anda tetap memperoleh materi sekelas reguler, namun dengan bimbingan lebih
+                    <p>Dengan pendekatan ini, kamu tetap memperoleh materi sekelas reguler, namun dengan bimbingan lebih
                         intensif dan personal, sehingga setiap sesi belajar jadi lebih fokus, efektif, dan sesuai ritme
                         belajarmu.</p>
                 </div>

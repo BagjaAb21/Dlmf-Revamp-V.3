@@ -688,7 +688,7 @@
             <div class="hero-content">
                 <div class="hero-badge">Buku Ajar Internasional</div>
                 <h1 class="hero-title">Netzwerk Neu</h1>
-                <p class="hero-subtitle">Buku ajar bahasa Jerman stKamur internasional yang mengantarkan Kamu dari
+                <p class="hero-subtitle">Buku ajar bahasa Jerman standar internasional yang mengantarkan kamu dari
                     pemula hingga mahir dengan metode pembelajaran modern dan interaktif</p>
             </div>
         </div>
@@ -727,7 +727,7 @@
                     <div class="package-number">1</div>
                     <h3>Kursbuch (Buku Kursus)</h3>
                     <p>Berisi materi utama, dialog, kosakata, tata bahasa, serta latihan komunikasi sehari-hari yang
-                        dirancang untuk membangun kemampuan bahasa Jerman Kamu secara komprehensif dan terstruktur.</p>
+                        dirancang untuk membangun kemampuan bahasa Jerman kamu secara komprehensif dan terstruktur.</p>
                     <ul>
                         <li>Materi pembelajaran sistematis dan mudah dipahami</li>
                         <li>Dialog autentik dari kehidupan nyata di Jerman</li>
@@ -766,9 +766,9 @@
                     <div class="feature-icon-wrapper">
                         <i class="bi bi-patch-check-fill"></i>
                     </div>
-                    <h4>StKamur Goethe-Institut & GER (CEFR)</h4>
-                    <p>Netzwerk neu mengikuti stKamur Gemeinsamer Europäischer Referenzrahmen (GER) atau Common European
-                        Framework of Reference (CEFR) yang diakui secara internasional. Sertifikat Kamu akan diakui di
+                    <h4>Standar Goethe-Institut & GER (CEFR)</h4>
+                    <p>Netzwerk neu mengikuti standar Gemeinsamer Europäischer Referenzrahmen (GER) atau Common European
+                        Framework of Reference (CEFR) yang diakui secara internasional. Sertifikat kamu akan diakui di
                         seluruh Eropa dan dunia.</p>
                 </div>
 
@@ -831,7 +831,7 @@
                 <div class="level-item">
                     <span class="level-badge">B1</span>
                     <h4>Tingkat Menengah</h4>
-                    <p>Level menengah yang mempersiapkan Kamu untuk komunikasi mandiri dan ujian sertifikasi
+                    <p>Level menengah yang mempersiapkan kamu untuk komunikasi mandiri dan ujian sertifikasi
                         internasional.</p>
                 </div>
             </div>

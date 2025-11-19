@@ -816,7 +816,7 @@
             <div class="hero-content">
                 <h1>Kelas Private Persiapan Ujian</h1>
                 <p>Program intensif untuk mempersiapkan ujian sertifikasi bahasa Jerman dengan fokus pada kebutuhan
-                    spesifik Anda. Tingkatkan kepercayaan diri dan kuasai strategi ujian yang efektif!</p>
+                    spesifik kamu. Tingkatkan kepercayaan diri dan kuasai strategi ujian yang efektif!</p>
             </div>
         </div>
     </section>
@@ -832,13 +832,13 @@
             </div>
             <div class="program-content">
                 <div class="program-text">
-                    <p><strong>Kelas Private Persiapan Ujian</strong> dirancang khusus untuk membantu anda menghadapi
+                    <p><strong>Kelas Private Persiapan Ujian</strong> dirancang khusus untuk membantu kamu menghadapi
                         ujian bahasa Jerman dengan lebih percaya diri. Program ini fleksibel dan berfokus pada kebutuhan
-                        peserta, sehingga anda bisa memilih modul mana yang ingin diperdalam.</p>
+                        peserta, sehingga kamu bisa memilih modul mana yang ingin diperdalam.</p>
 
                     <div class="highlight-box">
-                        <p><strong>Keunggulan:</strong> anda bisa mengambil satu atau beberapa modul sekaligus,
-                            tergantung bagian mana yang ingin lebih anda kuasai. Pembelajaran disesuaikan langsung
+                        <p><strong>Keunggulan:</strong> kamu bisa mengambil satu atau beberapa modul sekaligus,
+                            tergantung bagian mana yang ingin lebih kamu kuasai. Pembelajaran disesuaikan langsung
                             dengan fokus latihan peserta.</p>
                     </div>
 
@@ -846,7 +846,7 @@
                         Setiap sesi berdurasi maksimal <strong>90 menit per hari</strong>, sehingga tetap intensif tapi
                         efektif untuk dipahami.</p>
 
-                    <p>Dengan pendekatan private yang personal, kelas ini membantu anda memperkuat keterampilan
+                    <p>Dengan pendekatan private yang personal, kelas ini membantu kamu memperkuat keterampilan
                         spesifik, melatih strategi ujian, dan meningkatkan kepercayaan diri menjelang ujian sertifikasi
                         bahasa Jerman.</p>
                 </div>
@@ -865,7 +865,7 @@
             <div class="text-center">
                 <span class="program-badge">4 Modul Pilihan</span>
                 <h2 class="program-title">Pilih Modul Sesuai Kebutuhan</h2>
-                <p class="pricing-subtitle">Fokus pada keterampilan yang ingin anda tingkatkan untuk ujian</p>
+                <p class="pricing-subtitle">Fokus pada keterampilan yang ingin kamu tingkatkan untuk ujian</p>
             </div>
 
             <div class="module-cards">
@@ -921,7 +921,7 @@
             <div class="text-center">
                 <span class="program-badge">Detail Program</span>
                 <h2 class="program-title">Informasi Penting</h2>
-                <p class="pricing-subtitle">Yang perlu anda ketahui tentang program ini</p>
+                <p class="pricing-subtitle">Yang perlu kamu ketahui tentang program ini</p>
             </div>
 
             <div class="details-grid">

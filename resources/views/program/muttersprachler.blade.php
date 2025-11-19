@@ -732,7 +732,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Sprachkurs mit Muttersprachler</h1>
-                <p>Tingkatkan kemampuan berbicara bahasa Jerman Kamu secara intensif dengan bimbingan langsung dari
+                <p>Tingkatkan kemampuan berbicara bahasa Jerman kamu secara intensif dengan bimbingan langsung dari
                     native speaker dalam format one-on-one</p>
             </div>
         </div>
@@ -748,7 +748,7 @@
             </div>
             <div class="program-content">
                 <div class="program-text">
-                    <p>Kelas ini dirancang khusus buat Kamu yang ingin melatih kemampuan berbicara (<em>Sprechen</em>)
+                    <p>Kelas ini dirancang khusus buat kamu yang ingin melatih kemampuan berbicara (<em>Sprechen</em>)
                         langsung dengan <strong>native speaker bahasa Jerman</strong>. Karena sifatnya
                         <strong>private</strong>, pembelajaran dilakukan <strong>one-on-one</strong>, sehingga fokus
                         sepenuhnya pada perkembanganmu.
@@ -757,11 +757,11 @@
                         <p><strong>Jumlah pertemuan bisa fleksibel sesuai kebutuhan</strong>. Setiap sesi berlangsung
                             selama <strong>60 menit</strong>.</p>
                     </div>
-                    <p>Format ini memastikan Kamu punya cukup waktu untuk berlatih percakapan sekaligus mendapat koreksi
+                    <p>Format ini memastikan kamu punya cukup waktu untuk berlatih percakapan sekaligus mendapat koreksi
                         langsung dari pengajar native speaker.</p>
                     <p>Dalam kelas ini, pengantar yang digunakan adalah <strong>bahasa Inggris dan Jerman</strong>.
                         Metode ini
-                        membantu Kamu terbiasa berpikir langsung dalam bahasa Jerman, sekaligus meningkatkan kepercayaan
+                        membantu kamu terbiasa berpikir langsung dalam bahasa Jerman, sekaligus meningkatkan kepercayaan
                         diri dalam percakapan sehari-hari.</p>
                 </div>
                 <div class="program-images">
@@ -861,7 +861,7 @@
                     </div>
                     <div class="benefit-content">
                         <h4>Pembelajaran Full Immersion</h4>
-                        <p>Pengantar utama menggunakan bahasa Jerman dan Inggris, membantu Anda terbiasa memahami
+                        <p>Pengantar utama menggunakan bahasa Jerman dan Inggris, membantu kamu terbiasa memahami
                             konteks secara natural tanpa merasa sulit beradaptasi.</p>
                     </div>
                 </div>
@@ -960,7 +960,7 @@
             </div>
             <div class="text-center mt-5">
                 <p class="text-muted"><i class="bi bi-info-circle me-2"></i>Jumlah pertemuan dapat disesuaikan dengan
-                    kebutuhan dan target pembelajaran Kamu</p>
+                    kebutuhan dan target pembelajaran kamu</p>
             </div>
         </div>
     </section>
@@ -970,7 +970,7 @@
             <h2 class="cta-title">Wujudkan Bahasa Jerman Lancar dan Percaya Diri!
                 Konsultasikan kebutuhanmu dengan tim kami.</h2>
             <p class="mb-4">Dengan pendekatan privat dan bimbingan langsung dari native speaker, Sprachkurs mit
-                Muttersprachler memastikan perkembangan kemampuan berbicara bahasa Jerman Kamu lebih cepat dan efektif.
+                Muttersprachler memastikan perkembangan kemampuan berbicara bahasa Jerman kamu lebih cepat dan efektif.
                 Cocok untuk persiapan ujian, wawancara, atau sekadar meningkatkan kepercayaan diri dalam berkomunikasi.
             </p>
             <a href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+Sprachkurs+mit+Muttersprachler+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0"

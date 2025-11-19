@@ -1,6 +1,16 @@
 <?php
-
+use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
+
+// Add CORS headers
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type, X-Requested-With, Authorization');
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit(0);
+}
 
 define('LARAVEL_START', microtime(true));
 

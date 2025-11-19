@@ -1098,8 +1098,8 @@
             </div>
             <div class="program-content">
                 <div class="program-text">
-                    <p>Program kelas reguler bahasa Jerman ini dirancang untuk semua kalangan, termasuk bagi anda yang
-                        benar-benar pemula. Jika belum pernah belajar bahasa Jerman sama sekali, anda bisa langsung
+                    <p>Program kelas reguler bahasa Jerman ini dirancang untuk semua kalangan, termasuk bagi kamu yang
+                        benar-benar pemula. Jika belum pernah belajar bahasa Jerman sama sekali, kamu bisa langsung
                         memulai dari level A1, yang memang dibuat khusus untuk pemula.</p>
 
                     <div class="highlight-box">
@@ -1112,7 +1112,7 @@
                             Jumat</strong> dengan durasi <strong>2 jam per pertemuan</strong>.</p>
 
                     <p>Bagi yang sudah pernah belajar bahasa Jerman sebelumnya, tersedia juga <strong>placement
-                            test</strong> untuk menentukan level yang paling sesuai dengan kemampuan anda saat ini.</p>
+                            test</strong> untuk menentukan level yang paling sesuai dengan kemampuan kamu saat ini.</p>
                 </div>
                 <div class="program-images">
                     <div class="program-img large"></div>
@@ -1191,7 +1191,7 @@
         <div class="container">
             <div class="text-center">
                 <span class="program-badge">Jadwal Kelas</span>
-                <h2 class="program-title">Pilih Waktu yang Sesuai untuk Anda</h2>
+                <h2 class="program-title">Pilih Waktu yang Sesuai untuk kamu</h2>
                 <p class="pricing-subtitle">Kelas dilaksanakan Senin - Jumat dengan berbagai pilihan waktu</p>
             </div>
 

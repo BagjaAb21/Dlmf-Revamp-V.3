@@ -633,12 +633,12 @@
                             {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Produk Digital</a>
-                    </li>
                     {{-- <li class="nav-item">
-                        <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
+                        <a class="nav-link" href="#">Produk Digital</a>
                     </li> --}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>
@@ -694,9 +694,9 @@
                     <h3>Program Pendampingan Persiapan Au Pair</h3>
                     <p>Mengikuti program Au Pair bukan hanya soal mencari keluarga angkat, tetapi juga membutuhkan
                         persiapan matang. Mulai dari dokumen, bahasa, hingga wawancara. Karena itu, Deutsch Lernen mit
-                        Fara menghadirkan <strong>program pendampingan persiapan au pair ke Jerman</strong>.</p>
+                        Fara menghadirkan <strong>program pendampingan persiapan Au Pair ke Jerman</strong>.</p>
 
-                    <p>Melalui program ini, anda akan dibantu mulai dari <strong>pencarian keluarga angkat
+                    <p>Melalui program ini, kamu akan dibantu mulai dari <strong>pencarian keluarga angkat
                             (Gastfamilie)</strong>, pembuatan dokumen seperti <strong>motivation letter</strong>, hingga
                         <strong>latihan wawancara</strong> dengan keluarga maupun pihak kedutaan Jerman.
                     </p>
@@ -716,7 +716,7 @@
     <section class="pricing-section">
         <div class="container">
             <h3 class="pricing-title">Pricelist Program Pendampingan Persiapan Au Pair</h3>
-            <p class="pricing-subtitle">Pilih paket yang sesuai dengan kebutuhan Anda</p>
+            <p class="pricing-subtitle">Pilih paket yang sesuai dengan kebutuhan kamu</p>
 
             <div class="pricing-grid">
                 <!-- Ala Carte Package -->

@@ -13,20 +13,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-        <!-- Meta Tags SEO -->
+    <!-- Meta Tags SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Meta Title & Description -->
     <title>Harga Kursus Bahasa Jerman Online & Offline | DlmF</title>
-    <meta name="description" content="Cek harga kursus bahasa Jerman terbaik di DlmF. Program online mulai Rp149.000, offline mulai Rp2.099.000. Paket bundling A1-B1 hemat hingga Rp1.000.000!">
+    <meta name="description"
+        content="Cek harga kursus bahasa Jerman terbaik di DlmF. Program online mulai Rp149.000, offline mulai Rp2.099.000. Paket bundling A1-B1 hemat hingga Rp1.000.000!">
 
     <!-- Keywords -->
-    <meta name="keywords" content="harga kursus bahasa jerman, biaya les jerman, kursus jerman online murah, harga les jerman offline, paket bundling jerman, kursus A1 A2 B1">
+    <meta name="keywords"
+        content="harga kursus bahasa jerman, biaya les jerman, kursus jerman online murah, harga les jerman offline, paket bundling jerman, kursus A1 A2 B1">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Harga Kursus Bahasa Jerman Online & Offline | DlmF">
-    <meta property="og:description" content="Cek harga kursus bahasa Jerman terbaik di DlmF. Program online mulai Rp149.000, offline mulai Rp2.099.000. Paket bundling hemat!">
+    <meta property="og:description"
+        content="Cek harga kursus bahasa Jerman terbaik di DlmF. Program online mulai Rp149.000, offline mulai Rp2.099.000. Paket bundling hemat!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mitfara.com/harga">
     <meta property="og:image" content="{{ asset('asset/img/logo/logo-Transparant3.png') }}">
@@ -34,7 +37,8 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Harga Kursus Bahasa Jerman Online & Offline | DlmF">
-    <meta name="twitter:description" content="Cek harga kursus bahasa Jerman terbaik di DlmF. Program online mulai Rp149.000, offline mulai Rp2.099.000.">
+    <meta name="twitter:description"
+        content="Cek harga kursus bahasa Jerman terbaik di DlmF. Program online mulai Rp149.000, offline mulai Rp2.099.000.">
     <meta name="twitter:image" content="{{ asset('asset/img/logo/logo-Transparant3.png') }}">
 
     <!-- Canonical URL -->
@@ -974,11 +978,101 @@
                         Daftar Sekarang
                     </button>
                 </div>
+                <!-- Private Grammatik Online A-1 Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Grammatik A-1 <br> Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.150.000</div>
+                    </div>
+                    <p class="program-description">
+                        Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
+                        kalimat, pola kata kerja, hingga penggunaan kasus dengan cara yang mudah dan praktis.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Materi sama dengan kelas reguler</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1 on 1 dengan tutor</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free akses record kelas 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Grammatik Online A-1', 'Rp975.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
                 <!-- Private Grammatik Online A-2 -->
                 <div class="program-card">
                     <div class="program-type">Private Grammatik A-2</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp975.000</div>
+                    </div>
+                    <p class="program-description">
+                        Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
+                        kalimat, pola kata kerja, hingga penggunaan kasus dengan cara yang mudah dan praktis.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Materi sama dengan kelas reguler</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1 on 1 dengan tutor</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free akses record kelas 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Grammatik Online A-2', 'Rp975.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Private Grammatik Online A-2 Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Grammatik A-2 <br> Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.150.000</div>
                     </div>
                     <p class="program-description">
                         Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
@@ -1064,11 +1158,98 @@
                         Daftar Sekarang
                     </button>
                 </div>
+                <!-- Private Grammatik Online B-1 Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Grammatik B-1 <br> Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.270.000</div>
+                    </div>
+                    <p class="program-description">
+                        Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
+                        kalimat, pola kata kerja, hingga penggunaan kasus dengan cara yang mudah dan praktis.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Materi sama dengan kelas reguler</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1 on 1 dengan tutor</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free akses record kelas 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Grammatik Online B-1', 'Rp1.095.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
                 <!-- Private Persiapan Ujian Goethe A-1 Online -->
                 <div class="program-card">
                     <div class="program-type">Private Persiapan Ujian Goethe A-1</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp975.000</div>
+                    </div>
+                    <p class="program-description">
+                        Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi Goethe-Institut
+                        dengan optimal. Peserta dapat memilih modul tertentu (Hören, Lesen, Schreiben, Sprechen) untuk
+                        difokuskan.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free akses record kelas 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request materi</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Persiapan Ujian Goethe A-1 Online', 'Rp975.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Private Persiapan Ujian Goethe A-1 Online Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Persiapan Ujian Goethe A-1 Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.150.000</div>
                     </div>
                     <p class="program-description">
                         Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi Goethe-Institut
@@ -1147,11 +1328,93 @@
                         Daftar Sekarang
                     </button>
                 </div>
+                <!-- Private Persiapan Ujian Goethe A-2 Online Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Persiapan Ujian Goethe A-2 Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.150.000</div>
+                    </div>
+                    <p class="program-description">
+                        Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi Goethe-Institut
+                        dengan optimal. Peserta dapat memilih modul tertentu (Hören, Lesen, Schreiben, Sprechen) untuk
+                        difokuskan.
+                    </p>
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free akses record kelas 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request materi</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Persiapan Ujian Goethe A-2 Online', 'Rp975.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
                 <!-- Private Persiapan Ujian Goethe B-1 Online -->
                 <div class="program-card">
                     <div class="program-type">Private Persiapan Ujian Goethe B-1</div>
                     <div class="program-price-container">
-                        <div class="program-price">Rp975.000</div>
+                        <div class="program-price">Rp1.095.000</div>
+                    </div>
+                    <p class="program-description">
+                        Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi Goethe-Institut
+                        dengan optimal. Peserta dapat memilih modul tertentu (Hören, Lesen, Schreiben, Sprechen) untuk
+                        difokuskan.
+                    </p>
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free akses record kelas 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request materi</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Persiapan Ujian Goethe B-1 Online', 'Rp975.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Private Persiapan Ujian Goethe B-1 Online Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Persiapan Ujian Goethe B-1 Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.270.000</div>
                     </div>
                     <p class="program-description">
                         Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi Goethe-Institut
@@ -1233,7 +1496,7 @@
                 <div class="program-card">
                     <div class="program-type">Private Kinder dengan Bahasa Inggris</div>
                     <div class="program-price-container">
-                        <div class="program-price">Rp1.000.000</div>
+                        <div class="program-price">Rp1.070.000</div>
                     </div>
                     <p class="program-description">
                         Dirancang khusus untuk anak-anak dengan metode belajar interaktif, permainan edukatif, dan
@@ -1513,6 +1776,47 @@
                         Daftar Sekarang
                     </button>
                 </div>
+                <!-- Private Grammatik Offline A-1 Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Grammatik A-1 <br> Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.575.000</div>
+                    </div>
+                    <p class="program-description">
+                        Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
+                        kalimat, pola kata kerja, hingga penggunaan kasus dengan cara yang mudah dan praktis.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Materi sama dengan kelas reguler</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1 on 1 dengan tutor</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Grammatik Offline A-1 Dalam Bahasa Inggris', 'Rp1.575.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
                 <!-- Private Grammatik Offline A-2 -->
                 <div class="program-card">
                     <div class="program-type">Private Grammatik A-2</div>
@@ -1554,6 +1858,47 @@
                         Daftar Sekarang
                     </button>
                 </div>
+                <!-- Private Grammatik Offline A-2 Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Grammatik A-2 <br> Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.575.000</div>
+                    </div>
+                    <p class="program-description">
+                        Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
+                        kalimat, pola kata kerja, hingga penggunaan kasus dengan cara yang mudah dan praktis.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Materi sama dengan kelas reguler</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1 on 1 dengan tutor</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Grammatik Offline A-2 Dalam Bahasa Inggris', 'Rp1.575.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
                 <!-- Private Grammatik Offline B-1 -->
                 <div class="program-card">
                     <div class="program-type">Private Grammatik B-1</div>
@@ -1592,6 +1937,47 @@
                     </div>
                     <button class="btn btn-program mt-auto"
                         onclick="pilihPaket('Private Grammatik Offline B-1', 'Rp1.500.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Private Grammatik Offline B-1 Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Grammatik B-1 <br> Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.675.000</div>
+                    </div>
+                    <p class="program-description">
+                        Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
+                        kalimat, pola kata kerja, hingga penggunaan kasus dengan cara yang mudah dan praktis.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Materi sama dengan kelas reguler</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1 on 1 dengan tutor</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Grammatik Offline B-1 Dalam Bahasa Inggris', 'Rp1.675.000')">
                         Daftar Sekarang
                     </button>
                 </div>
@@ -1637,6 +2023,50 @@
                         Daftar Sekarang
                     </button>
                 </div>
+                <!-- Private Persiapan Ujian Goethe A-1 Offline Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Persiapan Ujian Goethe A-1 <br> Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.575.000</div>
+                    </div>
+                    <p class="program-description">
+                        Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi
+                        Goethe-Institut
+                        dengan optimal. Peserta dapat memilih modul tertentu (Hören, Lesen, Schreiben, Sprechen)
+                        untuk
+                        difokuskan.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1 on 1 dengan tutor</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request materi</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Persiapan Ujian Goethe A-1 Offline Dalam Bahasa Inggris', 'Rp1.575.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
                 <!-- Private Persiapan Ujian Goethe A-2 Offline -->
                 <div class="program-card">
                     <div class="program-type">Private Persiapan Ujian Goethe A-2</div>
@@ -1644,8 +2074,10 @@
                         <div class="program-price">Rp1.400.000</div>
                     </div>
                     <p class="program-description">
-                        Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi Goethe-Institut
-                        dengan optimal. Peserta dapat memilih modul tertentu (Hören, Lesen, Schreiben, Sprechen) untuk
+                        Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi
+                        Goethe-Institut
+                        dengan optimal. Peserta dapat memilih modul tertentu (Hören, Lesen, Schreiben, Sprechen)
+                        untuk
                         difokuskan.
                     </p>
 
@@ -1679,15 +2111,61 @@
                         Daftar Sekarang
                     </button>
                 </div>
-                <!-- Private Persiapan Ujian Goethe B-1 Offline -->
+                <!-- Private Persiapan Ujian Goethe A-2 Offline Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Persiapan Ujian Goethe A-2 <br> Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.575.000</div>
+                    </div>
+                    <p class="program-description">
+                        Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi
+                        Goethe-Institut
+                        dengan optimal. Peserta dapat memilih modul tertentu (Hören, Lesen, Schreiben, Sprechen)
+                        untuk
+                        difokuskan.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1 on 1 dengan tutor</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request materi</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Persiapan Ujian Goethe A-2 Offline Dalam Bahasa Inggris', 'Rp1.575.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Private Persiapan Ujian Goethe B-1 Offline-->
                 <div class="program-card">
                     <div class="program-type">Private Persiapan Ujian Goethe B-1</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp1.400.000</div>
                     </div>
                     <p class="program-description">
-                        Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi Goethe-Institut
-                        dengan optimal. Peserta dapat memilih modul tertentu (Hören, Lesen, Schreiben, Sprechen) untuk
+                        Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi
+                        Goethe-Institut
+                        dengan optimal. Peserta dapat memilih modul tertentu (Hören, Lesen, Schreiben, Sprechen)
+                        untuk
                         difokuskan.
                     </p>
 
@@ -1718,6 +2196,94 @@
                     </div>
                     <button class="btn btn-program mt-auto"
                         onclick="pilihPaket('Private Persiapan Ujian Goethe A-2 Offline', 'Rp1.400.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Private Persiapan Ujian Goethe B-1 Offline Dalam Bahasa Inggris -->
+                <div class="program-card">
+                    <div class="program-type">Private Persiapan Ujian Goethe B-1 <br> Dalam Bahasa Inggris</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.675.000</div>
+                    </div>
+                    <p class="program-description">
+                        Dirancang untuk membantu kamu mempersiapkan diri menghadapi ujian sertifikasi
+                        Goethe-Institut
+                        dengan optimal. Peserta dapat memilih modul tertentu (Hören, Lesen, Schreiben, Sprechen)
+                        untuk
+                        difokuskan.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1 on 1 dengan tutor</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 90 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request materi</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Persiapan Ujian Goethe A-2 Offline Dalam Bahasa Inggris', 'Rp1.675.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Sprachkurs mit Muttersprachler -->
+                <div class="program-card">
+                    <div class="program-type">Sprachkurs mit Muttersprachler </div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.676.000</div>
+                    </div>
+                    <p class="program-description">
+                        Belajar langsung bersama pengajar native speaker yang akan membantu kamu berbicara lebih
+                        natural, memahami budaya Jerman, dan memperbaiki pelafalan dengan cara yang autentik.
+                    </p>
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>4x Pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1 on 1 dengan tutor</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Durasi 60 menit/pertemuan</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free akses record kelas 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Free Konsultasi </span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request jadwal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Bisa request materi</span>
+                    </div>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Sprachkurs mit Muttersprachler', 'Rp1.676.000')">
                         Daftar Sekarang
                     </button>
                 </div>
@@ -1837,10 +2403,10 @@
                 </div>
                 <!-- Bundling Reguler Intensif A1-B1 Online -->
                 <div class="program-card">
-                    <div class="program-type">Bundling Bundling Reguler Intensif A1-B1 Online</div>
+                    <div class="program-type">Bundling Reguler Intensif A1-B1 Online</div>
                     <div class="program-price-container">
                         <span class="program-price-old">Rp9.394.000</span>
-                        <div class="program-price">Rp8.394.000</div>
+                        <div class="program-price">Rp8.399.000</div>
                     </div>
                     <p class="program-description">
                         Belajar lebih cepat, terarah, dan hemat hingga hampir Rp1.000.000 dibandingkan mendaftar per
@@ -1902,8 +2468,10 @@
                     </div>
                     <div class="program-duration">Akses 2 Bulan</div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -1962,8 +2530,10 @@
                     </div>
                     <div class="program-duration">Akses 6 Bulan</div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2022,8 +2592,10 @@
                     </div>
                     <div class="program-duration">Akses 12 Bulan</div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2081,8 +2653,10 @@
                         <div class="program-price">Rp199.000</div>
                     </div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2140,8 +2714,10 @@
                         <div class="program-price">Rp299.000</div>
                     </div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2199,8 +2775,10 @@
                         <div class="program-price">Rp399.000</div>
                     </div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2258,8 +2836,10 @@
                         <div class="program-price">Rp599.000</div>
                     </div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2317,8 +2897,10 @@
                         <div class="program-price">Rp699.000</div>
                     </div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2381,8 +2963,10 @@
                     </div>
                     <div class="program-duration">Akses 2 Bulan</div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2441,8 +3025,10 @@
                     </div>
                     <div class="program-duration">Akses 6 Bulan</div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2501,8 +3087,10 @@
                     </div>
                     <div class="program-duration">Akses 12 Bulan</div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2560,8 +3148,10 @@
                         <div class="program-price">Rp199.000</div>
                     </div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2619,8 +3209,10 @@
                         <div class="program-price">Rp299.000</div>
                     </div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2678,8 +3270,10 @@
                         <div class="program-price">Rp399.000</div>
                     </div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2737,8 +3331,10 @@
                         <div class="program-price">Rp599.000</div>
                     </div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2796,8 +3392,10 @@
                         <div class="program-price">Rp699.000</div>
                     </div>
                     <p class="program-description">
-                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun. Materinya
-                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal untuk
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
                         kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
                     </p>
 
@@ -2861,7 +3459,8 @@
                     <p class="program-description">
                         Buku ajar resmi yang digunakan dalam pembelajaran Bahasa Jerman di berbagai institusi
                         internasional. Menyajikan materi komunikasi sehari-hari, tata bahasa, dan kosakata secara
-                        bertahap sesuai level (A1–B1). Dilengkapi dengan latihan interaktif, audio, dan video pendukung,
+                        bertahap sesuai level (A1–B1). Dilengkapi dengan latihan interaktif, audio, dan video
+                        pendukung,
                         Netzwerk Neu membantu peserta belajar Bahasa Jerman secara kontekstual dan menyenangkan.
                     </p>
 
@@ -2873,7 +3472,8 @@
                     </div>
                     <div class="benefit-item">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span><strong>Übungsbuch (Buku Latihan):</strong> dilengkapi dengan berbagai latihan tambahan
+                        <span><strong>Übungsbuch (Buku Latihan):</strong> dilengkapi dengan berbagai latihan
+                            tambahan
                             untuk memperdalam pemahaman, termasuk listening, reading, writing, dan speaking.</span>
                     </div>
 
@@ -2980,45 +3580,116 @@
                         Temukan jawaban untuk pertanyaan yang sering diajukan tentang program kursus bahasa Jerman kami
                     </p>
                     <div class="faq-list mt-4">
-                        <div class="faq-item">
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
                             <button class="faq-header" onclick="toggleFaq(this)">
-                                <span>Gimana cara mulai kursus di DlmF?</span>
-                                <i class="bi bi-chevron-down faq-icon"></i>
+                                <span itemprop="name">Apakah kelas tersedia online atau offline?</span>
+                                <i class="bi bi-chevron-down faq-icon" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-content">
-                                <p>Untuk memulai kursus, Kamu hanya perlu mendaftar melalui website kami, memilih
-                                    program yang sesuai dengan level Kamu, dan melakukan pembayaran. Setelah itu, Kamu
-                                    langsung bisa mengakses materi pembelajaran.</p>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Ya, kami menyediakan kelas online maupun offline. anda dapat memilih
+                                    level sesuai kebutuhan: A1, A2, atau B1.</p>
                             </div>
                         </div>
-                        <div class="faq-item">
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
                             <button class="faq-header" onclick="toggleFaq(this)">
-                                <span>Lokasi DlmF itu ada dimana aja MinFar?</span>
-                                <i class="bi bi-chevron-down faq-icon"></i>
+                                <span itemprop="name">Di mana lokasi offline DlmF?</span>
+                                <i class="bi bi-chevron-down faq-icon" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-content">
-                                <p>DlmF memiliki cabang di Jakarta, Bandung, Surabaya, dan Yogyakarta. Kami juga
-                                    menyediakan kelas online untuk siswa di seluruh Indonesia.</p>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Lokasi kelas offline kami berada di Jalan Terusan Sari Asih No.76,
+                                    Sarijadi, Kota Bandung. Indonesia</p>
                             </div>
                         </div>
-                        <div class="faq-item">
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
                             <button class="faq-header" onclick="toggleFaq(this)">
-                                <span>Berapa di DlmF online atau offline ya, MinFar?</span>
-                                <i class="bi bi-chevron-down faq-icon"></i>
+                                <span itemprop="name">Program apa saja yang tersedia di Deutsch lernen mit Fara?</span>
+                                <i class="bi bi-chevron-down faq-icon" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-content">
-                                <p>Kami menyediakan kedua opsi. Kelas online mulai dari Rp 1.250.000 dan kelas offline
-                                    mulai dari Rp 1.750.000 per level, tergantung program yang dipilih.</p>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p>Kami menawarkan berbagai program belajar bahasa Jerman, antara lain: </p>
+                                    <ul>
+                                        <li>Kelas reguler dan private (dari level A1 – B1)</li>
+                                        <li>Kelas Sprechen mit Muttersprachler (speaking with native speaker)</li>
+                                        <li>Kelas private grammatik & persiapan ujian A1 – B1 (dengan pengantar bahasa
+                                            Indonesia atau Inggris)</li>
+                                        <li>Kelas private anak (dengan pengantar bahasa Indonesia atau Inggris)</li>
+                                        <li>Program pendampingan persiapan Au Pair</li>
+                                        <li>Program kelas asinkronus (melalui website FlexiLearn)</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="faq-item">
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
                             <button class="faq-header" onclick="toggleFaq(this)">
-                                <span>Butuh request tutor negara aja, MinFar?</span>
-                                <i class="bi bi-chevron-down faq-icon"></i>
+                                <span itemprop="name">Apa perbedaan kelas reguler dan private?</span>
+                                <i class="bi bi-chevron-down faq-icon" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-content">
-                                <p>Ya, kami bisa mengatur request khusus untuk tutor dari negara tertentu. Silakan
-                                    hubungi customer service kami untuk pengaturan lebih lanjut.</p>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <ul>
+                                        <li>Private: One-on-one dengan pengajar</li>
+                                        <li>Reguler: 3 – 8 orang per kelas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)">
+                                <span itemprop="name">Apa itu Program Au Pair?</span>
+                                <i class="bi bi-chevron-down faq-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Au Pair adalah program tinggal di Jerman bersama keluarga angkat.
+                                    Selain membantu mereka menjaga anak, anda juga bisa belajar bahasa dan budaya Jerman
+                                    secara langsung, plus mendapatkan uang saku dan pengalaman internasional yang
+                                    bernilai.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)">
+                                <span itemprop="name">Apakah ada sertifikat nya?</span>
+                                <i class="bi bi-chevron-down faq-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Ya, kami memberikan sertifikat keikutsertaan untuk setiap peserta.
+                                    Jika ingin mendapatkan sertifikat resmi, anda dapat mengikuti ujian Goethe secara
+                                    mandiri.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)">
+                                <span itemprop="name">Apakah ada garansi?</span>
+                                <i class="bi bi-chevron-down faq-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Kami memberikan garansi free class bagi siswa yang sudah mengikuti
+                                    program di Deutsch lernen mit Fara tetapi belum lulus ujian (S&K berlaku).</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)">
+                                <span itemprop="name">Aplikasi apa yang digunakan dalam proses belajar online?</span>
+                                <i class="bi bi-chevron-down faq-icon" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Kami menggunakan Microsoft Teams sebagai platform belajar. Semua
+                                    kelas dan grup diskusi sudah terintegrasi di dalam aplikasi tersebut.</p>
                             </div>
                         </div>
                     </div>

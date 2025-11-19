@@ -676,6 +676,26 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Program 2 -->
+            <div class="row align-items-center program-card">
+                <div class="col-lg-6 order-1">
+                    <div class="program-image-wrapper">
+                        <img src="{{ asset('asset/img/banner/23(1).png') }}" alt="Deutsch Kit" class="program-image">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-2">
+                    <div class="program-text-content">
+                        <div class="program-badge">E-Book</div>
+                        <h2 class="program-title">Deutsch Kit</h2>
+                        <p class="program-description">
+                            DeutschKit adalah eBook tematik yang dirancang untuk memperkaya pengetahuan kamu tentang
+                            Wortschatz (kosakata) dan idiom dalam bahasa Jerman.
+                        </p>
+                        <a href="{{ url('/product/deutschkit') }}" class="btn-program">Lihat Detail Product</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -691,34 +711,116 @@
                     <h2 class="section-title">Freunde Bertanya, MinFara Menjawab</h2>
                     <p class="section-subtitle">Temukan jawaban untuk pertanyaan yang sering diajukan</p>
                     <div class="faq-list">
-                        <div class="faq-item">
-                            <button class="faq-header" onclick="toggleFaq(this)">
-                                Gimana cara mulai kursus di DlmF?
-                                <i class="bi bi-chevron-down"></i>
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)" itemprop="name">
+                                Apakah kelas tersedia online atau offline?
+                                <i class="bi bi-chevron-down ms-auto" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-content">
-                                <p>Untuk memulai kursus, Anda hanya perlu mendaftar melalui website kami, memilih
-                                    program yang sesuai dengan level Anda, dan melakukan pembayaran.</p>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Ya, kami menyediakan kelas online maupun offline. anda dapat memilih
+                                    level sesuai kebutuhan: A1, A2, atau B1.</p>
                             </div>
                         </div>
-                        <div class="faq-item">
-                            <button class="faq-header" onclick="toggleFaq(this)">
-                                Lokasi DlmF itu ada dimana aja MinFar?
-                                <i class="bi bi-chevron-down"></i>
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)" itemprop="name">
+                                Di mana lokasi offline DlmF?
+                                <i class="bi bi-chevron-down ms-auto" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-content">
-                                <p>DlmF memiliki cabang di Jakarta, Bandung, Surabaya, dan Yogyakarta. Kami juga
-                                    menyediakan kelas online untuk siswa di seluruh Indonesia.</p>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Lokasi kelas offline kami berada di Jalan Terusan Sari Asih No.76,
+                                    Sarijadi, Kota Bandung. Indonesia</p>
                             </div>
                         </div>
-                        <div class="faq-item">
-                            <button class="faq-header" onclick="toggleFaq(this)">
-                                Berapa biaya kursus di DlmF?
-                                <i class="bi bi-chevron-down"></i>
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)" itemprop="name">
+                                Program apa saja yang tersedia di Deutsch lernen mit Fara?
+                                <i class="bi bi-chevron-down ms-auto" aria-hidden="true"></i>
                             </button>
-                            <div class="faq-content">
-                                <p>Kelas online mulai dari Rp 750.000 dan kelas offline mulai dari Rp 1.250.000 per
-                                    level, tergantung program yang dipilih.</p>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p>Kami menawarkan berbagai program belajar bahasa Jerman, antara lain: </p>
+                                    <ul>
+                                        <li>Kelas reguler dan private (dari level A1 – B1)</li>
+                                        <li>Kelas Sprechen mit Muttersprachler (speaking with native speaker)</li>
+                                        <li>Kelas private grammatik & persiapan ujian A1 – B1 (dengan pengantar bahasa
+                                            Indonesia atau Inggris)</li>
+                                        <li>Kelas private anak (dengan pengantar bahasa Indonesia atau Inggris)</li>
+                                        <li>Program pendampingan persiapan Au Pair</li>
+                                        <li>Program kelas asinkronus (melalui website FlexiLearn)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)" itemprop="name">
+                                Apa perbedaan kelas reguler dan private?
+                                <i class="bi bi-chevron-down ms-auto" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <ul>
+                                        <li>Private: One-on-one dengan pengajar</li>
+                                        <li>Reguler: 3 – 8 orang per kelas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)" itemprop="name">
+                                Apa itu Program Au Pair?
+                                <i class="bi bi-chevron-down ms-auto" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Au Pair adalah program tinggal di Jerman bersama keluarga angkat.
+                                    Selain membantu mereka menjaga anak, anda juga bisa belajar bahasa dan budaya Jerman
+                                    secara langsung, plus mendapatkan uang saku dan pengalaman internasional yang
+                                    bernilai.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)" itemprop="name">
+                                Apakah ada sertifikat nya?
+                                <i class="bi bi-chevron-down ms-auto" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Ya, kami memberikan sertifikat keikutsertaan untuk setiap peserta.
+                                    Jika ingin mendapatkan sertifikat resmi, anda dapat mengikuti ujian Goethe secara
+                                    mandiri.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)" itemprop="name">
+                                Apakah ada garansi?
+                                <i class="bi bi-chevron-down ms-auto" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Kami memberikan garansi free class bagi siswa yang sudah mengikuti
+                                    program di Deutsch lernen mit Fara tetapi belum lulus ujian (S&K berlaku).</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" itemscope itemtype="https://schema.org/Question">
+                            <button class="faq-header" onclick="toggleFaq(this)" itemprop="name">
+                                Aplikasi apa yang digunakan dalam proses belajar online?
+                                <i class="bi bi-chevron-down ms-auto" aria-hidden="true"></i>
+                            </button>
+                            <div class="faq-content" itemscope itemprop="acceptedAnswer"
+                                itemtype="https://schema.org/Answer">
+                                <p itemprop="text">Kami menggunakan Microsoft Teams sebagai platform belajar. Semua
+                                    kelas dan grup diskusi sudah terintegrasi di dalam aplikasi tersebut.</p>
                             </div>
                         </div>
                     </div>

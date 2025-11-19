@@ -336,7 +336,7 @@
                 experience: '1 Tahun Mengajar'
             },
             {
-                id: 2, name: 'Frau Assyifa',
+                id: 2, name: 'Frau Fia',
                 photo: '{{ asset('asset/img/teachers/Frau_Fia.png') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
@@ -344,7 +344,7 @@
                 experience: '1 Tahun Mengajar'
             },
             {
-                id: 3, name: 'Frau Azizah',
+                id: 3, name: 'Frau Olin',
                 photo: '{{ asset('asset/img/teachers/Frau_Olin.png') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',

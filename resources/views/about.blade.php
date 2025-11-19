@@ -1178,8 +1178,8 @@
                     <div class="hero-content">
                         <h1 class="display-4 fw-bold mb-4">Bahasa Jerman adalah Investasi Masa Depan</h1>
                         <p class="lead mb-4">
-                            Dengan bergabung di Deutsch lernen mit Fara (DlmF), Kamu tidak sekedar belajar bahasa
-                            Jerman. Tapi, Kamu juga membuka peluang baru. Dengan modul eksklusif, pengajar
+                            Dengan bergabung di Deutsch lernen mit Fara (DlmF), kamu tidak sekadar belajar bahasa
+                            Jerman. Tapi, kamu juga membuka peluang baru. Dengan modul eksklusif, pengajar
                             berpengalaman, dan metode pembelajaran yang terbukti, ribuan siswa Indonesia telah berhasil
                             mewujudkan mimpi mereka untuk belajar, bekerja, dan tinggal di Jerman.
                         </p>
@@ -1204,14 +1204,14 @@
             <div class="row">
                 <div class="col-6 col-md-4">
                     <div class="stat-item">
-                        <span class="stat-number" style="color: white;">5000+</span>
+                        <span class="stat-number" style="color: white;">300+</span>
                         <span class="stat-label">Siswa</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
                     <div class="stat-item">
-                        <span class="stat-number" style="color: white;">300</span>
-                        <span class="stat-label">Lulusan</span>
+                        <span class="stat-number" style="color: white;">5000+</span>
+                        <span class="stat-label">Alumni</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
@@ -1375,7 +1375,7 @@
                         <p class="timeline-description">DlmF mulai mengembangkan kehadirannya secara digital melalui
                             platform pembelajaran dan penyebaran konten edukatif di media sosial. Peserta dari berbagai
                             daerah di Indonesia mulai bergabung, dan kurikulum berbasis CEFR diperkenalkan untuk
-                            mendukung stKamur pembelajaran internasional.</p>
+                            mendukung standar pembelajaran internasional.</p>
                     </div>
 
                     <div class="timeline-card" data-year="2023">
@@ -1391,8 +1391,8 @@
                     <div class="timeline-card" data-year="2025">
                         <div class="timeline-year">2025</div>
                         <h5 class="timeline-title">Kantor Baru dan Langkah Menuju Akreditasi</h5>
-                        <p class="timeline-description">DlmF resmi membuka kantor fisik pertamanya di Jalan Trengguli
-                            Sari Asih No. 76, Bandung. Tahun ini juga menKamui langkah strategis dan menuju akreditasi
+                        <p class="timeline-description">DlmF resmi membuka kantor fisik pertamanya di Jalan terusan
+                            Sari Asih No. 76, Bandung. Tahun ini juga menjadi langkah strategis dan menuju akreditasi
                             sebagai lembaga pendidikan non-formal, sekaligus pengembangan platform pembelajaran digital
                             mandiri untuk memperkuat daya saing nasional dan internasional.</p>
                     </div>
@@ -1452,7 +1452,7 @@
         <div class="container">
             <h2 class="section-title" style="color:#334155">Belajar Bersama Tutor Terpilih</h2>
             <p class="section-subtitle">Setiap tutor di DlmF dipilih melalui proses seleksi ketat, terdiri dari native
-                speaker dan pengajar bersertifikasi yang berpengalaman dalam membimbing siswa menuju keberhasilan di
+                speaker dan pengajar bersertifikasi yang berpengalaman <br> dalam membimbing siswa menuju keberhasilan di
                 Jerman.</p>
 
             <div class="teachers-grid">
@@ -1662,8 +1662,8 @@
                         let targetNumber = parseInt(targetText.replace(/[^0-9]/g, ''));
 
                         // Adjust target numbers based on labels
-                        if (labelElement.textContent === 'Siswa') targetNumber = 5000;
-                        else if (labelElement.textContent === 'Lulusan') targetNumber = 300;
+                        if (labelElement.textContent === 'Siswa') targetNumber = 300;
+                        else if (labelElement.textContent === 'Lulusan') targetNumber = 5000;
                         else if (labelElement.textContent === 'Kepuasan') targetNumber = 99;
 
                         setTimeout(() => {

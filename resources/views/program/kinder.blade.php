@@ -830,7 +830,7 @@
     <section class="pricing-section">
         <div class="container">
             <h3 class="pricing-title">Biaya Investasi</h3>
-            <p class="pricing-subtitle">Pilih format kelas yang sesuai dengan kebutuhan anak Anda</p>
+            <p class="pricing-subtitle">Pilih format kelas yang sesuai dengan kebutuhan anak anda</p>
             <div class="pricing-grid">
                 <!-- Online Class -->
                 <div class="pricing-card">
@@ -880,7 +880,7 @@
         <div class="container">
             <div class="text-center">
                 <span class="program-badge">Apa yang Didapat?</span>
-                <h2 class="program-title">Manfaat untuk Anak Anda</h2>
+                <h2 class="program-title">Manfaat untuk Anak anda</h2>
                 <p class="pricing-subtitle">Keuntungan belajar bahasa Jerman sejak dini dengan metode yang tepat</p>
             </div>
 
@@ -932,8 +932,8 @@
 
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">Siap Daftarkan Anak Anda?</h2>
-            <p class="mb-4">Bekali anak Anda dengan kemampuan bahasa Jerman sejak dini! Investasi cerdas untuk masa
+            <h2 class="cta-title">Siap Daftarkan Anak anda?</h2>
+            <p class="mb-4">Bekali anak anda dengan kemampuan bahasa Jerman sejak dini! Investasi cerdas untuk masa
                 depan di dunia yang semakin global.</p>
             <a href="https://api.whatsapp.com/send/?phone=6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftarkan+anak+saya+di+Program+Private+Kinder+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+lebih+lanjut.&type=phone_number&app_absent=0"
                 class="btn-cta"><i class="bi bi-whatsapp me-2"></i>WhatsApp MinFara</a>

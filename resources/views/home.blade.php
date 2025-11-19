@@ -1498,7 +1498,7 @@
                             style="color: var(--accent-color);">Jerman</span></h1>
                     <p class="hero-subtitle">Deutsch Lernen mit Fara bukan sekadar kursus bahasa. Kami adalah investasi
                         untuk masa depanmu. Dengan standar terbaik, tutor berpengalaman, dan pendekatan personal dari
-                        level A1 hingga B2, kami memastikan anda siap studi/berkarir di Jerman.</p>
+                        level A1 hingga B2, kami memastikan anda siap studi & berkarir di Jerman.</p>
                     <div class="hero-buttons">
                         <a href="{{ url('/harga') }}" class="btn btn-hero-primary"
                             aria-label="Daftar kursus bahasa Jerman sekarang">Mulai Belajar</a>
@@ -1530,8 +1530,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-6">
-                    <div class="stat-item" data-target="5000">
-                        <span class="stat-number" data-count="5000">0+</span>
+                    <div class="stat-item" data-target="300">
+                        <span class="stat-number" data-count="300">0+</span>
                         <span class="stat-label">Siswa Aktif</span>
                     </div>
                 </div>
@@ -1562,8 +1562,8 @@
         <div class="container">
             <!-- H2 - Keyword Turunan -->
             <h2 class="section-title">4 Pilar Metode Belajar Bahasa Jerman di DlmF</h2>
-            <p class="section-subtitle">Belajar di sini tidak terburu-buru. Kapan anda stress, bisa istirahat dulu
-                sambil cari kenapa anda benci Bahasa Jerman!</p>
+            <p class="section-subtitle">Belajar Bahasa Jerman menyenangkan kalau dilakukan dengan cara yang tepat. Di
+                sini, kamu belajar tanpa tekanan dengan dukungan tutor yang siap bantu kamu berkembang setiap hari!</p>
             <div class="row mt-5">
                 <div class="col-lg-6 mb-4">
                     <article class="method-card animate-on-scroll">
@@ -1724,8 +1724,9 @@
                             <div class="feature-item-icon" aria-hidden="true">
                                 <i class="bi bi-people-fill"></i>
                             </div>
-                            <h3 class="feature-item-title">5.000+ Pelajar Terpercaya</h3>
-                            <p class="feature-item-description">Telah Mempercayakan Masa Depannya pada Kami</p>
+                            <h3 class="feature-item-title">Dipercaya 5.000+ Pelajar</h3>
+                            <p class="feature-item-description">Dari berbagai latar belakang untuk mencapai sertifikasi,
+                                studi, dan karier di Jerman.</p>
                         </article>
                     </div>
                 </div>
@@ -1823,10 +1824,10 @@
                     <article class="course-card">
                         <img src="{{ asset('asset/img/banner/17.png') }}"
                             alt="Program persiapan ujian Goethe dan TestDaF sertifikasi bahasa Jerman"
-                            class="course-image" loading="lazy" title="Kelas Persiapan Ujian Goethe & TestDaF">
+                            class="course-image" loading="lazy" title="Kelas Persiapan Ujian Goethe">
                         <div class="course-content">
                             <span class="course-badge">Preparation</span>
-                            <h3 class="course-title">Kelas Persiapan Ujian Goethe & TestDaF</h3>
+                            <h3 class="course-title">Kelas Persiapan Ujian Goethe</h3>
                             <p class="course-description">Kelas Persiapan Ujian sangat cocok bagi anda yang sedang
                                 menyiapkan ujian sertifikasi Bahasa Jerman dengan waktu dan kuantitas kelas yang dapat
                                 disesuaikan</p>
@@ -1845,7 +1846,7 @@
                             class="course-image" loading="lazy" title="Program Kelas Au Pair Jerman">
                         <div class="course-content">
                             <span class="course-badge">Au Pair</span>
-                            <h3 class="course-title">Kelas Au Pair Jerman</h3>
+                            <h3 class="course-title">Program Pendampingan Persiapan Au Pair</h3>
                             <p class="course-description">Au Pair secara singkat adalah program pertukaran budaya antar
                                 negara. Au Pair memberikan kesempatan bagi anak muda yang berusia 18 hingga 26 tahun.
                             </p>
