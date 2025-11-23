@@ -1453,7 +1453,7 @@
                 </div>
                 <!-- Private Kinder dengan Bahasa Indonesia Online -->
                 <div class="program-card">
-                    <div class="program-type">Private Kinder dengan Bahasa Indonesia</div>
+                    <div class="program-type">Private Kinder dengan <br> Dalam Bahasa Indonesia</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp895.000</div>
                     </div>
@@ -1494,7 +1494,7 @@
                 </div>
                 <!-- Private Kinder dengan Bahasa Inggris Online -->
                 <div class="program-card">
-                    <div class="program-type">Private Kinder dengan Bahasa Inggris</div>
+                    <div class="program-type">Private Kinder <br> Dalam Bahasa Inggris</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp1.070.000</div>
                     </div>
