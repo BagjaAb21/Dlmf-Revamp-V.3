@@ -8,6 +8,8 @@
     <meta name="description" content="@yield('description', 'Belajar bahasa Jerman dengan cara yang menyenangkan dan efektif bersama Deutsch Lernen mit Fara.')">
     <meta name="keywords" content="@yield('keywords', 'Bahasa Jerman, Kursus Bahasa Jerman, Deutsch Lernen mit Fara')">
 
+    <!-- Bootstrap CSS CDN - taruh SEBELUM vite -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     <!-- Google Fonts -->
@@ -33,6 +35,8 @@
             top: 0;
             width: 100%;
             z-index: 1000;
+            height: auto;
+            min-height: 70px;
         }
 
         .navbar-brand {
@@ -52,19 +56,19 @@
             color: var(--primary-color) !important;
         }
 
-        .btn-light {
-            background-color: white;
-            color: var(--primary-color);
-            border: 2px solid white;
+        .btn-login {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
             font-weight: 600;
             transition: all 0.3s ease;
         }
 
-        .btn-light:hover {
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            border-color: var(--accent-color);
-            transform: translateY(-2px);
+        .btn-login:hover {
+            background: var(--secondary-color);
+            transform: translateY(-1px);
         }
 
         /* Footer */
@@ -188,37 +192,36 @@
 </head>
 <body>
 <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+            <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}"
+                aria-label="Deutsch Lernen mit Fara - Kursus Bahasa Jerman">
                 <img src="{{ asset('asset/img/logo/logo-Transparant2-v2.png') }}" style="width: 200px; height: auto;"
-                    alt="Logo-Mitfara-Panjang">
+                    alt="Logo Deutsch Lernen mit Fara - Kursus Bahasa Jerman Premium"
+                    title="DlmF - Kursus Bahasa Jerman Terpercaya">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">Beranda</a>
+                        <a class="nav-link" href="{{ url('/') }}" aria-current="page">Beranda</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Layanan</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">Layanan</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/program') }}">Program</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
-                            {{-- <li><a class="dropdown-item" href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
+                            <li><a class="dropdown-item" href="{{ url('/product') }}">Produk</a></li>
                             <li><a class="dropdown-item" href="{{ url('/au-pair') }}">Au Pair</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/harga') }}">Harga</a></li>
                         </ul>
                     </li>
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="#">Produk Digital</a>
-                    </li> --}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('blog.index') }}">Blog</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/about') }}">Tentang Kami</a>
                     </li>

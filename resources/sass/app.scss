@@ -3,7 +3,8 @@
 // ==================================================================================
 
 // Import Bootstrap CSS (bukan SCSS) untuk menghindari konflik @use
-@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css");
+// @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css");
+@import "bootstrap/scss/bootstrap";
 
 // ==================================================================================
 //                           CUSTOM STYLES & VARIABLES
