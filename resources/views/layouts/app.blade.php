@@ -10,6 +10,10 @@
 
     <!-- Bootstrap CSS CDN - taruh SEBELUM vite -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     <!-- Google Fonts -->
@@ -252,16 +256,10 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h5 class="footer-title">Quick Link</h5>
                     <ul class="footer-links">
-                        {{-- <li><a href="#">Course</a></li> --}}
                         <li><a href="{{ url('/') }}">Beranda</a></li>
                         <li><a href="{{ url('/program') }}">Program</a></li>
-                        {{-- <li><a href="{{ url('/blog') }}">Blog</a></li> --}}
-                        {{-- <li><a href="{{ url('/aus-bildung') }}">Aus Bildung</a></li> --}}
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/about') }}">Tentang Kami</a></li>
-                        {{-- <li><a href="#">Career</a></li>
-                        <li><a href="#">Legalitas</a></li> --}}
-
                     </ul>
                 </div>
 
@@ -289,14 +287,10 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5 class="footer-title">Follow Us</h5>
                     <div class="d-flex gap-3 social-links mb-1">
-                        <a href="#" class="text-white"><i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="#" class="text-white"><i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="#" class="text-white"><i class="bi bi-youtube"></i>
-                        </a>
-                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i>
-                        </a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
                     </div>
                     <p class="footer-description">
                         Ikuti media sosial kami untuk tips belajar bahasa Jerman dan update program terbaru.
@@ -319,8 +313,8 @@
         </div>
     </footer>
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap JS Bundle CDN (includes Popper) - WAJIB untuk navbar toggle -->
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script> --}}
 
     @stack('scripts')
 

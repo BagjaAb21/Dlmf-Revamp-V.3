@@ -24,7 +24,7 @@
         background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95), rgba(124, 58, 237, 0.95)),
                     url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80') center/cover;
         color: white;
-        padding: 120px 0 80px;
+        padding: 180px 0 80px;
         text-align: center;
     }
 
@@ -567,7 +567,7 @@
 
     @media (max-width: 768px) {
         .article-header {
-            padding: 100px 0 60px;
+            padding: 160px 0 60px;
         }
 
         .article-title {
@@ -588,6 +588,10 @@
     }
 
     @media (max-width: 576px) {
+        .article-header {
+        padding: 150px 0 50px; /* Tambah untuk mobile kecil */
+    }
+
         .article-title {
             font-size: 1.5rem;
         }

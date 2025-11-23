@@ -24,7 +24,7 @@
         background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95), rgba(124, 58, 237, 0.95)),
                     url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80') center/cover;
         color: white;
-        padding: 140px 0 100px;
+        padding: 160px 0 100px;
         position: relative;
         text-align: center;
     }
@@ -419,7 +419,7 @@
 
     @media (max-width: 768px) {
         .blog-hero {
-            padding: 100px 0 80px;
+            padding: 140px 0 80px;
         }
 
         .blog-grid {
@@ -436,8 +436,12 @@
     }
 
     @media (max-width: 576px) {
+        .blog-hero {
+            padding: 130px 0 60px;
+        }
         .hero-content h1 {
             font-size: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .blog-card-content {
