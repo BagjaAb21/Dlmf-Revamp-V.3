@@ -1020,7 +1020,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+                    <img src="{{ asset('asset/img/FaQ/FAQ.PNG') }}"
                         alt="Ilustrasi FAQ pertanyaan seputar program kursus bahasa Jerman di DlmF"
                         class="img-fluid rounded-4 shadow-lg" loading="lazy" width="600" height="400">
                 </div>

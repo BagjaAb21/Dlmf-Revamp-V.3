@@ -69,7 +69,7 @@
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(124, 58, 237, 0.8)), url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(124, 58, 237, 0.8)), url('{{ asset('asset/img/AuPair/3ed4771b-3151-4dc4-a91e-afe3f8dcf317.jpeg') }}');
             background-size: cover;
             background-position: center;
             color: white;
@@ -170,15 +170,15 @@
         .program-img.large {
             grid-column: 1 / 3;
             grid-row: 1;
-            background-image: url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-image: url('{{ asset('asset/img/AuPair/3ed4771b-3151-4dc4-a91e-afe3f8dcf317.jpeg') }}');
         }
 
         .program-img.small1 {
-            background-image: url('https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');
+            background-image: url('{{ asset('asset/img/AuPair/IMG_9189.JPG') }}');
         }
 
         .program-img.small2 {
-            background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');
+            background-image: url('{{ asset('asset/img/AuPair/IMG_9211.JPG') }}');
         }
 
         /* Assistance Program Section */
@@ -231,15 +231,15 @@
         .assistance-img.large {
             grid-column: 1 / 3;
             grid-row: 1;
-            background-image: url('https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-image: url('{{ asset('asset/img/AuPair/pexels-pixabay-160994.jpg') }}');
         }
 
         .assistance-img.small1 {
-            background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');
+            background-image: url('{{ asset('asset/img/AuPair/pexels-emma-bauso-1183828-2253879.jpg') }}');
         }
 
         .assistance-img.small2 {
-            background-image: url('https://images.unsplash.com/photo-1506452305024-9d3f02d1c9b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');
+            background-image: url('{{ asset('asset/img/AuPair/pexels-pixabay-86456.jpg') }}');
         }
 
         /* Pricing Section */
@@ -829,26 +829,28 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
                         <img src="{{ asset('asset/img/logo/logo-Transparant3.png') }}" style="width: 180px;"
-                            alt="Logo-Mitfara-Bulat">
+                            alt="Logo Deutsch Lernen mit Fara - Kursus Bahasa Jerman Terpercaya" loading="lazy"
+                            title="DlmF - Deutsch Lernen mit Fara">
                     </div>
-                    <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
+                    <h2 class="footer-brand"><strong>Deutsch Lernen Mit Fara</strong></h2>
                     <p class="footer-description">
                         Platform pembelajaran bahasa Jerman terpercaya dengan metode pembelajaran yang efektif dan
-                        menyenangkan.
+                        menyenangkan. Tersedia kursus online dan offline dari level A1 hingga B2 dengan tutor
+                        bersertifikasi.
                     </p>
                 </div>
 
                 <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="footer-title">Quick Link</h5>
+                    <h3 class="footer-title">Quick Link</h3>
                     <ul class="footer-links">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
-                        <li><a href="{{ url('/program') }}">Program</a></li>
+                        <li><a href="{{ url('/program') }}">Program Kursus</a></li>
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/blog') }}">Blog</a></li>
                         <li><a href="{{ url('/about') }}">Tentang Kami</a></li>
@@ -856,37 +858,51 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="footer-title">Get In Touch</h5>
-                    <div class="contact-info">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="bi bi-telephone-fill"></i>
-                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
-                                href="https://wa.me/6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0">+62
-                                896 4789 7616</a>
-                        </span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="bi bi-envelope-fill"></i>
-                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
-                                href="mailto:info@mitfara.com">info@mitfara.com</a>
-                        </span>
-                    </div>
+                    <h3 class="footer-title">Hubungi Kami</h3>
+                    <address class="footer-contact">
+                        <div class="contact-info">
+                            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                            <span>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                            <span>
+                                <a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                    href="https://wa.me/6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0"
+                                    aria-label="Telepon ke nomor DlmF +62 896 4789 7616">
+                                    +62 896 4789 7616
+                                </a>
+                            </span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                            <span>
+                                <a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                    href="mailto:info@mitfara.com" aria-label="Email ke info@mitfara.com">
+                                    info@mitfara.com
+                                </a>
+                            </span>
+                        </div>
+                    </address>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="footer-title">Follow Us</h5>
-                    <div class="d-flex gap-3 social-links mb-1">
-                        <a href="#" class="text-white"><i class="bi bi-facebook"></i>
+                    <h3 class="footer-title">Ikuti Kami</h3>
+                    <div class="d-flex gap-3 social-links mb-1" role="navigation" aria-label="Social media links">
+                        <a href="https://www.tiktok.com/@deutschlernen.mit.fara?_t=zs-90kuixyjueq&_r=1" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="TikTok Deutsch Lernen mit Fara">
+                            <i class="bi bi-tiktok" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank"
-                            class="text-white"><i class="bi bi-instagram"></i>
+                        <a href="https://www.instagram.com/deutschlernen.mit.fara?igsh=bWxhaHA3em5wN200" target="_blank"
+                            rel="noopener noreferrer" class="text-white" aria-label="Instagram Deutsch Lernen mit Fara">
+                            <i class="bi bi-instagram" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="text-white"><i class="bi bi-youtube"></i>
+                        <a href="https://youtube.com/@deutschlernenmitfara?si=otDhT7t6g76yT57E" target="_blank"
+                            rel="noopener noreferrer" class="text-white" aria-label="YouTube Deutsch Lernen mit Fara">
+                            <i class="bi bi-youtube" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i>
+                        <a href="https://wa.me/62859106869302" target="_blank" rel="noopener noreferrer"
+                            class="text-white" aria-label="WhatsApp Deutsch Lernen mit Fara">
+                            <i class="bi bi-whatsapp" aria-hidden="true"></i>
                         </a>
                     </div>
                     <p class="footer-description">

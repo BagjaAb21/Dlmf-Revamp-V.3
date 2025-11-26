@@ -1492,7 +1492,7 @@
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 hero-content">
+                <div class="col-lg-5 hero-content" style="margin-right: 6rem;">
                     <!-- H1 - Keyword Utama -->
                     <h1 class="hero-title">Gerbang Eksklusif Menuju Masa Depan di <span
                             style="color: var(--accent-color);">Jerman</span></h1>
@@ -1510,7 +1510,7 @@
                 </div>
                 <div class="col-lg-6 hero-images">
                     <div class="position-relative">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        <img src="{{ asset('asset/img/hero-home/IMG_9272.JPG') }}"
                             alt="Kursus bahasa Jerman online interaktif dengan siswa belajar bersama tutor profesional di DlmF"
                             class="img-fluid hero-image-main w-100" loading="eager"
                             title="Belajar Bahasa Jerman Online - Deutsch Lernen mit Fara">
@@ -1536,8 +1536,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
-                    <div class="stat-item" data-target="20">
-                        <span class="stat-number" data-count="20">0+</span>
+                    <div class="stat-item" data-target="16">
+                        <span class="stat-number" data-count="16">0</span>
                         <span class="stat-label">Tutor Bersertifikasi</span>
                     </div>
                 </div>
@@ -1628,7 +1628,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="features-image-container">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        <img src="{{ asset('asset/img/features-home/IMG_9212.JPG') }}"
                             alt="Kelas online bahasa Jerman interaktif dengan metode pembelajaran modern dan tutor berpengalaman"
                             class="features-main-image" loading="lazy"
                             title="Kursus Bahasa Jerman Online - Metode Interaktif">
@@ -2124,7 +2124,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    <img src="{{ asset('asset/img/FaQ/FAQ.PNG') }}"
                         alt="Ilustrasi FAQ pertanyaan umum tentang kursus bahasa Jerman DlmF" class="img-fluid rounded"
                         loading="lazy" title="FAQ - Pertanyaan Umum Kursus Bahasa Jerman">
                 </div>
@@ -2327,14 +2327,15 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h3 class="footer-title">Ikuti Kami</h3>
                     <div class="d-flex gap-3 social-links mb-1" role="navigation" aria-label="Social media links">
-                        <a href="#" class="text-white" aria-label="Facebook Deutsch Lernen mit Fara">
-                            <i class="bi bi-facebook" aria-hidden="true"></i>
+                        <a href="https://www.tiktok.com/@deutschlernen.mit.fara?_t=zs-90kuixyjueq&_r=1" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="TikTok Deutsch Lernen mit Fara">
+                            <i class="bi bi-tiktok" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.instagram.com/deutschlernen.mit.fara/" target="_blank"
+                        <a href="https://www.instagram.com/deutschlernen.mit.fara?igsh=bWxhaHA3em5wN200" target="_blank"
                             rel="noopener noreferrer" class="text-white" aria-label="Instagram Deutsch Lernen mit Fara">
                             <i class="bi bi-instagram" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="text-white" aria-label="YouTube Deutsch Lernen mit Fara">
+                        <a href="https://youtube.com/@deutschlernenmitfara?si=otDhT7t6g76yT57E" target="_blank"
+                            rel="noopener noreferrer" class="text-white" aria-label="YouTube Deutsch Lernen mit Fara">
                             <i class="bi bi-youtube" aria-hidden="true"></i>
                         </a>
                         <a href="https://wa.me/62859106869302" target="_blank" rel="noopener noreferrer"
@@ -2368,7 +2369,7 @@
 
     <!-- Counter animation JS -->
     <script>
-        function animateCounter(element, target, suffix = '+') {
+        function animateCounter(element, target, suffix = ' ') {
             let current = 0;
             const increment = target / 100;
             const timer = setInterval(() => {

@@ -1128,26 +1128,28 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="footer-logo">
                         <img src="{{ asset('asset/img/logo/logo-Transparant3.png') }}" style="width: 180px;"
-                            alt="Logo-Mitfara-Bulat">
+                            alt="Logo Deutsch Lernen mit Fara - Kursus Bahasa Jerman Terpercaya" loading="lazy"
+                            title="DlmF - Deutsch Lernen mit Fara">
                     </div>
-                    <h2 class="footer-brand"><b>Deutsch Lernen Mit Fara</b></h2>
+                    <h2 class="footer-brand"><strong>Deutsch Lernen Mit Fara</strong></h2>
                     <p class="footer-description">
                         Platform pembelajaran bahasa Jerman terpercaya dengan metode pembelajaran yang efektif dan
-                        menyenangkan.
+                        menyenangkan. Tersedia kursus online dan offline dari level A1 hingga B2 dengan tutor
+                        bersertifikasi.
                     </p>
                 </div>
 
                 <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="footer-title">Quick Link</h5>
+                    <h3 class="footer-title">Quick Link</h3>
                     <ul class="footer-links">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
-                        <li><a href="{{ url('/program') }}">Program</a></li>
+                        <li><a href="{{ url('/program') }}">Program Kursus</a></li>
                         <li><a href="{{ url('/au-pair') }}">Au Pair</a></li>
                         <li><a href="{{ url('/blog') }}">Blog</a></li>
                         <li><a href="{{ url('/about') }}">Tentang Kami</a></li>
@@ -1155,37 +1157,51 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="footer-title">Get In Touch</h5>
-                    <div class="contact-info">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="bi bi-telephone-fill"></i>
-                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
-                                href="https://wa.me/6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0">+62
-                                896 4789 7616</a>
-                        </span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="bi bi-envelope-fill"></i>
-                        <span><a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
-                                href="{{ url('mailto:info@mitfara.com') }}">info@mitfara.com</a>
-                        </span>
-                    </div>
+                    <h3 class="footer-title">Hubungi Kami</h3>
+                    <address class="footer-contact">
+                        <div class="contact-info">
+                            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                            <span>Jalan Terusan Sari Asih No. 76, Sarijadi, Sukasari, Bandung, Jawa Barat</span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                            <span>
+                                <a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                    href="https://wa.me/6289647897616&text=Hallo+MinFara%2C+saya+tertarik+untuk+mendaftar+di+Deutsch+lernen+Mit+Fara.+Saya+ingin+bertanya+tentang+program+yang+ditawarkan.&type=phone_number&app_absent=0"
+                                    aria-label="Telepon ke nomor DlmF +62 896 4789 7616">
+                                    +62 896 4789 7616
+                                </a>
+                            </span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                            <span>
+                                <a class="text-decoration-none" style="color: rgba(255, 255, 255, 0.7);"
+                                    href="mailto:info@mitfara.com" aria-label="Email ke info@mitfara.com">
+                                    info@mitfara.com
+                                </a>
+                            </span>
+                        </div>
+                    </address>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="footer-title">Follow Us</h5>
-                    <div class="social-links mb-3">
-                        <a href="#" class="text-white"><i class="bi bi-facebook"></i>
+                    <h3 class="footer-title">Ikuti Kami</h3>
+                    <div class="d-flex gap-3 social-links mb-1" role="navigation" aria-label="Social media links">
+                        <a href="https://www.tiktok.com/@deutschlernen.mit.fara?_t=zs-90kuixyjueq&_r=1" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="TikTok Deutsch Lernen mit Fara">
+                            <i class="bi bi-tiktok" aria-hidden="true"></i>
                         </a>
-                        <a href="{{ url('https://www.instagram.com/deutschlernen.mit.fara/') }}" target="_blank"
-                            class="text-white"><i class="bi bi-instagram"></i>
+                        <a href="https://www.instagram.com/deutschlernen.mit.fara?igsh=bWxhaHA3em5wN200" target="_blank"
+                            rel="noopener noreferrer" class="text-white" aria-label="Instagram Deutsch Lernen mit Fara">
+                            <i class="bi bi-instagram" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="text-white"><i class="bi bi-youtube"></i>
+                        <a href="https://youtube.com/@deutschlernenmitfara?si=otDhT7t6g76yT57E" target="_blank"
+                            rel="noopener noreferrer" class="text-white" aria-label="YouTube Deutsch Lernen mit Fara">
+                            <i class="bi bi-youtube" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i>
+                        <a href="https://wa.me/62859106869302" target="_blank" rel="noopener noreferrer"
+                            class="text-white" aria-label="WhatsApp Deutsch Lernen mit Fara">
+                            <i class="bi bi-whatsapp" aria-hidden="true"></i>
                         </a>
                     </div>
                     <p class="footer-description">
@@ -1196,10 +1212,10 @@
 
             <div class="footer-bottom">
                 <div class="row">
-                    <div class="col-md-6 text-md-start text-center mb-2 mb-md-0">
+                    <div class="col-md-6 text-start">
                         <span>© 2025 Deutsch Lernen mit Fara. All Rights Reserved</span>
                     </div>
-                    <div class="col-md-6 text-md-end text-center">
+                    <div class="col-md-6 text-end">
                         <a href="#" class="me-3 text-white text-decoration-none">Terms</a>
                         <a href="#" class="me-3 text-white text-decoration-none">Privacy</a>
                         <a href="#" class="text-white text-decoration-none">Legal</a>
@@ -1208,7 +1224,6 @@
             </div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
