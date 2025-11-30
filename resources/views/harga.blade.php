@@ -768,14 +768,26 @@
                 <div class="pricing-tab" onclick="switchTab('offline')">
                     <i class="bi bi-people me-2"></i>Offline
                 </div>
-                <div class="pricing-tab" onclick="switchTab('bundling')">
-                    <i class="bi bi-gift me-2"></i>Bundling
+                <div class="pricing-tab" onclick="switchTab('bundling_reguler')">
+                    <i class="bi bi-gift me-2"></i>Bundling Reguler
                 </div>
                 <div class="pricing-tab" onclick="switchTab('flexilearn1')">
                     <i class="bi bi-globe me-2"></i>FlexiLearn A1
                 </div>
                 <div class="pricing-tab" onclick="switchTab('flexilearn2')">
                     <i class="bi bi-globe me-2"></i>FlexiLearn A2
+                </div>
+                <div class="pricing-tab" onclick="switchTab('flexilearnb1')">
+                    <i class="bi bi-globe me-2"></i>FlexiLearn B1
+                </div>
+                <div class="pricing-tab" onclick="switchTab('bundling_flex_a1-a2')">
+                    <i class="bi bi-gift me-2"></i>Bundling FlexiLearn A1-A2
+                </div>
+                <div class="pricing-tab" onclick="switchTab('bundling_flex_a2-b1')">
+                    <i class="bi bi-gift me-2"></i>Bundling FlexiLearn A2-B1
+                </div>
+                <div class="pricing-tab" onclick="switchTab('bundling_flex_a1-b1')">
+                    <i class="bi bi-gift me-2"></i>Bundling FlexiLearn A1-B1
                 </div>
                 <div class="pricing-tab" onclick="switchTab('deutschkit')">
                     <i class="bi bi-book me-2"></i>DeutschKit
@@ -831,7 +843,6 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Sertifikat</span>
                     </div>
-
                     <button class="btn btn-program mt-auto">
                         <a href="{{ route('payment.checkout', ['product' => 'intensif-online-a1']) }}"
                             class="btn btn-primary w-100">
@@ -887,12 +898,9 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Sertifikat</span>
                     </div>
-
-                    <button class="btn btn-program mt-auto">
-                        <a href="{{ route('payment.checkout', ['product' => 'intensif-online-a2']) }}"
-                            class="btn btn-primary w-100">
-                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
-                        </a>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Intensif Reguler Online A-2', 'Rp1.499.000')">
+                        Daftar Sekarang
                     </button>
                 </div>
                 <!-- Intensif Reguler Online B-1 -->
@@ -943,12 +951,9 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Sertifikat</span>
                     </div>
-
-                    <button class="btn btn-program mt-auto">
-                        <a href="{{ route('payment.checkout', ['product' => 'intensif-online-b1']) }}"
-                            class="btn btn-primary w-100">
-                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
-                        </a>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Intensif Reguler Online B-1', 'Rp1.699.000')">
+                        Daftar Sekarang
                     </button>
                 </div>
                 <!-- Private Grammatik Online A-1 -->
@@ -991,11 +996,9 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Bisa request jadwal</span>
                     </div>
-                    <button class="btn btn-program mt-auto">
-                        <a href="{{ route('payment.checkout', ['product' => 'private-grammatik-online-a1']) }}"
-                            class="btn btn-primary w-100">
-                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
-                        </a>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Grammatik Online A-1', 'Rp975.000')">
+                        Daftar Sekarang
                     </button>
                 </div>
                 <!-- Private Grammatik Online A-1 Dalam Bahasa Inggris -->
@@ -1038,11 +1041,9 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Bisa request jadwal</span>
                     </div>
-                    <button class="btn btn-program mt-auto">
-                        <a href="{{ route('payment.checkout', ['product' => 'private-grammatik-online-a1-dalam-bahasa-inggris']) }}"
-                            class="btn btn-primary w-100">
-                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
-                        </a>
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Private Grammatik A-1 Dalam Bahasa Inggris', 'Rp1.150.000')">
+                        Daftar Sekarang
                     </button>
                 </div>
                 <!-- Private Grammatik Online A-2 -->
@@ -2312,7 +2313,7 @@
             </div>
 
             <!-- Paket Bundling -->
-            <div class="pricing-grid" id="bundling">
+            <div class="pricing-grid" id="bundling_reguler">
                 <!-- Bundling Reguler Intensif A1-A2 Online -->
                 <div class="program-card">
                     <div class="program-type">Bundling Reguler Intensif A1-A2 Online</div>
@@ -2670,7 +2671,7 @@
                 </div>
                 <!-- FlexiLearn A1 - Lifetime Basic -->
                 <div class="program-card">
-                    <div class="program-type">Deutsch FlexiLearn A1 - Lifetime</div>
+                    <div class="program-type">Deutsch FlexiLearn A1 - Lifetime Basic</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp199.000</div>
                     </div>
@@ -2725,7 +2726,7 @@
                     </div>
 
                     <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Deutsch FlexiLearn A1 - Lifetime', 'Rp199.000')">
+                        onclick="pilihPaket('Deutsch FlexiLearn A1 - Lifetime Basic', 'Rp199.000')">
                         Daftar Sekarang
                     </button>
                 </div>
@@ -3165,7 +3166,7 @@
                 </div>
                 <!-- FlexiLearn A2 - Lifetime Basic -->
                 <div class="program-card">
-                    <div class="program-type">Deutsch FlexiLearn A2 - Lifetime</div>
+                    <div class="program-type">Deutsch FlexiLearn A2 - Lifetime Basic</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp199.000</div>
                     </div>
@@ -3220,7 +3221,7 @@
                     </div>
 
                     <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Deutsch FlexiLearn A2 - Lifetime', 'Rp199.000')">
+                        onclick="pilihPaket('Deutsch FlexiLearn A2 - Lifetime Basic', 'Rp199.000')">
                         Daftar Sekarang
                     </button>
                 </div>
@@ -3465,6 +3466,1986 @@
 
                     <button class="btn btn-program mt-auto"
                         onclick="pilihPaket('Deutsch FlexiLearn A2 - Lifetime + 20 E-Book + 2x Private', 'Rp699.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Paket FlexiLearn B1 -->
+            <div class="pricing-grid" id="flexilearnb1">
+                <!-- Flexilearn B1 - Subscribe 2 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Deutsch FlexiLearn B1 - 2 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp159.000</div>
+                    </div>
+                    <div class="program-duration">Akses 2 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Deutsch FlexiLearn B1 - 2 Bulan', 'Rp159.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- FlexiLearn B1 - Subscribe 6 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Deutsch FlexiLearn B1 - 6 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp179.000</div>
+                    </div>
+                    <div class="program-duration">Akses 6 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Deutsch FlexiLearn B1 - 6 Bulan', 'Rp179.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- FlexiLearn B1 - Subscribe 12 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Deutsch FlexiLearn B1 - 12 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp199.000</div>
+                    </div>
+                    <div class="program-duration">Akses 12 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Deutsch FlexiLearn B1 - 12 Bulan', 'Rp199.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- FlexiLearn B1 - Lifetime Basic -->
+                <div class="program-card">
+                    <div class="program-type">Deutsch FlexiLearn B1 - Lifetime Basic</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp199.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Deutsch FlexiLearn B1 - Lifetime Basic', 'Rp199.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- FlexiLearn B1 - Lifetime + 10 E-Book -->
+                <div class="program-card">
+                    <div class="program-type">Deutsch FlexiLearn B1 - Lifetime + 10 E-Book</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp399.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Deutsch FlexiLearn B1 - Lifetime + 10 E-Book', 'Rp399.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- FlexiLearn B1  - Lifetime + 20 E-Book -->
+                <div class="program-card">
+                    <div class="program-type">Deutsch FlexiLearn B1 - Lifetime + 20 E-Book</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp469.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Deutsch FlexiLearn B1 - Lifetime + 20 E-Book', 'Rp469.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- FlexiLearn B1 - Lifetime + 20 E-Book + 1x Private -->
+                <div class="program-card">
+                    <div class="program-type">Deutsch FlexiLearn B1 - Lifetime + 20 E-Book + 1x Private</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp649.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Deutsch FlexiLearn B1 - Lifetime + 20 E-Book + 1x Private', 'Rp649.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- FlexiLearn B1 - Lifetime + 20 E-Book + 2x Private -->
+                <div class="program-card">
+                    <div class="program-type">Deutsch FlexiLearn B1 - Lifetime + 20 E-Book + 2x Private</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp759.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Deutsch FlexiLearn B1 - Lifetime + 20 E-Book + 2x Private', 'Rp759.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Paket Bundling Flexilearn A1-A2 -->
+            <div class="pricing-grid" id="bundling_flex_a1-a2">
+                <!-- Bundling Flexilearn A1-A2 - Subscribe 2 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - 2 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp269.000</div>
+                    </div>
+                    <div class="program-duration">Akses 2 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bunndling Deutsch FlexiLearn A1-A2 - 2 Bulan', 'Rp269.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Flexilearn A2-B1 - Subscribe 6 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - 6 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp309.000</div>
+                    </div>
+                    <div class="program-duration">Akses 6 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A2-B1 - 6 Bulan', 'Rp309.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch Flexilearn A1-B1 - Subscribe 12 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - 12 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp339.000</div>
+                    </div>
+                    <div class="program-duration">Akses 12 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A1-B1 - 12 Bulan', 'Rp339.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch FlexiLearn - Lifetime Basic -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime Basic</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp339.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A1-A2 - Lifetime Basic', 'Rp339.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch FlexiLearn - Lifetime + 10 E-Book -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 10 E-Book</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp569.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A1-A2 - Lifetime + 10 E-Book', 'Rp569.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp779.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A1-A2 - Lifetime + 20 E-Book', 'Rp779.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch FlexiLearn A1-A2 - Lifetime + 20 E-Book + 1x Private -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book + 1x Private</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.169.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A1-A2 - Lifetime + 20 E-Book + 1x Private', 'Rp1.169.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book + 2x Private -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book + 2x Private</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.349.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A1-A2 - Lifetime + 20 E-Book + 2x Private', 'Rp1.349.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Paket Bundling Flexilearn A2-B1 -->
+            <div class="pricing-grid" id="bundling_flex_a2-b1">
+                <!-- Bundling Flexilearn A2-B1 - Subscribe 2 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - 2 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp289.000</div>
+                    </div>
+                    <div class="program-duration">Akses 2 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A2-B1 - 2 Bulan', 'Rp289.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Flexilearn A2-B1 - Subscribe 6 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - 6 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp319.000</div>
+                    </div>
+                    <div class="program-duration">Akses 6 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A2-B1 - 6 Bulan', 'Rp319.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch Flexilearn A2-B1 - Subscribe 12 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - 12 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp359.000</div>
+                    </div>
+                    <div class="program-duration">Akses 12 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A2-B1 - 12 Bulan', 'Rp359.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch FlexiLearn - Lifetime Basic -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime Basic</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp379.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A2-B1 - Lifetime Basic', 'Rp379.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch FlexiLearn - Lifetime + 10 E-Book -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 10 E-Book</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp609.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A2-B1 - Lifetime + 10 E-Book', 'Rp609.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp839.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A2-B1 - Lifetime + 20 E-Book', 'Rp839.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch FlexiLearn A1-A2 - Lifetime + 20 E-Book + 1x Private -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book + 1x Private</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.209.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A2-B1 - Lifetime + 20 E-Book + 1x Private', 'Rp1.209.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book + 2x Private -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book + 2x Private</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.409.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A2-B1 - Lifetime + 20 E-Book + 2x Private', 'Rp1.409.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Paket Bundling Flexilearn A1-B1 -->
+            <div class="pricing-grid" id="bundling_flex_a1-b1">
+                <!-- Bundling Flexilearn A1-B1 - Subscribe 2 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - 2 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp429.000</div>
+                    </div>
+                    <div class="program-duration">Akses 2 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A1-B1 - 2 Bulan', 'Rp429.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Flexilearn A1-B1 - Subscribe 6 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - 6 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp479.000</div>
+                    </div>
+                    <div class="program-duration">Akses 6 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A1-B1 - 6 Bulan', 'Rp479.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch Flexilearn A1-B1 - Subscribe 12 Bulan -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - 12 Bulan</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp529.000</div>
+                    </div>
+                    <div class="program-duration">Akses 12 Bulan</div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A1-B1 - 12 Bulan', 'Rp529.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch Flexilearn A1-B1 - Lifetime Basic -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime Basic</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp569.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch Flexilearn A1-B1 - Lifetime Basic', 'Rp569.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch Flexilearn A1-B1 - Lifetime + 10 E-Book -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 10 E-Book</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp889.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch FlexiLearn A2-B1 - Lifetime + 10 E-Book', 'Rp609.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch Flexilearn A1-B1 - Lifetime + 20 E-Book -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.229.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch Flexilearn A1-B1 - Lifetime + 20 E-Book', 'Rp1.229.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch Flexilearn A1-B1 - Lifetime + 20 E-Book + 1x Private -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book + 1x Private</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp1.779.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch Flexilearn A1-B1 - Lifetime + 20 E-Book + 1x Private', 'Rp1.779.000')">
+                        Daftar Sekarang
+                    </button>
+                </div>
+                <!-- Bundling Deutsch Flexilearn A1-B1 - Lifetime + 20 E-Book + 2x Private -->
+                <div class="program-card">
+                    <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book + 2x Private</div>
+                    <div class="program-price-container">
+                        <div class="program-price">Rp2.009.000</div>
+                    </div>
+                    <p class="program-description">
+                        Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
+                        Materinya
+                        lengkap dan terstruktur, mencakup video, latihan interaktif, dan evaluasi mandiri. Ideal
+                        untuk
+                        kamu yang butuh fleksibilitas tinggi tanpa mengurangi kualitas belajar.
+                    </p>
+
+                    <div class="benefits-title">Benefit:</div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Premium Access ke semua materi</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Waktu yang flexible</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Belajar sesuai ritme masing-masing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Dashboard Personal</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Akses video pembelajaran 24/7</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Evaluasi & Quiz otomatis</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Tersedia Forum diskusi dan & Chat</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Multi Device Access</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1.000+ latihan soal</span>
+                    </div>
+
+                    <button class="btn btn-program mt-auto"
+                        onclick="pilihPaket('Bundling Deutsch Flexilearn A1-B1 - Lifetime + 20 E-Book + 2x Private', 'Rp2.009.000')">
                         Daftar Sekarang
                     </button>
                 </div>

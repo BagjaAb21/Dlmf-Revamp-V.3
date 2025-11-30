@@ -310,7 +310,7 @@
         .vision-img.large {
             grid-column: 1 / 3;
             grid-row: 1;
-            background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-image: url('{{ asset("asset/img/about-us/IMG_0562.jpg") }}');
         }
 
         .vision-img.small1 {
@@ -1273,7 +1273,7 @@
 
             <!-- Values Hero Image -->
             <div class="values-hero">
-                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                <img src="{{ asset("asset/img/about-us/IMG_5680.jpg") }}"
                     alt="Students together" class="rounded-4">
             </div>
 
@@ -1437,7 +1437,7 @@
                     <div class="timeline-card" data-year="2025">
                         <div class="timeline-year">2025</div>
                         <h5 class="timeline-title">Kantor Baru dan Langkah Menuju Akreditasi</h5>
-                        <p class="timeline-description">DlmF resmi membuka kantor fisik pertamanya di Jalan Trengguli
+                        <p class="timeline-description">DlmF resmi membuka kantor fisik Kedua di Jalan Trengguli
                             Sari Asih No. 76, Bandung. Tahun ini juga menKamui langkah strategis dan menuju akreditasi
                             sebagai lembaga pendidikan non-formal, sekaligus pengembangan platform pembelajaran digital
                             mandiri untuk memperkuat daya saing nasional dan internasional.</p>
