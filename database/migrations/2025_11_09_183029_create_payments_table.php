@@ -11,12 +11,14 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->string('external_id')->unique();
-            $table->string('payer_name')->max(255);
-            $table->string('payer_email')->max(255);
-            $table->string('payer_phone')->max(20);
-            $table->decimal('amount', 15, 2);
+            $table->string('product_name')->nullable(); // Nama produk yang dibeli
+            $table->integer('quantity')->default(1); // Jumlah produk
+            $table->string('payer_name', 255);
+            $table->string('payer_email', 255);
+            $table->string('payer_phone', 20)->nullable();
+            $table->decimal('amount', 15, 2); // Total amount (price * quantity)
             $table->string('status')->default('pending');
-            $table->text('checkout_link');
+            $table->text('checkout_link')->nullable();
             $table->timestamp('paid_at')->nullable();
             $table->timestamps();
         });

@@ -77,11 +77,8 @@ Route::prefix('teachers')->name('teachers.')->group(function () {
     Route::get('/{teacher:slug}', [TeacherController::class, 'show'])->name('show');
 });
 
-// Web routes untuk redirect
-Route::get('/payment-success', function() {
-    return view('payment-success');
-});
-
-Route::get('/payment-failed', function() {
-    return view('payment-failed');
-});
+// Payment routes - dengan parameter external_id
+Route::get('/checkout', [PaymentController::class, 'showCheckout'])->name('payment.checkout');
+Route::post('/payment/process', [PaymentController::class, 'processPayment'])->name('payment.process');
+Route::get('/payment-success', [PaymentController::class, 'showSuccess'])->name('payment.success');
+Route::get('/payment-failed', [PaymentController::class, 'showFailed'])->name('payment.failed');

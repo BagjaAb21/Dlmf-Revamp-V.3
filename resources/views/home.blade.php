@@ -1542,14 +1542,14 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
-                    <div class="stat-item" data-target="200">
-                        <span class="stat-number" data-count="200">0+</span>
-                        <span class="stat-label">Materi Pembelajaran</span>
+                    <div class="stat-item" data-target="99" data-suffix="%">
+                        <span class="stat-number" data-count="99">0</span>
+                        <span class="stat-label">Kepuasan</span>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
                     <div class="stat-item" data-target="5000">
-                        <span class="stat-number" data-count="5000">0k+</span>
+                        <span class="stat-number" data-count="5000">0</span>
                         <span class="stat-label">Alumni Sukses</span>
                     </div>
                 </div>
@@ -2327,7 +2327,8 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h3 class="footer-title">Ikuti Kami</h3>
                     <div class="d-flex gap-3 social-links mb-1" role="navigation" aria-label="Social media links">
-                        <a href="https://www.tiktok.com/@deutschlernen.mit.fara?_t=zs-90kuixyjueq&_r=1" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="TikTok Deutsch Lernen mit Fara">
+                        <a href="https://www.tiktok.com/@deutschlernen.mit.fara?_t=zs-90kuixyjueq&_r=1" target="_blank"
+                            rel="noopener noreferrer" class="text-white" aria-label="TikTok Deutsch Lernen mit Fara">
                             <i class="bi bi-tiktok" aria-hidden="true"></i>
                         </a>
                         <a href="https://www.instagram.com/deutschlernen.mit.fara?igsh=bWxhaHA3em5wN200" target="_blank"
@@ -2394,15 +2395,41 @@
             }, 20);
         }
 
+        function animateCounter(element, target, suffix = '') {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+
+                let displayValue;
+                if (target >= 1000) {
+                    if (target >= 50000) {
+                        displayValue = Math.floor(current / 1000) + 'k';
+                    } else {
+                        displayValue = Math.floor(current).toLocaleString();
+                    }
+                } else {
+                    displayValue = Math.floor(current);
+                }
+
+                element.textContent = displayValue + suffix;
+            }, 20);
+        }
+
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const statItem = entry.target;
                     const counter = statItem.querySelector('.stat-number');
                     const target = parseInt(statItem.dataset.target);
+                    const suffix = statItem.dataset.suffix || '';
 
                     statItem.classList.add('animate');
-                    animateCounter(counter, target);
+                    animateCounter(counter, target, suffix);
 
                     statsObserver.unobserve(statItem);
                 }
@@ -2535,6 +2562,10 @@
                 }, 250);
             });
         });
+    </script>
+
+    <script>
+        stat.textContent = target + (stat.closest('.stat-item').dataset.suffix || '');
     </script>
 </body>
 

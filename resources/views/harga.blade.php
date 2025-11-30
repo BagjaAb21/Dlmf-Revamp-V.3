@@ -464,6 +464,18 @@
             margin-top: auto;
         }
 
+        .btn-program a {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: auto;
+        }
+
         .btn-program:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
@@ -820,9 +832,11 @@
                         <span>Sertifikat</span>
                     </div>
 
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Intensif Regular Online A-1', 'Rp1.499.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'intensif-online-a1']) }}"
+                            class="btn btn-primary w-100">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Intensif Reguler Online A-2 -->
@@ -874,9 +888,11 @@
                         <span>Sertifikat</span>
                     </div>
 
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Intensif Regular Online A-2', 'Rp1.499.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'intensif-online-a2']) }}"
+                            class="btn btn-primary w-100">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Intensif Reguler Online B-1 -->
@@ -928,9 +944,11 @@
                         <span>Sertifikat</span>
                     </div>
 
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Intensif Regular Online B-1', 'Rp1.699.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'intensif-online-b1']) }}"
+                            class="btn btn-primary w-100">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Private Grammatik Online A-1 -->
@@ -973,9 +991,11 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Bisa request jadwal</span>
                     </div>
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Private Grammatik Online A-1', 'Rp975.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'private-grammatik-online-a1']) }}"
+                            class="btn btn-primary w-100">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Private Grammatik Online A-1 Dalam Bahasa Inggris -->
@@ -1018,9 +1038,11 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Bisa request jadwal</span>
                     </div>
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Private Grammatik Online A-1', 'Rp975.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'private-grammatik-online-a1-dalam-bahasa-inggris']) }}"
+                            class="btn btn-primary w-100">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Private Grammatik Online A-2 -->
@@ -3568,8 +3590,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4">
-                    <img src="{{ asset('asset/img/FaQ/FAQ.PNG') }}"
-                        alt="FAQ Image" class="img-fluid rounded"
+                    <img src="{{ asset('asset/img/FaQ/FAQ.PNG') }}" alt="FAQ Image" class="img-fluid rounded"
                         style="border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);">
                 </div>
                 <div class="col-lg-6">
@@ -3782,7 +3803,8 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h3 class="footer-title">Ikuti Kami</h3>
                     <div class="d-flex gap-3 social-links mb-1" role="navigation" aria-label="Social media links">
-                        <a href="https://www.tiktok.com/@deutschlernen.mit.fara?_t=zs-90kuixyjueq&_r=1" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="TikTok Deutsch Lernen mit Fara">
+                        <a href="https://www.tiktok.com/@deutschlernen.mit.fara?_t=zs-90kuixyjueq&_r=1" target="_blank"
+                            rel="noopener noreferrer" class="text-white" aria-label="TikTok Deutsch Lernen mit Fara">
                             <i class="bi bi-tiktok" aria-hidden="true"></i>
                         </a>
                         <a href="https://www.instagram.com/deutschlernen.mit.fara?igsh=bWxhaHA3em5wN200" target="_blank"
