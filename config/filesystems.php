@@ -40,7 +40,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            'root' => '/home/mitfarac/public_html/storage', // DI UBAH INI AJA
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,
