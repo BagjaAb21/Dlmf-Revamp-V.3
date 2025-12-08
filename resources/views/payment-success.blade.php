@@ -215,7 +215,7 @@
 </head>
 
 <body>
-    <!-- Toast Notification -->
+    <!-- Toast Notifficcation -->
     <div class="copy-toast" id="copyToast">
         <i class="fas fa-check-circle"></i>
         <span>Nomor invoice berhasil disalin!</span>
