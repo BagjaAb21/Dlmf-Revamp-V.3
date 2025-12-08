@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pembayaran Berhasil - Deutsch Lernen Mit Fara</title>
+    <link rel="icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -12,43 +14,50 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
             padding: 20px;
         }
+
         .success-card {
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             padding: 3rem;
             text-align: center;
-            max-width: 600px;
+            max-width: 750px;
             width: 100%;
             animation: slideUp 0.5s ease-out;
         }
+
         @keyframes slideUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         .success-icon {
             font-size: 5rem;
             color: #28a745;
             margin-bottom: 1.5rem;
             animation: scaleIn 0.5s ease-out 0.2s both;
         }
+
         @keyframes scaleIn {
             from {
                 transform: scale(0);
             }
+
             to {
                 transform: scale(1);
             }
         }
+
         .payment-details {
             background: #f8f9fa;
             border-radius: 10px;
@@ -56,19 +65,23 @@
             margin: 2rem 0;
             text-align: left;
         }
+
         .detail-row {
             display: flex;
             justify-content: space-between;
             padding: 0.5rem 0;
             border-bottom: 1px solid #dee2e6;
         }
+
         .detail-row:last-child {
             border-bottom: none;
         }
+
         .detail-label {
             font-weight: 600;
             color: #6c757d;
         }
+
         .detail-value {
             color: #212529;
             font-weight: 500;
@@ -80,9 +93,11 @@
             align-items: center;
             gap: 8px;
         }
+
         .invoice-number {
             position: relative;
         }
+
         .copy-btn {
             background: transparent;
             border: none;
@@ -93,10 +108,12 @@
             transition: all 0.2s;
             position: relative;
         }
+
         .copy-btn:hover {
             background: #667eea;
             color: white;
         }
+
         .copy-btn:active {
             transform: scale(0.95);
         }
@@ -110,7 +127,7 @@
             color: white;
             padding: 12px 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -119,20 +136,24 @@
             opacity: 0;
             pointer-events: none;
         }
+
         .copy-toast.show {
             opacity: 1;
             pointer-events: auto;
         }
+
         @keyframes slideInRight {
             from {
                 transform: translateX(100%);
                 opacity: 0;
             }
+
             to {
                 transform: translateX(0);
                 opacity: 1;
             }
         }
+
         /* ===== AKHIR CSS INVOICE COPY ===== */
 
         .btn-custom {
@@ -144,6 +165,7 @@
             font-weight: 600;
             transition: transform 0.2s;
         }
+
         .btn-custom:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
@@ -163,23 +185,27 @@
             display: inline-block;
             margin: 5px;
         }
+
         .btn-whatsapp:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
             color: white;
         }
+
         .action-buttons {
             display: flex;
             flex-direction: column;
             gap: 10px;
             margin-top: 2rem;
         }
+
         /* ===== AKHIR CSS TAMBAHAN ===== */
 
         @media (max-width: 576px) {
             .success-card {
                 padding: 2rem 1.5rem;
             }
+
             .detail-row {
                 flex-direction: column;
                 gap: 0.25rem;
@@ -187,12 +213,14 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Toast Notification -->
     <div class="copy-toast" id="copyToast">
         <i class="fas fa-check-circle"></i>
         <span>Nomor invoice berhasil disalin!</span>
     </div>
+
 
     <div class="success-container">
         <div class="success-card">
@@ -207,22 +235,18 @@
             <div class="payment-details">
                 <h5 class="mb-3 text-center"><i class="fas fa-receipt me-2"></i>Detail Pembayaran</h5>
 
-                <!-- ===== INVOICE DENGAN COPY BUTTON ===== -->
+                <!-- ===== MODIFIKASI BAGIAN INVOICE ===== -->
                 <div class="detail-row">
                     <span class="detail-label">No. Invoice:</span>
                     <div class="invoice-copy-wrapper">
                         <span class="detail-value invoice-number" id="invoiceNumber">{{ $payment->external_id }}</span>
-                        <button
-                            class="copy-btn"
-                            onclick="copyInvoice()"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="Klik untuk menyalin"
-                        >
+                        <button class="copy-btn" onclick="copyInvoice()" data-bs-toggle="tooltip"
+                            data-bs-placement="top" title="Klik untuk menyalin">
                             <i class="fas fa-copy"></i>
                         </button>
                     </div>
                 </div>
+                <!-- ===== AKHIR MODIFIKASI INVOICE ===== -->
 
                 @if($payment->product_name)
                 <div class="detail-row">
@@ -286,7 +310,7 @@
             <!-- ===== AKHIR BAGIAN YANG DIGANTI ===== -->
 
             <p class="text-muted mb-4">
-                <i class="fas fa-envelope me-2"></i>
+                <!-- <i class="fas fa-envelope me-2"></i> -->
                 Kami akan segera mengirimkan email konfirmasi dan detail akses kursus ke email Anda.
             </p>
 
@@ -296,7 +320,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- ===== JAVASCRIPT ===== -->
     <script>
         // Initialize tooltips
@@ -310,21 +333,23 @@
             const invoiceNumber = document.getElementById('invoiceNumber').textContent;
 
             // Copy ke clipboard
-            navigator.clipboard.writeText(invoiceNumber).then(function() {
+            navigator.clipboard.writeText(invoiceNumber).then(function () {
                 // Show toast notification
                 const toast = document.getElementById('copyToast');
                 toast.classList.add('show');
 
                 // Hide toast after 3 seconds
-                setTimeout(function() {
+                setTimeout(function () {
                     toast.classList.remove('show');
                 }, 3000);
-            }).catch(function(err) {
+            }).catch(function (err) {
                 console.error('Failed to copy: ', err);
                 // Fallback untuk browser yang tidak support clipboard API
                 alert('Nomor Invoice: ' + invoiceNumber);
             });
         }
     </script>
+
 </body>
+
 </html>
