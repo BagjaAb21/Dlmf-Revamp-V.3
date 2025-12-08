@@ -153,7 +153,7 @@
       "offers": [{
         "@type": "Offer",
         "name": "Intensif Reguler Online A-1",
-        "price": "1499000",
+        "price": "10200000",
         "priceCurrency": "IDR",
         "availability": "https://schema.org/InStock",
         "description": "Kursus bahasa Jerman intensif level A1 dengan 20 pertemuan online"
