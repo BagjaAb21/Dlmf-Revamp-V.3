@@ -421,6 +421,12 @@
         .modal-terms .modal-footer {
             border-top: 2px solid #e9ecef;
             padding: 20px 30px;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .modal-terms .modal-footer button {
+            width: 100%;
         }
 
         .btn-accept-terms {
@@ -693,7 +699,7 @@
                                     <div class="terms-content">
                                         <p
                                             style="text-align: center; font-weight: 600; color: #764ba2; font-size: 1.1rem; margin-bottom: 20px;">
-                                            TERMS & CONDITIONS – DEUTSCH LERNEN MIT FARA (MITFARA.COM)<br>
+                                            SYARAT & KETENTUAN – DEUTSCH LERNEN MIT FARA (MITFARA.COM)<br>
                                             <span style="font-size: 0.9rem;">Dikelola oleh PT Fara Kreatif
                                                 Sejahtera</span>
                                         </p>
@@ -931,7 +937,7 @@
                                                     style="color: #495057;">https://mitfara.com</a></li>
                                             <li><strong>Nomor HP:</strong> <a href="https://wa.me/6289647897616"
                                                     target="_blank" class="text-decoration-none"
-                                                    style="color: #495057;">Admin Minfara</a></li>
+                                                    style="color: #495057;">+6289647897616</a></li>
                                         </ul>
 
                                         <p
@@ -942,10 +948,10 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                    {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                                         style="border-radius: 50px; padding: 12px 30px;" onclick="closeModalManually()">
                                         <i class="fas fa-times me-2"></i>Tutup
-                                    </button>
+                                    </button> --}}
                                     <button type="button" class="btn btn-accept-terms" id="btnAcceptTerms"
                                         onclick="acceptTerms()" disabled>
                                         <i class="fas fa-check me-2"></i>Saya Setuju
