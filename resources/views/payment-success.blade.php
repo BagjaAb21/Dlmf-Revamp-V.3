@@ -310,7 +310,7 @@
             <!-- ===== AKHIR BAGIAN YANG DIGANTI ===== -->
 
             <p class="text-muted mb-4">
-                <!-- <i class="fas fa-envelope me-2"></i> -->
+                <i class="fas fa-envelope me-2"></i>
                 Kami akan segera mengirimkan email konfirmasi dan detail akses kursus ke email Anda.
             </p>
 
