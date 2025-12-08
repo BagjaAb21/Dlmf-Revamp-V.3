@@ -73,6 +73,68 @@
             color: #212529;
             font-weight: 500;
         }
+
+        /* ===== CSS UNTUK INVOICE COPY ===== */
+        .invoice-copy-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .invoice-number {
+            position: relative;
+        }
+        .copy-btn {
+            background: transparent;
+            border: none;
+            color: #667eea;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .copy-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Toast notification */
+        .copy-toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 9999;
+            animation: slideInRight 0.3s ease-out;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .copy-toast.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        /* ===== AKHIR CSS INVOICE COPY ===== */
+
         .btn-custom {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border: none;
@@ -87,6 +149,33 @@
             box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
             color: white;
         }
+
+        /* ===== TAMBAHKAN CSS INI ===== */
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border: none;
+            padding: 12px 40px;
+            border-radius: 25px;
+            color: white;
+            font-weight: 600;
+            transition: transform 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+            color: white;
+        }
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 2rem;
+        }
+        /* ===== AKHIR CSS TAMBAHAN ===== */
+
         @media (max-width: 576px) {
             .success-card {
                 padding: 2rem 1.5rem;
@@ -99,6 +188,12 @@
     </style>
 </head>
 <body>
+    <!-- Toast Notification -->
+    <div class="copy-toast" id="copyToast">
+        <i class="fas fa-check-circle"></i>
+        <span>Nomor invoice berhasil disalin!</span>
+    </div>
+
     <div class="success-container">
         <div class="success-card">
             <i class="fas fa-check-circle success-icon"></i>
@@ -112,9 +207,21 @@
             <div class="payment-details">
                 <h5 class="mb-3 text-center"><i class="fas fa-receipt me-2"></i>Detail Pembayaran</h5>
 
+                <!-- ===== INVOICE DENGAN COPY BUTTON ===== -->
                 <div class="detail-row">
                     <span class="detail-label">No. Invoice:</span>
-                    <span class="detail-value">{{ $payment->external_id }}</span>
+                    <div class="invoice-copy-wrapper">
+                        <span class="detail-value invoice-number" id="invoiceNumber">{{ $payment->external_id }}</span>
+                        <button
+                            class="copy-btn"
+                            onclick="copyInvoice()"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Klik untuk menyalin"
+                        >
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
 
                 @if($payment->product_name)
@@ -167,6 +274,17 @@
             </div>
             @endif
 
+            <!-- ===== GANTI BAGIAN INI ===== -->
+            <div class="action-buttons">
+                <a href="{{ $whatsappUrl ?? '#' }}" class="btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp me-2"></i>Konfirmasi via WhatsApp
+                </a>
+                {{-- <a href="{{ url('/') }}" class="btn-custom">
+                    <i class="fas fa-home me-2"></i>Kembali ke Beranda
+                </a> --}}
+            </div>
+            <!-- ===== AKHIR BAGIAN YANG DIGANTI ===== -->
+
             <p class="text-muted mb-4">
                 <i class="fas fa-envelope me-2"></i>
                 Kami akan segera mengirimkan email konfirmasi dan detail akses kursus ke email Anda.
@@ -178,5 +296,35 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Function untuk copy invoice
+        function copyInvoice() {
+            const invoiceNumber = document.getElementById('invoiceNumber').textContent;
+
+            // Copy ke clipboard
+            navigator.clipboard.writeText(invoiceNumber).then(function() {
+                // Show toast notification
+                const toast = document.getElementById('copyToast');
+                toast.classList.add('show');
+
+                // Hide toast after 3 seconds
+                setTimeout(function() {
+                    toast.classList.remove('show');
+                }, 3000);
+            }).catch(function(err) {
+                console.error('Failed to copy: ', err);
+                // Fallback untuk browser yang tidak support clipboard API
+                alert('Nomor Invoice: ' + invoiceNumber);
+            });
+        }
+    </script>
 </body>
 </html>

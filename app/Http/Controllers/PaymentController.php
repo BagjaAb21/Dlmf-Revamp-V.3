@@ -945,25 +945,67 @@ class PaymentController extends Controller
      * Menampilkan halaman payment success
      */
     public function showSuccess(Request $request)
-    {
-        $externalId = $request->query('external_id');
+{
+    $externalId = $request->query('external_id');
 
-        if (!$externalId) {
-            // Jika tidak ada external_id, tampilkan halaman tanpa data
-            return view('payment-success');
-        }
-
-        // Ambil data payment dari database
-        $payment = Payment::where('external_id', $externalId)->first();
-
-        if (!$payment) {
-            // Jika payment tidak ditemukan, redirect ke homepage atau tampilkan error
-            return redirect('/')->with('error', 'Data pembayaran tidak ditemukan');
-        }
-
-        // Tampilkan view dengan data payment
-        return view('payment-success', compact('payment'));
+    if (!$externalId) {
+        // Jika tidak ada external_id, tampilkan halaman tanpa data
+        return view('payment-success');
     }
+
+    // Ambil data payment dari database
+    $payment = Payment::where('external_id', $externalId)->first();
+
+    if (!$payment) {
+        // Jika payment tidak ditemukan, redirect ke homepage atau tampilkan error
+        return redirect('/')->with('error', 'Data pembayaran tidak ditemukan');
+    }
+
+    // ============================================================================
+    // GENERATE WHATSAPP URL - TAMBAHKAN KODE INI
+    // ============================================================================
+    $whatsappNumber = '62859106869302'; // Nomor WhatsApp MinFara
+
+    $message = "*KONFIRMASI PEMBAYARAN BERHASIL*%0A%0A";
+    $message .= "Halo MinFara, saya telah menyelesaikan pembayaran dengan detail sebagai berikut:%0A%0A";
+    $message .= "📋 *Detail Pembayaran:*%0A";
+    $message .= "━━━━━━━━━━━━━━━━━━━━%0A";
+    $message .= "🔖 *No. Invoice:* " . $payment->external_id . "%0A";
+
+    if ($payment->product_name) {
+        $message .= "📦 *Produk:* " . urlencode($payment->product_name) . "%0A";
+    }
+
+    if ($payment->quantity && $payment->quantity > 1) {
+        $message .= "🔢 *Jumlah:* " . $payment->quantity . " item%0A";
+    }
+
+    $message .= "👤 *Nama:* " . urlencode($payment->payer_name) . "%0A";
+    $message .= "📧 *Email:* " . urlencode($payment->payer_email) . "%0A";
+
+    if ($payment->payer_phone) {
+        $message .= "📱 *No. Telepon:* " . $payment->payer_phone . "%0A";
+    }
+
+    $message .= "💰 *Jumlah Bayar:* Rp " . number_format((float) $payment->amount, 0, ',', '.') . "%0A";
+    $message .= "✅ *Status:* Lunas%0A";
+
+    if ($payment->paid_at) {
+        $message .= "🗓️ *Tanggal Bayar:* " . $payment->paid_at->format('d/m/Y H:i') . " WIB%0A";
+    }
+
+    $message .= "━━━━━━━━━━━━━━━━━━━━%0A%0A";
+    $message .= "Mohon informasi lebih lanjut mengenai akses kursus.%0A%0A";
+    $message .= "Terima kasih! 🙏";
+
+    $whatsappUrl = "https://api.whatsapp.com/send?phone={$whatsappNumber}&text={$message}";
+    // ============================================================================
+    // AKHIR KODE WHATSAPP URL
+    // ============================================================================
+
+    // Tampilkan view dengan data payment DAN whatsappUrl
+    return view('payment-success', compact('payment', 'whatsappUrl'));
+}
 
     /**
      * Menampilkan halaman payment failed
