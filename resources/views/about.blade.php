@@ -1528,7 +1528,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Foooter -->
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="row">
