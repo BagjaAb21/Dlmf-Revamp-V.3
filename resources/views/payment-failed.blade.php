@@ -139,18 +139,18 @@
 
                 <div class="detail-row">
                     <span class="detail-label">Nama Pemesan:</span>
-                    <span class="detail-value">{{ $payment->payer_name }}</span>
+                    <span class="detail-value">{{ $payment->given_names }}{{ $payment->surname ? ' ' . $payment->surname : '' }}</span>
                 </div>
 
                 <div class="detail-row">
                     <span class="detail-label">Email:</span>
-                    <span class="detail-value">{{ $payment->payer_email }}</span>
+                    <span class="detail-value">{{ $payment->email }}</span>
                 </div>
 
-                @if($payment->payer_phone)
+                @if($payment->mobile_number)
                 <div class="detail-row">
                     <span class="detail-label">No. Telepon:</span>
-                    <span class="detail-value">{{ $payment->payer_phone }}</span>
+                    <span class="detail-value">{{ $payment->mobile_number }}</span>
                 </div>
                 @endif
 

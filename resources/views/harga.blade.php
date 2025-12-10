@@ -799,7 +799,7 @@
                 <div class="program-card">
                     <div class="program-type">Intensif Reguler A-1</div>
                     <div class="program-price-container">
-                        <div class="program-price">Rp1.499.000</div>
+                        <div class="program-price">Rp10.000</div>
                     </div>
                     <p class="program-description">
                         Belajar dari mana saja dengan metode intensif dan terarah. Dirancang untuk kamu yang ingin fasih

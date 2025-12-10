@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Deutsch Lernen Mit Fara</title>
     <link rel="icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -505,39 +505,54 @@
                 <!-- Checkout Form -->
                 <form id="checkoutForm" action="{{ route('payment.process') }}" method="POST">
                     @csrf
-                    <!-- HANYA KIRIM PRODUCT CODE - Server akan calculate price -->
+                    <!-- HIDDEN INPUTS - Dikirim ke Backend -->
                     <input type="hidden" name="product_code" value="{{ $product['code'] }}">
+                    <input type="hidden" name="grand_total_amount" id="hidden_grand_total"
+                        value="{{ $product['price'] }}">
+                    <input type="hidden" name="convenience_fee_amount" id="hidden_convenience_fee" value="0">
+                    <input type="hidden" name="payment_method" id="hidden_payment_method" value="QRIS">
 
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="payer_name" class="form-label">
-                                <i class="fas fa-user me-1"></i>Nama Lengkap <span class="text-danger">*</span>
+                            <label for="given_names" class="form-label">
+                                <i class="fas fa-user me-1"></i>Nama Depan <span class="text-danger">*</span>
                             </label>
-                            <input type="text" class="form-control" id="payer_name" name="payer_name"
-                                placeholder="Masukkan nama lengkap" required>
+                            <input type="text" class="form-control" id="given_names" name="given_names"
+                                placeholder="Contoh: John" required>
+                            <small class="text-muted">Wajib diisi</small>
                         </div>
                         <div class="col-md-6">
-                            <label for="payer_email" class="form-label">
-                                <i class="fas fa-envelope me-1"></i>Email <span class="text-danger">*</span>
+                            <label for="surname" class="form-label">
+                                <i class="fas fa-user me-1"></i>Nama Belakang <span class="text-muted">(Opsional)</span>
                             </label>
-                            <input type="email" class="form-control" id="payer_email" name="payer_email"
-                                placeholder="contoh@gmail.com" required>
+                            <input type="text" class="form-control" id="surname" name="surname"
+                                placeholder="Contoh: Doe">
+                            <small class="text-muted">Boleh dikosongkan</small>
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label for="payer_phone" class="form-label">
-                            <i class="fas fa-phone me-1"></i>Nomor Telepon/WhatsApp <span class="text-danger">*</span>
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope me-1"></i>Email <span class="text-danger">*</span>
                         </label>
-                        <input type="tel" class="form-control" id="payer_phone" name="payer_phone"
-                            placeholder="62856xxxxxxxxxx" required pattern="[0-9]{10,15}" minlength="10" maxlength="15"
-                            title="Nomor telepon harus 10-15 digit">
-                        <div class="invalid-feedback">
-                            Nomor telepon harus berisi 10-15 digit angka.
-                        </div>
-                        <!-- <small class="text-muted">
-                            <i class="fas fa-info-circle me-1"></i>Format: 62856xxxxxxxxxx (10-15 digit)
-                        </small> -->
+                        <input type="email" class="form-control" id="email" name="email" placeholder="email@example.com"
+                            required>
+                        <small class="text-muted">
+                            <i class="fas fa-info-circle me-1"></i>Notifikasi pembayaran akan dikirim ke email ini
+                        </small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mobile_number" class="form-label">
+                            <i class="fas fa-phone me-1"></i>Nomor Telepon/WhatsApp <span
+                                class="text-success">(Disarankan)</span>
+                        </label>
+                        <input type="tel" class="form-control" id="mobile_number" name="mobile_number"
+                            placeholder="08123456789 atau 62812345678">
+                        <small class="text-muted">
+                            <i class="fas fa-info-circle me-1"></i>Isi nomor aktif untuk menerima notifikasi via
+                            WhatsApp
+                        </small>
                     </div>
 
                     <div class="mb-4">
@@ -929,9 +944,12 @@
                                         <h3>17. Kontak Resmi</h3>
                                         <p>Untuk pertanyaan terkait layanan, Anda dapat menghubungi:</p>
                                         <ul>
-                                            <li><strong>Email:</strong> <a href="mailto:info@mitfara.com"
-                                                    class="text-decoration-none"
-                                                    style="color: #495057;">info@mitfara.com</a></li>
+                                            <li><strong>Email:</strong> <a
+                                                    href="/cdn-cgi/l/email-protection#036a6d656c436e6a77656271622d606c6e"
+                                                    class="text-decoration-none" style="color: #495057;"><span
+                                                        class="__cf_email__"
+                                                        data-cfemail="c5acaba3aa85a8acb1a3a4b7a4eba6aaa8">[email&#160;protected]</span></a>
+                                            </li>
                                             <li><strong>Website:</strong> <a href="https://mitfara.com" target="_blank"
                                                     class="text-decoration-none"
                                                     style="color: #495057;">https://mitfara.com</a></li>
@@ -975,23 +993,19 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const basePrice = {{ $product['price'] }};
-        const VA_BASE_FEE = 4000; // Base fee untuk VA
-        const PPN_RATE = 0.11; // PPN 11%
-        const QRIS_RATE = 0.0063; // QRIS fee 0.63%
-        const QRIS_LIMIT = 10000000; // Limit QRIS 10 juta
-
-        // Calculate VA Fee: Rp 4.000 + PPN 11%
-        const VA_FEE = Math.round(VA_BASE_FEE * (1 + PPN_RATE)); // = 4.440
-
-        // Tooltip messages
+        const basePrice = {{ $product['price'] ?? 0 }};
+        const VA_BASE_FEE = 4000;
+        const PPN_RATE = 0.11;
+        const QRIS_RATE = 0.0063;
+        const QRIS_LIMIT = 10000000;
+        const VA_FEE = Math.round(VA_BASE_FEE * (1 + PPN_RATE));
         const TOOLTIP_QRIS = "Biaya QRIS: 0.63% dari subtotal + PPN 11%";
         const TOOLTIP_VA = "Biaya Admin Virtual Account: Rp 4.000 + PPN 11% = Rp 4.440";
 
         function calculateQRISFee(subtotal) {
-            // QRIS Fee: 0.63% dari subtotal + PPN 11%
             const qrisFeeBase = subtotal * QRIS_RATE;
             const qrisFeeWithPPN = qrisFeeBase * (1 + PPN_RATE);
             return Math.round(qrisFeeWithPPN);
@@ -1002,12 +1016,8 @@
             if (tooltipIcon) {
                 tooltipIcon.setAttribute('data-bs-original-title', message);
                 tooltipIcon.setAttribute('title', message);
-
-                // Reinitialize tooltip
                 const tooltip = bootstrap.Tooltip.getInstance(tooltipIcon);
-                if (tooltip) {
-                    tooltip.dispose();
-                }
+                if (tooltip) tooltip.dispose();
                 new bootstrap.Tooltip(tooltipIcon);
             }
         }
@@ -1018,142 +1028,95 @@
             const vaRadio = document.getElementById('va');
 
             if (subtotal >= QRIS_LIMIT) {
-                // Hide QRIS option
-                if (qrisOption) {
-                    qrisOption.style.display = 'none';
-                }
-
-                // Auto select VA if QRIS was selected
-                if (qrisRadio && qrisRadio.checked) {
-                    vaRadio.checked = true;
-                }
-
-                // Disable QRIS radio
-                if (qrisRadio) {
-                    qrisRadio.disabled = true;
-                }
-
-                // Show info alert
+                if (qrisOption) qrisOption.style.display = 'none';
+                if (qrisRadio && qrisRadio.checked) vaRadio.checked = true;
+                if (qrisRadio) qrisRadio.disabled = true;
                 showQRISLimitAlert(true);
             } else {
-                // Show QRIS option
-                if (qrisOption) {
-                    qrisOption.style.display = 'block';
-                }
-
-                // Enable QRIS radio
-                if (qrisRadio) {
-                    qrisRadio.disabled = false;
-                }
-
-                // Hide info alert
+                if (qrisOption) qrisOption.style.display = 'block';
+                if (qrisRadio) qrisRadio.disabled = false;
                 showQRISLimitAlert(false);
             }
         }
 
         function showQRISLimitAlert(show) {
             let alertElement = document.getElementById('qrisLimitAlert');
-
             if (show) {
                 if (!alertElement) {
-                    // Create alert if doesn't exist
                     const paymentMethodContainer = document.querySelector('.payment-method-container');
                     alertElement = document.createElement('div');
                     alertElement.id = 'qrisLimitAlert';
                     alertElement.className = 'alert alert-warning mt-3';
                     alertElement.innerHTML = `
-                <div class="d-flex align-items-start">
-                    <i class="fas fa-exclamation-triangle me-2 mt-1"></i>
-                    <div>
-                        <strong>Informasi QRIS:</strong>
-                        <p class="mb-0 mt-1">
-                            Metode pembayaran QRIS tidak tersedia untuk transaksi di atas Rp 10.000.000.
-                            Silakan gunakan metode Virtual Account.
-                        </p>
-                    </div>
-                </div>
-            `;
+                    <div class="d-flex align-items-start">
+                        <i class="fas fa-exclamation-triangle me-2 mt-1"></i>
+                        <div>
+                            <strong>Informasi QRIS:</strong>
+                            <p class="mb-0 mt-1">Metode pembayaran QRIS tidak tersedia untuk transaksi di atas Rp 10.000.000. Silakan gunakan metode Virtual Account.</p>
+                        </div>
+                    </div>`;
                     paymentMethodContainer.parentNode.insertBefore(alertElement, paymentMethodContainer.nextSibling);
                 } else {
                     alertElement.style.display = 'block';
                 }
             } else {
-                if (alertElement) {
-                    alertElement.style.display = 'none';
-                }
+                if (alertElement) alertElement.style.display = 'none';
             }
         }
 
         function selectPaymentMethod(method) {
             const quantity = parseInt(document.getElementById('quantity').value);
             const subtotal = basePrice * quantity;
-
-            // Check if QRIS is available for current amount
             if (method === 'QRIS' && subtotal >= QRIS_LIMIT) {
-                // Don't allow QRIS selection if amount exceeds limit
                 document.getElementById('va').checked = true;
                 return;
             }
-
-            // Update radio button
             if (method === 'QRIS') {
                 document.getElementById('qris').checked = true;
             } else {
                 document.getElementById('va').checked = true;
             }
-
-            // Update total
             updateTotal();
         }
 
         function updateTotal() {
             const quantity = parseInt(document.getElementById('quantity').value);
             const paymentMethod = document.querySelector('input[name="payment_method"]:checked').value;
-
             const subtotal = basePrice * quantity;
-
-            // Check QRIS availability based on subtotal
             checkQRISAvailability(subtotal);
 
             let adminFee = 0;
             let grandTotal = subtotal;
 
-            // Calculate and show appropriate fee
             if (paymentMethod === 'QRIS' && subtotal < QRIS_LIMIT) {
                 adminFee = calculateQRISFee(subtotal);
                 grandTotal = subtotal + adminFee;
-
-                // Update convenience fee display
                 document.getElementById('convenienceFeeAmount').textContent = 'Rp ' + adminFee.toLocaleString('id-ID');
                 document.getElementById('convenienceFeeDisplay').style.display = 'flex';
-
-                // Update tooltip
                 updateTooltip(TOOLTIP_QRIS);
-
             } else if (paymentMethod === 'VA' || subtotal >= QRIS_LIMIT) {
                 adminFee = VA_FEE;
                 grandTotal = subtotal + adminFee;
-
-                // Update convenience fee display
                 document.getElementById('convenienceFeeAmount').textContent = 'Rp ' + adminFee.toLocaleString('id-ID');
                 document.getElementById('convenienceFeeDisplay').style.display = 'flex';
-
-                // Update tooltip
                 updateTooltip(TOOLTIP_VA);
             }
 
-            // Update displays
             document.getElementById('qtyText').textContent = quantity;
             document.getElementById('subtotalDisplay').textContent = 'Rp ' + subtotal.toLocaleString('id-ID');
             document.getElementById('totalAmount').textContent = 'Rp ' + grandTotal.toLocaleString('id-ID');
             document.getElementById('grandTotalDisplay').textContent = 'Rp ' + grandTotal.toLocaleString('id-ID');
             document.getElementById('displayQuantity').textContent = quantity;
+
+            // ✅ UPDATE HIDDEN INPUTS - INI YANG PENTING!
+            document.getElementById('hidden_grand_total').value = grandTotal;
+            document.getElementById('hidden_convenience_fee').value = adminFee;
+            document.getElementById('hidden_payment_method').value = paymentMethod;
         }
 
         function increaseQuantity() {
             const quantityInput = document.getElementById('quantity');
             let currentValue = parseInt(quantityInput.value);
-
             if (currentValue < 10) {
                 quantityInput.value = currentValue + 1;
                 updateTotal();
@@ -1163,121 +1126,15 @@
         function decreaseQuantity() {
             const quantityInput = document.getElementById('quantity');
             let currentValue = parseInt(quantityInput.value);
-
             if (currentValue > 1) {
                 quantityInput.value = currentValue - 1;
                 updateTotal();
             }
         }
 
-        // Event listener for payment method change
-        document.querySelectorAll('input[name="payment_method"]').forEach(radio => {
-            radio.addEventListener('change', updateTotal);
-        });
-
-        // Form submission dengan loading state
-        document.getElementById('checkoutForm').addEventListener('submit', function (e) {
-            const btnSubmit = document.getElementById('btnSubmit');
-            btnSubmit.disabled = true;
-            btnSubmit.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Memproses...';
-        });
-
-        // Validasi phone number format dengan feedback visual
-        document.getElementById('payer_phone').addEventListener('input', function (e) {
-            let value = e.target.value.replace(/[^0-9]/g, '');
-
-            // Limit maksimal 15 digit
-            if (value.length > 15) {
-                value = value.substring(0, 15);
-            }
-
-            e.target.value = value;
-
-            // Visual feedback untuk validasi
-            if (value.length >= 10 && value.length <= 15) {
-                e.target.classList.remove('is-invalid');
-                e.target.classList.add('is-valid');
-            } else if (value.length > 0) {
-                e.target.classList.remove('is-valid');
-                e.target.classList.add('is-invalid');
-            } else {
-                e.target.classList.remove('is-valid', 'is-invalid');
-            }
-        });
-
-        // Close Modal Manually (Fallback function)
-        function closeModalManually() {
-            const modalElement = document.getElementById('termsModal');
-            const modal = bootstrap.Modal.getInstance(modalElement);
-
-            if (modal) {
-                modal.hide();
-            }
-
-            // Force cleanup after delay
-            setTimeout(() => {
-                const backdrops = document.querySelectorAll('.modal-backdrop');
-                backdrops.forEach(backdrop => backdrop.remove());
-
-                document.body.classList.remove('modal-open');
-                document.body.style.overflow = '';
-                document.body.style.paddingRight = '';
-            }, 300);
-        }
-
-        // Accept Terms Function
-        function acceptTerms() {
-            const termsCheckbox = document.getElementById('terms');
-
-            // Enable dan check checkbox
-            termsCheckbox.disabled = false;
-            termsCheckbox.checked = true;
-
-            // Remove invalid feedback classes
-            termsCheckbox.classList.remove('is-invalid');
-            termsCheckbox.setCustomValidity('');
-
-            // Trigger validation events
-            const changeEvent = new Event('change', { bubbles: true });
-            const inputEvent = new Event('input', { bubbles: true });
-            termsCheckbox.dispatchEvent(changeEvent);
-            termsCheckbox.dispatchEvent(inputEvent);
-
-            // Close modal dengan cara yang lebih reliable
-            const modalElement = document.getElementById('termsModal');
-            const modal = bootstrap.Modal.getInstance(modalElement);
-
-            if (modal) {
-                modal.hide();
-            }
-
-            // Pastikan backdrop dan body class dihapus
-            setTimeout(() => {
-                // Remove all modal backdrops
-                const backdrops = document.querySelectorAll('.modal-backdrop');
-                backdrops.forEach(backdrop => backdrop.remove());
-
-                // Remove modal-open class from body
-                document.body.classList.remove('modal-open');
-                document.body.style.overflow = '';
-                document.body.style.paddingRight = '';
-
-                // Optional: Visual feedback dengan pulse animation
-                const submitBtn = document.getElementById('btnSubmit');
-                if (submitBtn) {
-                    submitBtn.classList.add('pulse-animation');
-                    setTimeout(() => submitBtn.classList.remove('pulse-animation'), 1000);
-                }
-            }, 300);
-        }
-
-        // Open Terms Modal Function
         function openTermsModal() {
-            if (typeof event !== 'undefined') {
-                event.preventDefault(); // Prevent default behavior
-            }
+            if (typeof event !== 'undefined') event.preventDefault();
 
-            // Pastikan tidak ada backdrop yang tertinggal
             const oldBackdrops = document.querySelectorAll('.modal-backdrop');
             oldBackdrops.forEach(backdrop => backdrop.remove());
 
@@ -1289,159 +1146,40 @@
 
             termsModal.show();
 
-            // Reset button state when modal opens
-            const acceptButton = document.getElementById('btnAcceptTerms');
-            const scrollIndicator = document.getElementById('scrollIndicator');
-
-            if (acceptButton) acceptButton.disabled = true;
-            if (scrollIndicator) scrollIndicator.style.display = 'block';
-
-            // Reset scroll position
-            const modalBody = document.getElementById('termsModalBody');
-            if (modalBody) {
-                modalBody.scrollTop = 0;
-            }
-        }
-
-        // Initialize total and tooltip on page load
-        document.addEventListener('DOMContentLoaded', function () {
-            // Initialize Bootstrap tooltips
-            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl);
-            });
-
-            // Track scroll in modal body
-            const modalBody = document.getElementById('termsModalBody');
-            const acceptButton = document.getElementById('btnAcceptTerms');
-            const scrollIndicator = document.getElementById('scrollIndicator');
-
-            if (modalBody) {
-                modalBody.addEventListener('scroll', function () {
-                    // Check if scrolled to bottom (with 10px tolerance)
-                    const isScrolledToBottom = modalBody.scrollHeight - modalBody.scrollTop <= modalBody.clientHeight + 10;
-
-                    if (isScrolledToBottom) {
-                        acceptButton.disabled = false;
-                        scrollIndicator.style.display = 'none';
-                    }
-                });
-            }
-
-            // Handle modal hidden event untuk cleanup
-            const termsModalElement = document.getElementById('termsModal');
-            if (termsModalElement) {
-                termsModalElement.addEventListener('hidden.bs.modal', function () {
-                    // Cleanup backdrop yang mungkin tertinggal
-                    const backdrops = document.querySelectorAll('.modal-backdrop');
-                    backdrops.forEach(backdrop => backdrop.remove());
-
-                    // Reset body styles
-                    document.body.classList.remove('modal-open');
-                    document.body.style.overflow = '';
-                    document.body.style.paddingRight = '';
-                });
-            }
-
-            // Prevent form submission if terms not checked
-            const checkoutForm = document.getElementById('checkoutForm');
-            const termsCheckbox = document.getElementById('terms');
-
-            if (checkoutForm) {
-                checkoutForm.addEventListener('submit', function (e) {
-                    // Check if terms is checked and enabled
-                    if (!termsCheckbox.checked || termsCheckbox.disabled) {
-                        e.preventDefault();
-                        e.stopPropagation();
-
-                        // Show alert
-                        alert('Silakan baca dan setujui syarat dan ketentuan terlebih dahulu.');
-
-                        // Open modal if not checked
-                        if (!termsCheckbox.checked) {
-                            openTermsModal();
-                        }
-
-                        return false;
-                    }
-                });
-            }
-
-            // Update total
-            updateTotal();
-        });
-
-        // Form submission dengan loading state
-        document.getElementById('checkoutForm').addEventListener('submit', function (e) {
-            const btnSubmit = document.getElementById('btnSubmit');
-            btnSubmit.disabled = true;
-            btnSubmit.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Memproses...';
-        });
-
-        // Validasi phone number format
-        document.getElementById('payer_phone').addEventListener('input', function (e) {
-            let value = e.target.value.replace(/[^0-9]/g, '');
-            e.target.value = value;
-        });
-
-        // Close Modal Manually (Fallback function)
-        function closeModalManually() {
-            const modalElement = document.getElementById('termsModal');
-            const modal = bootstrap.Modal.getInstance(modalElement);
-
-            if (modal) {
-                modal.hide();
-            }
-
-            // Force cleanup after delay
             setTimeout(() => {
-                const backdrops = document.querySelectorAll('.modal-backdrop');
-                backdrops.forEach(backdrop => backdrop.remove());
+                const acceptButton = document.getElementById('btnAcceptTerms');
+                const scrollIndicator = document.getElementById('scrollIndicator');
+                const modalBody = document.getElementById('termsModalBody');
 
-                document.body.classList.remove('modal-open');
-                document.body.style.overflow = '';
-                document.body.style.paddingRight = '';
-            }, 300);
+                if (acceptButton) acceptButton.disabled = true;
+                if (scrollIndicator) scrollIndicator.style.display = 'block';
+                if (modalBody) modalBody.scrollTop = 0;
+            }, 100);
         }
 
-        // Accept Terms Function
         function acceptTerms() {
             const termsCheckbox = document.getElementById('terms');
-
-            // Enable dan check checkbox
             termsCheckbox.disabled = false;
             termsCheckbox.checked = true;
-
-            // Remove invalid feedback classes
             termsCheckbox.classList.remove('is-invalid');
             termsCheckbox.setCustomValidity('');
 
-            // Trigger validation events
             const changeEvent = new Event('change', { bubbles: true });
             const inputEvent = new Event('input', { bubbles: true });
             termsCheckbox.dispatchEvent(changeEvent);
             termsCheckbox.dispatchEvent(inputEvent);
 
-            // Close modal dengan cara yang lebih reliable
             const modalElement = document.getElementById('termsModal');
             const modal = bootstrap.Modal.getInstance(modalElement);
+            if (modal) modal.hide();
 
-            if (modal) {
-                modal.hide();
-            }
-
-            // Pastikan backdrop dan body class dihapus
             setTimeout(() => {
-                // Remove all modal backdrops
                 const backdrops = document.querySelectorAll('.modal-backdrop');
                 backdrops.forEach(backdrop => backdrop.remove());
-
-                // Remove modal-open class from body
                 document.body.classList.remove('modal-open');
                 document.body.style.overflow = '';
                 document.body.style.paddingRight = '';
 
-                // Optional: Visual feedback dengan pulse animation
                 const submitBtn = document.getElementById('btnSubmit');
                 if (submitBtn) {
                     submitBtn.classList.add('pulse-animation');
@@ -1450,106 +1188,84 @@
             }, 300);
         }
 
-        // Open Terms Modal Function
-        function openTermsModal() {
-            if (typeof event !== 'undefined') {
-                event.preventDefault(); // Prevent default behavior
-            }
-
-            // Pastikan tidak ada backdrop yang tertinggal
-            const oldBackdrops = document.querySelectorAll('.modal-backdrop');
-            oldBackdrops.forEach(backdrop => backdrop.remove());
-
-            const modalElement = document.getElementById('termsModal');
-            const termsModal = new bootstrap.Modal(modalElement, {
-                backdrop: 'static',
-                keyboard: false
-            });
-
-            termsModal.show();
-
-            // Reset button state when modal opens
-            const acceptButton = document.getElementById('btnAcceptTerms');
-            const scrollIndicator = document.getElementById('scrollIndicator');
-
-            if (acceptButton) acceptButton.disabled = true;
-            if (scrollIndicator) scrollIndicator.style.display = 'block';
-
-            // Reset scroll position
-            const modalBody = document.getElementById('termsModalBody');
-            if (modalBody) {
-                modalBody.scrollTop = 0;
-            }
-        }
-
-        // Initialize total and tooltip on page load
+        // DOMContentLoaded - HANYA SATU!
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize Bootstrap tooltips
+            // Initialize tooltips
             const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl);
-            });
+            tooltipTriggerList.map(el => new bootstrap.Tooltip(el));
 
-            // Track scroll in modal body
+            // Scroll detection - FIX: Toleransi 50px
             const modalBody = document.getElementById('termsModalBody');
             const acceptButton = document.getElementById('btnAcceptTerms');
             const scrollIndicator = document.getElementById('scrollIndicator');
 
-            if (modalBody) {
+            if (modalBody && acceptButton) {
                 modalBody.addEventListener('scroll', function () {
-                    // Check if scrolled to bottom (with 10px tolerance)
-                    const isScrolledToBottom = modalBody.scrollHeight - modalBody.scrollTop <= modalBody.clientHeight + 10;
+                    const remaining = modalBody.scrollHeight - modalBody.scrollTop - modalBody.clientHeight;
 
-                    if (isScrolledToBottom) {
+                    console.log('Scroll remaining:', remaining + 'px'); // Debug
+
+                    if (remaining < 50) { // FIX: 50px tolerance
                         acceptButton.disabled = false;
                         scrollIndicator.style.display = 'none';
+                        console.log('✅ Button enabled!');
                     }
                 });
             }
 
-            // Handle modal hidden event untuk cleanup
+            // Modal cleanup
             const termsModalElement = document.getElementById('termsModal');
             if (termsModalElement) {
                 termsModalElement.addEventListener('hidden.bs.modal', function () {
-                    // Cleanup backdrop yang mungkin tertinggal
                     const backdrops = document.querySelectorAll('.modal-backdrop');
                     backdrops.forEach(backdrop => backdrop.remove());
-
-                    // Reset body styles
                     document.body.classList.remove('modal-open');
                     document.body.style.overflow = '';
                     document.body.style.paddingRight = '';
                 });
             }
 
-            // Prevent form submission if terms not checked
+            // Form validation
             const checkoutForm = document.getElementById('checkoutForm');
             const termsCheckbox = document.getElementById('terms');
 
-            if (checkoutForm) {
+            if (checkoutForm && termsCheckbox) {
                 checkoutForm.addEventListener('submit', function (e) {
-                    // Check if terms is checked and enabled
+                    // Check terms
                     if (!termsCheckbox.checked || termsCheckbox.disabled) {
                         e.preventDefault();
                         e.stopPropagation();
-
-                        // Show alert
                         alert('Silakan baca dan setujui syarat dan ketentuan terlebih dahulu.');
-
-                        // Open modal if not checked
-                        if (!termsCheckbox.checked) {
-                            openTermsModal();
-                        }
-
+                        if (!termsCheckbox.checked) openTermsModal();
                         return false;
                     }
+
+                    // Loading state
+                    const btnSubmit = document.getElementById('btnSubmit');
+                    btnSubmit.disabled = true;
+                    btnSubmit.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Memproses...';
                 });
             }
 
-            // Update total
+            // Payment method change listener
+            document.querySelectorAll('input[name="payment_method"]').forEach(radio => {
+                radio.addEventListener('change', updateTotal);
+            });
+
+            // Mobile number validation - FIX: mobile_number bukan payer_phone
+            const mobileInput = document.getElementById('mobile_number');
+            if (mobileInput) {
+                mobileInput.addEventListener('input', function (e) {
+                    let value = e.target.value.replace(/[^0-9]/g, '');
+                    e.target.value = value;
+                });
+            }
+
+            // Initialize total
             updateTotal();
         });
     </script>
+
 </body>
 
 </html>

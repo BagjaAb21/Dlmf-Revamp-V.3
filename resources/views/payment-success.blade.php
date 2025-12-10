@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pembayaran Berhasil - Deutsch Lernen Mit Fara</title>
     <link rel="icon" href="{{ asset('asset/img/logo/logo-Transparant3.png') }}" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .success-container {
@@ -14,7 +14,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
             padding: 20px;
         }
 
@@ -87,15 +86,10 @@
             font-weight: 500;
         }
 
-        /* ===== CSS UNTUK INVOICE COPY ===== */
         .invoice-copy-wrapper {
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-
-        .invoice-number {
-            position: relative;
         }
 
         .copy-btn {
@@ -106,7 +100,6 @@
             padding: 4px 8px;
             border-radius: 4px;
             transition: all 0.2s;
-            position: relative;
         }
 
         .copy-btn:hover {
@@ -114,11 +107,6 @@
             color: white;
         }
 
-        .copy-btn:active {
-            transform: scale(0.95);
-        }
-
-        /* Toast notification */
         .copy-toast {
             position: fixed;
             top: 20px;
@@ -154,8 +142,6 @@
             }
         }
 
-        /* ===== AKHIR CSS INVOICE COPY ===== */
-
         .btn-custom {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border: none;
@@ -172,7 +158,6 @@
             color: white;
         }
 
-        /* ===== TAMBAHKAN CSS INI ===== */
         .btn-whatsapp {
             background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             border: none;
@@ -199,8 +184,6 @@
             margin-top: 2rem;
         }
 
-        /* ===== AKHIR CSS TAMBAHAN ===== */
-
         @media (max-width: 576px) {
             .success-card {
                 padding: 2rem 1.5rem;
@@ -221,7 +204,6 @@
         <span>Nomor invoice berhasil disalin!</span>
     </div>
 
-
     <div class="success-container">
         <div class="success-card">
             <i class="fas fa-check-circle success-icon"></i>
@@ -235,7 +217,6 @@
             <div class="payment-details">
                 <h5 class="mb-3 text-center"><i class="fas fa-receipt me-2"></i>Detail Pembayaran</h5>
 
-                <!-- ===== MODIFIKASI BAGIAN INVOICE ===== -->
                 <div class="detail-row">
                     <span class="detail-label">No. Invoice:</span>
                     <div class="invoice-copy-wrapper">
@@ -246,7 +227,6 @@
                         </button>
                     </div>
                 </div>
-                <!-- ===== AKHIR MODIFIKASI INVOICE ===== -->
 
                 @if($payment->product_name)
                 <div class="detail-row">
@@ -264,18 +244,19 @@
 
                 <div class="detail-row">
                     <span class="detail-label">Nama Pemesan:</span>
-                    <span class="detail-value">{{ $payment->payer_name }}</span>
+                    <span class="detail-value">{{ $payment->given_names }}{{ $payment->surname ? ' ' . $payment->surname
+                        : '' }}</span>
                 </div>
 
                 <div class="detail-row">
                     <span class="detail-label">Email:</span>
-                    <span class="detail-value">{{ $payment->payer_email }}</span>
+                    <span class="detail-value">{{ $payment->email }}</span>
                 </div>
 
-                @if($payment->payer_phone)
+                @if($payment->mobile_number)
                 <div class="detail-row">
                     <span class="detail-label">No. Telepon:</span>
-                    <span class="detail-value">{{ $payment->payer_phone }}</span>
+                    <span class="detail-value">{{ $payment->mobile_number }}</span>
                 </div>
                 @endif
 
@@ -295,21 +276,23 @@
                     <span class="detail-value">{{ $payment->paid_at->format('d/m/Y H:i') }} WIB</span>
                 </div>
                 @endif
+
+                @if($payment->payment_channel)
+                <div class="detail-row">
+                    <span class="detail-label">Metode Pembayaran:</span>
+                    <span class="detail-value">{{ $payment->payment_channel }}</span>
+                </div>
+                @endif
             </div>
             @endif
 
-            <!-- ===== GANTI BAGIAN INI ===== -->
             <div class="action-buttons">
                 <a href="{{ $whatsappUrl ?? '#' }}" class="btn-whatsapp" target="_blank">
                     <i class="fab fa-whatsapp me-2"></i>Konfirmasi via WhatsApp
                 </a>
-                {{-- <a href="{{ url('/') }}" class="btn-custom">
-                    <i class="fas fa-home me-2"></i>Kembali ke Beranda
-                </a> --}}
             </div>
-            <!-- ===== AKHIR BAGIAN YANG DIGANTI ===== -->
 
-            <p class="text-muted mb-4">
+            <p class="text-muted mb-4 mt-3">
                 <i class="fas fa-envelope me-2"></i>
                 Kami akan segera mengirimkan email konfirmasi dan detail akses kursus ke email Anda.
             </p>
@@ -319,8 +302,8 @@
             </a>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- ===== JAVASCRIPT ===== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Initialize tooltips
         const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -332,24 +315,19 @@
         function copyInvoice() {
             const invoiceNumber = document.getElementById('invoiceNumber').textContent;
 
-            // Copy ke clipboard
             navigator.clipboard.writeText(invoiceNumber).then(function () {
-                // Show toast notification
                 const toast = document.getElementById('copyToast');
                 toast.classList.add('show');
 
-                // Hide toast after 3 seconds
                 setTimeout(function () {
                     toast.classList.remove('show');
                 }, 3000);
             }).catch(function (err) {
                 console.error('Failed to copy: ', err);
-                // Fallback untuk browser yang tidak support clipboard API
                 alert('Nomor Invoice: ' + invoiceNumber);
             });
         }
     </script>
-
 </body>
 
 </html>

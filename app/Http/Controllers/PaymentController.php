@@ -19,7 +19,7 @@ class PaymentController extends Controller
         'intensif-online-a1' => [
             'code' => 'intensif-online-a1',
             'name' => 'Intensif Reguler Online A1',
-            'price' => 1499000,
+            'price' => 10000,
             'description' => 'Kursus Bahasa Jerman Level A1 - Online'
         ],
         'intensif-online-a2' => [
@@ -210,301 +210,153 @@ class PaymentController extends Controller
         // ==================== FLEXILEARN A1 ====================
         'flexilearn-a1-2m' => [
             'code' => 'flexilearn-a1-2m',
-            'name' => 'Deutsch FlexiLearn A1 - 2 Bulan',
-            'price' => 149000,
-            'description' => 'Akses FlexiLearn A1 selama 2 Bulan'
+            'name' => 'FlexiLearn A1 - 2 Bulan',
+            'price' => 1299000,
+            'description' => 'Akses FlexiLearn Level A1 - 2 Bulan'
+        ],
+        'flexilearn-a1-3m' => [
+            'code' => 'flexilearn-a1-3m',
+            'name' => 'FlexiLearn A1 - 3 Bulan',
+            'price' => 1799000,
+            'description' => 'Akses FlexiLearn Level A1 - 3 Bulan'
         ],
         'flexilearn-a1-6m' => [
             'code' => 'flexilearn-a1-6m',
-            'name' => 'Deutsch FlexiLearn A1 - 6 Bulan',
-            'price' => 169000,
-            'description' => 'Akses FlexiLearn A1 selama 6 Bulan'
+            'name' => 'FlexiLearn A1 - 6 Bulan',
+            'price' => 2499000,
+            'description' => 'Akses FlexiLearn Level A1 - 6 Bulan'
         ],
         'flexilearn-a1-12m' => [
             'code' => 'flexilearn-a1-12m',
-            'name' => 'Deutsch FlexiLearn A1 - 12 Bulan',
-            'price' => 189000,
-            'description' => 'Akses FlexiLearn A1 selama 12 Bulan'
-        ],
-        'flexilearn-a1-lifetime' => [
-            'code' => 'flexilearn-a1-lifetime',
-            'name' => 'Deutsch FlexiLearn A1 - Lifetime Basic',
-            'price' => 199000,
-            'description' => 'Akses Lifetime FlexiLearn A1'
-        ],
-        'flexilearn-a1-lifetime-10ebook' => [
-            'code' => 'flexilearn-a1-lifetime-10ebook',
-            'name' => 'Deutsch FlexiLearn A1 - Lifetime + 10 E-Book',
-            'price' => 299000,
-            'description' => 'Akses Lifetime FlexiLearn A1 + 10 E-Book'
-        ],
-        'flexilearn-a1-lifetime-20ebook' => [
-            'code' => 'flexilearn-a1-lifetime-20ebook',
-            'name' => 'Deutsch FlexiLearn A1 - Lifetime + 20 E-Book',
-            'price' => 399000,
-            'description' => 'Akses Lifetime FlexiLearn A1 + 20 E-Book'
-        ],
-        'flexilearn-a1-lifetime-20ebook-1private' => [
-            'code' => 'flexilearn-a1-lifetime-20ebook-1private',
-            'name' => 'Deutsch FlexiLearn A1 - Lifetime + 20 E-Book + 1x Private',
-            'price' => 599000,
-            'description' => 'Akses Lifetime FlexiLearn A1 + 20 E-Book + 1x Private Class'
-        ],
-        'flexilearn-a1-lifetime-20ebook-2private' => [
-            'code' => 'flexilearn-a1-lifetime-20ebook-2private',
-            'name' => 'Deutsch FlexiLearn A1 - Lifetime + 20 E-Book + 2x Private',
-            'price' => 699000,
-            'description' => 'Akses Lifetime FlexiLearn A1 + 20 E-Book + 2x Private Class'
+            'name' => 'FlexiLearn A1 - 12 Bulan',
+            'price' => 3299000,
+            'description' => 'Akses FlexiLearn Level A1 - 12 Bulan'
         ],
 
         // ==================== FLEXILEARN A2 ====================
         'flexilearn-a2-2m' => [
             'code' => 'flexilearn-a2-2m',
-            'name' => 'Deutsch FlexiLearn A2 - 2 Bulan',
-            'price' => 149000,
-            'description' => 'Akses FlexiLearn A2 selama 2 Bulan'
+            'name' => 'FlexiLearn A2 - 2 Bulan',
+            'price' => 1299000,
+            'description' => 'Akses FlexiLearn Level A2 - 2 Bulan'
+        ],
+        'flexilearn-a2-3m' => [
+            'code' => 'flexilearn-a2-3m',
+            'name' => 'FlexiLearn A2 - 3 Bulan',
+            'price' => 1799000,
+            'description' => 'Akses FlexiLearn Level A2 - 3 Bulan'
         ],
         'flexilearn-a2-6m' => [
             'code' => 'flexilearn-a2-6m',
-            'name' => 'Deutsch FlexiLearn A2 - 6 Bulan',
-            'price' => 169000,
-            'description' => 'Akses FlexiLearn A2 selama 6 Bulan'
+            'name' => 'FlexiLearn A2 - 6 Bulan',
+            'price' => 2499000,
+            'description' => 'Akses FlexiLearn Level A2 - 6 Bulan'
         ],
         'flexilearn-a2-12m' => [
             'code' => 'flexilearn-a2-12m',
-            'name' => 'Deutsch FlexiLearn A2 - 12 Bulan',
-            'price' => 189000,
-            'description' => 'Akses FlexiLearn A2 selama 12 Bulan'
-        ],
-        'flexilearn-a2-lifetime' => [
-            'code' => 'flexilearn-a2-lifetime',
-            'name' => 'Deutsch FlexiLearn A2 - Lifetime Basic',
-            'price' => 199000,
-            'description' => 'Akses Lifetime FlexiLearn A2'
-        ],
-        'flexilearn-a2-lifetime-10ebook' => [
-            'code' => 'flexilearn-a2-lifetime-10ebook',
-            'name' => 'Deutsch FlexiLearn A2 - Lifetime + 10 E-Book',
-            'price' => 299000,
-            'description' => 'Akses Lifetime FlexiLearn A2 + 10 E-Book'
-        ],
-        'flexilearn-a2-lifetime-20ebook' => [
-            'code' => 'flexilearn-a2-lifetime-20ebook',
-            'name' => 'Deutsch FlexiLearn A2 - Lifetime + 20 E-Book',
-            'price' => 399000,
-            'description' => 'Akses Lifetime FlexiLearn A2 + 20 E-Book'
-        ],
-        'flexilearn-a2-lifetime-20ebook-1private' => [
-            'code' => 'flexilearn-a2-lifetime-20ebook-1private',
-            'name' => 'Deutsch FlexiLearn A2 - Lifetime + 20 E-Book + 1x Private',
-            'price' => 599000,
-            'description' => 'Akses Lifetime FlexiLearn A2 + 20 E-Book + 1x Private Class'
-        ],
-        'flexilearn-a2-lifetime-20ebook-2private' => [
-            'code' => 'flexilearn-a2-lifetime-20ebook-2private',
-            'name' => 'Deutsch FlexiLearn A2 - Lifetime + 20 E-Book + 2x Private',
-            'price' => 699000,
-            'description' => 'Akses Lifetime FlexiLearn A2 + 20 E-Book + 2x Private Class'
+            'name' => 'FlexiLearn A2 - 12 Bulan',
+            'price' => 3299000,
+            'description' => 'Akses FlexiLearn Level A2 - 12 Bulan'
         ],
 
         // ==================== FLEXILEARN B1 ====================
         'flexilearn-b1-2m' => [
             'code' => 'flexilearn-b1-2m',
-            'name' => 'Deutsch FlexiLearn B1 - 2 Bulan',
-            'price' => 159000,
-            'description' => 'Akses FlexiLearn B1 selama 2 Bulan'
+            'name' => 'FlexiLearn B1 - 2 Bulan',
+            'price' => 1499000,
+            'description' => 'Akses FlexiLearn Level B1 - 2 Bulan'
+        ],
+        'flexilearn-b1-3m' => [
+            'code' => 'flexilearn-b1-3m',
+            'name' => 'FlexiLearn B1 - 3 Bulan',
+            'price' => 1999000,
+            'description' => 'Akses FlexiLearn Level B1 - 3 Bulan'
         ],
         'flexilearn-b1-6m' => [
             'code' => 'flexilearn-b1-6m',
-            'name' => 'Deutsch FlexiLearn B1 - 6 Bulan',
-            'price' => 179000,
-            'description' => 'Akses FlexiLearn B1 selama 6 Bulan'
+            'name' => 'FlexiLearn B1 - 6 Bulan',
+            'price' => 2699000,
+            'description' => 'Akses FlexiLearn Level B1 - 6 Bulan'
         ],
         'flexilearn-b1-12m' => [
             'code' => 'flexilearn-b1-12m',
-            'name' => 'Deutsch FlexiLearn B1 - 12 Bulan',
-            'price' => 199000,
-            'description' => 'Akses FlexiLearn B1 selama 12 Bulan'
-        ],
-        'flexilearn-b1-lifetime' => [
-            'code' => 'flexilearn-b1-lifetime',
-            'name' => 'Deutsch FlexiLearn B1 - Lifetime Basic',
-            'price' => 199000,
-            'description' => 'Akses Lifetime FlexiLearn B1'
-        ],
-        'flexilearn-b1-lifetime-10ebook' => [
-            'code' => 'flexilearn-b1-lifetime-10ebook',
-            'name' => 'Deutsch FlexiLearn B1 - Lifetime + 10 E-Book',
-            'price' => 399000,
-            'description' => 'Akses Lifetime FlexiLearn B1 + 10 E-Book'
-        ],
-        'flexilearn-b1-lifetime-20ebook' => [
-            'code' => 'flexilearn-b1-lifetime-20ebook',
-            'name' => 'Deutsch FlexiLearn B1 - Lifetime + 20 E-Book',
-            'price' => 469000,
-            'description' => 'Akses Lifetime FlexiLearn B1 + 20 E-Book'
-        ],
-        'flexilearn-b1-lifetime-20ebook-1private' => [
-            'code' => 'flexilearn-b1-lifetime-20ebook-1private',
-            'name' => 'Deutsch FlexiLearn B1 - Lifetime + 20 E-Book + 1x Private',
-            'price' => 649000,
-            'description' => 'Akses Lifetime FlexiLearn B1 + 20 E-Book + 1x Private Class'
-        ],
-        'flexilearn-b1-lifetime-20ebook-2private' => [
-            'code' => 'flexilearn-b1-lifetime-20ebook-2private',
-            'name' => 'Deutsch FlexiLearn B1 - Lifetime + 20 E-Book + 2x Private',
-            'price' => 759000,
-            'description' => 'Akses Lifetime FlexiLearn B1 + 20 E-Book + 2x Private Class'
+            'name' => 'FlexiLearn B1 - 12 Bulan',
+            'price' => 3499000,
+            'description' => 'Akses FlexiLearn Level B1 - 12 Bulan'
         ],
 
-        // ==================== BUNDLING FLEXILEARN A1-A2 ====================
-        'bundling-flex-a1a2-2m' => [
-            'code' => 'bundling-flex-a1a2-2m',
-            'name' => 'Bundling Deutsch FlexiLearn A1-A2 - 2 Bulan',
-            'price' => 269000,
-            'description' => 'Akses FlexiLearn A1-A2 selama 2 Bulan'
+        // ==================== BUNDLING FLEXILEARN ====================
+        'flexilearn-a1-a2-2m' => [
+            'code' => 'flexilearn-a1-a2-2m',
+            'name' => 'FlexiLearn A1-A2 - 2 Bulan',
+            'price' => 2399000,
+            'description' => 'Akses FlexiLearn Level A1-A2 - 2 Bulan'
         ],
-        'bundling-flex-a1a2-6m' => [
-            'code' => 'bundling-flex-a1a2-6m',
-            'name' => 'Bundling Deutsch FlexiLearn A1-A2 - 6 Bulan',
-            'price' => 309000,
-            'description' => 'Akses FlexiLearn A1-A2 selama 6 Bulan'
+        'flexilearn-a1-a2-3m' => [
+            'code' => 'flexilearn-a1-a2-3m',
+            'name' => 'FlexiLearn A1-A2 - 3 Bulan',
+            'price' => 3299000,
+            'description' => 'Akses FlexiLearn Level A1-A2 - 3 Bulan'
         ],
-        'bundling-flex-a1a2-12m' => [
-            'code' => 'bundling-flex-a1a2-12m',
-            'name' => 'Bundling Deutsch FlexiLearn A1-A2 - 12 Bulan',
-            'price' => 339000,
-            'description' => 'Akses FlexiLearn A1-A2 selama 12 Bulan'
+        'flexilearn-a1-a2-6m' => [
+            'code' => 'flexilearn-a1-a2-6m',
+            'name' => 'FlexiLearn A1-A2 - 6 Bulan',
+            'price' => 4599000,
+            'description' => 'Akses FlexiLearn Level A1-A2 - 6 Bulan'
         ],
-        'bundling-flex-a1a2-lifetime' => [
-            'code' => 'bundling-flex-a1a2-lifetime',
-            'name' => 'Bundling Deutsch FlexiLearn A1-A2 - Lifetime Basic',
-            'price' => 339000,
-            'description' => 'Akses Lifetime FlexiLearn A1-A2'
+        'flexilearn-a1-a2-12m' => [
+            'code' => 'flexilearn-a1-a2-12m',
+            'name' => 'FlexiLearn A1-A2 - 12 Bulan',
+            'price' => 6099000,
+            'description' => 'Akses FlexiLearn Level A1-A2 - 12 Bulan'
         ],
-        'bundling-flex-a1a2-lifetime-10ebook' => [
-            'code' => 'bundling-flex-a1a2-lifetime-10ebook',
-            'name' => 'Bundling Deutsch FlexiLearn A1-A2 - Lifetime + 10 E-Book',
-            'price' => 569000,
-            'description' => 'Akses Lifetime FlexiLearn A1-A2 + 10 E-Book'
+        'flexilearn-a2-b1-2m' => [
+            'code' => 'flexilearn-a2-b1-2m',
+            'name' => 'FlexiLearn A2-B1 - 2 Bulan',
+            'price' => 2599000,
+            'description' => 'Akses FlexiLearn Level A2-B1 - 2 Bulan'
         ],
-        'bundling-flex-a1a2-lifetime-20ebook' => [
-            'code' => 'bundling-flex-a1a2-lifetime-20ebook',
-            'name' => 'Bundling Deutsch FlexiLearn A1-A2 - Lifetime + 20 E-Book',
-            'price' => 779000,
-            'description' => 'Akses Lifetime FlexiLearn A1-A2 + 20 E-Book'
+        'flexilearn-a2-b1-3m' => [
+            'code' => 'flexilearn-a2-b1-3m',
+            'name' => 'FlexiLearn A2-B1 - 3 Bulan',
+            'price' => 3499000,
+            'description' => 'Akses FlexiLearn Level A2-B1 - 3 Bulan'
         ],
-        'bundling-flex-a1a2-lifetime-20ebook-1private' => [
-            'code' => 'bundling-flex-a1a2-lifetime-20ebook-1private',
-            'name' => 'Bundling Deutsch FlexiLearn A1-A2 - Lifetime + 20 E-Book + 1x Private',
-            'price' => 1169000,
-            'description' => 'Akses Lifetime FlexiLearn A1-A2 + 20 E-Book + 1x Private Class'
+        'flexilearn-a2-b1-6m' => [
+            'code' => 'flexilearn-a2-b1-6m',
+            'name' => 'FlexiLearn A2-B1 - 6 Bulan',
+            'price' => 4899000,
+            'description' => 'Akses FlexiLearn Level A2-B1 - 6 Bulan'
         ],
-        'bundling-flex-a1a2-lifetime-20ebook-2private' => [
-            'code' => 'bundling-flex-a1a2-lifetime-20ebook-2private',
-            'name' => 'Bundling Deutsch FlexiLearn A1-A2 - Lifetime + 20 E-Book + 2x Private',
-            'price' => 1349000,
-            'description' => 'Akses Lifetime FlexiLearn A1-A2 + 20 E-Book + 2x Private Class'
+        'flexilearn-a2-b1-12m' => [
+            'code' => 'flexilearn-a2-b1-12m',
+            'name' => 'FlexiLearn A2-B1 - 12 Bulan',
+            'price' => 6499000,
+            'description' => 'Akses FlexiLearn Level A2-B1 - 12 Bulan'
         ],
-
-        // ==================== BUNDLING FLEXILEARN A2-B1 ====================
-        'bundling-flex-a2b1-2m' => [
-            'code' => 'bundling-flex-a2b1-2m',
-            'name' => 'Bundling Deutsch FlexiLearn A2-B1 - 2 Bulan',
-            'price' => 289000,
-            'description' => 'Akses FlexiLearn A2-B1 selama 2 Bulan'
+        'flexilearn-a1-b1-2m' => [
+            'code' => 'flexilearn-a1-b1-2m',
+            'name' => 'FlexiLearn A1-B1 - 2 Bulan',
+            'price' => 3599000,
+            'description' => 'Akses FlexiLearn Level A1-B1 - 2 Bulan'
         ],
-        'bundling-flex-a2b1-6m' => [
-            'code' => 'bundling-flex-a2b1-6m',
-            'name' => 'Bundling Deutsch FlexiLearn A2-B1 - 6 Bulan',
-            'price' => 319000,
-            'description' => 'Akses FlexiLearn A2-B1 selama 6 Bulan'
+        'flexilearn-a1-b1-3m' => [
+            'code' => 'flexilearn-a1-b1-3m',
+            'name' => 'FlexiLearn A1-B1 - 3 Bulan',
+            'price' => 4899000,
+            'description' => 'Akses FlexiLearn Level A1-B1 - 3 Bulan'
         ],
-        'bundling-flex-a2b1-12m' => [
-            'code' => 'bundling-flex-a2b1-12m',
-            'name' => 'Bundling Deutsch FlexiLearn A2-B1 - 12 Bulan',
-            'price' => 359000,
-            'description' => 'Akses FlexiLearn A2-B1 selama 12 Bulan'
+        'flexilearn-a1-b1-6m' => [
+            'code' => 'flexilearn-a1-b1-6m',
+            'name' => 'FlexiLearn A1-B1 - 6 Bulan',
+            'price' => 6899000,
+            'description' => 'Akses FlexiLearn Level A1-B1 - 6 Bulan'
         ],
-        'bundling-flex-a2b1-lifetime' => [
-            'code' => 'bundling-flex-a2b1-lifetime',
-            'name' => 'Bundling Deutsch FlexiLearn A2-B1 - Lifetime Basic',
-            'price' => 379000,
-            'description' => 'Akses Lifetime FlexiLearn A2-B1'
-        ],
-        'bundling-flex-a2b1-lifetime-10ebook' => [
-            'code' => 'bundling-flex-a2b1-lifetime-10ebook',
-            'name' => 'Bundling Deutsch FlexiLearn A2-B1 - Lifetime + 10 E-Book',
-            'price' => 609000,
-            'description' => 'Akses Lifetime FlexiLearn A2-B1 + 10 E-Book'
-        ],
-        'bundling-flex-a2b1-lifetime-20ebook' => [
-            'code' => 'bundling-flex-a2b1-lifetime-20ebook',
-            'name' => 'Bundling Deutsch FlexiLearn A2-B1 - Lifetime + 20 E-Book',
-            'price' => 839000,
-            'description' => 'Akses Lifetime FlexiLearn A2-B1 + 20 E-Book'
-        ],
-        'bundling-flex-a2b1-lifetime-20ebook-1private' => [
-            'code' => 'bundling-flex-a2b1-lifetime-20ebook-1private',
-            'name' => 'Bundling Deutsch FlexiLearn A2-B1 - Lifetime + 20 E-Book + 1x Private',
-            'price' => 1209000,
-            'description' => 'Akses Lifetime FlexiLearn A2-B1 + 20 E-Book + 1x Private Class'
-        ],
-        'bundling-flex-a2b1-lifetime-20ebook-2private' => [
-            'code' => 'bundling-flex-a2b1-lifetime-20ebook-2private',
-            'name' => 'Bundling Deutsch FlexiLearn A2-B1 - Lifetime + 20 E-Book + 2x Private',
-            'price' => 1409000,
-            'description' => 'Akses Lifetime FlexiLearn A2-B1 + 20 E-Book + 2x Private Class'
-        ],
-
-        // ==================== BUNDLING FLEXILEARN A1-B1 ====================
-        'bundling-flex-a1b1-2m' => [
-            'code' => 'bundling-flex-a1b1-2m',
-            'name' => 'Bundling Deutsch FlexiLearn A1-B1 - 2 Bulan',
-            'price' => 429000,
-            'description' => 'Akses FlexiLearn A1-B1 selama 2 Bulan'
-        ],
-        'bundling-flex-a1b1-6m' => [
-            'code' => 'bundling-flex-a1b1-6m',
-            'name' => 'Bundling Deutsch FlexiLearn A1-B1 - 6 Bulan',
-            'price' => 479000,
-            'description' => 'Akses FlexiLearn A1-B1 selama 6 Bulan'
-        ],
-        'bundling-flex-a1b1-12m' => [
-            'code' => 'bundling-flex-a1b1-12m',
-            'name' => 'Bundling Deutsch FlexiLearn A1-B1 - 12 Bulan',
-            'price' => 529000,
-            'description' => 'Akses FlexiLearn A1-B1 selama 12 Bulan'
-        ],
-        'bundling-flex-a1b1-lifetime' => [
-            'code' => 'bundling-flex-a1b1-lifetime',
-            'name' => 'Bundling Deutsch FlexiLearn A1-B1 - Lifetime Basic',
-            'price' => 569000,
-            'description' => 'Akses Lifetime FlexiLearn A1-B1'
-        ],
-        'bundling-flex-a1b1-lifetime-10ebook' => [
-            'code' => 'bundling-flex-a1b1-lifetime-10ebook',
-            'name' => 'Bundling Deutsch FlexiLearn A1-B1 - Lifetime + 10 E-Book',
-            'price' => 889000,
-            'description' => 'Akses Lifetime FlexiLearn A1-B1 + 10 E-Book'
-        ],
-        'bundling-flex-a1b1-lifetime-20ebook' => [
-            'code' => 'bundling-flex-a1b1-lifetime-20ebook',
-            'name' => 'Bundling Deutsch FlexiLearn A1-B1 - Lifetime + 20 E-Book',
-            'price' => 1229000,
-            'description' => 'Akses Lifetime FlexiLearn A1-B1 + 20 E-Book'
-        ],
-        'bundling-flex-a1b1-lifetime-20ebook-1private' => [
-            'code' => 'bundling-flex-a1b1-lifetime-20ebook-1private',
-            'name' => 'Bundling Deutsch FlexiLearn A1-B1 - Lifetime + 20 E-Book + 1x Private',
-            'price' => 1779000,
-            'description' => 'Akses Lifetime FlexiLearn A1-B1 + 20 E-Book + 1x Private Class'
-        ],
-        'bundling-flex-a1b1-lifetime-20ebook-2private' => [
-            'code' => 'bundling-flex-a1b1-lifetime-20ebook-2private',
-            'name' => 'Bundling Deutsch FlexiLearn A1-B1 - Lifetime + 20 E-Book + 2x Private',
-            'price' => 2009000,
-            'description' => 'Akses Lifetime FlexiLearn A1-B1 + 20 E-Book + 2x Private Class'
+        'flexilearn-a1-b1-12m' => [
+            'code' => 'flexilearn-a1-b1-12m',
+            'name' => 'FlexiLearn A1-B1 - 12 Bulan',
+            'price' => 9199000,
+            'description' => 'Akses FlexiLearn Level A1-B1 - 12 Bulan'
         ],
     ];
 
@@ -515,7 +367,7 @@ class PaymentController extends Controller
     }
 
     /**
-     * Menampilkan halaman checkout untuk produk tertentu
+     * Menampilkan halaman checkout dengan product yang dipilih
      */
     public function showCheckout(Request $request)
     {
@@ -531,295 +383,231 @@ class PaymentController extends Controller
     }
 
     /**
-     * Proses payment dengan quantity
-     * DENGAN SECURITY VALIDATION
+     * Proses pembayaran dan create invoice di Xendit
      */
     public function processPayment(Request $request)
-{
-    // Validasi input
-    $validated = $request->validate([
-        'product_code' => 'required|string',
-        'payer_name' => 'required|string|max:255',
-        'payer_email' => 'required|email|max:255',
-        'payer_phone' => 'required|string|max:20',
-        'quantity' => 'required|integer|min:1|max:10',
-        'payment_method' => 'required|in:QRIS,VA', // Tambahkan validasi payment method
-    ]);
-
-    // ============================================================================
-    // SECURITY LAYER 1: Verify product exists
-    // ============================================================================
-    if (!isset($this->products[$validated['product_code']])) {
-        Log::warning('Invalid product code attempt', [
-            'product_code' => $validated['product_code'],
-            'ip' => $request->ip(),
-            'user_agent' => $request->userAgent()
-        ]);
-
-        return redirect('/harga')->with('error', 'Produk tidak valid');
-    }
-
-    $product = $this->products[$validated['product_code']];
-
-    // ============================================================================
-    // SECURITY LAYER 2: Calculate price SERVER-SIDE
-    // ============================================================================
-    $quantity = $validated['quantity'];
-    $pricePerItem = $product['price'];
-    $subtotal = $pricePerItem * $quantity;
-    $paymentMethod = $validated['payment_method'];
-
-    // ============================================================================
-    // CALCULATE CONVENIENCE FEE (sama seperti di frontend)
-    // ============================================================================
-    $VA_BASE_FEE = 4000;
-    $PPN_RATE = 0.11;
-    $QRIS_RATE = 0.0063;
-    $QRIS_LIMIT = 10000000;
-
-    $convenienceFee = 0;
-
-    if ($paymentMethod === 'QRIS' && $subtotal < $QRIS_LIMIT) {
-        // QRIS Fee: 0.63% dari subtotal + PPN 11%
-        $qrisFeeBase = $subtotal * $QRIS_RATE;
-        $convenienceFee = round($qrisFeeBase * (1 + $PPN_RATE));
-    } elseif ($paymentMethod === 'VA' || $subtotal >= $QRIS_LIMIT) {
-        // VA Fee: Rp 4.000 + PPN 11% = Rp 4.440
-        $convenienceFee = round($VA_BASE_FEE * (1 + $PPN_RATE));
-
-        // Jika subtotal >= 10 juta, paksa gunakan VA
-        if ($subtotal >= $QRIS_LIMIT) {
-            $paymentMethod = 'VA';
-        }
-    }
-
-    // Total yang harus dibayar
-    $totalAmount = $subtotal + $convenienceFee;
-
-    // ============================================================================
-    // SECURITY LAYER 3: Additional validation
-    // ============================================================================
-    if ($totalAmount < 10000) {
-        Log::warning('Amount below minimum', [
-            'product_code' => $validated['product_code'],
-            'amount' => $totalAmount,
-            'ip' => $request->ip()
-        ]);
-
-        return redirect('/harga')->with('error', 'Jumlah pembayaran minimal Rp 10.000');
-    }
-
-    $maxAmount = 100000000;
-    if ($totalAmount > $maxAmount) {
-        Log::warning('Amount exceeds maximum', [
-            'product_code' => $validated['product_code'],
-            'amount' => $totalAmount,
-            'quantity' => $quantity,
-            'ip' => $request->ip()
-        ]);
-
-        return redirect('/harga')->with('error', 'Jumlah pembayaran melebihi batas maksimal');
-    }
-
-    if ($quantity > 10) {
-        Log::warning('Quantity exceeds limit', [
-            'product_code' => $validated['product_code'],
-            'quantity' => $quantity,
-            'ip' => $request->ip()
-        ]);
-
-        return redirect('/harga')->with('error', 'Maksimal pembelian 10 item per transaksi');
-    }
-
-    // ============================================================================
-    // SECURITY LAYER 4: Log transaction
-    // ============================================================================
-    Log::info('Payment creation attempt', [
-        'product_code' => $validated['product_code'],
-        'product_name' => $product['name'],
-        'quantity' => $quantity,
-        'price_per_item' => $pricePerItem,
-        'subtotal' => $subtotal,
-        'payment_method' => $paymentMethod,
-        'convenience_fee' => $convenienceFee,
-        'total_amount' => $totalAmount,
-        'payer_email' => $validated['payer_email'],
-        'ip' => $request->ip(),
-        'timestamp' => now()
-    ]);
-
-    // Generate external ID
-    $externalId = (string) Str::uuid();
-
-    // Prepare description dengan detail biaya
-    $description = sprintf(
-        '%s (Qty: %d) | Subtotal: Rp %s | %s Fee: Rp %s | Total: Rp %s',
-        $product['description'],
-        $quantity,
-        number_format($subtotal, 0, ',', '.'),
-        $paymentMethod,
-        number_format($convenienceFee, 0, ',', '.'),
-        number_format($totalAmount, 0, ',', '.')
-    );
-
-    $params = [
-        'external_id' => $externalId,
-        'payer_name' => $validated['payer_name'],
-        'payer_email' => $validated['payer_email'],
-        'payer_phone' => $validated['payer_phone'],
-        'description' => $description,
-        'amount' => $totalAmount, // Total sudah termasuk convenience fee
-        'success_redirect_url' => url('/payment-success?external_id=' . $externalId),
-        'failure_redirect_url' => url('/payment-failed?external_id=' . $externalId),
-        'invoice_duration' => 86400,
-    ];
-
-    try {
-        $createInvoice = $this->invoiceApi->createInvoice($params);
-
-        // Save to DB
-        $payment = new Payment;
-        $payment->external_id = $externalId;
-        $payment->product_name = $product['name'];
-        $payment->quantity = $quantity;
-        $payment->payer_name = $validated['payer_name'];
-        $payment->payer_email = $validated['payer_email'];
-        $payment->payer_phone = $validated['payer_phone'];
-        $payment->amount = $totalAmount; // Simpan total amount (sudah include fee)
-        $payment->status = 'pending';
-        $payment->checkout_link = $createInvoice['invoice_url'];
-        $payment->save();
-
-        Log::info('Payment invoice created successfully', [
-            'external_id' => $externalId,
-            'payment_id' => $payment->id,
-            'subtotal' => $subtotal,
-            'convenience_fee' => $convenienceFee,
-            'total_amount' => $totalAmount
-        ]);
-
-        return redirect($createInvoice['invoice_url']);
-
-    } catch (\Xendit\XenditSdkException $e) {
-        Log::error('Xendit Error', [
-            'message' => $e->getMessage(),
-            'product_code' => $validated['product_code'],
-            'amount' => $totalAmount,
-            'ip' => $request->ip()
-        ]);
-
-        return redirect('/harga')->with('error', 'Gagal membuat invoice. Silakan coba lagi.');
-    } catch (\Exception $e) {
-        Log::error('Payment Error', [
-            'message' => $e->getMessage(),
-            'trace' => $e->getTraceAsString(),
-            'product_code' => $validated['product_code'],
-            'ip' => $request->ip()
-        ]);
-
-        return redirect('/harga')->with('error', 'Terjadi kesalahan. Silakan coba lagi.');
-    }
-}
-
-    public function create(Request $request)
     {
-        // Validasi input
+        // Validasi input sesuai dengan field yang dibutuhkan Xendit
         $validated = $request->validate([
-            'payer_name' => 'required|string',
-            'payer_email' => 'required|email',
-            'payer_phone' => 'nullable|string',
-            'description' => 'required|string',
-            'amount' => 'required|numeric|min:10000',
+            'product_code' => 'required|string',
+            'given_names' => 'required|string|max:255', // Sesuai Xendit: given_names
+            'surname' => 'nullable|string|max:255', // Sesuai Xendit: surname
+            'email' => 'required|email|max:255', // Sesuai Xendit: email
+            'mobile_number' => 'nullable|string|max:20', // Sesuai Xendit: mobile_number (E164 format)
+            'quantity' => 'required|integer|min:1',
+            'payment_method' => 'required|string|in:VA,QRIS', // Metode pembayaran dipilih user
+            // --- FIELD BARU DARI CHECKOUT.BLADE.PHP ---
+            'grand_total_amount' => 'required|integer|min:1', // Total akhir termasuk fee
+            'convenience_fee_amount' => 'required|integer|min:0', // Biaya tambahan
+            // --- END FIELD BARU ---
         ]);
 
-        $externalId = (string) Str::uuid();
+        // Cek apakah produk ada
+        if (!isset($this->products[$validated['product_code']])) {
+            return back()->with('error', 'Produk tidak valid');
+        }
 
-        $params = [
-            'external_id' => $externalId,
-            'payer_name' => $validated['payer_name'],
-            'payer_email' => $validated['payer_email'],
-            'payer_phone' => $validated['payer_phone'],
-            'description' => $validated['description'],
-            'amount' => $validated['amount'],
-            'success_redirect_url' => url('/payment-success?external_id=' . $externalId),
-            'failure_redirect_url' => url('/payment-failed?external_id=' . $externalId),
-            'invoice_duration' => 86400, // 24 jam (dalam detik)
-        ];
+        $product = $this->products[$validated['product_code']];
+
+        // Ambil jumlah dari request
+        $subTotal = $product['price'] * $validated['quantity'];
+        $convenienceFee = $validated['convenience_fee_amount'];
+        $totalAmount = $validated['grand_total_amount']; // GRAND TOTAL: Subtotal + Fee (sudah benar dari frontend)
+
+        // Generate external_id yang unik
+        $externalId = 'DLMF-' . strtoupper(Str::random(8)) . '-' . time();
 
         try {
-            $createInvoice = $this->invoiceApi->createInvoice($params);
+            // Format nomor telepon ke E164 jika ada
+            $mobileNumber = null;
+            if (!empty($validated['mobile_number'])) {
+                $phone = preg_replace('/[^0-9]/', '', $validated['mobile_number']);
+                // Jika dimulai dengan 0, ganti dengan +62
+                if (substr($phone, 0, 1) === '0') {
+                    $mobileNumber = '+62' . substr($phone, 1);
+                }
+                // Jika dimulai dengan 62, tambahkan +
+                elseif (substr($phone, 0, 2) === '62') {
+                    $mobileNumber = '+' . $phone;
+                }
+                // Jika tidak ada prefix, anggap 08xx -> +628xx
+                else {
+                    $mobileNumber = '+62' . $phone;
+                }
+            }
 
-            // Save to DB
-            $payment = new Payment;
-            $payment->status = 'pending';
-            $payment->checkout_link = $createInvoice['invoice_url'];
-            $payment->external_id = $externalId;
-            $payment->payer_name = $validated['payer_name'];
-            $payment->payer_email = $validated['payer_email'];
-            $payment->payer_phone = $validated['payer_phone'];
-            $payment->amount = $validated['amount'];
-            $payment->save();
+            // Buat data invoice sesuai dengan dokumentasi Xendit
+            $invoiceData = [
+                'external_id' => $externalId,
+                'amount' => $totalAmount,
+                'description' => $product['description'] ?? $product['name'],
+                'invoice_duration' => 3600, // 1 jam dalam detik
+                'currency' => 'IDR',
 
-            return response()->json([
-                'success' => true,
-                'data' => [
-                    'checkout_link' => $createInvoice['invoice_url'],
-                    'external_id' => $externalId,
-                    'pembeli' => $validated['payer_name'],
-                    'email' => $validated['payer_email'],
-                    'phone' => $validated['payer_phone'],
-                    'status' => 'pending',
-                    'amount' => $validated['amount'],
-                    'description' => $validated['description'],
-                    'message' => 'Invoice created successfully',
-                ]
+                // Customer object sesuai dokumentasi Xendit
+                'customer' => [
+                    'given_names' => $validated['given_names'],
+                    'email' => $validated['email'],
+                ],
+
+                // Customer notification preference (PENTING: untuk mengirim email & WhatsApp)
+                // Notifikasi akan terkirim ke email dan WhatsApp (jika mobile_number diisi)
+                'customer_notification_preference' => [
+                    'invoice_created' => ['whatsapp', 'email'], // Notifikasi saat invoice dibuat
+                    'invoice_reminder' => ['whatsapp', 'email'], // Notifikasi reminder
+                    'invoice_paid' => ['whatsapp', 'email'], // Notifikasi saat invoice dibayar
+                ],
+
+                // Redirect URLs
+                'success_redirect_url' => route('payment.success') . '?external_id=' . $externalId,
+                'failure_redirect_url' => route('payment.failed') . '?external_id=' . $externalId,
+
+                // Payment methods - HANYA QRIS dan Virtual Account
+                'payment_methods' => ['QRIS', 'BCA', 'BNI', 'BRI', 'MANDIRI', 'PERMATA', 'BSI'],
+
+                // Items array (untuk detail produk)
+                'items' => [
+                    [
+                        'name' => $product['name'],
+                        'quantity' => $validated['quantity'],
+                        'price' => $product['price'],
+                        'category' => 'Education',
+                    ]
+                ],
+            ];
+
+            // --- TAMBAHKAN ITEM CONVENIENCE FEE JIKA ADA ---
+            if ($convenienceFee > 0) {
+                $paymentMethodLabel = $validated['payment_method'] === 'QRIS' ? 'QRIS' : 'Virtual Account';
+                $invoiceData['items'][] = [
+                    'name' => "Convenience Fee ({$paymentMethodLabel})",
+                    'quantity' => 1,
+                    'price' => $convenienceFee, // Nilai convenience fee sudah termasuk PPN 11%
+                    'category' => 'Fee',
+                ];
+            }
+
+            // Tambahkan surname jika ada
+            if (!empty($validated['surname'])) {
+                $invoiceData['customer']['surname'] = $validated['surname'];
+            }
+
+            // Tambahkan mobile_number jika ada
+            if ($mobileNumber) {
+                $invoiceData['customer']['mobile_number'] = $mobileNumber;
+            }
+
+            Log::info('Creating Xendit Invoice:', $invoiceData);
+
+            // Create invoice di Xendit
+            $invoice = $this->invoiceApi->createInvoice($invoiceData);
+
+            Log::info('Xendit Invoice Created:', (array) $invoice);
+
+            // Simpan data payment ke database dengan field yang sesuai
+            $payment = Payment::create([
+                'external_id' => $externalId,
+                'xendit_invoice_id' => $invoice['id'], // ID dari Xendit
+
+                // Customer information (sesuai struktur baru)
+                'given_names' => $validated['given_names'],
+                'surname' => $validated['surname'] ?? null,
+                'email' => $validated['email'],
+                'mobile_number' => $mobileNumber,
+
+                // Product information
+                'product_name' => $product['name'],
+                'quantity' => $validated['quantity'],
+
+                // Amount information
+                'amount' => $totalAmount,
+                'currency' => 'IDR',
+
+                // Invoice information
+                'description' => $product['description'] ?? $product['name'],
+                'invoice_url' => $invoice['invoice_url'],
+
+                // Status
+                'status' => strtolower($invoice['status']), // PENDING, PAID, EXPIRED
+
+                // Expiry
+                'expired_at' => $invoice['expiry_date'] ? \Carbon\Carbon::parse($invoice['expiry_date']) : null,
             ]);
 
-        } catch (\Xendit\XenditSdkException $e) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Failed to create invoice: ' . $e->getMessage()
-            ], 500);
+            Log::info('Payment record created:', $payment->toArray());
+
+            // Redirect ke Xendit checkout page
+            return redirect($invoice['invoice_url']);
+
         } catch (\Exception $e) {
-            return response()->json([
-                'success' => false,
-                'message' => 'An error occurred: ' . $e->getMessage()
-            ], 500);
+            Log::error('Payment Error: ' . $e->getMessage());
+            Log::error('Stack Trace: ' . $e->getTraceAsString());
+
+            return back()->with('error', 'Terjadi kesalahan saat memproses pembayaran: ' . $e->getMessage());
         }
     }
 
+    /**
+     * Callback dari Xendit setelah pembayaran
+     * Endpoint ini akan dipanggil oleh Xendit saat status invoice berubah
+     */
     public function callback(Request $request)
     {
-        // Log untuk debugging
-        Log::info('Xendit Callback Received:', $request->all());
+        // Verifikasi callback token dari Xendit
+        $callbackToken = $request->header('x-callback-token');
+        $xenditCallbackToken = env('XENDIT_CALLBACK_TOKEN');
 
-        // Verifikasi callback token
-        $xenditCallbackToken = $request->header('x-callback-token');
-
-        if ($xenditCallbackToken !== env('XENDIT_CALLBACK_TOKEN')) {
-            Log::error('Invalid callback token');
-            return response()->json(['message' => 'Invalid callback token'], 401);
+        if ($callbackToken !== $xenditCallbackToken) {
+            Log::warning('Invalid callback token', [
+                'received' => $callbackToken,
+                'expected' => $xenditCallbackToken
+            ]);
+            return response()->json(['message' => 'Invalid token'], 401);
         }
 
-        $externalId = $request->input('external_id');
-        $status = $request->input('status');
+        try {
+            $data = $request->all();
+            Log::info('Xendit Callback Received:', $data);
 
-        Log::info("Processing payment: {$externalId} with status: {$status}");
+            // Cari payment berdasarkan external_id
+            $payment = Payment::where('external_id', $data['external_id'])->first();
 
-        // Update payment status
-        $payment = Payment::where('external_id', $externalId)->first();
+            if (!$payment) {
+                Log::error('Payment not found for external_id: ' . $data['external_id']);
+                return response()->json(['message' => 'Payment not found'], 404);
+            }
 
-        if ($payment) {
-            $payment->status = strtolower($status);
-            $payment->paid_at = $status === 'PAID' ? now() : null;
+            // Update status payment sesuai callback dari Xendit
+            $payment->status = strtolower($data['status']); // PAID, EXPIRED, etc
+
+            // Jika status PAID, simpan informasi pembayaran
+            if (strtoupper($data['status']) === 'PAID') {
+                $payment->paid_at = isset($data['paid_at'])
+                    ? \Carbon\Carbon::parse($data['paid_at'])
+                    : now();
+
+                // Simpan payment method dan channel jika ada
+                if (isset($data['payment_method'])) {
+                    $payment->payment_method = $data['payment_method'];
+                }
+                if (isset($data['payment_channel'])) {
+                    $payment->payment_channel = $data['payment_channel'];
+                }
+                if (isset($data['payment_destination'])) {
+                    $payment->payment_destination = $data['payment_destination'];
+                }
+            }
+
             $payment->save();
 
-            Log::info("Payment updated successfully: {$externalId}");
-            return response()->json(['message' => 'Callback processed successfully']);
-        }
+            Log::info('Payment updated successfully:', $payment->toArray());
 
-        Log::error("Payment not found: {$externalId}");
-        return response()->json(['message' => 'Payment not found'], 404);
+            return response()->json(['message' => 'Callback processed successfully'], 200);
+
+        } catch (\Exception $e) {
+            Log::error('Callback Error: ' . $e->getMessage());
+            return response()->json(['message' => 'Error processing callback'], 500);
+        }
     }
 
     /**
@@ -841,12 +629,18 @@ class PaymentController extends Controller
             'success' => true,
             'data' => [
                 'external_id' => $payment->external_id,
-                'payer_name' => $payment->payer_name,
-                'payer_email' => $payment->payer_email,
-                'payer_phone' => $payment->payer_phone,
+                'given_names' => $payment->given_names,
+                'surname' => $payment->surname,
+                'email' => $payment->email,
+                'mobile_number' => $payment->mobile_number,
+                'product_name' => $payment->product_name,
+                'quantity' => $payment->quantity,
                 'amount' => $payment->amount,
+                'currency' => $payment->currency,
                 'status' => $payment->status,
-                'checkout_link' => $payment->checkout_link,
+                'invoice_url' => $payment->invoice_url,
+                'payment_method' => $payment->payment_method,
+                'payment_channel' => $payment->payment_channel,
                 'paid_at' => $payment->paid_at,
                 'created_at' => $payment->created_at,
             ]
@@ -869,7 +663,7 @@ class PaymentController extends Controller
         }
 
         try {
-            // Gunakan HTTP Client Laravel
+            // Gunakan HTTP Client Laravel untuk hit Xendit API
             $response = \Illuminate\Support\Facades\Http::withHeaders([
                 'Authorization' => 'Basic ' . base64_encode(env('XENDIT_SECRET_KEY') . ':'),
             ])->get("https://api.xendit.co/v2/invoices", [
@@ -906,10 +700,21 @@ class PaymentController extends Controller
 
             $payment->status = $newStatus;
 
+            // Update payment details jika status PAID
             if (strtoupper($invoice['status']) === 'PAID' && !$payment->paid_at) {
                 $payment->paid_at = isset($invoice['paid_at'])
                     ? \Carbon\Carbon::parse($invoice['paid_at'])
                     : now();
+
+                if (isset($invoice['payment_method'])) {
+                    $payment->payment_method = $invoice['payment_method'];
+                }
+                if (isset($invoice['payment_channel'])) {
+                    $payment->payment_channel = $invoice['payment_channel'];
+                }
+                if (isset($invoice['payment_destination'])) {
+                    $payment->payment_destination = $invoice['payment_destination'];
+                }
             }
 
             $payment->save();
@@ -923,6 +728,8 @@ class PaymentController extends Controller
                     'new_status' => $payment->status,
                     'amount' => $payment->amount,
                     'paid_at' => $payment->paid_at,
+                    'payment_method' => $payment->payment_method,
+                    'payment_channel' => $payment->payment_channel,
                     'xendit_data' => [
                         'invoice_url' => $invoice['invoice_url'] ?? null,
                         'expiry_date' => $invoice['expiry_date'] ?? null,
@@ -945,67 +752,61 @@ class PaymentController extends Controller
      * Menampilkan halaman payment success
      */
     public function showSuccess(Request $request)
-{
-    $externalId = $request->query('external_id');
+    {
+        $externalId = $request->query('external_id');
 
-    if (!$externalId) {
-        // Jika tidak ada external_id, tampilkan halaman tanpa data
-        return view('payment-success');
+        if (!$externalId) {
+            return view('payment-success');
+        }
+
+        $payment = Payment::where('external_id', $externalId)->first();
+
+        if (!$payment) {
+            return redirect('/')->with('error', 'Data pembayaran tidak ditemukan');
+        }
+
+        // Generate WhatsApp URL untuk konfirmasi
+        $whatsappNumber = '62859106869302';
+
+        // Gabungkan given_names dan surname untuk nama lengkap
+        $fullName = trim($payment->given_names . ' ' . ($payment->surname ?? ''));
+
+        $message = "*KONFIRMASI PEMBAYARAN BERHASIL*%0A%0A";
+        $message .= "Halo MinFara, saya telah menyelesaikan pembayaran dengan detail sebagai berikut:%0A%0A";
+        $message .= "📋 *Detail Pembayaran:*%0A";
+        $message .= "━━━━━━━━━━━━━━━━━━━━%0A";
+        $message .= "🔖 *No. Invoice:* " . $payment->external_id . "%0A";
+
+        if ($payment->product_name) {
+            $message .= "📦 *Produk:* " . urlencode($payment->product_name) . "%0A";
+        }
+
+        if ($payment->quantity && $payment->quantity > 1) {
+            $message .= "🔢 *Jumlah:* " . $payment->quantity . " item%0A";
+        }
+
+        $message .= "👤 *Nama:* " . urlencode($fullName) . "%0A";
+        $message .= "📧 *Email:* " . urlencode($payment->email) . "%0A";
+
+        if ($payment->mobile_number) {
+            $message .= "📱 *No. Telepon:* " . $payment->mobile_number . "%0A";
+        }
+
+        $message .= "💰 *Jumlah Bayar:* Rp " . number_format((float) $payment->amount, 0, ',', '.') . "%0A";
+        $message .= "✅ *Status:* Lunas%0A";
+
+        if ($payment->paid_at) {
+            $message .= "🗓️ *Tanggal Bayar:* " . $payment->paid_at->format('d/m/Y H:i') . " WIB%0A";
+        }
+
+        $message .= "━━━━━━━━━━━━━━━━━━━━%0A%0A";
+        $message .= "Mohon informasi lebih lanjut mengenai akses kursus.%0A%0A";
+        $message .= "Terima kasih! 🙏";
+
+        $whatsappUrl = "https://api.whatsapp.com/send?phone={$whatsappNumber}&text={$message}";
+
+        return view('payment-success', compact('payment', 'whatsappUrl'));
     }
-
-    // Ambil data payment dari database
-    $payment = Payment::where('external_id', $externalId)->first();
-
-    if (!$payment) {
-        // Jika payment tidak ditemukan, redirect ke homepage atau tampilkan error
-        return redirect('/')->with('error', 'Data pembayaran tidak ditemukan');
-    }
-
-    // ============================================================================
-    // GENERATE WHATSAPP URL - TAMBAHKAN KODE INI
-    // ============================================================================
-    $whatsappNumber = '62859106869302'; // Nomor WhatsApp MinFara
-
-    $message = "*KONFIRMASI PEMBAYARAN BERHASIL*%0A%0A";
-    $message .= "Halo MinFara, saya telah menyelesaikan pembayaran dengan detail sebagai berikut:%0A%0A";
-    $message .= "📋 *Detail Pembayaran:*%0A";
-    $message .= "━━━━━━━━━━━━━━━━━━━━%0A";
-    $message .= "🔖 *No. Invoice:* " . $payment->external_id . "%0A";
-
-    if ($payment->product_name) {
-        $message .= "📦 *Produk:* " . urlencode($payment->product_name) . "%0A";
-    }
-
-    if ($payment->quantity && $payment->quantity > 1) {
-        $message .= "🔢 *Jumlah:* " . $payment->quantity . " item%0A";
-    }
-
-    $message .= "👤 *Nama:* " . urlencode($payment->payer_name) . "%0A";
-    $message .= "📧 *Email:* " . urlencode($payment->payer_email) . "%0A";
-
-    if ($payment->payer_phone) {
-        $message .= "📱 *No. Telepon:* " . $payment->payer_phone . "%0A";
-    }
-
-    $message .= "💰 *Jumlah Bayar:* Rp " . number_format((float) $payment->amount, 0, ',', '.') . "%0A";
-    $message .= "✅ *Status:* Lunas%0A";
-
-    if ($payment->paid_at) {
-        $message .= "🗓️ *Tanggal Bayar:* " . $payment->paid_at->format('d/m/Y H:i') . " WIB%0A";
-    }
-
-    $message .= "━━━━━━━━━━━━━━━━━━━━%0A%0A";
-    $message .= "Mohon informasi lebih lanjut mengenai akses kursus.%0A%0A";
-    $message .= "Terima kasih! 🙏";
-
-    $whatsappUrl = "https://api.whatsapp.com/send?phone={$whatsappNumber}&text={$message}";
-    // ============================================================================
-    // AKHIR KODE WHATSAPP URL
-    // ============================================================================
-
-    // Tampilkan view dengan data payment DAN whatsappUrl
-    return view('payment-success', compact('payment', 'whatsappUrl'));
-}
 
     /**
      * Menampilkan halaman payment failed
@@ -1015,19 +816,15 @@ class PaymentController extends Controller
         $externalId = $request->query('external_id');
 
         if (!$externalId) {
-            // Jika tidak ada external_id, tampilkan halaman tanpa data
             return view('payment-failed');
         }
 
-        // Ambil data payment dari database
         $payment = Payment::where('external_id', $externalId)->first();
 
         if (!$payment) {
-            // Jika payment tidak ditemukan, redirect ke homepage atau tampilkan error
             return redirect('/')->with('error', 'Data pembayaran tidak ditemukan');
         }
 
-        // Tampilkan view dengan data payment
         return view('payment-failed', compact('payment'));
     }
 }
