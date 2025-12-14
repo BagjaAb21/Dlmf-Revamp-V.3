@@ -19,7 +19,7 @@ class PaymentController extends Controller
         'intensif-online-a1' => [
             'code' => 'intensif-online-a1',
             'name' => 'Intensif Reguler Online A1',
-            'price' => 10000,
+            'price' => 1499000,
             'description' => 'Kursus Bahasa Jerman Level A1 - Online'
         ],
         'intensif-online-a2' => [
@@ -62,17 +62,35 @@ class PaymentController extends Controller
             'price' => 975000,
             'description' => 'Private Grammar A1 - Online'
         ],
+        'grammatik-online-a1-english' => [
+            'code' => 'grammatik-online-a1-english',
+            'name' => 'Private Grammatik Online A1 Dalam Bahasa Inggris',
+            'price' => 1150000,
+            'description' => 'Private Grammar A1 - Online Dalam Bahasa Inggris'
+        ],
         'grammatik-online-a2' => [
             'code' => 'grammatik-online-a2',
             'name' => 'Private Grammatik Online A2',
             'price' => 975000,
             'description' => 'Private Grammar A2 - Online'
         ],
+        'grammatik-online-a2-english' => [
+            'code' => 'grammatik-online-a2-english',
+            'name' => 'Private Grammatik Online A2 Dalam Bahasa Inggris',
+            'price' => 1150000,
+            'description' => 'Private Grammar A2 - Online Dalam Bahasa Inggris'
+        ],
         'grammatik-online-b1' => [
             'code' => 'grammatik-online-b1',
             'name' => 'Private Grammatik Online B1',
             'price' => 1095000,
             'description' => 'Private Grammar B1 - Online'
+        ],
+        'grammatik-online-b1-english' => [
+            'code' => 'grammatik-online-b1-english',
+            'name' => 'Private Grammatik Online B1 Dalam Bahasa Inggris',
+            'price' => 1270000,
+            'description' => 'Private Grammar B1 - Online Dalam Bahasa Inggris'
         ],
 
         // ==================== PRIVATE GRAMMATIK OFFLINE ====================
@@ -120,17 +138,35 @@ class PaymentController extends Controller
             'price' => 975000,
             'description' => 'Persiapan Ujian Goethe A1 - Online'
         ],
+        'goethe-online-a1-english' => [
+            'code' => 'goethe-online-a1-english',
+            'name' => 'Private Persiapan Ujian Goethe A1 Online Dalam Bahasa Inggris',
+            'price' => 1150000,
+            'description' => 'Persiapan Ujian Goethe A1 - Online Dalam Bahasa Inggris'
+        ],
         'goethe-online-a2' => [
             'code' => 'goethe-online-a2',
             'name' => 'Private Persiapan Ujian Goethe A2 Online',
             'price' => 975000,
             'description' => 'Persiapan Ujian Goethe A2 - Online'
         ],
+        'goethe-online-a2-english' => [
+            'code' => 'goethe-online-a2-english',
+            'name' => 'Private Persiapan Ujian Goethe A2 Online Dalam Bahasa Inggris',
+            'price' => 1150000,
+            'description' => 'Persiapan Ujian Goethe A2 - Online Dalam Bahasa Inggris'
+        ],
         'goethe-online-b1' => [
             'code' => 'goethe-online-b1',
             'name' => 'Private Persiapan Ujian Goethe B1 Online',
-            'price' => 975000,
+            'price' => 1095000,
             'description' => 'Persiapan Ujian Goethe B1 - Online'
+        ],
+        'goethe-online-b1-english' => [
+            'code' => 'goethe-online-b1-english',
+            'name' => 'Private Persiapan Ujian Goethe B1 Online Dalam Bahasa Inggris',
+            'price' => 1270000,
+            'description' => 'Persiapan Ujian Goethe B1 - Online Dalam Bahasa Inggris'
         ],
 
         // ==================== PERSIAPAN UJIAN GOETHE OFFLINE ====================
@@ -144,7 +180,7 @@ class PaymentController extends Controller
             'code' => 'goethe-offline-a1-english',
             'name' => 'Private Persiapan Ujian Goethe A1 Offline Dalam Bahasa Inggris',
             'price' => 1575000,
-            'description' => 'Persiapan Ujian Goethe A1 - Offline (English)'
+            'description' => 'Persiapan Ujian Goethe A1 - Offline Dalam Bahasa Inggris'
         ],
         'goethe-offline-a2' => [
             'code' => 'goethe-offline-a2',
@@ -155,8 +191,20 @@ class PaymentController extends Controller
         'goethe-offline-a2-english' => [
             'code' => 'goethe-offline-a2-english',
             'name' => 'Private Persiapan Ujian Goethe A2 Offline Dalam Bahasa Inggris',
+            'price' => 1575000,
+            'description' => 'Persiapan Ujian Goethe A2 - Offline Dalam Bahasa Inggris'
+        ],
+        'goethe-offline-b1' => [
+            'code' => 'goethe-offline-b1',
+            'name' => 'Private Persiapan Ujian Goethe B1 Offline',
+            'price' => 1400000,
+            'description' => 'Persiapan Ujian Goethe B1 - Offline'
+        ],
+        'goethe-offline-b1-english' => [
+            'code' => 'goethe-offline-b1-english',
+            'name' => 'Private Persiapan Ujian Goethe B1 Offline Dalam Bahasa Inggris',
             'price' => 1675000,
-            'description' => 'Persiapan Ujian Goethe A2 - Offline (English)'
+            'description' => 'Persiapan Ujian Goethe B1 - Offline Dalam Bahasa Inggris'
         ],
 
         // ==================== KINDER (ANAK-ANAK) ====================
@@ -169,7 +217,7 @@ class PaymentController extends Controller
         'kinder-online-english' => [
             'code' => 'kinder-online-english',
             'name' => 'Private Kinder dengan Bahasa Inggris Online',
-            'price' => 1000000,
+            'price' => 1070000,
             'description' => 'Kursus Anak dengan Bahasa Inggris - Online'
         ],
 
@@ -192,171 +240,319 @@ class PaymentController extends Controller
             'code' => 'bundling-a1-a2-online',
             'name' => 'Bundling Reguler Intensif A1-A2 Online',
             'price' => 5599000,
-            'description' => 'Paket Bundling Level A1-A2 - Online'
+            'description' => 'Paket Bundling Reguler Intensif Level A1-A2 - Online'
         ],
         'bundling-a2-b1-online' => [
             'code' => 'bundling-a2-b1-online',
             'name' => 'Bundling Reguler Intensif A2-B1 Online',
             'price' => 5999000,
-            'description' => 'Paket Bundling Level A2-B1 - Online'
+            'description' => 'Paket Bundling Reguler Intensif Level A2-B1 - Online'
         ],
         'bundling-a1-b1-online' => [
             'code' => 'bundling-a1-b1-online',
             'name' => 'Bundling Reguler Intensif A1-B1 Online',
-            'price' => 8394000,
-            'description' => 'Paket Bundling Level A1-B1 - Online'
+            'price' => 8399000,
+            'description' => 'Paket Bundling Reguler Intensif Level A1-B1 - Online'
         ],
 
         // ==================== FLEXILEARN A1 ====================
         'flexilearn-a1-2m' => [
             'code' => 'flexilearn-a1-2m',
             'name' => 'FlexiLearn A1 - 2 Bulan',
-            'price' => 1299000,
+            'price' => 149000,
             'description' => 'Akses FlexiLearn Level A1 - 2 Bulan'
-        ],
-        'flexilearn-a1-3m' => [
-            'code' => 'flexilearn-a1-3m',
-            'name' => 'FlexiLearn A1 - 3 Bulan',
-            'price' => 1799000,
-            'description' => 'Akses FlexiLearn Level A1 - 3 Bulan'
         ],
         'flexilearn-a1-6m' => [
             'code' => 'flexilearn-a1-6m',
             'name' => 'FlexiLearn A1 - 6 Bulan',
-            'price' => 2499000,
+            'price' => 169000,
             'description' => 'Akses FlexiLearn Level A1 - 6 Bulan'
         ],
         'flexilearn-a1-12m' => [
             'code' => 'flexilearn-a1-12m',
             'name' => 'FlexiLearn A1 - 12 Bulan',
-            'price' => 3299000,
+            'price' => 189000,
             'description' => 'Akses FlexiLearn Level A1 - 12 Bulan'
+        ],
+        'flexilearn-a1-lifetime' => [
+            'code' => 'flexilearn-a1-lifetime',
+            'name' => 'FlexiLearn A1 - Lifetime Basic',
+            'price' => 199000,
+            'description' => 'Akses FlexiLearn Level A1 - Lifetime Basic'
+        ],
+        'flexilearn-a1-lifetime-10book' => [
+            'code' => 'flexilearn-a1-lifetime-10book',
+            'name' => 'FlexiLearn A1 - Lifetime Basic + 10 E-Book',
+            'price' => 299000,
+            'description' => 'Akses FlexiLearn Level A1 - Lifetime Basic + 10 E-Book'
+        ],
+        'flexilearn-a1-lifetime-20book' => [
+            'code' => 'flexilearn-a1-lifetime-20book',
+            'name' => 'FlexiLearn A1 - Lifetime Basic + 20 E-Book',
+            'price' => 399000,
+            'description' => 'Akses FlexiLearn Level A1 - Lifetime Basic + 20 E-Book'
+        ],
+        'flexilearn-a1-lifetime-20book-1private' => [
+            'code' => 'flexilearn-a1-lifetime-20book-1private',
+            'name' => 'FlexiLearn A1 - Lifetime Basic + 20 E-Book + 1x Private Session',
+            'price' => 599000,
+            'description' => 'Akses FlexiLearn Level A1 - Lifetime Basic + 20 E-Book + 1x Private Session'
+        ],
+        'flexilearn-a1-lifetime-20book-2private' => [
+            'code' => 'flexilearn-a1-lifetime-20book-2private',
+            'name' => 'FlexiLearn A1 - Lifetime Basic + 20 E-Book + 2x Private Session',
+            'price' => 699000,
+            'description' => 'Akses FlexiLearn Level A1 - Lifetime Basic + 20 E-Book + 2x Private Session'
         ],
 
         // ==================== FLEXILEARN A2 ====================
         'flexilearn-a2-2m' => [
             'code' => 'flexilearn-a2-2m',
             'name' => 'FlexiLearn A2 - 2 Bulan',
-            'price' => 1299000,
+            'price' => 149000,
             'description' => 'Akses FlexiLearn Level A2 - 2 Bulan'
-        ],
-        'flexilearn-a2-3m' => [
-            'code' => 'flexilearn-a2-3m',
-            'name' => 'FlexiLearn A2 - 3 Bulan',
-            'price' => 1799000,
-            'description' => 'Akses FlexiLearn Level A2 - 3 Bulan'
         ],
         'flexilearn-a2-6m' => [
             'code' => 'flexilearn-a2-6m',
             'name' => 'FlexiLearn A2 - 6 Bulan',
-            'price' => 2499000,
+            'price' => 169000,
             'description' => 'Akses FlexiLearn Level A2 - 6 Bulan'
         ],
         'flexilearn-a2-12m' => [
             'code' => 'flexilearn-a2-12m',
             'name' => 'FlexiLearn A2 - 12 Bulan',
-            'price' => 3299000,
+            'price' => 189000,
             'description' => 'Akses FlexiLearn Level A2 - 12 Bulan'
+        ],
+        'flexilearn-a2-lifetime' => [
+            'code' => 'flexilearn-a2-lifetime',
+            'name' => 'FlexiLearn A2 - Lifetime Basic',
+            'price' => 199000,
+            'description' => 'Akses FlexiLearn Level A2 - Lifetime Basic'
+        ],
+        'flexilearn-a2-lifetime-10book' => [
+            'code' => 'flexilearn-a2-lifetime-10book',
+            'name' => 'FlexiLearn A2 - Lifetime Basic + 10 E-Book',
+            'price' => 299000,
+            'description' => 'Akses FlexiLearn Level A2 - Lifetime Basic + 10 E-Book'
+        ],
+        'flexilearn-a2-lifetime-20book' => [
+            'code' => 'flexilearn-a2-lifetime-20book',
+            'name' => 'FlexiLearn A2 - Lifetime Basic + 20 E-Book',
+            'price' => 399000,
+            'description' => 'Akses FlexiLearn Level A2 - Lifetime Basic + 20 E-Book'
+        ],
+        'flexilearn-a2-lifetime-20book-1private' => [
+            'code' => 'flexilearn-a2-lifetime-20book-1private',
+            'name' => 'FlexiLearn A2 - Lifetime Basic + 20 E-Book + 1x Private Session',
+            'price' => 599000,
+            'description' => 'Akses FlexiLearn Level A2 - Lifetime Basic + 20 E-Book + 1x Private Session'
+        ],
+        'flexilearn-a2-lifetime-20book-2private' => [
+            'code' => 'flexilearn-a2-lifetime-20book-2private',
+            'name' => 'FlexiLearn A2 - Lifetime Basic + 20 E-Book + 2x Private Session',
+            'price' => 699000,
+            'description' => 'Akses FlexiLearn Level A2 - Lifetime Basic + 20 E-Book + 2x Private Session'
         ],
 
         // ==================== FLEXILEARN B1 ====================
         'flexilearn-b1-2m' => [
             'code' => 'flexilearn-b1-2m',
             'name' => 'FlexiLearn B1 - 2 Bulan',
-            'price' => 1499000,
+            'price' => 159000,
             'description' => 'Akses FlexiLearn Level B1 - 2 Bulan'
-        ],
-        'flexilearn-b1-3m' => [
-            'code' => 'flexilearn-b1-3m',
-            'name' => 'FlexiLearn B1 - 3 Bulan',
-            'price' => 1999000,
-            'description' => 'Akses FlexiLearn Level B1 - 3 Bulan'
         ],
         'flexilearn-b1-6m' => [
             'code' => 'flexilearn-b1-6m',
             'name' => 'FlexiLearn B1 - 6 Bulan',
-            'price' => 2699000,
+            'price' => 179000,
             'description' => 'Akses FlexiLearn Level B1 - 6 Bulan'
         ],
         'flexilearn-b1-12m' => [
             'code' => 'flexilearn-b1-12m',
             'name' => 'FlexiLearn B1 - 12 Bulan',
-            'price' => 3499000,
+            'price' => 199000,
             'description' => 'Akses FlexiLearn Level B1 - 12 Bulan'
         ],
+        'flexilearn-b1-lifetime' => [
+            'code' => 'flexilearn-b1-lifetime',
+            'name' => 'FlexiLearn B1 - Lifetime Basic',
+            'price' => 199000,
+            'description' => 'Akses FlexiLearn Level B1 - Lifetime Basic'
+        ],
+        'flexilearn-b1-lifetime-10book' => [
+            'code' => 'flexilearn-b1-lifetime-10book',
+            'name' => 'FlexiLearn B1 - Lifetime Basic + 10 E-Book',
+            'price' => 399000,
+            'description' => 'Akses FlexiLearn Level B1 - Lifetime Basic + 10 E-Book'
+        ],
+        'flexilearn-b1-lifetime-20book' => [
+            'code' => 'flexilearn-b1-lifetime-20book',
+            'name' => 'FlexiLearn B1 - Lifetime Basic + 20 E-Book',
+            'price' => 469000,
+            'description' => 'Akses FlexiLearn Level B1 - Lifetime Basic + 20 E-Book'
+        ],
+        'flexilearn-b1-lifetime-20book-1private' => [
+            'code' => 'flexilearn-b1-lifetime-20book-1private',
+            'name' => 'FlexiLearn B1 - Lifetime Basic + 20 E-Book + 1x Private Session',
+            'price' => 649000,
+            'description' => 'Akses FlexiLearn Level B1 - Lifetime Basic + 20 E-Book + 1x Private Session'
+        ],
+        'flexilearn-b1-lifetime-20book-2private' => [
+            'code' => 'flexilearn-b1-lifetime-20book-2private',
+            'name' => 'FlexiLearn B1 - Lifetime Basic + 20 E-Book + 2x Private Session',
+            'price' => 759000,
+            'description' => 'Akses FlexiLearn Level B1 - Lifetime Basic + 20 E-Book + 2x Private Session'
+        ],
 
-        // ==================== BUNDLING FLEXILEARN ====================
+        // ==================== BUNDLING FLEXILEARN A1-A2 ====================
         'flexilearn-a1-a2-2m' => [
             'code' => 'flexilearn-a1-a2-2m',
             'name' => 'FlexiLearn A1-A2 - 2 Bulan',
-            'price' => 2399000,
+            'price' => 269000,
             'description' => 'Akses FlexiLearn Level A1-A2 - 2 Bulan'
-        ],
-        'flexilearn-a1-a2-3m' => [
-            'code' => 'flexilearn-a1-a2-3m',
-            'name' => 'FlexiLearn A1-A2 - 3 Bulan',
-            'price' => 3299000,
-            'description' => 'Akses FlexiLearn Level A1-A2 - 3 Bulan'
         ],
         'flexilearn-a1-a2-6m' => [
             'code' => 'flexilearn-a1-a2-6m',
             'name' => 'FlexiLearn A1-A2 - 6 Bulan',
-            'price' => 4599000,
+            'price' => 309000,
             'description' => 'Akses FlexiLearn Level A1-A2 - 6 Bulan'
         ],
         'flexilearn-a1-a2-12m' => [
             'code' => 'flexilearn-a1-a2-12m',
             'name' => 'FlexiLearn A1-A2 - 12 Bulan',
-            'price' => 6099000,
+            'price' => 339000,
             'description' => 'Akses FlexiLearn Level A1-A2 - 12 Bulan'
         ],
+        'flexilearn-a1-a2-lifetime' => [
+            'code' => 'flexilearn-a1-a2-lifetime',
+            'name' => 'FlexiLearn A1-A2 - Lifetime Basic',
+            'price' => 339000,
+            'description' => 'Akses FlexiLearn Level A1-A2 - Lifetime Basic'
+        ],
+        'flexilearn-a1-a2-lifetime-10book' => [
+            'code' => 'flexilearn-a1-a2-lifetime-10book',
+            'name' => 'FlexiLearn A1-A2 - Lifetime Basic + 10 E-Book',
+            'price' => 569000,
+            'description' => 'Akses FlexiLearn Level A1-A2 - Lifetime Basic + 10 E-Book'
+        ],
+        'flexilearn-a1-a2-lifetime-20book' => [
+            'code' => 'flexilearn-a1-a2-lifetime-20book',
+            'name' => 'FlexiLearn A1-A2 - Lifetime Basic + 20 E-Book',
+            'price' => 779000,
+            'description' => 'Akses FlexiLearn Level A1-A2 - Lifetime Basic + 20 E-Book'
+        ],
+        'flexilearn-a1-a2-lifetime-20book-1private' => [
+            'code' => 'flexilearn-a1-a2-lifetime-20book-1private',
+            'name' => 'FlexiLearn A1-A2 - Lifetime Basic + 20 E-Book + 1x Private Session',
+            'price' => 1169000,
+            'description' => 'Akses FlexiLearn Level A1-A2 - Lifetime Basic + 20 E-Book + 1x Private Session'
+        ],
+        'flexilearn-a1-a2-lifetime-20book-2private' => [
+            'code' => 'flexilearn-a1-a2-lifetime-20book-2private',
+            'name' => 'FlexiLearn A1-A2 - Lifetime Basic + 20 E-Book + 2x Private Session',
+            'price' => 1349000,
+            'description' => 'Akses FlexiLearn Level A1-A2 - Lifetime Basic + 20 E-Book + 2x Private Session'
+        ],
+
+        // ==================== BUNDLING FLEXILEARN A2-B1 ====================
         'flexilearn-a2-b1-2m' => [
             'code' => 'flexilearn-a2-b1-2m',
             'name' => 'FlexiLearn A2-B1 - 2 Bulan',
-            'price' => 2599000,
+            'price' => 289000,
             'description' => 'Akses FlexiLearn Level A2-B1 - 2 Bulan'
-        ],
-        'flexilearn-a2-b1-3m' => [
-            'code' => 'flexilearn-a2-b1-3m',
-            'name' => 'FlexiLearn A2-B1 - 3 Bulan',
-            'price' => 3499000,
-            'description' => 'Akses FlexiLearn Level A2-B1 - 3 Bulan'
         ],
         'flexilearn-a2-b1-6m' => [
             'code' => 'flexilearn-a2-b1-6m',
             'name' => 'FlexiLearn A2-B1 - 6 Bulan',
-            'price' => 4899000,
+            'price' => 319000,
             'description' => 'Akses FlexiLearn Level A2-B1 - 6 Bulan'
         ],
         'flexilearn-a2-b1-12m' => [
             'code' => 'flexilearn-a2-b1-12m',
             'name' => 'FlexiLearn A2-B1 - 12 Bulan',
-            'price' => 6499000,
+            'price' => 359000,
             'description' => 'Akses FlexiLearn Level A2-B1 - 12 Bulan'
         ],
+        'flexilearn-a2-b1-lifetime' => [
+            'code' => 'flexilearn-a2-b1-lifetime',
+            'name' => 'FlexiLearn A2-B1 - Lifetime Basic',
+            'price' => 379000,
+            'description' => 'Akses FlexiLearn Level A2-B1 - Lifetime Basic'
+        ],
+        'flexilearn-a2-b1-lifetime-10book' => [
+            'code' => 'flexilearn-a2-b1-lifetime-10book',
+            'name' => 'FlexiLearn A2-B1 - Lifetime Basic + 10 E-Book',
+            'price' => 609000,
+            'description' => 'Akses FlexiLearn Level A2-B1 - Lifetime Basic + 10 E-Book'
+        ],
+        'flexilearn-a2-b1-lifetime-20book' => [
+            'code' => 'flexilearn-a2-b1-lifetime-20book',
+            'name' => 'FlexiLearn A2-B1 - Lifetime Basic + 20 E-Book',
+            'price' => 839000,
+            'description' => 'Akses FlexiLearn Level A2-B1 - Lifetime Basic + 20 E-Book'
+        ],
+        'flexilearn-a2-b1-lifetime-20book-1private' => [
+            'code' => 'flexilearn-a2-b1-lifetime-20book-1private',
+            'name' => 'FlexiLearn A2-B1 - Lifetime Basic + 20 E-Book + 1x Private Session',
+            'price' => 1209000,
+            'description' => 'Akses FlexiLearn Level A2-B1 - Lifetime Basic + 20 E-Book + 1x Private Session'
+        ],
+        'flexilearn-a2-b1-lifetime-20book-2private' => [
+            'code' => 'flexilearn-a2-b1-lifetime-20book-2private',
+            'name' => 'FlexiLearn A2-B1 - Lifetime Basic + 20 E-Book + 2x Private Session',
+            'price' => 1409000,
+            'description' => 'Akses FlexiLearn Level A2-B1 - Lifetime Basic + 20 E-Book + 2x Private Session'
+        ],
+
+        // ==================== BUNDLING FLEXILEARN A1-B1 ====================
         'flexilearn-a1-b1-2m' => [
             'code' => 'flexilearn-a1-b1-2m',
             'name' => 'FlexiLearn A1-B1 - 2 Bulan',
-            'price' => 3599000,
+            'price' => 429000,
             'description' => 'Akses FlexiLearn Level A1-B1 - 2 Bulan'
-        ],
-        'flexilearn-a1-b1-3m' => [
-            'code' => 'flexilearn-a1-b1-3m',
-            'name' => 'FlexiLearn A1-B1 - 3 Bulan',
-            'price' => 4899000,
-            'description' => 'Akses FlexiLearn Level A1-B1 - 3 Bulan'
         ],
         'flexilearn-a1-b1-6m' => [
             'code' => 'flexilearn-a1-b1-6m',
             'name' => 'FlexiLearn A1-B1 - 6 Bulan',
-            'price' => 6899000,
+            'price' => 479000,
             'description' => 'Akses FlexiLearn Level A1-B1 - 6 Bulan'
         ],
         'flexilearn-a1-b1-12m' => [
             'code' => 'flexilearn-a1-b1-12m',
             'name' => 'FlexiLearn A1-B1 - 12 Bulan',
-            'price' => 9199000,
+            'price' => 529000,
             'description' => 'Akses FlexiLearn Level A1-B1 - 12 Bulan'
+        ],
+        'flexilearn-a1-b1-lifetime' => [
+            'code' => 'flexilearn-a1-b1-lifetime',
+            'name' => 'FlexiLearn A1-B1 - Lifetime Basic',
+            'price' => 569000,
+            'description' => 'Akses FlexiLearn Level A1-B1 - Lifetime Basic'
+        ],
+        'flexilearn-a1-b1-lifetime-10book' => [
+            'code' => 'flexilearn-a1-b1-lifetime-10book',
+            'name' => 'FlexiLearn A1-B1 - Lifetime Basic + 10 E-Book',
+            'price' => 889000,
+            'description' => 'Akses FlexiLearn Level A1-B1 - Lifetime Basic + 10 E-Book'
+        ],
+        'flexilearn-a1-b1-lifetime-20book' => [
+            'code' => 'flexilearn-a1-b1-lifetime-20book',
+            'name' => 'FlexiLearn A1-B1 - Lifetime Basic + 20 E-Book',
+            'price' => 1229000,
+            'description' => 'Akses FlexiLearn Level A1-B1 - Lifetime Basic + 20 E-Book'
+        ],
+        'flexilearn-a1-b1-lifetime-20book-1private' => [
+            'code' => 'flexilearn-a1-b1-lifetime-20book-1private',
+            'name' => 'FlexiLearn A1-B1 - Lifetime Basic + 20 E-Book + 1x Private Session',
+            'price' => 1779000,
+            'description' => 'Akses FlexiLearn Level A1-B1 - Lifetime Basic + 20 E-Book + 1x Private Session'
+        ],
+        'flexilearn-a1-b1-lifetime-20book-2private' => [
+            'code' => 'flexilearn-a1-b1-lifetime-20book-2private',
+            'name' => 'FlexiLearn A1-B1 - Lifetime Basic + 20 E-Book + 2x Private Session',
+            'price' => 2009000,
+            'description' => 'Akses FlexiLearn Level A1-B1 - Lifetime Basic + 20 E-Book + 2x Private Session'
         ],
     ];
 
@@ -531,7 +727,7 @@ class PaymentController extends Controller
                 'status' => strtolower($invoice['status']), // PENDING, PAID, EXPIRED
 
                 // Expiry
-                'expired_at' => $invoice['expiry_date'] ? \Carbon\Carbon::parse($invoice['expiry_date']) : null,
+                'expired_at' => $invoice['expiry_date'] ? \Carbon\Carbon::parse($invoice['expiry_date'])->timezone('Asia/Jakarta') : null,
             ]);
 
             Log::info('Payment record created:', $payment->toArray());
@@ -583,8 +779,8 @@ class PaymentController extends Controller
             // Jika status PAID, simpan informasi pembayaran
             if (strtoupper($data['status']) === 'PAID') {
                 $payment->paid_at = isset($data['paid_at'])
-                    ? \Carbon\Carbon::parse($data['paid_at'])
-                    : now();
+                    ? \Carbon\Carbon::parse($data['paid_at'])->timezone('Asia/Jakarta')
+                    : now()->timezone('Asia/Jakarta');
 
                 // Simpan payment method dan channel jika ada
                 if (isset($data['payment_method'])) {

@@ -468,15 +468,24 @@
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border: none;
-            padding: 12px 30px;
+            padding: 1px 19px;
             border-radius: 25px;
             font-weight: 600;
             transition: all 0.3s ease;
             width: 100%;
             margin-top: auto;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
         }
 
         .btn-program:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+            color: white;
+        }
+
+        .btn-program a:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
             color: white;
@@ -799,7 +808,7 @@
                 <div class="program-card">
                     <div class="program-type">Intensif Reguler A-1</div>
                     <div class="program-price-container">
-                        <div class="program-price">Rp10.000</div>
+                        <div class="program-price">Rp1.499.000</div>
                     </div>
                     <p class="program-description">
                         Belajar dari mana saja dengan metode intensif dan terarah. Dirancang untuk kamu yang ingin fasih
@@ -845,7 +854,7 @@
                     </div>
                     <button class="btn btn-program mt-auto">
                         <a href="{{ route('payment.checkout', ['product' => 'intensif-online-a1']) }}"
-                            class="btn btn-primary w-100">
+                            class="d-block w-100 text-decoration-none">
                             <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
                         </a>
                     </button>
@@ -898,9 +907,11 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Sertifikat</span>
                     </div>
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Intensif Reguler Online A-2', 'Rp1.499.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'intensif-online-a2']) }}"
+                            class="d-block w-100 text-decoration-none">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Intensif Reguler Online B-1 -->
@@ -951,9 +962,11 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Sertifikat</span>
                     </div>
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Intensif Reguler Online B-1', 'Rp1.699.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'intensif-online-b1']) }}"
+                            class="d-block w-100 text-decoration-none">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Private Grammatik Online A-1 -->
@@ -996,9 +1009,11 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Bisa request jadwal</span>
                     </div>
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Private Grammatik Online A-1', 'Rp975.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'grammatik-online-a1']) }}"
+                            class="d-block w-100 text-decoration-none">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Private Grammatik Online A-1 Dalam Bahasa Inggris -->
@@ -1041,9 +1056,11 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Bisa request jadwal</span>
                     </div>
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Private Grammatik A-1 Dalam Bahasa Inggris', 'Rp1.150.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'grammatik-online-a1-english']) }}"
+                            class="d-block w-100 text-decoration-none">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Private Grammatik Online A-2 -->
@@ -1086,9 +1103,11 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Bisa request jadwal</span>
                     </div>
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Private Grammatik Online A-2', 'Rp975.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'grammatik-online-a2']) }}"
+                            class="d-block w-100 text-decoration-none">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Private Grammatik Online A-2 Dalam Bahasa Inggris -->
@@ -1131,9 +1150,11 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Bisa request jadwal</span>
                     </div>
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Private Grammatik Online A-2', 'Rp975.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'grammatik-online-a2-english']) }}"
+                            class="d-block w-100 text-decoration-none">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Private Grammatik Online B-1 -->
@@ -1176,9 +1197,11 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Bisa request jadwal</span>
                     </div>
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Private Grammatik Online B-1', 'Rp1.095.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'grammatik-online-b1']) }}"
+                            class="d-block w-100 text-decoration-none">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Private Grammatik Online B-1 Dalam Bahasa Inggris -->
@@ -1221,9 +1244,11 @@
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Bisa request jadwal</span>
                     </div>
-                    <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Private Grammatik Online B-1', 'Rp1.095.000')">
-                        Daftar Sekarang
+                    <button class="btn btn-program mt-auto">
+                        <a href="{{ route('payment.checkout', ['product' => 'grammatik-online-b1-english']) }}"
+                            class="d-block w-100 text-decoration-none">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </a>
                     </button>
                 </div>
                 <!-- Private Persiapan Ujian Goethe A-1 Online -->
