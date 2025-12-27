@@ -63,6 +63,9 @@ class PostResource extends Resource
                                 '16:9',
                                 '4:3',
                                 '1:1',
+                                '2:1',
+                                '3:2',
+                                '16:10',
                             ]),
 
                         Forms\Components\Select::make('category_id')

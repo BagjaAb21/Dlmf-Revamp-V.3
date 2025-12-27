@@ -13,5 +13,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         'api/payment/callback', // Tambahkan ini
+        'livewire/*',  // Tambahkan ini
     ];
 }
