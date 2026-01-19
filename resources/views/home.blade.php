@@ -1873,7 +1873,7 @@
             <div class="row mt-5">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <article class="teacher-card">
-                        <img src="{{ asset('asset/img/teachers/Herr_Yasin.png') }}"
+                        <img src="{{ asset('asset/img/teachers/Herr_Yasin.webp') }}"
                             alt="Herr Yasin tutor bahasa Jerman level C2 berpengalaman di DlmF" class="teacher-avatar"
                             loading="lazy" title="Herr Yasin - German Tutor C2">
                         <h3 class="teacher-name">Herr Yasin</h3>
@@ -1882,7 +1882,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <article class="teacher-card">
-                        <img src="{{ asset('asset/img/teachers/Frau_Caca.png') }}"
+                        <img src="{{ asset('asset/img/teachers/Frau_Caca.webp') }}"
                             alt="Frau Caca tutor bahasa Jerman level B1 berpengalaman di DlmF" class="teacher-avatar"
                             loading="lazy" title="Frau Caca - German Tutor B1">
                         <h3 class="teacher-name">Frau Caca</h3>
@@ -1891,7 +1891,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <article class="teacher-card">
-                        <img src="{{ asset('asset/img/teachers/Herr_Farabi.png') }}"
+                        <img src="{{ asset('asset/img/teachers/Herr_Farabi.webp') }}"
                             alt="Herr Farabi tutor bahasa Jerman level B1 berpengalaman di DlmF" class="teacher-avatar"
                             loading="lazy" title="Herr Farabi - German Tutor B1">
                         <h3 class="teacher-name">Herr Farabi</h3>
@@ -1900,7 +1900,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <article class="teacher-card">
-                        <img src="{{ asset('asset/img/teachers/Frau_Dwi.png') }}"
+                        <img src="{{ asset('asset/img/teachers/Frau_Dwi.webp') }}"
                             alt="Frau Dwi tutor bahasa Jerman level B1 berpengalaman di DlmF" class="teacher-avatar"
                             loading="lazy" title="Frau Dwi - German Tutor B1">
                         <h3 class="teacher-name">Frau Dwi</h3>

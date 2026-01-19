@@ -809,6 +809,7 @@
                     <div class="program-type">Intensif Reguler A-1</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp1.499.000</div>
+                        {{-- <div class="program-price">Rp10.000</div> --}}
                     </div>
                     <p class="program-description">
                         Belajar dari mana saja dengan metode intensif dan terarah. Dirancang untuk kamu yang ingin fasih
@@ -864,6 +865,7 @@
                     <div class="program-type">Intensif Reguler A-2</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp1.499.000</div>
+                        {{-- <div class="program-price">Rp20.000</div> --}}
                     </div>
                     <p class="program-description">
                         Belajar dari mana saja dengan metode intensif dan terarah. Dirancang untuk kamu yang ingin fasih
@@ -919,6 +921,7 @@
                     <div class="program-type">Intensif Reguler B-1</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp1.699.000</div>
+                        {{-- <div class="program-price">Rp30.000</div> --}}
                     </div>
                     <p class="program-description">
                         Belajar dari mana saja dengan metode intensif dan terarah. Dirancang untuk kamu yang ingin fasih
@@ -974,6 +977,7 @@
                     <div class="program-type">Private Grammatik A-1</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp975.000</div>
+                        {{-- <div class="program-price">Rp40.000</div> --}}
                     </div>
                     <p class="program-description">
                         Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
@@ -1021,6 +1025,7 @@
                     <div class="program-type">Private Grammatik A-1 <br> Dalam Bahasa Inggris</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp1.150.000</div>
+                        {{-- <div class="program-price">Rp50.000</div> --}}
                     </div>
                     <p class="program-description">
                         Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
@@ -1068,6 +1073,7 @@
                     <div class="program-type">Private Grammatik A-2</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp975.000</div>
+                        {{-- <div class="program-price">Rp60.000</div> --}}
                     </div>
                     <p class="program-description">
                         Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
@@ -1115,6 +1121,7 @@
                     <div class="program-type">Private Grammatik A-2 <br> Dalam Bahasa Inggris</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp1.150.000</div>
+                        {{-- <div class="program-price">Rp70.000</div> --}}
                     </div>
                     <p class="program-description">
                         Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
@@ -1162,6 +1169,7 @@
                     <div class="program-type">Private Grammatik B-1</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp1.095.000</div>
+                        {{-- <div class="program-price">Rp80.000</div> --}}
                     </div>
                     <p class="program-description">
                         Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
@@ -1209,6 +1217,7 @@
                     <div class="program-type">Private Grammatik B-1 <br> Dalam Bahasa Inggris</div>
                     <div class="program-price-container">
                         <div class="program-price">Rp1.270.000</div>
+                        {{-- <div class="program-price">Rp90.000</div> --}}
                     </div>
                     <p class="program-description">
                         Belajar secara personal bersama pengajar berpengalaman yang akan membantu kamu memahami struktur
@@ -5417,7 +5426,7 @@
                 <div class="program-card">
                     <div class="program-type">Bundling Deutsch FlexiLearn - Lifetime + 20 E-Book + 2x Private</div>
                     <div class="program-price-container">
-                        <div class="program-price">Rp2.009.000</div>
+                        <div class="program-price">Rp2.099.000</div>
                     </div>
                     <p class="program-description">
                         Program belajar Bahasa Jerman asinkronus yang bisa diakses kapan pun dan di mana pun.
@@ -5470,7 +5479,7 @@
                     </div>
 
                     <button class="btn btn-program mt-auto"
-                        onclick="pilihPaket('Bundling Deutsch Flexilearn A1-B1 - Lifetime + 20 E-Book + 2x Private', 'Rp2.009.000')">
+                        onclick="pilihPaket('Bundling Deutsch Flexilearn A1-B1 - Lifetime + 20 E-Book + 2x Private', 'Rp2.099.000')">
                         Daftar Sekarang
                     </button>
                 </div>

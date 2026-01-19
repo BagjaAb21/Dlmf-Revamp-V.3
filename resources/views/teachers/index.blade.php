@@ -329,7 +329,7 @@
         const teachersData = [
             {
                 id: 1, name: 'Frau Afifah',
-                photo: '{{ asset('asset/img/teachers/Frau_Afifah.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Afifah.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
@@ -337,47 +337,47 @@
             },
             {
                 id: 2, name: 'Frau Fia',
-                photo: '{{ asset('asset/img/teachers/Frau_Fia.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Fia.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
-                experience: '1 Tahun Mengajar'
+                experience: '2 Tahun Mengajar'
             },
             {
                 id: 3, name: 'Frau Olin',
-                photo: '{{ asset('asset/img/teachers/Frau_Olin.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Olin.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
-                experience: '1 Tahun Mengajar'
+                experience: '2 Tahun Mengajar'
             },
             {
                 id: 4, name: 'Frau Cindy',
-                photo: '{{ asset('asset/img/teachers/Frau_Cindy.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Cindy.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
-                experience: '1 Tahun Mengajar'
+                experience: '2 Tahun Mengajar'
             },
             {
                 id: 5, name: 'Frau Caca',
-                photo: '{{ asset('asset/img/teachers/Frau_Caca.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Caca.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
-                experience: '2 Tahun Mengajar'
+                experience: '3 Tahun Mengajar'
             },
             {
                 id: 6, name: 'Frau Dwi',
-                photo: '{{ asset('asset/img/teachers/Frau_Dwi.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Dwi.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
-                experience: '2 Tahun Mengajar'
+                experience: '3 Tahun Mengajar'
             },
             {
                 id: 7, name: 'Frau Joys',
-                photo: '{{ asset('asset/img/teachers/Frau_Joys.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Joys.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
@@ -385,7 +385,7 @@
             },
             {
                 id: 8, name: 'Frau Mia',
-                photo: '{{ asset('asset/img/teachers/Frau_Mia.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Mia.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
@@ -393,7 +393,7 @@
             },
             {
                 id: 9, name: 'Herr Fadhil',
-                photo: '{{ asset('asset/img/teachers/Herr_Fadhil.png') }}',
+                photo: '{{ asset('asset/img/teachers/Herr_Fadhil.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
@@ -401,7 +401,7 @@
             },
             {
                 id: 10, name: 'Frau Natasya',
-                photo: '{{ asset('asset/img/teachers/Frau_Natasya.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Natasya.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
@@ -409,31 +409,31 @@
             },
             {
                 id: 11, name: 'Frau Sofi',
-                photo: '{{ asset('asset/img/teachers/Frau_Sofi.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Sofi.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
-                experience: '1 Tahun Mengajar'
+                experience: '2 Tahun Mengajar'
             },
             {
                 id: 12, name: 'Herr Farabi',
-                photo: '{{ asset('asset/img/teachers/Herr_Farabi.png') }}',
+                photo: '{{ asset('asset/img/teachers/Herr_Farabi.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
-                experience: '2 Tahun Mengajar'
+                experience: '3 Tahun Mengajar'
             },
             {
                 id: 13, name: 'Frau Tanaya',
-                photo: '{{ asset('asset/img/teachers/Frau_Tanaya.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Tanaya.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
-                experience: '2 Tahun Mengajar'
+                experience: '3 Tahun Mengajar'
             },
             {
                 id: 14, name: 'Herr Yasin',
-                photo: '{{ asset('asset/img/teachers/Herr_Yasin.png') }}',
+                photo: '{{ asset('asset/img/teachers/Herr_Yasin.webp') }}',
                 level: 'Level: C-2',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'C-2',
@@ -441,19 +441,19 @@
             },
             {
                 id: 15, name: 'Frau Zizah',
-                photo: '{{ asset('asset/img/teachers/Frau_Zizah.png') }}',
+                photo: '{{ asset('asset/img/teachers/Frau_Zizah.webp') }}',
+                level: 'Level: B-1',
+                education: 'Sastra Jerman Universitas Padjadjaran',
+                certification: 'B-1',
+                experience: '3 Tahun Mengajar'
+            },
+            {
+                id: 16, name: 'Frau Zahra',
+                photo: '{{ asset('asset/img/teachers/Frau_Zahra.webp') }}',
                 level: 'Level: B-1',
                 education: 'Sastra Jerman Universitas Padjadjaran',
                 certification: 'B-1',
                 experience: '2 Tahun Mengajar'
-            },
-            {
-                id: 16, name: 'Frau Zahra',
-                photo: '{{ asset('asset/img/teachers/Frau_Zahra.png') }}',
-                level: 'Level: B-1',
-                education: 'Sastra Jerman Universitas Padjadjaran',
-                certification: 'B-1',
-                experience: '1 Tahun Mengajar'
             }
         ];
 

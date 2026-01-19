@@ -1457,25 +1457,25 @@
 
             <div class="teachers-grid">
                 <div class="teacher-card" data-delay="0">
-                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Herr_Yasin.png')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Herr_Yasin.webp')">
                     </div>
                     <div class="teacher-name">Herr Yasin</div>
-                    <div class="teacher-level">Level B2</div>
+                    <div class="teacher-level">Level C2</div>
                     <!-- <div class="teacher-description">Sastra Jerman Universitas Padjadjaran</div> -->
-                    <div class="teacher-experience">5 Tahun Pengalaman Mengajar</div>
+                    <div class="teacher-experience">1 Tahun Pengalaman Mengajar</div>
                 </div>
 
                 <div class="teacher-card" data-delay="200">
-                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Zahra.png')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Zahra.webp')">
                     </div>
                     <div class="teacher-name">Frau Zahra</div>
-                    <div class="teacher-level">Level B2</div>
+                    <div class="teacher-level">Level B1</div>
                     <!-- <div class="teacher-description">Sertifikasi GOETHE A2</div> -->
                     <div class="teacher-experience">2 Tahun Pengalaman Mengajar</div>
                 </div>
 
                 <div class="teacher-card" data-delay="400">
-                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Olin.png')">
+                    <div class="teacher-img" style="background-image: url('asset/img/teachers/Frau_Olin.webp')">
                     </div>
                     <div class="teacher-name">Frau Olin</div>
                     <div class="teacher-level">Level B1</div>

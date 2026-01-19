@@ -19,19 +19,22 @@ class PaymentController extends Controller
         'intensif-online-a1' => [
             'code' => 'intensif-online-a1',
             'name' => 'Intensif Reguler Online A1',
-            'price' => 1499000,
+            // 'price' => 1499000,
+            'price' => 10000,
             'description' => 'Kursus Bahasa Jerman Level A1 - Online'
         ],
         'intensif-online-a2' => [
             'code' => 'intensif-online-a2',
             'name' => 'Intensif Reguler Online A2',
-            'price' => 1499000,
+            // 'price' => 1499000,
+            'price' => 20000,
             'description' => 'Kursus Bahasa Jerman Level A2 - Online'
         ],
         'intensif-online-b1' => [
             'code' => 'intensif-online-b1',
             'name' => 'Intensif Reguler Online B1',
-            'price' => 1699000,
+            //'price' => 1699000,
+            'price' => 30000,
             'description' => 'Kursus Bahasa Jerman Level B1 - Online'
         ],
 
@@ -59,37 +62,43 @@ class PaymentController extends Controller
         'grammatik-online-a1' => [
             'code' => 'grammatik-online-a1',
             'name' => 'Private Grammatik Online A1',
-            'price' => 975000,
+            //'price' => 975000,
+            'price' => 40000,
             'description' => 'Private Grammar A1 - Online'
         ],
         'grammatik-online-a1-english' => [
             'code' => 'grammatik-online-a1-english',
             'name' => 'Private Grammatik Online A1 Dalam Bahasa Inggris',
-            'price' => 1150000,
+            //'price' => 1150000,
+            'price' => 50000,
             'description' => 'Private Grammar A1 - Online Dalam Bahasa Inggris'
         ],
         'grammatik-online-a2' => [
             'code' => 'grammatik-online-a2',
             'name' => 'Private Grammatik Online A2',
-            'price' => 975000,
+            //'price' => 975000,
+            'price' => 60000,
             'description' => 'Private Grammar A2 - Online'
         ],
         'grammatik-online-a2-english' => [
             'code' => 'grammatik-online-a2-english',
             'name' => 'Private Grammatik Online A2 Dalam Bahasa Inggris',
-            'price' => 1150000,
+            //'price' => 1150000,
+            'price' => 70000,
             'description' => 'Private Grammar A2 - Online Dalam Bahasa Inggris'
         ],
         'grammatik-online-b1' => [
             'code' => 'grammatik-online-b1',
             'name' => 'Private Grammatik Online B1',
-            'price' => 1095000,
+            //'price' => 1095000,
+            'price' => 80000,
             'description' => 'Private Grammar B1 - Online'
         ],
         'grammatik-online-b1-english' => [
             'code' => 'grammatik-online-b1-english',
             'name' => 'Private Grammatik Online B1 Dalam Bahasa Inggris',
-            'price' => 1270000,
+            //'price' => 1270000,
+            'price' => 90000,
             'description' => 'Private Grammar B1 - Online Dalam Bahasa Inggris'
         ],
 
@@ -551,7 +560,7 @@ class PaymentController extends Controller
         'flexilearn-a1-b1-lifetime-20book-2private' => [
             'code' => 'flexilearn-a1-b1-lifetime-20book-2private',
             'name' => 'FlexiLearn A1-B1 - Lifetime Basic + 20 E-Book + 2x Private Session',
-            'price' => 2009000,
+            'price' => 2099000,
             'description' => 'Akses FlexiLearn Level A1-B1 - Lifetime Basic + 20 E-Book + 2x Private Session'
         ],
     ];
@@ -962,7 +971,7 @@ class PaymentController extends Controller
         }
 
         // Generate WhatsApp URL untuk konfirmasi
-        $whatsappNumber = '62859106869302';
+        $whatsappNumber = '6289647897616';
 
         // Gabungkan given_names dan surname untuk nama lengkap
         $fullName = trim($payment->given_names . ' ' . ($payment->surname ?? ''));
