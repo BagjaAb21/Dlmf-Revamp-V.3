@@ -15,8 +15,12 @@ class User extends Authenticatable implements FilamentUser
     protected $fillable = [
         'name',
         'email',
+        'phone',
         'password',
         'role',
+        'email_verified_at',
+        'otp_code',
+        'otp_expires_at',
     ];
 
     protected $hidden = [
@@ -24,14 +28,22 @@ class User extends Authenticatable implements FilamentUser
         'remember_token',
     ];
 
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'otp_expires_at' => 'datetime',
+            'password' => 'hashed',
+        ];
+    }
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return in_array($this->role, ['admin', 'editor']);
+        return match ($panel->getId()) {
+            'admin-minfara' => $this->role === 'admin',
+            'student' => $this->role === 'siswa',
+            default => false,
+        };
     }
 
     public function isAdmin(): bool
@@ -39,14 +51,23 @@ class User extends Authenticatable implements FilamentUser
         return $this->role === 'admin';
     }
 
-    public function isEditor(): bool
+    public function isSiswa(): bool
     {
-        return $this->role === 'editor';
+        return $this->role === 'siswa';
     }
 
-    // Relationship dengan posts
-    public function posts()
+    public function studentProfile()
     {
-        return $this->hasMany(Post::class);
+        return $this->hasOne(StudentProfile::class);
+    }
+
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class);
     }
 }

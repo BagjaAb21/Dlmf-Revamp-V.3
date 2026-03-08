@@ -23,6 +23,9 @@ class DatabaseSeeder extends Seeder
             AdminUserSeeder::class,
             CategorySeeder::class,
             TeacherSeeder::class,
+            BenefitMasterSeeder::class,
+            // ProductSeeder::class,
+            ProductCategorySeeder::class,
             //PostSeeder::class, // Optional: jika ingin sample posts
         ]);
     }

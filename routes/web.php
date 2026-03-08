@@ -82,3 +82,8 @@ Route::get('/checkout', [PaymentController::class, 'showCheckout'])->name('payme
 Route::post('/payment/process', [PaymentController::class, 'processPayment'])->name('payment.process');
 Route::get('/payment-success', [PaymentController::class, 'showSuccess'])->name('payment.success');
 Route::get('/payment-failed', [PaymentController::class, 'showFailed'])->name('payment.failed');
+
+// ── Student OTP Verification (guest route — no auth required) ─────────────
+Route::get('/student/verify-otp', \App\Livewire\Student\VerifyOtp::class)
+    ->name('filament.student.pages.verify-otp')
+    ->middleware(['web']);

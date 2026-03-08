@@ -158,9 +158,9 @@ class PostResource extends Resource
     {
         $query = parent::getEloquentQuery();
 
-        // Editor hanya bisa melihat post mereka sendiri
+        // Jika bukan admin, hanya tampilkan post milik sendiri
         $user = Auth::user();
-        if ($user?->isEditor()) {
+        if ($user && ! $user->isAdmin()) {
             $query->where('user_id', $user->id);
         }
 

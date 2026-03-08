@@ -6,10 +6,39 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Tambah kolom user_id dan product_id ke tabel payments yang sudah ada.
+     *
+     * Kenapa nullable?
+     *  - Backward-compatible: data lama (sebelum ada sistem login) tetap valid
+     *  - Guest checkout (jika diperlukan kelak) tetap bisa jalan
+     *  - Tidak ada data yang rusak saat migration dijalankan
+     *
+     * Relasi baru:
+     *  - user_id    → belongsTo users    (nullable)
+     *  - product_id → belongsTo products (nullable)
+     */
     public function up()
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
+
+            // Tambahkan setelah kolom id
+            $table->foreignId('user_id')
+                ->nullable()
+                //->after('id')
+                ->constrained('users')
+                ->nullOnDelete();   // Jika user dihapus, set null (jangan hapus histori payment)
+
+            $table->foreignId('product_id')
+                ->nullable()
+                //->after('user_id')
+                ->constrained('products')
+                ->nullOnDelete();   // Jika product di-softDelete, tetap keep histori
+
+            // Index untuk query di Filament (filter payment by user / by product)
+            $table->index('user_id');
+            $table->index('product_id');
 
             // External ID - unique identifier dari sistem kita
             $table->string('external_id')->unique();
@@ -57,6 +86,15 @@ return new class extends Migration
 
     public function down()
     {
+
         Schema::dropIfExists('payments');
+
+        // Schema::table('payments', function (Blueprint $table) {
+        //     $table->dropForeign(['user_id']);
+        //     $table->dropForeign(['product_id']);
+        //     $table->dropIndex(['user_id']);
+        //     $table->dropIndex(['product_id']);
+        //     $table->dropColumn(['user_id', 'product_id']);
+        // });
     }
 };
