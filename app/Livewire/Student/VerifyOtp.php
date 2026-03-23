@@ -4,9 +4,9 @@ namespace App\Livewire\Student;
 
 use App\Mail\OtpVerificationMail;
 use App\Models\User;
-use Livewire\Component;
-use Livewire\Attributes\Layout;
 use Illuminate\Support\Facades\Mail;
+use Livewire\Attributes\Layout;
+use Livewire\Component;
 
 /**
  * OTP Verification page — plain Livewire component (no Filament auth middleware).
@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Mail;
 #[Layout('filament-panels::components.layout.simple')]
 class VerifyOtp extends Component
 {
-    public string $email  = '';
-    public string $otp    = '';
+    public string $email = '';
+
+    public string $otp = '';
+
     public string $notice = '';
 
     public function mount(): void
@@ -24,6 +26,7 @@ class VerifyOtp extends Component
         // Already logged in → go home
         if (auth()->check()) {
             $this->redirectRoute('filament.student.pages.dashboard');
+
             return;
         }
 
@@ -40,7 +43,7 @@ class VerifyOtp extends Component
             'otp' => ['required', 'digits:6'],
         ], [
             'otp.required' => 'Kode OTP wajib diisi.',
-            'otp.digits'   => 'Kode OTP harus 6 digit angka.',
+            'otp.digits' => 'Kode OTP harus 6 digit angka.',
         ]);
 
         /** @var User|null $user */
@@ -50,24 +53,27 @@ class VerifyOtp extends Component
 
         if (! $user) {
             $this->addError('otp', 'Akun tidak ditemukan atau sudah terverifikasi.');
+
             return;
         }
 
         if ($user->otp_expires_at && now()->isAfter($user->otp_expires_at)) {
             $this->addError('otp', 'Kode OTP sudah kedaluwarsa. Klik "Kirim Ulang" untuk mendapatkan kode baru.');
+
             return;
         }
 
         if ($user->otp_code !== $this->otp) {
             $this->addError('otp', 'Kode OTP tidak valid. Periksa kembali email Anda.');
+
             return;
         }
 
         // ✅ Success — mark verified
         $user->update([
             'email_verified_at' => now(),
-            'otp_code'          => null,
-            'otp_expires_at'    => null,
+            'otp_code' => null,
+            'otp_expires_at' => null,
         ]);
 
         session()->flash('success', 'Email berhasil diverifikasi! Silakan login.');
@@ -83,19 +89,25 @@ class VerifyOtp extends Component
 
         if (! $user) {
             $this->notice = 'Akun tidak ditemukan.';
+
             return;
         }
 
         $otp = (string) random_int(100000, 999999);
         $user->update([
-            'otp_code'       => $otp,
+            'otp_code' => $otp,
             'otp_expires_at' => now()->addMinutes(10),
         ]);
 
-        Mail::to($user->email)->send(new OtpVerificationMail($otp, $user->name));
+        try {
+            Mail::to($user->email)->queue(new OtpVerificationMail($otp, $user->name));
+            $this->notice = 'Kode OTP baru sudah dikirim ke '.$user->email;
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('OTP Resend Error: '.$e->getMessage());
+            $this->notice = 'Gagal mengirim email. Silakan hubungi admin untuk dilakukan pengecekan sistem';
+        }
 
-        $this->notice = 'Kode OTP baru sudah dikirim ke ' . $user->email;
-        $this->otp    = '';
+        $this->otp = '';
     }
 
     public function render()

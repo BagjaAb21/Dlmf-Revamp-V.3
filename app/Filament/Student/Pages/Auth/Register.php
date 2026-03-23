@@ -71,7 +71,12 @@ class Register extends BaseRegister
                 'otp_code'       => $otp,
                 'otp_expires_at' => now()->addMinutes(10),
             ]);
-            Mail::to($existing->email)->send(new OtpVerificationMail($otp, $existing->name));
+
+            try {
+                Mail::to($existing->email)->queue(new OtpVerificationMail($otp, $existing->name));
+            } catch (\Exception $e) {
+                \Illuminate\Support\Facades\Log::error("Registration OTP Mail Error (Existing User): " . $e->getMessage());
+            }
 
             return $existing;
         }
@@ -91,7 +96,11 @@ class Register extends BaseRegister
             'otp_expires_at'    => now()->addMinutes(10),
         ]);
 
-        Mail::to($user->email)->send(new OtpVerificationMail($otp, $user->name));
+        try {
+            Mail::to($user->email)->queue(new OtpVerificationMail($otp, $user->name));
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error("Registration OTP Mail Error (New User): " . $e->getMessage());
+        }
 
         return $user;
     }

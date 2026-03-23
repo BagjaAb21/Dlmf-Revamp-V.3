@@ -8,7 +8,6 @@ use Filament\Http\Responses\Auth\Contracts\LoginResponse;
 use Filament\Notifications\Notification;
 use Filament\Pages\Auth\Login as BaseLogin;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Validation\ValidationException;
 
 class Login extends BaseLogin
 {
@@ -32,16 +31,20 @@ class Login extends BaseLogin
             // Resend OTP
             $otp = (string) random_int(100000, 999999);
             $user->update([
-                'otp_code'       => $otp,
+                'otp_code' => $otp,
                 'otp_expires_at' => now()->addMinutes(10),
             ]);
 
-            Mail::to($user->email)->send(new OtpVerificationMail($otp, $user->name));
+            try {
+                Mail::to($user->email)->queue(new OtpVerificationMail($otp, $user->name));
+            } catch (\Exception $e) {
+                \Illuminate\Support\Facades\Log::error('Login OTP Resend Error: '.$e->getMessage());
+            }
 
             Notification::make()
                 ->warning()
                 ->title('Email belum diverifikasi.')
-                ->body('Kode OTP baru telah dikirim ke ' . $user->email)
+                ->body('Kode OTP baru telah dikirim ke '.$user->email)
                 ->send();
 
             $this->redirect(
