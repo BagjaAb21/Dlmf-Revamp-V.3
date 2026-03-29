@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\HargaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaymentController;
 
@@ -22,9 +23,7 @@ Route::get('/program', function () {
 });
 
 // harga routes
-Route::get('/harga', function () {
-    return view('harga');
-});
+Route::get('/harga', [HargaController::class, 'index'])->name('harga');
 Route::get('/program/reguler', function () {
     return view('program.reguler');
 });

@@ -12,19 +12,33 @@ use Illuminate\Support\Facades\Mail;
 class Login extends BaseLogin
 {
     /**
-     * After Filament authenticates successfully, check if email is verified.
-     * If not → logout, resend OTP, redirect to verify page.
+     * Override authenticate to provide specific error messages for email and password.
      */
-    public function authenticate(): LoginResponse
+    public function authenticate(): \Filament\Http\Responses\Auth\Contracts\LoginResponse
     {
-        $response = parent::authenticate();
+        try {
+            $response = parent::authenticate();
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            $data = $this->form->getState();
+            $user = User::where('email', $data['email'])->first();
 
-        /** @var User|null $user */
-        $user = auth()->user();
+            if (! $user) {
+                throw \Illuminate\Validation\ValidationException::withMessages([
+                    'data.email' => __('Email tidak cocok'),
+                ]);
+            }
+
+            throw \Illuminate\Validation\ValidationException::withMessages([
+                'data.password' => __('Password yang Anda masukkan tidak cocok.'),
+            ]);
+        }
+
+        /** @var \App\Models\User|null $user */
+        $user = \Illuminate\Support\Facades\Auth::user();
 
         if ($user && is_null($user->email_verified_at)) {
             // Logout immediately
-            auth()->logout();
+            \Illuminate\Support\Facades\Auth::logout();
             request()->session()->invalidate();
             request()->session()->regenerateToken();
 
@@ -36,7 +50,7 @@ class Login extends BaseLogin
             ]);
 
             try {
-                Mail::to($user->email)->queue(new OtpVerificationMail($otp, $user->name));
+                Mail::to($user->email)->queue(new \App\Mail\OtpVerificationMail($otp, $user->name));
             } catch (\Exception $e) {
                 \Illuminate\Support\Facades\Log::error('Login OTP Resend Error: '.$e->getMessage());
             }

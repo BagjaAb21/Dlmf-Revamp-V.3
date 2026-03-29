@@ -53,6 +53,40 @@ class ProductCategoryResource extends Resource
                         ->maxLength(100)
                         ->helperText('Auto-generate dari nama. Bisa diubah manual jika perlu.'),
 
+                    Forms\Components\Select::make('icon')
+                        ->label('Icon Kategori')
+                        ->options([
+                            'bi-laptop' => 'Laptop (Online)',
+                            'bi-people' => 'People (Offline)',
+                            'bi-gift' => 'Gift (Bundling)',
+                            'bi-globe' => 'Globe (FlexiLearn)',
+                            'bi-book' => 'Book (DeutschKit)',
+                            'bi-journal-text' => 'Journal',
+                            'bi-mortarboard' => 'Education',
+                            'bi-briefcase' => 'Work',
+                            'bi-chat-dots' => 'Chat',
+                            'bi-star' => 'Star',
+                            'bi-award' => 'Award',
+                            'bi-backpack' => 'Backpack',
+                            'bi-translate' => 'Translate',
+                            'bi-pencil' => 'Pencil',
+                            'bi-calendar-event' => 'Calendar',
+                        ])
+                        ->searchable()
+                        ->live(),
+
+                    Forms\Components\Placeholder::make('icon_preview')
+                        ->label('Preview Icon Terpilih')
+                        ->content(fn ($get) => $get('icon') 
+                            ? new \Illuminate\Support\HtmlString("
+                                <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>
+                                <div class='p-4 border rounded-lg bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center gap-2'>
+                                    <i class='bi {$get('icon')}' style='font-size: 4rem; color: #8b5cf6;'></i>
+                                    <span class='text-xs font-mono text-gray-500'>{$get('icon')}</span>
+                                </div>
+                            ") 
+                            : 'Pilih icon untuk melihat preview'),
+
                     Forms\Components\TextInput::make('sort_order')
                         ->label('Urutan Tampil')
                         ->numeric()

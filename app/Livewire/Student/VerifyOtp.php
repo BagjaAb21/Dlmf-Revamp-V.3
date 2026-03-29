@@ -24,7 +24,7 @@ class VerifyOtp extends Component
     public function mount(): void
     {
         // Already logged in → go home
-        if (auth()->check()) {
+        if (\Illuminate\Support\Facades\Auth::check()) {
             $this->redirectRoute('filament.student.pages.dashboard');
 
             return;
@@ -112,7 +112,9 @@ class VerifyOtp extends Component
 
     public function render()
     {
-        return view('livewire.student.verify-otp')
-            ->title('Verifikasi Email — DlmF');
+        /** @var \Livewire\Features\SupportPageComponents\ContentRenderer $view */
+        $view = view('livewire.student.verify-otp');
+
+        return $view->title('Verifikasi Email — DlmF');
     }
 }

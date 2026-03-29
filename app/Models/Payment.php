@@ -67,4 +67,12 @@ class Payment extends Model
             ? Carbon::parse($value)->setTimezone('Asia/Jakarta')
             : null;
     }
+
+    /**
+     * Relasi ke User (Pembeli)
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class)->withTrashed();
+    }
 }

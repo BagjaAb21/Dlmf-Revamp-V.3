@@ -6,11 +6,12 @@ use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable implements FilamentUser
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, SoftDeletes;
 
     protected $fillable = [
         'name',
@@ -35,6 +36,19 @@ class User extends Authenticatable implements FilamentUser
             'otp_expires_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    protected static function booted(): void
+    {
+        static::deleting(function (User $user) {
+            // Jika Hapus Permanen (Force Delete), bersihkan relasi agar tidak kena database constraint
+            if ($user->isForceDeleting()) {
+                $user->enrollments()->each(fn ($enrollment) => $enrollment->delete());
+                $user->studentProfile()?->delete();
+            }
+            
+            // Untuk Soft Delete, kita biarkan relasinya tetap ada di database
+        });
     }
 
     public function canAccessPanel(Panel $panel): bool

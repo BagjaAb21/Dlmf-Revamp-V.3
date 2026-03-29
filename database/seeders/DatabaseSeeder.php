@@ -24,8 +24,8 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             TeacherSeeder::class,
             BenefitMasterSeeder::class,
-            // ProductSeeder::class,
-            ProductCategorySeeder::class,
+            ProductSeeder::class,
+            // ProductCategorySeeder::class,
             //PostSeeder::class, // Optional: jika ingin sample posts
         ]);
     }

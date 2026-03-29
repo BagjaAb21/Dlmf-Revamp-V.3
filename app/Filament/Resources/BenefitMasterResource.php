@@ -19,9 +19,9 @@ class BenefitMasterResource extends Resource
     protected static ?string $model           = BenefitMaster::class;
     protected static ?string $navigationIcon  = 'heroicon-o-check-circle';
     protected static ?string $navigationGroup = 'Master Data';
-    protected static ?string $navigationLabel = 'Master Benefit';
+    protected static ?string $navigationLabel = 'Benefit Produk';
     protected static ?string $modelLabel      = 'Benefit';
-    protected static ?string $pluralModelLabel = 'Master Benefit';
+    protected static ?string $pluralModelLabel = 'Benefit Produk';
     protected static ?int    $navigationSort  = 2;
 
     // ── Form ────────────────────────────────────────────────────────

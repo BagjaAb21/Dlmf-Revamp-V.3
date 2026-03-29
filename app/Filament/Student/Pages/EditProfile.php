@@ -53,9 +53,12 @@ class EditProfile extends Page implements HasForms
         );
 
         // Gabungkan data user + profile ke dalam form state
+        $birthDate = $profile->birth_date;
+
         $this->form->fill([
             // Dari tabel users
             'name'  => $user->name,
+            'email' => $user->email,
             'phone' => $user->phone,
 
             // Dari tabel student_profiles
@@ -147,7 +150,7 @@ class EditProfile extends Page implements HasForms
                             ->displayFormat('d M Y')
                             ->placeholder('Pilih tanggal lahir')
                             ->closeOnDateSelection()
-                            ->maxDate(now()->subYears(5)),
+                            ->maxDate(now()->subYears(3)),
 
                         TextInput::make('institution')
                             ->label('Asal Institusi / Pekerjaan')

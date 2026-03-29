@@ -8,6 +8,8 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
+use Filament\Support\Enums\MaxWidth;
+use App\Filament\Pages\Dashboard as AdminDashboard;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -24,11 +26,12 @@ class AdminMinfaraPanelProvider extends PanelProvider
             ->id('admin-minfara')
             ->path('admin-minfara')
             ->default()
+            ->maxContentWidth(MaxWidth::Full)
 
             // ── Brand ──────────────────────────────────────────────────────
             ->brandName('DlmF — Admin')
             ->brandLogo(asset('asset/img/logo/logo-Transparant2-v2.png'))
-            ->brandLogoHeight('3rem')
+            ->brandLogoHeight('5rem')
             ->favicon(asset('asset/img/logo/logo-Transparant3.png'))
 
             // ── Warna brand ────────────────────────────────────────────────
@@ -37,7 +40,7 @@ class AdminMinfaraPanelProvider extends PanelProvider
             ])
 
             // ── Auth ───────────────────────────────────────────────────────
-            ->login()
+            ->login(\App\Filament\Pages\Auth\AdminLogin::class)
             ->passwordReset()
 
             // ── Dark mode ─────────────────────────────────────────────────
@@ -48,14 +51,10 @@ class AdminMinfaraPanelProvider extends PanelProvider
                 in: app_path('Filament/Resources'),
                 for: 'App\\Filament\\Resources'
             )
-            ->discoverPages(
-                in: app_path('Filament/Pages'),
-                for: 'App\\Filament\\Pages'
-            )
-            ->discoverWidgets(
-                in: app_path('Filament/Widgets'),
-                for: 'App\\Filament\\Widgets'
-            )
+            ->pages([
+                AdminDashboard::class,
+            ])
+            ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([])
 
             // ── Middleware ─────────────────────────────────────────────────
@@ -72,6 +71,22 @@ class AdminMinfaraPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->renderHook(
+                'panels::head.done',
+                fn () => new \Illuminate\Support\HtmlString('
+                    <style>
+                        .fi-sidebar-header {
+                            padding-top: 3rem !important;
+                            padding-bottom: 2rem !important;
+                        }
+                        .fi-logo { 
+                            margin-top: 1.5rem !important; 
+                            margin-bottom: 1.5rem !important;
+                            margin-left: 1.5rem !important;
+                        }
+                    </style>
+                '),
+            );
     }
 }
