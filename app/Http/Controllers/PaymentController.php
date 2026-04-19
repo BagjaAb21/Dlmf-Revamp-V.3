@@ -7,563 +7,12 @@ use Xendit\Configuration;
 use Illuminate\Support\Str;
 use Xendit\Invoice\InvoiceApi;
 use App\Models\Payment;
+use App\Models\Product;
 use Illuminate\Support\Facades\Log;
 
 class PaymentController extends Controller
 {
     private $invoiceApi;
-
-    // Daftar produk yang tersedia - LENGKAP SESUAI HARGA.BLADE.PHP
-    private $products = [
-        // ==================== INTENSIF REGULER ONLINE ====================
-        'intensif-online-a1' => [
-            'code' => 'intensif-online-a1',
-            'name' => 'Intensif Reguler Online A1',
-            // 'price' => 1499000,
-            'price' => 10000,
-            'description' => 'Kursus Bahasa Jerman Level A1 - Online'
-        ],
-        'intensif-online-a2' => [
-            'code' => 'intensif-online-a2',
-            'name' => 'Intensif Reguler Online A2',
-            // 'price' => 1499000,
-            'price' => 20000,
-            'description' => 'Kursus Bahasa Jerman Level A2 - Online'
-        ],
-        'intensif-online-b1' => [
-            'code' => 'intensif-online-b1',
-            'name' => 'Intensif Reguler Online B1',
-            //'price' => 1699000,
-            'price' => 30000,
-            'description' => 'Kursus Bahasa Jerman Level B1 - Online'
-        ],
-
-        // ==================== INTENSIF REGULER OFFLINE ====================
-        'intensif-offline-a1' => [
-            'code' => 'intensif-offline-a1',
-            'name' => 'Intensif Reguler Offline A1',
-            'price' => 2099000,
-            'description' => 'Kursus Bahasa Jerman Level A1 - Offline'
-        ],
-        'intensif-offline-a2' => [
-            'code' => 'intensif-offline-a2',
-            'name' => 'Intensif Reguler Offline A2',
-            'price' => 2099000,
-            'description' => 'Kursus Bahasa Jerman Level A2 - Offline'
-        ],
-        'intensif-offline-b1' => [
-            'code' => 'intensif-offline-b1',
-            'name' => 'Intensif Reguler Offline B1',
-            'price' => 2250000,
-            'description' => 'Kursus Bahasa Jerman Level B1 - Offline'
-        ],
-
-        // ==================== PRIVATE GRAMMATIK ONLINE ====================
-        'grammatik-online-a1' => [
-            'code' => 'grammatik-online-a1',
-            'name' => 'Private Grammatik Online A1',
-            //'price' => 975000,
-            'price' => 40000,
-            'description' => 'Private Grammar A1 - Online'
-        ],
-        'grammatik-online-a1-english' => [
-            'code' => 'grammatik-online-a1-english',
-            'name' => 'Private Grammatik Online A1 Dalam Bahasa Inggris',
-            //'price' => 1150000,
-            'price' => 50000,
-            'description' => 'Private Grammar A1 - Online Dalam Bahasa Inggris'
-        ],
-        'grammatik-online-a2' => [
-            'code' => 'grammatik-online-a2',
-            'name' => 'Private Grammatik Online A2',
-            //'price' => 975000,
-            'price' => 60000,
-            'description' => 'Private Grammar A2 - Online'
-        ],
-        'grammatik-online-a2-english' => [
-            'code' => 'grammatik-online-a2-english',
-            'name' => 'Private Grammatik Online A2 Dalam Bahasa Inggris',
-            //'price' => 1150000,
-            'price' => 70000,
-            'description' => 'Private Grammar A2 - Online Dalam Bahasa Inggris'
-        ],
-        'grammatik-online-b1' => [
-            'code' => 'grammatik-online-b1',
-            'name' => 'Private Grammatik Online B1',
-            //'price' => 1095000,
-            'price' => 80000,
-            'description' => 'Private Grammar B1 - Online'
-        ],
-        'grammatik-online-b1-english' => [
-            'code' => 'grammatik-online-b1-english',
-            'name' => 'Private Grammatik Online B1 Dalam Bahasa Inggris',
-            //'price' => 1270000,
-            'price' => 90000,
-            'description' => 'Private Grammar B1 - Online Dalam Bahasa Inggris'
-        ],
-
-        // ==================== PRIVATE GRAMMATIK OFFLINE ====================
-        'grammatik-offline-a1' => [
-            'code' => 'grammatik-offline-a1',
-            'name' => 'Private Grammatik Offline A1',
-            'price' => 1400000,
-            'description' => 'Private Grammar A1 - Offline'
-        ],
-        'grammatik-offline-a1-english' => [
-            'code' => 'grammatik-offline-a1-english',
-            'name' => 'Private Grammatik Offline A1 Dalam Bahasa Inggris',
-            'price' => 1575000,
-            'description' => 'Private Grammar A1 - Offline (English)'
-        ],
-        'grammatik-offline-a2' => [
-            'code' => 'grammatik-offline-a2',
-            'name' => 'Private Grammatik Offline A2',
-            'price' => 1400000,
-            'description' => 'Private Grammar A2 - Offline'
-        ],
-        'grammatik-offline-a2-english' => [
-            'code' => 'grammatik-offline-a2-english',
-            'name' => 'Private Grammatik Offline A2 Dalam Bahasa Inggris',
-            'price' => 1575000,
-            'description' => 'Private Grammar A2 - Offline (English)'
-        ],
-        'grammatik-offline-b1' => [
-            'code' => 'grammatik-offline-b1',
-            'name' => 'Private Grammatik Offline B1',
-            'price' => 1500000,
-            'description' => 'Private Grammar B1 - Offline'
-        ],
-        'grammatik-offline-b1-english' => [
-            'code' => 'grammatik-offline-b1-english',
-            'name' => 'Private Grammatik Offline B1 Dalam Bahasa Inggris',
-            'price' => 1675000,
-            'description' => 'Private Grammar B1 - Offline (English)'
-        ],
-
-        // ==================== PERSIAPAN UJIAN GOETHE ONLINE ====================
-        'goethe-online-a1' => [
-            'code' => 'goethe-online-a1',
-            'name' => 'Private Persiapan Ujian Goethe A1 Online',
-            'price' => 975000,
-            'description' => 'Persiapan Ujian Goethe A1 - Online'
-        ],
-        'goethe-online-a1-english' => [
-            'code' => 'goethe-online-a1-english',
-            'name' => 'Private Persiapan Ujian Goethe A1 Online Dalam Bahasa Inggris',
-            'price' => 1150000,
-            'description' => 'Persiapan Ujian Goethe A1 - Online Dalam Bahasa Inggris'
-        ],
-        'goethe-online-a2' => [
-            'code' => 'goethe-online-a2',
-            'name' => 'Private Persiapan Ujian Goethe A2 Online',
-            'price' => 975000,
-            'description' => 'Persiapan Ujian Goethe A2 - Online'
-        ],
-        'goethe-online-a2-english' => [
-            'code' => 'goethe-online-a2-english',
-            'name' => 'Private Persiapan Ujian Goethe A2 Online Dalam Bahasa Inggris',
-            'price' => 1150000,
-            'description' => 'Persiapan Ujian Goethe A2 - Online Dalam Bahasa Inggris'
-        ],
-        'goethe-online-b1' => [
-            'code' => 'goethe-online-b1',
-            'name' => 'Private Persiapan Ujian Goethe B1 Online',
-            'price' => 1095000,
-            'description' => 'Persiapan Ujian Goethe B1 - Online'
-        ],
-        'goethe-online-b1-english' => [
-            'code' => 'goethe-online-b1-english',
-            'name' => 'Private Persiapan Ujian Goethe B1 Online Dalam Bahasa Inggris',
-            'price' => 1270000,
-            'description' => 'Persiapan Ujian Goethe B1 - Online Dalam Bahasa Inggris'
-        ],
-
-        // ==================== PERSIAPAN UJIAN GOETHE OFFLINE ====================
-        'goethe-offline-a1' => [
-            'code' => 'goethe-offline-a1',
-            'name' => 'Private Persiapan Ujian Goethe A1 Offline',
-            'price' => 1400000,
-            'description' => 'Persiapan Ujian Goethe A1 - Offline'
-        ],
-        'goethe-offline-a1-english' => [
-            'code' => 'goethe-offline-a1-english',
-            'name' => 'Private Persiapan Ujian Goethe A1 Offline Dalam Bahasa Inggris',
-            'price' => 1575000,
-            'description' => 'Persiapan Ujian Goethe A1 - Offline Dalam Bahasa Inggris'
-        ],
-        'goethe-offline-a2' => [
-            'code' => 'goethe-offline-a2',
-            'name' => 'Private Persiapan Ujian Goethe A2 Offline',
-            'price' => 1400000,
-            'description' => 'Persiapan Ujian Goethe A2 - Offline'
-        ],
-        'goethe-offline-a2-english' => [
-            'code' => 'goethe-offline-a2-english',
-            'name' => 'Private Persiapan Ujian Goethe A2 Offline Dalam Bahasa Inggris',
-            'price' => 1575000,
-            'description' => 'Persiapan Ujian Goethe A2 - Offline Dalam Bahasa Inggris'
-        ],
-        'goethe-offline-b1' => [
-            'code' => 'goethe-offline-b1',
-            'name' => 'Private Persiapan Ujian Goethe B1 Offline',
-            'price' => 1400000,
-            'description' => 'Persiapan Ujian Goethe B1 - Offline'
-        ],
-        'goethe-offline-b1-english' => [
-            'code' => 'goethe-offline-b1-english',
-            'name' => 'Private Persiapan Ujian Goethe B1 Offline Dalam Bahasa Inggris',
-            'price' => 1675000,
-            'description' => 'Persiapan Ujian Goethe B1 - Offline Dalam Bahasa Inggris'
-        ],
-
-        // ==================== KINDER (ANAK-ANAK) ====================
-        'kinder-online-indo' => [
-            'code' => 'kinder-online-indo',
-            'name' => 'Private Kinder dengan Bahasa Indonesia Online',
-            'price' => 895000,
-            'description' => 'Kursus Anak dengan Bahasa Indonesia - Online'
-        ],
-        'kinder-online-english' => [
-            'code' => 'kinder-online-english',
-            'name' => 'Private Kinder dengan Bahasa Inggris Online',
-            'price' => 1070000,
-            'description' => 'Kursus Anak dengan Bahasa Inggris - Online'
-        ],
-
-        // ==================== MUTTERSPRACHLER (NATIVE SPEAKER) ====================
-        'muttersprachler-online' => [
-            'code' => 'muttersprachler-online',
-            'name' => 'Sprachkurs mit Muttersprachler Online',
-            'price' => 1596000,
-            'description' => 'Kursus dengan Native Speaker - Online'
-        ],
-        'muttersprachler-offline' => [
-            'code' => 'muttersprachler-offline',
-            'name' => 'Sprachkurs mit Muttersprachler Offline',
-            'price' => 1676000,
-            'description' => 'Kursus dengan Native Speaker - Offline'
-        ],
-
-        // ==================== BUNDLING PACKAGES INTENSIF ====================
-        'bundling-a1-a2-online' => [
-            'code' => 'bundling-a1-a2-online',
-            'name' => 'Bundling Reguler Intensif A1-A2 Online',
-            'price' => 5599000,
-            'description' => 'Paket Bundling Reguler Intensif Level A1-A2 - Online'
-        ],
-        'bundling-a2-b1-online' => [
-            'code' => 'bundling-a2-b1-online',
-            'name' => 'Bundling Reguler Intensif A2-B1 Online',
-            'price' => 5999000,
-            'description' => 'Paket Bundling Reguler Intensif Level A2-B1 - Online'
-        ],
-        'bundling-a1-b1-online' => [
-            'code' => 'bundling-a1-b1-online',
-            'name' => 'Bundling Reguler Intensif A1-B1 Online',
-            'price' => 8399000,
-            'description' => 'Paket Bundling Reguler Intensif Level A1-B1 - Online'
-        ],
-
-        // ==================== FLEXILEARN A1 ====================
-        'flexilearn-a1-2m' => [
-            'code' => 'flexilearn-a1-2m',
-            'name' => 'FlexiLearn A1 - 2 Bulan',
-            'price' => 149000,
-            'description' => 'Akses FlexiLearn Level A1 - 2 Bulan'
-        ],
-        'flexilearn-a1-6m' => [
-            'code' => 'flexilearn-a1-6m',
-            'name' => 'FlexiLearn A1 - 6 Bulan',
-            'price' => 169000,
-            'description' => 'Akses FlexiLearn Level A1 - 6 Bulan'
-        ],
-        'flexilearn-a1-12m' => [
-            'code' => 'flexilearn-a1-12m',
-            'name' => 'FlexiLearn A1 - 12 Bulan',
-            'price' => 189000,
-            'description' => 'Akses FlexiLearn Level A1 - 12 Bulan'
-        ],
-        'flexilearn-a1-lifetime' => [
-            'code' => 'flexilearn-a1-lifetime',
-            'name' => 'FlexiLearn A1 - Lifetime Basic',
-            'price' => 199000,
-            'description' => 'Akses FlexiLearn Level A1 - Lifetime Basic'
-        ],
-        'flexilearn-a1-lifetime-10book' => [
-            'code' => 'flexilearn-a1-lifetime-10book',
-            'name' => 'FlexiLearn A1 - Lifetime Basic + 10 E-Book',
-            'price' => 299000,
-            'description' => 'Akses FlexiLearn Level A1 - Lifetime Basic + 10 E-Book'
-        ],
-        'flexilearn-a1-lifetime-20book' => [
-            'code' => 'flexilearn-a1-lifetime-20book',
-            'name' => 'FlexiLearn A1 - Lifetime Basic + 20 E-Book',
-            'price' => 399000,
-            'description' => 'Akses FlexiLearn Level A1 - Lifetime Basic + 20 E-Book'
-        ],
-        'flexilearn-a1-lifetime-20book-1private' => [
-            'code' => 'flexilearn-a1-lifetime-20book-1private',
-            'name' => 'FlexiLearn A1 - Lifetime Basic + 20 E-Book + 1x Private Session',
-            'price' => 599000,
-            'description' => 'Akses FlexiLearn Level A1 - Lifetime Basic + 20 E-Book + 1x Private Session'
-        ],
-        'flexilearn-a1-lifetime-20book-2private' => [
-            'code' => 'flexilearn-a1-lifetime-20book-2private',
-            'name' => 'FlexiLearn A1 - Lifetime Basic + 20 E-Book + 2x Private Session',
-            'price' => 699000,
-            'description' => 'Akses FlexiLearn Level A1 - Lifetime Basic + 20 E-Book + 2x Private Session'
-        ],
-
-        // ==================== FLEXILEARN A2 ====================
-        'flexilearn-a2-2m' => [
-            'code' => 'flexilearn-a2-2m',
-            'name' => 'FlexiLearn A2 - 2 Bulan',
-            'price' => 149000,
-            'description' => 'Akses FlexiLearn Level A2 - 2 Bulan'
-        ],
-        'flexilearn-a2-6m' => [
-            'code' => 'flexilearn-a2-6m',
-            'name' => 'FlexiLearn A2 - 6 Bulan',
-            'price' => 169000,
-            'description' => 'Akses FlexiLearn Level A2 - 6 Bulan'
-        ],
-        'flexilearn-a2-12m' => [
-            'code' => 'flexilearn-a2-12m',
-            'name' => 'FlexiLearn A2 - 12 Bulan',
-            'price' => 189000,
-            'description' => 'Akses FlexiLearn Level A2 - 12 Bulan'
-        ],
-        'flexilearn-a2-lifetime' => [
-            'code' => 'flexilearn-a2-lifetime',
-            'name' => 'FlexiLearn A2 - Lifetime Basic',
-            'price' => 199000,
-            'description' => 'Akses FlexiLearn Level A2 - Lifetime Basic'
-        ],
-        'flexilearn-a2-lifetime-10book' => [
-            'code' => 'flexilearn-a2-lifetime-10book',
-            'name' => 'FlexiLearn A2 - Lifetime Basic + 10 E-Book',
-            'price' => 299000,
-            'description' => 'Akses FlexiLearn Level A2 - Lifetime Basic + 10 E-Book'
-        ],
-        'flexilearn-a2-lifetime-20book' => [
-            'code' => 'flexilearn-a2-lifetime-20book',
-            'name' => 'FlexiLearn A2 - Lifetime Basic + 20 E-Book',
-            'price' => 399000,
-            'description' => 'Akses FlexiLearn Level A2 - Lifetime Basic + 20 E-Book'
-        ],
-        'flexilearn-a2-lifetime-20book-1private' => [
-            'code' => 'flexilearn-a2-lifetime-20book-1private',
-            'name' => 'FlexiLearn A2 - Lifetime Basic + 20 E-Book + 1x Private Session',
-            'price' => 599000,
-            'description' => 'Akses FlexiLearn Level A2 - Lifetime Basic + 20 E-Book + 1x Private Session'
-        ],
-        'flexilearn-a2-lifetime-20book-2private' => [
-            'code' => 'flexilearn-a2-lifetime-20book-2private',
-            'name' => 'FlexiLearn A2 - Lifetime Basic + 20 E-Book + 2x Private Session',
-            'price' => 699000,
-            'description' => 'Akses FlexiLearn Level A2 - Lifetime Basic + 20 E-Book + 2x Private Session'
-        ],
-
-        // ==================== FLEXILEARN B1 ====================
-        'flexilearn-b1-2m' => [
-            'code' => 'flexilearn-b1-2m',
-            'name' => 'FlexiLearn B1 - 2 Bulan',
-            'price' => 159000,
-            'description' => 'Akses FlexiLearn Level B1 - 2 Bulan'
-        ],
-        'flexilearn-b1-6m' => [
-            'code' => 'flexilearn-b1-6m',
-            'name' => 'FlexiLearn B1 - 6 Bulan',
-            'price' => 179000,
-            'description' => 'Akses FlexiLearn Level B1 - 6 Bulan'
-        ],
-        'flexilearn-b1-12m' => [
-            'code' => 'flexilearn-b1-12m',
-            'name' => 'FlexiLearn B1 - 12 Bulan',
-            'price' => 199000,
-            'description' => 'Akses FlexiLearn Level B1 - 12 Bulan'
-        ],
-        'flexilearn-b1-lifetime' => [
-            'code' => 'flexilearn-b1-lifetime',
-            'name' => 'FlexiLearn B1 - Lifetime Basic',
-            'price' => 199000,
-            'description' => 'Akses FlexiLearn Level B1 - Lifetime Basic'
-        ],
-        'flexilearn-b1-lifetime-10book' => [
-            'code' => 'flexilearn-b1-lifetime-10book',
-            'name' => 'FlexiLearn B1 - Lifetime Basic + 10 E-Book',
-            'price' => 399000,
-            'description' => 'Akses FlexiLearn Level B1 - Lifetime Basic + 10 E-Book'
-        ],
-        'flexilearn-b1-lifetime-20book' => [
-            'code' => 'flexilearn-b1-lifetime-20book',
-            'name' => 'FlexiLearn B1 - Lifetime Basic + 20 E-Book',
-            'price' => 469000,
-            'description' => 'Akses FlexiLearn Level B1 - Lifetime Basic + 20 E-Book'
-        ],
-        'flexilearn-b1-lifetime-20book-1private' => [
-            'code' => 'flexilearn-b1-lifetime-20book-1private',
-            'name' => 'FlexiLearn B1 - Lifetime Basic + 20 E-Book + 1x Private Session',
-            'price' => 649000,
-            'description' => 'Akses FlexiLearn Level B1 - Lifetime Basic + 20 E-Book + 1x Private Session'
-        ],
-        'flexilearn-b1-lifetime-20book-2private' => [
-            'code' => 'flexilearn-b1-lifetime-20book-2private',
-            'name' => 'FlexiLearn B1 - Lifetime Basic + 20 E-Book + 2x Private Session',
-            'price' => 759000,
-            'description' => 'Akses FlexiLearn Level B1 - Lifetime Basic + 20 E-Book + 2x Private Session'
-        ],
-
-        // ==================== BUNDLING FLEXILEARN A1-A2 ====================
-        'flexilearn-a1-a2-2m' => [
-            'code' => 'flexilearn-a1-a2-2m',
-            'name' => 'FlexiLearn A1-A2 - 2 Bulan',
-            'price' => 269000,
-            'description' => 'Akses FlexiLearn Level A1-A2 - 2 Bulan'
-        ],
-        'flexilearn-a1-a2-6m' => [
-            'code' => 'flexilearn-a1-a2-6m',
-            'name' => 'FlexiLearn A1-A2 - 6 Bulan',
-            'price' => 309000,
-            'description' => 'Akses FlexiLearn Level A1-A2 - 6 Bulan'
-        ],
-        'flexilearn-a1-a2-12m' => [
-            'code' => 'flexilearn-a1-a2-12m',
-            'name' => 'FlexiLearn A1-A2 - 12 Bulan',
-            'price' => 339000,
-            'description' => 'Akses FlexiLearn Level A1-A2 - 12 Bulan'
-        ],
-        'flexilearn-a1-a2-lifetime' => [
-            'code' => 'flexilearn-a1-a2-lifetime',
-            'name' => 'FlexiLearn A1-A2 - Lifetime Basic',
-            'price' => 339000,
-            'description' => 'Akses FlexiLearn Level A1-A2 - Lifetime Basic'
-        ],
-        'flexilearn-a1-a2-lifetime-10book' => [
-            'code' => 'flexilearn-a1-a2-lifetime-10book',
-            'name' => 'FlexiLearn A1-A2 - Lifetime Basic + 10 E-Book',
-            'price' => 569000,
-            'description' => 'Akses FlexiLearn Level A1-A2 - Lifetime Basic + 10 E-Book'
-        ],
-        'flexilearn-a1-a2-lifetime-20book' => [
-            'code' => 'flexilearn-a1-a2-lifetime-20book',
-            'name' => 'FlexiLearn A1-A2 - Lifetime Basic + 20 E-Book',
-            'price' => 779000,
-            'description' => 'Akses FlexiLearn Level A1-A2 - Lifetime Basic + 20 E-Book'
-        ],
-        'flexilearn-a1-a2-lifetime-20book-1private' => [
-            'code' => 'flexilearn-a1-a2-lifetime-20book-1private',
-            'name' => 'FlexiLearn A1-A2 - Lifetime Basic + 20 E-Book + 1x Private Session',
-            'price' => 1169000,
-            'description' => 'Akses FlexiLearn Level A1-A2 - Lifetime Basic + 20 E-Book + 1x Private Session'
-        ],
-        'flexilearn-a1-a2-lifetime-20book-2private' => [
-            'code' => 'flexilearn-a1-a2-lifetime-20book-2private',
-            'name' => 'FlexiLearn A1-A2 - Lifetime Basic + 20 E-Book + 2x Private Session',
-            'price' => 1349000,
-            'description' => 'Akses FlexiLearn Level A1-A2 - Lifetime Basic + 20 E-Book + 2x Private Session'
-        ],
-
-        // ==================== BUNDLING FLEXILEARN A2-B1 ====================
-        'flexilearn-a2-b1-2m' => [
-            'code' => 'flexilearn-a2-b1-2m',
-            'name' => 'FlexiLearn A2-B1 - 2 Bulan',
-            'price' => 289000,
-            'description' => 'Akses FlexiLearn Level A2-B1 - 2 Bulan'
-        ],
-        'flexilearn-a2-b1-6m' => [
-            'code' => 'flexilearn-a2-b1-6m',
-            'name' => 'FlexiLearn A2-B1 - 6 Bulan',
-            'price' => 319000,
-            'description' => 'Akses FlexiLearn Level A2-B1 - 6 Bulan'
-        ],
-        'flexilearn-a2-b1-12m' => [
-            'code' => 'flexilearn-a2-b1-12m',
-            'name' => 'FlexiLearn A2-B1 - 12 Bulan',
-            'price' => 359000,
-            'description' => 'Akses FlexiLearn Level A2-B1 - 12 Bulan'
-        ],
-        'flexilearn-a2-b1-lifetime' => [
-            'code' => 'flexilearn-a2-b1-lifetime',
-            'name' => 'FlexiLearn A2-B1 - Lifetime Basic',
-            'price' => 379000,
-            'description' => 'Akses FlexiLearn Level A2-B1 - Lifetime Basic'
-        ],
-        'flexilearn-a2-b1-lifetime-10book' => [
-            'code' => 'flexilearn-a2-b1-lifetime-10book',
-            'name' => 'FlexiLearn A2-B1 - Lifetime Basic + 10 E-Book',
-            'price' => 609000,
-            'description' => 'Akses FlexiLearn Level A2-B1 - Lifetime Basic + 10 E-Book'
-        ],
-        'flexilearn-a2-b1-lifetime-20book' => [
-            'code' => 'flexilearn-a2-b1-lifetime-20book',
-            'name' => 'FlexiLearn A2-B1 - Lifetime Basic + 20 E-Book',
-            'price' => 839000,
-            'description' => 'Akses FlexiLearn Level A2-B1 - Lifetime Basic + 20 E-Book'
-        ],
-        'flexilearn-a2-b1-lifetime-20book-1private' => [
-            'code' => 'flexilearn-a2-b1-lifetime-20book-1private',
-            'name' => 'FlexiLearn A2-B1 - Lifetime Basic + 20 E-Book + 1x Private Session',
-            'price' => 1209000,
-            'description' => 'Akses FlexiLearn Level A2-B1 - Lifetime Basic + 20 E-Book + 1x Private Session'
-        ],
-        'flexilearn-a2-b1-lifetime-20book-2private' => [
-            'code' => 'flexilearn-a2-b1-lifetime-20book-2private',
-            'name' => 'FlexiLearn A2-B1 - Lifetime Basic + 20 E-Book + 2x Private Session',
-            'price' => 1409000,
-            'description' => 'Akses FlexiLearn Level A2-B1 - Lifetime Basic + 20 E-Book + 2x Private Session'
-        ],
-
-        // ==================== BUNDLING FLEXILEARN A1-B1 ====================
-        'flexilearn-a1-b1-2m' => [
-            'code' => 'flexilearn-a1-b1-2m',
-            'name' => 'FlexiLearn A1-B1 - 2 Bulan',
-            'price' => 429000,
-            'description' => 'Akses FlexiLearn Level A1-B1 - 2 Bulan'
-        ],
-        'flexilearn-a1-b1-6m' => [
-            'code' => 'flexilearn-a1-b1-6m',
-            'name' => 'FlexiLearn A1-B1 - 6 Bulan',
-            'price' => 479000,
-            'description' => 'Akses FlexiLearn Level A1-B1 - 6 Bulan'
-        ],
-        'flexilearn-a1-b1-12m' => [
-            'code' => 'flexilearn-a1-b1-12m',
-            'name' => 'FlexiLearn A1-B1 - 12 Bulan',
-            'price' => 529000,
-            'description' => 'Akses FlexiLearn Level A1-B1 - 12 Bulan'
-        ],
-        'flexilearn-a1-b1-lifetime' => [
-            'code' => 'flexilearn-a1-b1-lifetime',
-            'name' => 'FlexiLearn A1-B1 - Lifetime Basic',
-            'price' => 569000,
-            'description' => 'Akses FlexiLearn Level A1-B1 - Lifetime Basic'
-        ],
-        'flexilearn-a1-b1-lifetime-10book' => [
-            'code' => 'flexilearn-a1-b1-lifetime-10book',
-            'name' => 'FlexiLearn A1-B1 - Lifetime Basic + 10 E-Book',
-            'price' => 889000,
-            'description' => 'Akses FlexiLearn Level A1-B1 - Lifetime Basic + 10 E-Book'
-        ],
-        'flexilearn-a1-b1-lifetime-20book' => [
-            'code' => 'flexilearn-a1-b1-lifetime-20book',
-            'name' => 'FlexiLearn A1-B1 - Lifetime Basic + 20 E-Book',
-            'price' => 1229000,
-            'description' => 'Akses FlexiLearn Level A1-B1 - Lifetime Basic + 20 E-Book'
-        ],
-        'flexilearn-a1-b1-lifetime-20book-1private' => [
-            'code' => 'flexilearn-a1-b1-lifetime-20book-1private',
-            'name' => 'FlexiLearn A1-B1 - Lifetime Basic + 20 E-Book + 1x Private Session',
-            'price' => 1779000,
-            'description' => 'Akses FlexiLearn Level A1-B1 - Lifetime Basic + 20 E-Book + 1x Private Session'
-        ],
-        'flexilearn-a1-b1-lifetime-20book-2private' => [
-            'code' => 'flexilearn-a1-b1-lifetime-20book-2private',
-            'name' => 'FlexiLearn A1-B1 - Lifetime Basic + 20 E-Book + 2x Private Session',
-            'price' => 2099000,
-            'description' => 'Akses FlexiLearn Level A1-B1 - Lifetime Basic + 20 E-Book + 2x Private Session'
-        ],
-    ];
 
     public function __construct()
     {
@@ -571,53 +20,60 @@ class PaymentController extends Controller
         $this->invoiceApi = new InvoiceApi();
     }
 
-    /**
-     * Menampilkan halaman checkout dengan product yang dipilih
-     */
+    private function findProduct(string $slug): ?array
+    {
+        $product = Product::with('discount')
+            ->where('slug', $slug)
+            ->where('is_active', true)
+            ->first();
+
+        if (!$product) {
+            return null;
+        }
+
+        return [
+            'id'          => $product->id,
+            'code'        => $product->slug,
+            'name'        => $product->name,
+            'price'       => (int) $product->effective_price,
+            'description' => $product->short_description ?? $product->name,
+        ];
+    }
+
     public function showCheckout(Request $request)
     {
         $productCode = $request->query('product');
+        $product = $productCode ? $this->findProduct($productCode) : null;
 
-        if (!$productCode || !isset($this->products[$productCode])) {
+        if (!$product) {
             return redirect('/harga')->with('error', 'Produk tidak ditemukan');
         }
-
-        $product = $this->products[$productCode];
 
         return view('checkout', compact('product'));
     }
 
-    /**
-     * Proses pembayaran dan create invoice di Xendit
-     */
     public function processPayment(Request $request)
     {
-        // Validasi input sesuai dengan field yang dibutuhkan Xendit
         $validated = $request->validate([
-            'product_code' => 'required|string',
-            'given_names' => 'required|string|max:255', // Sesuai Xendit: given_names
-            'surname' => 'nullable|string|max:255', // Sesuai Xendit: surname
-            'email' => 'required|email|max:255', // Sesuai Xendit: email
-            'mobile_number' => 'nullable|string|max:20', // Sesuai Xendit: mobile_number (E164 format)
-            'quantity' => 'required|integer|min:1',
-            'payment_method' => 'required|string|in:VA,QRIS', // Metode pembayaran dipilih user
-            // --- FIELD BARU DARI CHECKOUT.BLADE.PHP ---
-            'grand_total_amount' => 'required|integer|min:1', // Total akhir termasuk fee
-            'convenience_fee_amount' => 'required|integer|min:0', // Biaya tambahan
-            // --- END FIELD BARU ---
+            'product_code'           => 'required|string',
+            'given_names'            => 'required|string|max:255',
+            'surname'                => 'nullable|string|max:255',
+            'email'                  => 'required|email|max:255',
+            'mobile_number'          => 'nullable|string|max:20',
+            'quantity'               => 'required|integer|min:1',
+            'payment_method'         => 'required|string|in:VA,QRIS',
+            'grand_total_amount'     => 'required|integer|min:1',
+            'convenience_fee_amount' => 'required|integer|min:0',
         ]);
 
-        // Cek apakah produk ada
-        if (!isset($this->products[$validated['product_code']])) {
+        $product = $this->findProduct($validated['product_code']);
+
+        if (!$product) {
             return back()->with('error', 'Produk tidak valid');
         }
 
-        $product = $this->products[$validated['product_code']];
-
-        // Ambil jumlah dari request
-        $subTotal = $product['price'] * $validated['quantity'];
         $convenienceFee = $validated['convenience_fee_amount'];
-        $totalAmount = $validated['grand_total_amount']; // GRAND TOTAL: Subtotal + Fee (sudah benar dari frontend)
+        $totalAmount    = $validated['grand_total_amount'];
 
         // Generate external_id yang unik
         $externalId = 'DLMF-' . strtoupper(Str::random(8)) . '-' . time();
@@ -664,7 +120,7 @@ class PaymentController extends Controller
                 ],
 
                 // Redirect URLs
-                'success_redirect_url' => route('payment.success') . '?external_id=' . $externalId,
+                'success_redirect_url' => route('survey.show') . '?external_id=' . $externalId,
                 'failure_redirect_url' => route('payment.failed') . '?external_id=' . $externalId,
 
                 // Payment methods - HANYA QRIS dan Virtual Account
@@ -712,15 +168,16 @@ class PaymentController extends Controller
             // Simpan data payment ke database dengan field yang sesuai
             $payment = Payment::create([
                 'external_id' => $externalId,
-                'xendit_invoice_id' => $invoice['id'], // ID dari Xendit
+                'xendit_invoice_id' => $invoice['id'],
 
-                // Customer information (sesuai struktur baru)
+                // Customer information
                 'given_names' => $validated['given_names'],
                 'surname' => $validated['surname'] ?? null,
                 'email' => $validated['email'],
                 'mobile_number' => $mobileNumber,
 
                 // Product information
+                'product_id'   => $product['id'],
                 'product_name' => $product['name'],
                 'quantity' => $validated['quantity'],
 
@@ -775,7 +232,7 @@ class PaymentController extends Controller
             Log::info('Xendit Callback Received:', $data);
 
             // Cari payment berdasarkan external_id
-            $payment = Payment::where('external_id', $data['external_id'])->first();
+            $payment = \App\Models\Payment::where('external_id', $data['external_id'])->first();
 
             if (!$payment) {
                 Log::error('Payment not found for external_id: ' . $data['external_id']);
@@ -801,9 +258,15 @@ class PaymentController extends Controller
                 if (isset($data['payment_destination'])) {
                     $payment->payment_destination = $data['payment_destination'];
                 }
-            }
 
-            $payment->save();
+                $payment->save();
+
+                // ── Buat Enrollment otomatis ────────────────────────────────
+                $this->createEnrollmentFromPayment($payment);
+
+            } else {
+                $payment->save();
+            }
 
             Log::info('Payment updated successfully:', $payment->toArray());
 
@@ -813,6 +276,72 @@ class PaymentController extends Controller
             Log::error('Callback Error: ' . $e->getMessage());
             return response()->json(['message' => 'Error processing callback'], 500);
         }
+    }
+
+    /**
+     * Buat Enrollment dari Payment yang sudah PAID.
+     * Dipanggil dari callback Xendit maupun dari showSuccess (fallback).
+     */
+    private function createEnrollmentFromPayment(\App\Models\Payment $payment): void
+    {
+        // Cek sudah ada enrollment untuk payment ini (unique constraint)
+        if (\App\Models\Enrollment::where('payment_id', $payment->id)->exists()) {
+            Log::info('[Enrollment] Already exists for payment_id=' . $payment->id);
+            return;
+        }
+
+        // Cari user — dari payment.user_id atau match by email
+        $userId = $payment->user_id;
+        if (!$userId) {
+            $user = \App\Models\User::where('email', $payment->email)->first();
+            $userId = $user?->id;
+        }
+
+        if (!$userId) {
+            Log::warning('[Enrollment] Cannot create: no user found for payment_id=' . $payment->id . ' email=' . $payment->email);
+            return;
+        }
+
+        // Cari product — dari payment.product_id atau match by product_name
+        $productId = $payment->product_id;
+        if (!$productId && $payment->product_name) {
+            $product = \App\Models\Product::where('name', $payment->product_name)->first();
+            $productId = $product?->id;
+        }
+
+        if (!$productId) {
+            Log::warning('[Enrollment] Cannot create: no product found for payment_id=' . $payment->id . ' product_name=' . $payment->product_name);
+            return;
+        }
+
+        // Hitung expires_at berdasarkan duration_type produk
+        $product = $payment->product_id
+            ? \App\Models\Product::find($productId)
+            : (\App\Models\Product::find($productId));
+
+        $startedAt  = $payment->paid_at ?? now();
+        $expiresAt  = null;
+
+        if ($product) {
+            $durationType = $product->duration_type instanceof \App\Enums\DurationTypeEnum
+                ? $product->duration_type->value
+                : $product->duration_type;
+
+            if ($durationType && $durationType !== 'lifetime' && is_numeric($durationType)) {
+                $expiresAt = $startedAt->copy()->addMonths((int)$durationType);
+            }
+        }
+
+        \App\Models\Enrollment::create([
+            'user_id'    => $userId,
+            'payment_id' => $payment->id,
+            'product_id' => $productId,
+            'status'     => 'active',
+            'started_at' => $startedAt->toDateString(),
+            'expires_at' => $expiresAt?->toDateString(),
+        ]);
+
+        Log::info('[Enrollment] Created for user_id=' . $userId . ' product_id=' . $productId . ' payment_id=' . $payment->id);
     }
 
     /**
@@ -968,6 +497,18 @@ class PaymentController extends Controller
 
         if (!$payment) {
             return redirect('/')->with('error', 'Data pembayaran tidak ditemukan');
+        }
+
+        // ── CEK WAJIB SURVEI ──
+        $alreadyAnswered = \App\Models\SurveyResponse::where('payment_id', $payment->id)->exists();
+        if (!$alreadyAnswered) {
+            return redirect()->route('survey.show', ['external_id' => $externalId])
+                ->with('error', 'Mohon lengkapi survei singkat berikut sebelum melihat invoice.');
+        }
+
+        // ── Fallback: buat enrollment jika payment sudah PAID tapi enrollment belum ada ──
+        if (in_array(strtolower($payment->status), ['paid', 'settled'])) {
+            $this->createEnrollmentFromPayment($payment);
         }
 
         // Generate WhatsApp URL untuk konfirmasi

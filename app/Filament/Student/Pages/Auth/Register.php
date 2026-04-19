@@ -108,6 +108,9 @@ class Register extends BaseRegister
     /**
      * Override the register method to prevent auto-login
      * and redirect to OTP verification.
+     *
+     * If ?product=slug is present (from harga page), store it in session
+     * so after OTP verification the student lands on BuyCourse page.
      */
     public function register(): ?\Filament\Http\Responses\Auth\Contracts\RegistrationResponse
     {
@@ -132,6 +135,12 @@ class Register extends BaseRegister
         event(new \Illuminate\Auth\Events\Registered($user));
 
         $email = $data['email'] ?? '';
+
+        // ── Simpan product slug ke session jika ada ────────────────────
+        $productSlug = request()->query('product') ?? session('checkout_product_slug');
+        if ($productSlug) {
+            session(['checkout_product_slug' => $productSlug]);
+        }
 
         Notification::make()
             ->success()

@@ -4,8 +4,10 @@ namespace App\Providers\Filament;
 
 use App\Filament\Student\Pages\Auth\Login;
 use App\Filament\Student\Pages\Auth\Register;
+use App\Filament\Student\Pages\BuyCourse;
 use App\Filament\Student\Pages\Dashboard;
 use App\Filament\Student\Pages\EditProfile;
+use App\Filament\Student\Pages\KatalogKursus;
 use App\Filament\Student\Pages\MyClasses;
 use App\Http\Middleware\EnsureUserIsSiswa;
 use Filament\Http\Middleware\Authenticate;
@@ -62,7 +64,9 @@ class StudentPanelProvider extends PanelProvider
             ->pages([
                 Dashboard::class,
                 EditProfile::class,
+                KatalogKursus::class,
                 MyClasses::class,
+                BuyCourse::class,
             ])
 
 

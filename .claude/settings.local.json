@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.php$\")",
+      "Bash(php artisan *)",
+      "Bash(php -r ' *)"
+    ]
+  }
+}

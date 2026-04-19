@@ -69,15 +69,27 @@ class VerifyOtp extends Component
             return;
         }
 
-        // ✅ Success — mark verified
+        // ✅ Success — mark verified + auto-login
         $user->update([
             'email_verified_at' => now(),
-            'otp_code' => null,
-            'otp_expires_at' => null,
+            'otp_code'          => null,
+            'otp_expires_at'    => null,
         ]);
 
-        session()->flash('success', 'Email berhasil diverifikasi! Silakan login.');
-        $this->redirect(route('filament.student.auth.login'));
+        // Auto-login the user
+        \Illuminate\Support\Facades\Auth::login($user);
+
+        // ── Redirect: ke checkout jika ada pending product, else dashboard ─
+        $productSlug = session()->pull('checkout_product_slug');
+
+        if ($productSlug) {
+            $this->redirect(
+                route('filament.student.pages.buy-course') . '?product=' . $productSlug
+            );
+        } else {
+            session()->flash('success', 'Email berhasil diverifikasi! Selamat datang! 🎉');
+            $this->redirectRoute('filament.student.pages.dashboard');
+        }
     }
 
     public function resend(): void

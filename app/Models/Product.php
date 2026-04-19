@@ -80,6 +80,11 @@ class Product extends Model
         return $this->hasOne(ProductMetaAd::class);
     }
 
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class);
+    }
+
     // ── Accessors ────────────────────────────────────────────────
 
     /**

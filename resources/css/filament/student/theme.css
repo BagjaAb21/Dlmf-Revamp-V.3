@@ -463,6 +463,13 @@ input[type="radio"] {
     font-size: 0.875rem !important;
     padding: 0.75rem 1rem !important;
 }
+
+.fi-ta-content,
+.fi-ta-table,
+.fi-ta-table tbody,
+.fi-ta-table tr {
+    background-color: #1a0a35 !important;
+}
 .fi-table-empty-state {
     padding: 3rem 2rem !important;
     text-align: center !important;
@@ -541,7 +548,16 @@ input[type="radio"] {
     border-radius: 9999px !important;
     font-size: 0.7rem !important;
     font-weight: 700 !important;
-    padding: 0.2rem 0.6rem !important;
+    padding: 0.2rem 0.65rem !important;
+    white-space: nowrap !important;
+    width: fit-content !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.fi-badge-icon {
+    width: 0.8rem !important;
+    height: 0.8rem !important;
 }
 
 /* ── Dropdown panels ───────────────────────────────────────── */

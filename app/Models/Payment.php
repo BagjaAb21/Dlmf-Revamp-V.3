@@ -11,25 +11,24 @@ class Payment extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
+        'product_id',
         'external_id',
-        'given_names',     // Mengganti 'payer_name' (Nama depan)
-        'surname',         // Nama belakang
-        'email',           // Mengganti 'payer_email'
-        'mobile_number',   // Mengganti 'payer_phone' (Format E164)
-
+        'given_names',
+        'surname',
+        'email',
+        'mobile_number',
         'product_name',
         'quantity',
         'amount',
         'currency',
         'description',
-        'invoice_url',     // Mengganti 'checkout_link'
+        'invoice_url',
         'status',
-
         'payment_method',
         'payment_channel',
         'payment_destination',
         'xendit_invoice_id',
-
         'paid_at',
         'expired_at',
     ];
@@ -74,5 +73,15 @@ class Payment extends Model
     public function user()
     {
         return $this->belongsTo(User::class)->withTrashed();
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class)->withTrashed();
+    }
+
+    public function enrollment()
+    {
+        return $this->hasOne(Enrollment::class);
     }
 }

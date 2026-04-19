@@ -6,8 +6,8 @@
     <div class="program-price-container">
         @php
             $hasDiscount = $product->discount && $product->discount->is_active;
-            $validFrom   = !$product->discount?->valid_from  || $product->discount?->valid_from?->lte(now());
-            $validUntil  = !$product->discount?->valid_until || $product->discount?->valid_until?->gte(now());
+            $validFrom = !$product->discount?->valid_from || $product->discount?->valid_from?->lte(now());
+            $validUntil = !$product->discount?->valid_until || $product->discount?->valid_until?->gte(now());
             $showDiscount = $hasDiscount && $validFrom && $validUntil;
         @endphp
 
@@ -36,9 +36,18 @@
         @endforeach
     @endif
 
+    @php
+        /* Route "Beli Sekarang":
+         * - Jika sudah login sebagai siswa → langsung ke halaman checkout siswa
+         * - Jika belum login → ke halaman registrasi/login siswa (dengan ?product=slug)
+         */
+        $buyUrl = auth()->check()
+            ? route('filament.student.pages.buy-course', ['product' => $product->slug])
+            : route('filament.student.auth.register') . '?product=' . $product->slug;
+    @endphp
+
     <button class="btn btn-program mt-auto">
-        <a href="{{ route('payment.checkout', ['product' => $product->slug]) }}"
-            class="d-block w-100 text-decoration-none">
+        <a href="{{ $buyUrl }}" class="d-block w-100 text-decoration-none">
             <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
         </a>
     </button>
