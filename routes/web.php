@@ -7,6 +7,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HargaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\SurveyController;
 
 // Welcome route
 
@@ -82,7 +83,21 @@ Route::post('/payment/process', [PaymentController::class, 'processPayment'])->n
 Route::get('/payment-success', [PaymentController::class, 'showSuccess'])->name('payment.success');
 Route::get('/payment-failed', [PaymentController::class, 'showFailed'])->name('payment.failed');
 
+// Survey routes
+Route::get('/survey', [SurveyController::class, 'show'])->name('survey.show');
+Route::post('/survey/store', [SurveyController::class, 'store'])->name('survey.store');
+
 // ── Student OTP Verification (guest route — no auth required) ─────────────
 Route::get('/student/verify-otp', \App\Livewire\Student\VerifyOtp::class)
     ->name('filament.student.pages.verify-otp')
     ->middleware(['web']);
+
+// ── Student Checkout (authenticated siswa only) ───────────────────────────
+Route::post('/student/checkout/process', [\App\Http\Controllers\StudentPaymentController::class, 'process'])
+    ->name('student.checkout.process')
+    ->middleware(['web', 'auth', \App\Http\Middleware\EnsureUserIsSiswa::class]);
+
+Route::get('/student/checkout/terms', function () {
+    return view('student.checkout.terms');
+})->name('student.checkout.terms')->middleware(['web']);
+
