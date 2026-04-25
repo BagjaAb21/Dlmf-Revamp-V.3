@@ -227,10 +227,8 @@
                 @foreach ($recentEnrollments as $enr)
                     @php
                         $sc = match ($enr->status) {
-                            'active' => ['#ECFDF5', '#065F46', '#10B981', '✅ Aktif'],
-                            'expired' => ['#FEF2F2', '#991B1B', '#EF4444', '⛔ Berakhir'],
-                            'cancelled' => ['#FFFBEB', '#92400E', '#F59E0B', '⚠️ Dibatalkan'],
-                            default => ['#F9FAFB', '#374151', '#D1D5DB', ucfirst($enr->status)],
+                            'active' => ['#ECFDF5', '#065F46', '#10B981', 'Aktif'],
+                            default => ['#FEF2F2', '#991B1B', '#EF4444', 'Tidak Aktif'],
                         };
                     @endphp
                     <div style="display:flex;align-items:center;justify-content:space-between;gap:0.75rem;background:#F9FAFB;border:1px solid rgba(124,58,237,0.07);border-radius:12px;padding:0.75rem 1rem;transition:background 0.15s;"
