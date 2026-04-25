@@ -45,7 +45,7 @@
             <div>
                 <span
                     style="display:inline-block;background:rgba(255,255,255,0.12);color:#FDE047;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.75rem;border-radius:9999px;border:1px solid rgba(253,224,71,0.25);margin-bottom:0.6rem;">
-                    🇩🇪 Area Siswa — DlmF
+                    🇩🇪 Student Portal - DlmF
                 </span>
                 <h1
                     style="font-family:'Poppins',sans-serif;font-size:clamp(1.25rem,3vw,1.65rem);font-weight:800;color:#fff;margin:0 0 0.3rem;line-height:1.25;">

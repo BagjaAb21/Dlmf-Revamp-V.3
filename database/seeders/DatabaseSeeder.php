@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             BenefitMasterSeeder::class,
             ProductSeeder::class,
             // ProductCategorySeeder::class,
-            //PostSeeder::class, // Optional: jika ingin sample posts
+            PostSeeder::class, // Optional: jika ingin sample posts
         ]);
     }
 }

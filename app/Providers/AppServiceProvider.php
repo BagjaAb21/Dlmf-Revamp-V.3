@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Models\User;
 use App\Observers\UserObserver;
+use Illuminate\Pagination\Paginator;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -24,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         // Auto-create student_profile saat user baru register
         User::observe(UserObserver::class);
+        Paginator::useBootstrapFive();
 
         // Global Bootstrap Icons for Filament Admin Preview
         \Filament\Support\Facades\FilamentView::registerRenderHook(

@@ -38,7 +38,7 @@ class StudentPanelProvider extends PanelProvider
             ->maxContentWidth(MaxWidth::Full)
 
             // ── Brand ──────────────────────────────────────────────────────
-            ->brandName('DlmF — Area Siswa')
+            ->brandName('DlmF - Student Portal')
             ->brandLogo(asset('asset/img/logo/logo-Transparant2-v2.png'))
             ->brandLogoHeight('3.7rem')
             ->favicon(asset('asset/img/logo/logo-Transparant3.png'))
